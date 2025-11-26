@@ -443,61 +443,66 @@ input[type="search"]:focus {
 }
 
 .marker-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 0, 0, 0.3);
+  background: var(--marker-color, #94a3b8);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.4);
   position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
+  transform: rotate(-45deg);
 }
 
 .marker-icon:hover {
-  transform: scale(1.15);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(255, 255, 255, 0.5);
+  transform: rotate(-45deg) scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(255, 255, 255, 0.6);
   z-index: 1000;
 }
 
 .marker-icon--complete {
-  opacity: 0.6;
-  border-color: rgba(74, 222, 128, 0.8);
+  opacity: 0.65;
+  border-color: rgba(74, 222, 128, 0.9);
 }
 
 .marker-icon--complete::after {
   content: "";
   position: absolute;
-  inset: -4px;
+  inset: -3px;
   border: 2px solid #4ade80;
-  border-radius: 50%;
-  opacity: 0.6;
+  border-radius: 6px;
+  opacity: 0.7;
 }
 
-.marker-icon__symbol {
-  font-size: 18px;
-  line-height: 1;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+.marker-icon__svg {
+  width: 18px;
+  height: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  transform: rotate(45deg);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
 }
 
 .marker-icon__check {
   position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 16px;
-  height: 16px;
+  top: -8px;
+  right: -8px;
+  width: 18px;
+  height: 18px;
   background: #4ade80;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px;
+  font-size: 11px;
   color: #05090f;
   font-weight: bold;
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transform: rotate(45deg);
 }
 
 .map-legend {
@@ -538,13 +543,21 @@ input[type="search"]:focus {
 .map-legend__icon {
   width: 24px;
   height: 24px;
-  border-radius: 50%;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  background: var(--marker-color, #94a3b8);
   border: 2px solid rgba(255, 255, 255, 0.3);
   flex-shrink: 0;
+  transform: rotate(-45deg);
+}
+
+.map-legend__svg {
+  width: 14px;
+  height: 14px;
+  color: rgba(255, 255, 255, 0.95);
+  transform: rotate(45deg);
 }
 
 .map-legend__label {
@@ -554,53 +567,6 @@ input[type="search"]:focus {
 
 .hidden {
   display: none !important;
-}
-
-.map-legend {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: rgba(2, 6, 23, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 1rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  z-index: 1000;
-  min-width: 180px;
-}
-
-.map-legend__title {
-  margin: 0 0 0.75rem;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-.map-legend__items {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.map-legend__item {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-}
-
-.map-legend__icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  flex-shrink: 0;
 }
 
 .map-legend__label {
@@ -629,7 +595,11 @@ input[type="search"]:focus {
   .map-legend__icon {
     width: 20px;
     height: 20px;
-    font-size: 10px;
+  }
+  
+  .map-legend__svg {
+    width: 12px;
+    height: 12px;
   }
 }
 

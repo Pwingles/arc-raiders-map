@@ -307,38 +307,40 @@
     return coords;
   }
 
-  function getMarkerIcon(item) {
+  function getMarkerIconSVG(item) {
     const iconMap = {
-      quest: "📋",
-      weaponCase: "📦",
-      fieldCrate: "📦",
-      securityLocker: "🔒",
-      raiderCache: "💎",
-      vehicleTrunk: "🚗",
-      extraction: "🚁",
-      boss: "👹",
-      collectible: "📜",
-      location: "📍"
+      quest: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>',
+      weaponCase: '<path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>',
+      fieldCrate: '<path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>',
+      securityLocker: '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>',
+      raiderCache: '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>',
+      vehicleTrunk: '<path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>',
+      extraction: '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>',
+      boss: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>',
+      collectible: '<path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>',
+      location: '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>'
     };
-    return iconMap[item.type] || "📍";
+    return iconMap[item.type] || iconMap.location;
   }
 
   function createMarkerIcon(item) {
-    const icon = getMarkerIcon(item);
     const category = config.categories[item.type];
     const color = category?.color || "#94a3b8";
     const completed = Boolean(state.progress[item.id]);
+    const iconSVG = getMarkerIconSVG(item);
     
     return L.divIcon({
       className: "custom-marker",
       html: `
-        <div class="marker-icon ${completed ? "marker-icon--complete" : ""}" style="background-color: ${color};">
-          <span class="marker-icon__symbol">${icon}</span>
+        <div class="marker-icon ${completed ? "marker-icon--complete" : ""}" style="--marker-color: ${color};">
+          <svg class="marker-icon__svg" viewBox="0 0 24 24" fill="currentColor">
+            ${iconSVG}
+          </svg>
           ${completed ? '<span class="marker-icon__check">✓</span>' : ""}
         </div>
       `,
-      iconSize: [36, 36],
-      iconAnchor: [18, 18]
+      iconSize: [32, 32],
+      iconAnchor: [16, 16]
     });
   }
 
@@ -511,8 +513,9 @@
       
       const icon = document.createElement("span");
       icon.className = "map-legend__icon";
-      icon.textContent = getMarkerIcon({ type: key });
-      icon.style.backgroundColor = meta.color;
+      icon.style.setProperty("--marker-color", meta.color);
+      const iconSVG = getMarkerIconSVG({ type: key });
+      icon.innerHTML = `<svg class="map-legend__svg" viewBox="0 0 24 24" fill="currentColor">${iconSVG}</svg>`;
       
       const label = document.createElement("span");
       label.className = "map-legend__label";
