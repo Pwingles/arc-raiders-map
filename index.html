@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARC Raiders Interactive Intel Map</title>
+    <meta
+      name="description"
+      content="Track ARC Raiders loot, quests, and field intel on an interactive map that syncs your progress locally."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="panel">
+        <header class="panel__header">
+          <div>
+            <p class="eyebrow">ARC RAIDERS FIELD GUIDE</p>
+            <h1>Interactive Intel Map</h1>
+          </div>
+          <button id="resetProgress" class="ghost-button" title="Clear saved progress">
+            Reset Progress
+          </button>
+        </header>
+
+        <section class="panel__section">
+          <label for="mapSelect" class="section-label">Region / Map</label>
+          <select id="mapSelect" class="select"></select>
+          <p class="panel__hint" id="mapDescription"></p>
+        </section>
+
+        <section class="panel__section stats" id="progressCard">
+          <div>
+            <p class="eyebrow">COMPLETION</p>
+            <h2 id="completionHeadline">0 of 0 complete</h2>
+            <p class="panel__hint" id="completionSubtext">Choose a map to get started.</p>
+          </div>
+          <div class="progress-bar">
+            <span class="progress-bar__value" id="progressBarValue"></span>
+          </div>
+        </section>
+
+        <section class="panel__section">
+          <label for="searchInput" class="section-label">Search</label>
+          <div class="search-field">
+            <input
+              type="search"
+              id="searchInput"
+              placeholder="Search by name, tags, or rewards"
+            />
+            <span class="material-icon">search</span>
+          </div>
+        </section>
+
+        <section class="panel__section">
+          <p class="section-label">Categories</p>
+          <div id="categoryFilters" class="chip-group"></div>
+        </section>
+
+        <section class="panel__section toggle-group">
+          <label class="toggle">
+            <input type="checkbox" id="showIncomplete" checked />
+            <span>Show in-progress</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="showComplete" checked />
+            <span>Show completed</span>
+          </label>
+        </section>
+
+        <section class="panel__section list-section">
+          <div class="list-section__header">
+            <p class="section-label">Points of Interest</p>
+            <button id="collapseList" class="ghost-button ghost-button--small">
+              Collapse
+            </button>
+          </div>
+          <ul id="itemList" class="poi-list"></ul>
+        </section>
+      </aside>
+
+      <main class="map-shell">
+        <div id="map"></div>
+        <div class="map-toolbar">
+          <p class="map-toolbar__status" id="activeFilters"></p>
+          <div class="map-toolbar__actions">
+            <button class="ghost-button" id="fitBoundsBtn">Fit to Map</button>
+            <button class="ghost-button" id="exportProgressBtn" title="Download your checklist state">
+              Export Progress
+            </button>
+            <label class="ghost-button ghost-button--file">
+              Import Progress
+              <input type="file" id="importProgressInput" accept="application/json" />
+            </label>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <template id="poiTemplate">
+      <li class="poi-card">
+        <header class="poi-card__header">
+          <div>
+            <p class="poi-card__type"></p>
+            <h3 class="poi-card__title"></h3>
+          </div>
+          <button class="ghost-button ghost-button--small poi-card__jump">View on Map</button>
+        </header>
+        <p class="poi-card__description"></p>
+        <ul class="poi-card__meta"></ul>
+        <div class="poi-card__actions">
+          <button class="primary-button poi-card__toggle"></button>
+        </div>
+      </li>
+    </template>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="data/maps.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+
