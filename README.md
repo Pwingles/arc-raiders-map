@@ -10,6 +10,8 @@ Customizable interactive checklist built with plain HTML, CSS, and vanilla JavaS
 - Two projection modes:
   - **`simple`** — uses `L.CRS.Simple` for custom stitched map art (example: `Caligo Basin` placeholder SVG).
   - **`geo`** — standard geographic tiles (example: OpenStreetMap powered `Orbital Link Testbed`).
+- Per-map intel card with live thumbnails, biome/threat labels, and recommended power/featured loot callouts.
+- Advanced filters for category, rarity, difficulty, and completion state plus a searchable checklist.
 - Per-item completion state stored in `localStorage`, plus manual export/import for moving progress between devices.
 - Filters, search, and progress stats update instantly.
 - Mark objectives from the sidebar list or directly from map popups.

@@ -1,72 +1,88 @@
 <svg width="1200" height="1600" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="stellaBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e0e7ff;stop-opacity:1" />
+    <linearGradient id="stellaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#c7d2fe;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#a5b4fc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9aaefc;stop-opacity:1" />
     </linearGradient>
-    <pattern id="snowPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="10" cy="10" r="1" fill="#ffffff" opacity="0.3"/>
+    <pattern id="snowPattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1.5" fill="#ffffff" opacity="0.25"/>
+      <circle cx="40" cy="40" r="1" fill="#ffffff" opacity="0.2"/>
     </pattern>
   </defs>
   
   <!-- Background -->
-  <rect width="1200" height="1600" fill="url(#stellaBg)"/>
+  <rect width="1200" height="1600" fill="url(#stellaGrad)"/>
   <rect width="1200" height="1600" fill="url(#snowPattern)"/>
   
+  <!-- Mountain ridges -->
+  <path d="M0 240 Q200 260 400 220 Q600 180 800 240 Q1000 300 1200 240" stroke="#d4d9f5" stroke-width="3" fill="none" opacity="0.5"/>
+  <path d="M0 420 Q200 460 400 420 Q600 380 800 440 Q1000 500 1200 440" stroke="#c5cff2" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M0 640 Q200 700 400 660 Q600 620 800 680 Q1000 740 1200 700" stroke="#b7c4ef" stroke-width="3" fill="none" opacity="0.35"/>
+  
   <!-- Snow-covered mountains -->
-  <polygon points="400,300 500,400 600,500 700,450 800,500 900,400 1000,350" fill="#ffffff" opacity="0.7" stroke="#cbd5e1" stroke-width="4"/>
-  <polygon points="300,500 400,600 480,680 600,640 720,700 800,620 900,580" fill="#f1f5f9" opacity="0.6" stroke="#e2e8f0" stroke-width="3"/>
-  <polygon points="200,700 300,800 480,840 600,800 720,860 850,820" fill="#e2e8f0" opacity="0.5" stroke="#cbd5e1" stroke-width="2"/>
+  <polygon points="260,280 380,380 520,480 660,430 800,500 920,420 1040,360" fill="#ffffff" opacity="0.75" stroke="#cbd5e1" stroke-width="4"/>
+  <polygon points="160,520 300,640 420,700 540,660 660,720 780,680 900,720 1040,660" fill="#eff3ff" opacity="0.7" stroke="#dde5fb" stroke-width="3"/>
+  <polygon points="140,780 260,880 420,900 560,860 700,920 860,900 1000,960" fill="#e2e8f0" opacity="0.6" stroke="#cbd5e1" stroke-width="2"/>
   
-  <!-- Snow caps (brighter) -->
-  <polygon points="600,500 620,480 640,500" fill="#ffffff" opacity="0.9"/>
-  <polygon points="700,450 720,430 740,450" fill="#ffffff" opacity="0.9"/>
-  <polygon points="480,680 500,660 520,680" fill="#ffffff" opacity="0.8"/>
+  <!-- Crevasses -->
+  <path d="M300 600 L360 680 L300 760" stroke="#9fb5e8" stroke-width="8" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <path d="M760 680 L820 760 L760 820" stroke="#9fb5e8" stroke-width="8" fill="none" opacity="0.5" stroke-linecap="round"/>
   
-  <!-- Snowfield -->
-  <ellipse cx="480" cy="680" rx="250" ry="180" fill="#f8fafc" opacity="0.4"/>
+  <!-- Snow field -->
+  <ellipse cx="520" cy="760" rx="260" ry="180" fill="#f8fafc" opacity="0.5"/>
+  <ellipse cx="540" cy="780" rx="210" ry="140" fill="#e2e8f0" opacity="0.4"/>
   
   <!-- Mountain Facility -->
-  <rect x="580" y="480" width="100" height="80" fill="#475569" opacity="0.7" stroke="#64748b" stroke-width="3" rx="6"/>
-  <rect x="590" y="490" width="25" height="60" fill="#334155" opacity="0.8"/>
-  <rect x="625" y="490" width="25" height="60" fill="#334155" opacity="0.8"/>
-  <rect x="660" y="490" width="10" height="60" fill="#334155" opacity="0.8"/>
-  <!-- Roof (snow-covered) -->
-  <polygon points="580,480 630,460 680,480" fill="#ffffff" opacity="0.8"/>
+  <rect x="560" y="520" width="140" height="100" fill="#334155" opacity="0.85" stroke="#4b5d73" stroke-width="3" rx="6"/>
+  <rect x="575" y="535" width="30" height="70" fill="#0f172a" opacity="0.85"/>
+  <rect x="615" y="535" width="30" height="70" fill="#0f172a" opacity="0.85"/>
+  <rect x="655" y="535" width="20" height="70" fill="#0f172a" opacity="0.85"/>
+  <polygon points="560,520 630,490 700,520" fill="#e5edff" opacity="0.8"/>
+  <rect x="600" y="490" width="80" height="18" fill="#94a3b8" opacity="0.7"/>
+  
+  <!-- Rail console -->
+  <rect x="600" y="620" width="80" height="35" fill="#4c5f7b" opacity="0.8"/>
+  <rect x="610" y="630" width="20" height="18" fill="#1f2937" opacity="0.9"/>
+  <rect x="640" y="630" width="20" height="18" fill="#1f2937" opacity="0.9"/>
   
   <!-- Ice Caves -->
-  <ellipse cx="720" cy="840" rx="100" ry="70" fill="#e0e7ff" opacity="0.6" stroke="#c7d2fe" stroke-width="3"/>
-  <ellipse cx="720" cy="840" rx="70" ry="50" fill="#c7d2fe" opacity="0.5"/>
-  <!-- Cave entrance -->
-  <ellipse cx="720" cy="840" rx="40" ry="30" fill="#1e293b" opacity="0.4"/>
+  <ellipse cx="780" cy="920" rx="120" ry="85" fill="#d7e3ff" opacity="0.65" stroke="#b9c9ff" stroke-width="4"/>
+  <ellipse cx="780" cy="920" rx="80" ry="55" fill="#bdccff" opacity="0.6"/>
+  <ellipse cx="780" cy="920" rx="40" ry="28" fill="#1e293b" opacity="0.5"/>
   
-  <!-- Base camp (extraction) -->
-  <rect x="340" y="300" width="50" height="40" fill="#475569" opacity="0.6" stroke="#64748b" stroke-width="2" rx="4"/>
-  <circle cx="365" cy="320" r="8" fill="#1e40af" opacity="0.7"/>
+  <!-- Snow fields / drifts -->
+  <ellipse cx="340" cy="660" rx="120" ry="70" fill="#f8fafc" opacity="0.35"/>
+  <ellipse cx="860" cy="720" rx="110" ry="65" fill="#f8fafc" opacity="0.3"/>
+  <ellipse cx="420" cy="900" rx="100" ry="55" fill="#ffffff" opacity="0.25"/>
+  
+  <!-- Base camp -->
+  <rect x="300" y="340" width="80" height="50" fill="#334155" opacity="0.8" stroke="#4b5d73" stroke-width="3" rx="6"/>
+  <rect x="315" y="355" width="20" height="25" fill="#0f172a" opacity="0.8"/>
+  <rect x="345" y="355" width="20" height="25" fill="#0f172a" opacity="0.8"/>
+  <circle cx="340" cy="330" r="10" fill="#1e40af" opacity="0.8"/>
   
   <!-- Summit extraction -->
-  <rect x="820" y="260" width="50" height="40" fill="#475569" opacity="0.6" stroke="#64748b" stroke-width="2" rx="4"/>
-  <circle cx="845" cy="280" r="8" fill="#1e40af" opacity="0.7"/>
+  <rect x="860" y="280" width="70" height="45" fill="#334155" opacity="0.8" stroke="#4b5d73" stroke-width="3" rx="6"/>
+  <circle cx="895" cy="260" r="12" fill="#1e40af" opacity="0.85"/>
   
   <!-- Paths -->
-  <path d="M 360 320 L 600 500 L 720 840" stroke="#cbd5e1" stroke-width="10" fill="none" opacity="0.4" stroke-linecap="round"/>
-  <path d="M 840 280 L 600 500" stroke="#cbd5e1" stroke-width="8" fill="none" opacity="0.35"/>
-  
-  <!-- Snow drifts -->
-  <ellipse cx="400" cy="600" rx="80" ry="50" fill="#ffffff" opacity="0.3"/>
-  <ellipse cx="800" cy="700" rx="100" ry="60" fill="#ffffff" opacity="0.25"/>
+  <path d="M 320 360 L 520 540 L 680 700 L 780 920" stroke="#94a3b8" stroke-width="12" fill="none" opacity="0.45" stroke-linecap="round"/>
+  <path d="M 860 300 L 640 520" stroke="#94a3b8" stroke-width="10" fill="none" opacity="0.4"/>
+  <path d="M 420 900 L 540 780" stroke="#94a3b8" stroke-width="8" fill="none" opacity="0.35"/>
   
   <!-- Grid overlay -->
-  <g opacity="0.1">
-    <line x1="0" y1="400" x2="1200" y2="400" stroke="#1e40af" stroke-width="1"/>
-    <line x1="0" y1="800" x2="1200" y2="800" stroke="#1e40af" stroke-width="1"/>
-    <line x1="0" y1="1200" x2="1200" y2="1200" stroke="#1e40af" stroke-width="1"/>
-    <line x1="400" y1="0" x2="400" y2="1600" stroke="#1e40af" stroke-width="1"/>
-    <line x1="800" y1="0" x2="800" y2="1600" stroke="#1e40af" stroke-width="1"/>
+  <g opacity="0.08">
+    <line x1="0" y1="320" x2="1200" y2="320" stroke="#1e40af" stroke-width="1"/>
+    <line x1="0" y1="640" x2="1200" y2="640" stroke="#1e40af" stroke-width="1"/>
+    <line x1="0" y1="960" x2="1200" y2="960" stroke="#1e40af" stroke-width="1"/>
+    <line x1="0" y1="1280" x2="1200" y2="1280" stroke="#1e40af" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="1600" stroke="#1e40af" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="1600" stroke="#1e40af" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="1600" stroke="#1e40af" stroke-width="1"/>
   </g>
   
   <!-- Title -->
-  <text x="600" y="100" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#1e40af" text-anchor="middle" opacity="0.4">STELLA MONTIS</text>
-  <text x="600" y="140" font-family="Arial, sans-serif" font-size="20" fill="#64748b" text-anchor="middle" opacity="0.5">Isolated Mountain Facility</text>
+  <text x="600" y="90" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="#1e40af" text-anchor="middle" opacity="0.35">STELLA MONTIS</text>
+  <text x="600" y="130" font-family="Arial, sans-serif" font-size="20" fill="#475569" text-anchor="middle" opacity="0.45">North Line Research Bastion</text>
 </svg>

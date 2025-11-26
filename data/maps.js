@@ -1,6 +1,8 @@
 window.arcMapsConfig = {
   storageKey: "arc-raiders-progress-v1",
   defaultMapId: "dam-battlegrounds",
+  rarityOptions: ["common", "uncommon", "rare", "legendary", "exotic"],
+  difficultyOptions: ["low", "medium", "high", "elite"],
   categories: {
     quest: {
       label: "Quest",
@@ -26,6 +28,11 @@ window.arcMapsConfig = {
       label: "Raider Cache",
       color: "#ec4899",
       description: "Premium loot stashes left by other raiders."
+    },
+    event: {
+      label: "World Event",
+      color: "#34d399",
+      description: "Timed public events and roaming convoy activities."
     },
     vehicleTrunk: {
       label: "Vehicle Trunk",
@@ -59,6 +66,11 @@ window.arcMapsConfig = {
       name: "Dam Battlegrounds",
       description:
         "Overgrown ruins of the Alcantara Power Plant. Toxic, waterlogged terrain with frequent ARC skirmishes. Features the Control Tower, Research & Administration Building, and Pumping Station.",
+      biome: "Flooded industrial exclusion zone",
+      thumbnail: "assets/maps/dam-battlegrounds.svg",
+      threatLevel: { label: "High Threat", color: "#f97316" },
+      recommendedPower: 18,
+      featuredLoot: ["Aphelion Blueprint", "Stormglass Core modules"],
       projection: "simple",
       zoom: {
         min: -1,
@@ -177,6 +189,30 @@ window.arcMapsConfig = {
           coords: [920, 840],
           description: "Secondary extraction point near the pumping station.",
           tags: ["extraction"]
+        },
+        {
+          id: "dam-locker-012",
+          title: "Floodgate Vault Locker",
+          type: "securityLocker",
+          coords: [610, 520],
+          description:
+            "Deep locker wedged beneath the turbine gantry highlighted on GameRant's Dam Battlegrounds map.",
+          rewards: ["Floodgate Cipher", "Epic components"],
+          tags: ["requires key", "turbine wing"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "dam-event-013",
+          title: "Ashen Siphon Convoy",
+          type: "event",
+          coords: [780, 620],
+          description:
+            "Timed convoy skirmish that rotates between the Research Building and Pumping Station per Raiders of Arc command briefs.",
+          schedule: "Spawns on the half hour",
+          tags: ["fireteam", "public event"],
+          rarity: "rare",
+          difficulty: "high"
         }
       ]
     },
@@ -185,6 +221,11 @@ window.arcMapsConfig = {
       name: "Buried City",
       description:
         "A remnant of the old world amidst sand dunes. Underground city reclaimed by nature with narrow streets and empty plazas. Features Sunken Plaza, Subway Tunnels, and Central Hub.",
+      biome: "Subterranean metro ruins",
+      thumbnail: "assets/maps/buried-city.svg",
+      threatLevel: { label: "Medium Threat", color: "#facc15" },
+      recommendedPower: 16,
+      featuredLoot: ["Espresso Machine Parts", "Urban alloy stockpiles"],
       projection: "simple",
       zoom: {
         min: -1,
@@ -297,6 +338,29 @@ window.arcMapsConfig = {
           coords: [840, 1120],
           description: "Southern extraction zone near the city outskirts.",
           tags: ["extraction"]
+        },
+        {
+          id: "city-collect-012",
+          title: "Sunken Subway Relay",
+          type: "collectible",
+          coords: [500, 740],
+          description:
+            "Encrypted lore cache tucked inside the buried subway relay noted on the official ARC Raiders site.",
+          rewards: ["Lore: Collapse Echoes"],
+          tags: ["underground", "lore"],
+          rarity: "uncommon",
+          difficulty: "medium"
+        },
+        {
+          id: "city-event-013",
+          title: "Plaza Rosa Skirmish",
+          type: "event",
+          coords: [660, 560],
+          description:
+            "Faction clash that GameRant's Buried City map marks as a high-yield public event.",
+          tags: ["crowd control", "public event"],
+          rarity: "rare",
+          difficulty: "high"
         }
       ]
     },
@@ -305,6 +369,11 @@ window.arcMapsConfig = {
       name: "Spaceport",
       description:
         "A derelict rocket launch facility reflecting humanity's past ambitions. Multi-level buildings and tight corridors. Features Launch Pad, Assembly Building, and Fuel Depot.",
+      biome: "Orbital launch complex",
+      thumbnail: "assets/maps/spaceport.svg",
+      threatLevel: { label: "Severe Threat", color: "#60a5fa" },
+      recommendedPower: 22,
+      featuredLoot: ["Prototype Mods", "Fuel Depot Access Codes"],
       projection: "simple",
       zoom: {
         min: -1,
@@ -426,6 +495,34 @@ window.arcMapsConfig = {
           coords: [240, 680],
           description: "Western extraction zone near the facility entrance.",
           tags: ["extraction"]
+        },
+        {
+          id: "space-quest-013",
+          title: "Fuel Siphon Operation",
+          type: "quest",
+          coords: [850, 700],
+          description:
+            "Infiltrate the Fuel Depot siphon rigs documented on the official ARC Raiders map overview.",
+          objectives: [
+            "Disable the depot sentries without triggering alarms",
+            "Siphon three fuel tanks before ARC reinforcements arrive"
+          ],
+          rewards: ["Depot access codes", "Faction rep: ARC Splicers"],
+          tags: ["stealth optional", "time sensitive"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "space-locker-014",
+          title: "Hangar Epsilon Locker",
+          type: "securityLocker",
+          coords: [420, 1040],
+          description:
+            "High-security locker tucked inside Hangar Epsilon, the same bay referenced on GameRant's Spaceport map.",
+          rewards: ["Arc Driver barrel", "Rare crafting kit"],
+          tags: ["requires key", "hangar row"],
+          rarity: "rare",
+          difficulty: "medium"
         }
       ]
     },
@@ -434,6 +531,11 @@ window.arcMapsConfig = {
       name: "The Blue Gate",
       description:
         "A mountainous region with open hills, small towns, tunnels, and underground complexes. Excellent for farming Rusted Gears from vehicle trunks.",
+      biome: "Foothills and subterranean caverns",
+      thumbnail: "assets/maps/blue-gate.svg",
+      threatLevel: { label: "Dynamic Threat", color: "#38bdf8" },
+      recommendedPower: 15,
+      featuredLoot: ["Rusted Gears", "Vehicle salvage"],
       projection: "simple",
       zoom: {
         min: -1,
@@ -542,6 +644,29 @@ window.arcMapsConfig = {
           coords: [920, 1040],
           description: "Foothills extraction zone.",
           tags: ["extraction"]
+        },
+        {
+          id: "blue-event-012",
+          title: "Tunnel Raiders Ambush",
+          type: "event",
+          coords: [700, 760],
+          description:
+            "Recurring event inside the underground complex highlighted on GameRant's Blue Gate interactive map.",
+          tags: ["public event", "underground"],
+          rarity: "rare",
+          difficulty: "high"
+        },
+        {
+          id: "blue-vehicle-013",
+          title: "Ridgeline Caravan",
+          type: "vehicleTrunk",
+          coords: [360, 680],
+          description:
+            "Triple trunk route used by community farming guides on arcraidersmaps.app for accelerated Rusted Gear loops.",
+          rewards: ["Rusted Gears", "Vehicle salvage"],
+          tags: ["farming route"],
+          rarity: "uncommon",
+          difficulty: "low"
         }
       ]
     },
@@ -550,6 +675,11 @@ window.arcMapsConfig = {
       name: "Stella Montis",
       description:
         "An isolated mountain facility shrouded in snow, containing long-kept secrets. Introduced in the North Line update. Harsh arctic environment with hidden facilities.",
+      biome: "Polar research summit",
+      thumbnail: "assets/maps/stella-montis.svg",
+      threatLevel: { label: "Extreme Threat", color: "#a855f7" },
+      recommendedPower: 24,
+      featuredLoot: ["North Line tech fragments", "Cryonic alloys"],
       projection: "simple",
       zoom: {
         min: -1,
@@ -649,6 +779,34 @@ window.arcMapsConfig = {
           coords: [840, 280],
           description: "High-altitude extraction point near the summit.",
           tags: ["extraction", "elevated"]
+        },
+        {
+          id: "stella-quest-011",
+          title: "North Line Uplink",
+          type: "quest",
+          coords: [600, 520],
+          description:
+            "Reactivate the uplink nodes described in TechRadar's coverage of the North Line update to summon the Matriarch variant.",
+          objectives: [
+            "Synchronize three uplink pylons without letting ARC drones reset them",
+            "Hold the mountain facility roof until the uplink stabilizes"
+          ],
+          rewards: ["North Line tech fragments", "Faction rep: Pilots"],
+          tags: ["multi-stage", "defense"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "stella-collect-012",
+          title: "Frozen Data Cache",
+          type: "collectible",
+          coords: [780, 920],
+          description:
+            "Lore shard buried inside the ice caves that the official ARC Raiders wiki labels as a scanner target.",
+          rewards: ["Lore: Polaris Vault"],
+          tags: ["ice caves", "scanner"],
+          rarity: "uncommon",
+          difficulty: "medium"
         }
       ]
     }

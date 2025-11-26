@@ -1,63 +1,107 @@
 <svg width="1200" height="1600" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="spaceBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#020617;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#141b2d;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0b1523;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#050912;stop-opacity:1" />
     </linearGradient>
+    <pattern id="tarmacPattern" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <rect width="80" height="80" fill="#0f172a"/>
+      <path d="M0 40 L80 40" stroke="#1e293b" stroke-width="2" opacity="0.4"/>
+      <path d="M40 0 L40 80" stroke="#1e293b" stroke-width="2" opacity="0.4"/>
+    </pattern>
     <radialGradient id="launchPadGrad" cx="50%" cy="50%">
-      <stop offset="0%" style="stop-color:#334155;stop-opacity:0.8" />
-      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.6" />
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#1b2738;stop-opacity:0.5" />
     </radialGradient>
   </defs>
   
   <!-- Background -->
   <rect width="1200" height="1600" fill="url(#spaceBg)"/>
+  <rect width="1200" height="1600" fill="url(#tarmacPattern)" opacity="0.35"/>
+  
+  <!-- Runways -->
+  <rect x="150" y="300" width="900" height="120" fill="#111827" opacity="0.8" rx="8"/>
+  <line x1="150" y1="360" x2="1050" y2="360" stroke="#f8fafc" stroke-width="4" stroke-dasharray="20 20" opacity="0.6"/>
+  <rect x="300" y="900" width="750" height="100" fill="#111827" opacity="0.7" rx="6"/>
+  <line x1="300" y1="950" x2="1050" y2="950" stroke="#f8fafc" stroke-width="3" stroke-dasharray="16 18" opacity="0.6"/>
   
   <!-- Launch Pad -->
-  <circle cx="680" cy="440" r="100" fill="url(#launchPadGrad)" stroke="#475569" stroke-width="4"/>
-  <circle cx="680" cy="440" r="70" fill="#1e293b" opacity="0.7" stroke="#334155" stroke-width="2"/>
-  <circle cx="680" cy="440" r="40" fill="#0f172a" opacity="0.8"/>
+  <circle cx="720" cy="460" r="130" fill="#0f172a" opacity="0.7" stroke="#475569" stroke-width="4"/>
+  <circle cx="720" cy="460" r="110" fill="url(#launchPadGrad)" stroke="#607387" stroke-width="3"/>
+  <circle cx="720" cy="460" r="70" fill="#0b1523" opacity="0.8"/>
+  <circle cx="720" cy="460" r="40" fill="#020617" opacity="0.9"/>
+  <path d="M590 460 L850 460" stroke="#94a3b8" stroke-width="4" opacity="0.4"/>
+  <path d="M720 330 L720 590" stroke="#94a3b8" stroke-width="4" opacity="0.4"/>
   
   <!-- Launch Towers -->
-  <line x1="700" y1="480" x2="700" y2="180" stroke="#64748b" stroke-width="8" opacity="0.7"/>
-  <line x1="740" y1="480" x2="740" y2="180" stroke="#64748b" stroke-width="8" opacity="0.7"/>
-  <line x1="660" y1="480" x2="660" y2="200" stroke="#64748b" stroke-width="6" opacity="0.6"/>
-  <!-- Tower platforms -->
-  <rect x="690" y="200" width="20" height="15" fill="#475569" opacity="0.8"/>
-  <rect x="730" y="200" width="20" height="15" fill="#475569" opacity="0.8"/>
-  <rect x="650" y="220" width="20" height="15" fill="#475569" opacity="0.7"/>
+  <g opacity="0.85">
+    <rect x="690" y="220" width="20" height="210" fill="#4b5d73" rx="3"/>
+    <rect x="730" y="220" width="20" height="210" fill="#4b5d73" rx="3"/>
+    <rect x="650" y="240" width="18" height="200" fill="#3d5066" rx="3"/>
+    <rect x="770" y="240" width="18" height="200" fill="#3d5066" rx="3"/>
+    <line x1="700" y1="240" x2="700" y2="180" stroke="#7c8aa1" stroke-width="6"/>
+    <line x1="740" y1="240" x2="740" y2="180" stroke="#7c8aa1" stroke-width="6"/>
+  </g>
   
-  <!-- Assembly Building -->
-  <rect x="540" y="580" width="140" height="120" fill="#334155" opacity="0.7" stroke="#475569" stroke-width="3" rx="4"/>
-  <rect x="550" y="590" width="30" height="100" fill="#1e293b" opacity="0.8"/>
-  <rect x="590" y="590" width="30" height="100" fill="#1e293b" opacity="0.8"/>
-  <rect x="630" y="590" width="30" height="100" fill="#1e293b" opacity="0.8"/>
-  <rect x="670" y="590" width="10" height="100" fill="#1e293b" opacity="0.8"/>
-  <!-- Roof details -->
-  <polygon points="540,580 620,560 680,580" fill="#475569" opacity="0.6"/>
+  <!-- Assembly Complex -->
+  <rect x="520" y="620" width="200" height="140" fill="#2d3e55" opacity="0.9" stroke="#425268" stroke-width="3" rx="6"/>
+  <rect x="540" y="635" width="40" height="110" fill="#0f172a" opacity="0.8"/>
+  <rect x="590" y="635" width="40" height="110" fill="#0f172a" opacity="0.8"/>
+  <rect x="640" y="635" width="40" height="110" fill="#0f172a" opacity="0.8"/>
+  <rect x="690" y="635" width="20" height="110" fill="#0f172a" opacity="0.8"/>
+  <polygon points="520,620 620,580 720,620" fill="#3b4f68" opacity="0.7"/>
+  <rect x="560" y="590" width="120" height="18" fill="#5a6b83" opacity="0.8"/>
   
   <!-- Fuel Depot -->
-  <rect x="820" y="660" width="120" height="100" fill="#334155" opacity="0.7" stroke="#475569" stroke-width="3" rx="4"/>
-  <circle cx="880" cy="710" r="35" fill="#1e293b" opacity="0.8" stroke="#334155" stroke-width="2"/>
-  <circle cx="880" cy="710" r="25" fill="#0f172a" opacity="0.9"/>
-  <!-- Warning stripes -->
-  <rect x="820" y="660" width="120" height="15" fill="#dc2626" opacity="0.6"/>
+  <rect x="850" y="700" width="160" height="120" fill="#253245" opacity="0.85" stroke="#3d4c61" stroke-width="3" rx="8"/>
+  <circle cx="930" cy="760" r="40" fill="#0d1524" stroke="#3d4c61" stroke-width="3"/>
+  <circle cx="930" cy="760" r="24" fill="#040a14"/>
+  <rect x="850" y="700" width="160" height="18" fill="#b91c1c" opacity="0.65"/>
+  <path d="M850 820 L850 900" stroke="#475569" stroke-width="6" opacity="0.6"/>
   
-  <!-- Service roads -->
-  <path d="M 240 680 L 540 580 L 680 440 L 1080 520" stroke="#334155" stroke-width="12" fill="none" opacity="0.5" stroke-linecap="round"/>
-  <path d="M 680 440 L 820 660" stroke="#334155" stroke-width="10" fill="none" opacity="0.4"/>
+  <!-- Cargo Rail -->
+  <rect x="200" y="520" width="280" height="60" fill="#1a2437" opacity="0.8" rx="4"/>
+  <line x1="220" y1="550" x2="460" y2="550" stroke="#94a3b8" stroke-width="3" opacity="0.5" stroke-dasharray="12 12"/>
+  <rect x="220" y="535" width="30" height="30" fill="#3d4c61" opacity="0.8"/>
+  <rect x="260" y="535" width="30" height="30" fill="#3d4c61" opacity="0.8"/>
+  <rect x="300" y="535" width="30" height="30" fill="#3d4c61" opacity="0.8"/>
+  
+  <!-- Hangars -->
+  <rect x="260" y="1040" width="140" height="90" fill="#0f172a" opacity="0.9" stroke="#334155" stroke-width="3" rx="4"/>
+  <rect x="420" y="1040" width="140" height="90" fill="#0f172a" opacity="0.9" stroke="#334155" stroke-width="3" rx="4"/>
+  <rect x="580" y="1040" width="140" height="90" fill="#0f172a" opacity="0.9" stroke="#334155" stroke-width="3" rx="4"/>
+  <rect x="740" y="1040" width="140" height="90" fill="#0f172a" opacity="0.9" stroke="#334155" stroke-width="3" rx="4"/>
+  <rect x="900" y="1040" width="140" height="90" fill="#0f172a" opacity="0.9" stroke="#334155" stroke-width="3" rx="4"/>
+  <rect x="275" y="1048" width="15" height="70" fill="#1f2937"/>
+  <rect x="435" y="1048" width="15" height="70" fill="#1f2937"/>
+  <rect x="595" y="1048" width="15" height="70" fill="#1f2937"/>
+  <rect x="755" y="1048" width="15" height="70" fill="#1f2937"/>
+  <rect x="915" y="1048" width="15" height="70" fill="#1f2937"/>
+  
+  <!-- Service roads and tram lines -->
+  <path d="M 200 760 L 520 620 L 720 460 L 1080 560" stroke="#3d4c61" stroke-width="16" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <path d="M 320 1120 L 720 900 L 980 820" stroke="#3d4c61" stroke-width="12" fill="none" opacity="0.45"/>
+  <path d="M 180 620 L 320 520" stroke="#3d4c61" stroke-width="10" fill="none" opacity="0.4"/>
+  
+  <!-- Radar dish -->
+  <circle cx="1020" cy="320" r="60" fill="#0f172a" opacity="0.8" stroke="#334155" stroke-width="3"/>
+  <path d="M970 320 A50 50 0 0 1 1070 320" stroke="#60a5fa" stroke-width="3" opacity="0.5" fill="none"/>
+  <path d="M980 300 A35 35 0 0 1 1060 300" stroke="#60a5fa" stroke-width="2" opacity="0.4" fill="none"/>
+  <circle cx="1020" cy="320" r="20" fill="#1e293b"/>
   
   <!-- Grid overlay -->
-  <g opacity="0.1">
-    <line x1="0" y1="400" x2="1200" y2="400" stroke="#60a5fa" stroke-width="1"/>
-    <line x1="0" y1="800" x2="1200" y2="800" stroke="#60a5fa" stroke-width="1"/>
-    <line x1="0" y1="1200" x2="1200" y2="1200" stroke="#60a5fa" stroke-width="1"/>
-    <line x1="400" y1="0" x2="400" y2="1600" stroke="#60a5fa" stroke-width="1"/>
-    <line x1="800" y1="0" x2="800" y2="1600" stroke="#60a5fa" stroke-width="1"/>
+  <g opacity="0.08">
+    <line x1="0" y1="320" x2="1200" y2="320" stroke="#4b5d73" stroke-width="1"/>
+    <line x1="0" y1="640" x2="1200" y2="640" stroke="#4b5d73" stroke-width="1"/>
+    <line x1="0" y1="960" x2="1200" y2="960" stroke="#4b5d73" stroke-width="1"/>
+    <line x1="0" y1="1280" x2="1200" y2="1280" stroke="#4b5d73" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="1600" stroke="#4b5d73" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="1600" stroke="#4b5d73" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="1600" stroke="#4b5d73" stroke-width="1"/>
   </g>
   
   <!-- Title -->
-  <text x="600" y="100" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#60a5fa" text-anchor="middle" opacity="0.4">SPACEPORT</text>
-  <text x="600" y="140" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle" opacity="0.5">Launch Pad • Assembly Building</text>
+  <text x="600" y="90" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="#60a5fa" text-anchor="middle" opacity="0.35">SPACEPORT</text>
+  <text x="600" y="130" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle" opacity="0.45">Acerra Launch Complex</text>
 </svg>

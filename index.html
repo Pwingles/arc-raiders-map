@@ -40,6 +40,24 @@
           <p class="panel__hint" id="mapDescription"></p>
         </section>
 
+        <section class="panel__section map-meta">
+          <div class="map-meta__visual">
+            <img id="mapPreview" alt="Selected map preview" class="map-meta__image" loading="lazy" />
+            <span class="map-meta__badge" id="mapThreatBadge">Threat</span>
+          </div>
+          <div class="map-meta__details">
+            <p class="map-meta__biome" id="mapBiome"></p>
+            <p class="map-meta__stat">
+              <span>Recommended Power</span>
+              <strong id="mapRecommendedPower">--</strong>
+            </p>
+            <p class="map-meta__stat">
+              <span>Featured Loot</span>
+              <strong id="mapFeaturedLoot">--</strong>
+            </p>
+          </div>
+        </section>
+
         <section class="panel__section stats" id="progressCard">
           <div>
             <p class="eyebrow">COMPLETION</p>
@@ -66,6 +84,21 @@
         <section class="panel__section">
           <p class="section-label">Categories</p>
           <div id="categoryFilters" class="chip-group"></div>
+        </section>
+
+        <section class="panel__section filter-row">
+          <div class="filter-field">
+            <label for="rarityFilter" class="section-label">Rarity</label>
+            <select id="rarityFilter" class="select">
+              <option value="all">All rarities</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="difficultyFilter" class="section-label">Difficulty</label>
+            <select id="difficultyFilter" class="select">
+              <option value="all">All difficulties</option>
+            </select>
+          </div>
         </section>
 
         <section class="panel__section toggle-group">

@@ -100,6 +100,77 @@ h3 {
   gap: 0.5rem;
 }
 
+.map-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 0.9rem;
+}
+
+.map-meta__visual {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  flex-shrink: 0;
+}
+
+.map-meta__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.9);
+}
+
+.map-meta__badge {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--threat-color, #f97316);
+  color: #05090f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.map-meta__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.map-meta__biome {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.map-meta__stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.map-meta__stat strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
 .panel__hint {
   margin: 0;
   color: var(--text-muted);
@@ -178,6 +249,18 @@ input[type="search"]:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.85rem;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
 .chip {
@@ -569,11 +652,6 @@ input[type="search"]:focus {
   display: none !important;
 }
 
-.map-legend__label {
-  font-size: 0.85rem;
-  color: var(--text);
-}
-
 @media (max-width: 720px) {
   .map-toolbar {
     flex-direction: column;
@@ -600,6 +678,16 @@ input[type="search"]:focus {
   .map-legend__svg {
     width: 12px;
     height: 12px;
+  }
+
+  .map-meta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .map-meta__visual {
+    width: 100%;
+    height: 180px;
   }
 }
 
