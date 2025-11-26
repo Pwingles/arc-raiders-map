@@ -21,7 +21,8 @@
     resetProgress: document.getElementById("resetProgress"),
     fitBoundsBtn: document.getElementById("fitBoundsBtn"),
     exportProgressBtn: document.getElementById("exportProgressBtn"),
-    importProgressInput: document.getElementById("importProgressInput")
+    importProgressInput: document.getElementById("importProgressInput"),
+    legendItems: document.getElementById("legendItems")
   };
 
   const state = {
@@ -306,13 +307,38 @@
     return coords;
   }
 
+  function getMarkerIcon(item) {
+    const iconMap = {
+      quest: "📋",
+      weaponCase: "📦",
+      fieldCrate: "📦",
+      securityLocker: "🔒",
+      raiderCache: "💎",
+      vehicleTrunk: "🚗",
+      extraction: "🚁",
+      boss: "👹",
+      collectible: "📜",
+      location: "📍"
+    };
+    return iconMap[item.type] || "📍";
+  }
+
   function createMarkerIcon(item) {
-    const baseClass = `marker-pill marker-pill--${item.type}`;
+    const icon = getMarkerIcon(item);
+    const category = config.categories[item.type];
+    const color = category?.color || "#94a3b8";
+    const completed = Boolean(state.progress[item.id]);
+    
     return L.divIcon({
-      className: "",
-      html: `<span class="${baseClass}">${config.categories[item.type]?.label ?? item.type}</span>`,
-      iconSize: [120, 32],
-      iconAnchor: [60, 16]
+      className: "custom-marker",
+      html: `
+        <div class="marker-icon ${completed ? "marker-icon--complete" : ""}" style="background-color: ${color};">
+          <span class="marker-icon__symbol">${icon}</span>
+          ${completed ? '<span class="marker-icon__check">✓</span>' : ""}
+        </div>
+      `,
+      iconSize: [36, 36],
+      iconAnchor: [18, 18]
     });
   }
 
@@ -477,8 +503,29 @@
     updateToolbarStats(visible);
   }
 
+  function hydrateLegend() {
+    els.legendItems.innerHTML = "";
+    Object.entries(config.categories).forEach(([key, meta]) => {
+      const item = document.createElement("div");
+      item.className = "map-legend__item";
+      
+      const icon = document.createElement("span");
+      icon.className = "map-legend__icon";
+      icon.textContent = getMarkerIcon({ type: key });
+      icon.style.backgroundColor = meta.color;
+      
+      const label = document.createElement("span");
+      label.className = "map-legend__label";
+      label.textContent = meta.label;
+      
+      item.append(icon, label);
+      els.legendItems.append(item);
+    });
+  }
+
   hydrateMapSelect();
   hydrateCategoryFilters();
+  hydrateLegend();
   initEvents();
   renderMap();
 })();

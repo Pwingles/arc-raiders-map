@@ -1,20 +1,64 @@
 <svg width="1200" height="1600" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="cityGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="cityBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#3a2818;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d1f12;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#1a0f08;stop-opacity:1" />
     </linearGradient>
+    <pattern id="sandPattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1.5" fill="#d97706" opacity="0.2"/>
+    </pattern>
   </defs>
-  <rect width="1200" height="1600" fill="url(#cityGrad)"/>
-  <text x="600" y="800" font-family="Arial" font-size="48" fill="#f59e0b" text-anchor="middle" opacity="0.3">BURIED CITY</text>
-  <text x="600" y="850" font-family="Arial" font-size="24" fill="#94a3b8" text-anchor="middle" opacity="0.5">Sunken Plaza • Subway Tunnels</text>
+  
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="url(#cityBg)"/>
+  <rect width="1200" height="1600" fill="url(#sandPattern)"/>
+  
   <!-- Sand dunes -->
-  <ellipse cx="580" cy="680" rx="150" ry="100" fill="#d97706" opacity="0.15"/>
-  <ellipse cx="640" cy="540" rx="120" ry="80" fill="#d97706" opacity="0.15"/>
-  <!-- Underground tunnels -->
-  <path d="M 480 720 L 620 600 L 640 540" stroke="#78350f" stroke-width="8" fill="none" opacity="0.3"/>
-  <!-- Structures -->
-  <rect x="600" y="580" width="60" height="60" fill="#92400e" opacity="0.4" stroke="#b45309" stroke-width="2"/>
-  <rect x="560" y="660" width="80" height="50" fill="#92400e" opacity="0.4" stroke="#b45309" stroke-width="2"/>
+  <ellipse cx="580" cy="680" rx="200" ry="140" fill="#d97706" opacity="0.15"/>
+  <ellipse cx="640" cy="540" rx="160" ry="110" fill="#d97706" opacity="0.12"/>
+  <ellipse cx="480" cy="720" rx="180" ry="130" fill="#92400e" opacity="0.1"/>
+  
+  <!-- Underground tunnels (visible as darker areas) -->
+  <path d="M 480 720 L 620 600 L 640 540 L 720 580" stroke="#78350f" stroke-width="12" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 600 600 L 680 680 L 720 700" stroke="#78350f" stroke-width="10" fill="none" opacity="0.35" stroke-linecap="round"/>
+  
+  <!-- Sunken Plaza -->
+  <ellipse cx="580" cy="680" rx="120" ry="80" fill="#92400e" opacity="0.3" stroke="#b45309" stroke-width="3"/>
+  <rect x="560" y="660" width="100" height="60" fill="#78350f" opacity="0.4" rx="8"/>
+  
+  <!-- Central Hub -->
+  <rect x="600" y="580" width="80" height="80" fill="#92400e" opacity="0.6" stroke="#b45309" stroke-width="2" rx="6"/>
+  <rect x="610" y="590" width="20" height="60" fill="#78350f" opacity="0.5"/>
+  <rect x="640" y="590" width="20" height="60" fill="#78350f" opacity="0.5"/>
+  <rect x="670" y="590" width="10" height="60" fill="#78350f" opacity="0.5"/>
+  
+  <!-- Plaza Rosa / Caffe Da Rosa -->
+  <rect x="620" y="520" width="60" height="50" fill="#b45309" opacity="0.5" stroke="#d97706" stroke-width="2" rx="4"/>
+  <circle cx="650" cy="545" r="8" fill="#78350f" opacity="0.6"/>
+  
+  <!-- Subway entrance -->
+  <ellipse cx="480" cy="720" rx="40" ry="30" fill="#78350f" opacity="0.5"/>
+  <rect x="460" y="710" width="40" height="20" fill="#92400e" opacity="0.6" rx="4"/>
+  
+  <!-- Buried structures (partial) -->
+  <rect x="400" y="600" width="50" height="40" fill="#78350f" opacity="0.3" rx="3"/>
+  <rect x="720" y="640" width="60" height="50" fill="#78350f" opacity="0.3" rx="3"/>
+  
+  <!-- Paths -->
+  <path d="M 360 280 L 580 680 L 840 1120" stroke="#92400e" stroke-width="10" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 640 540 L 720 580" stroke="#92400e" stroke-width="8" fill="none" opacity="0.35"/>
+  
+  <!-- Grid overlay -->
+  <g opacity="0.08">
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="0" y1="800" x2="1200" y2="800" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="0" y1="1200" x2="1200" y2="1200" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="1600" stroke="#f59e0b" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="1600" stroke="#f59e0b" stroke-width="1"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#f59e0b" text-anchor="middle" opacity="0.4">BURIED CITY</text>
+  <text x="600" y="140" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle" opacity="0.5">Sunken Plaza • Subway Tunnels</text>
 </svg>
-

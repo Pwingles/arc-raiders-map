@@ -437,38 +437,175 @@ input[type="search"]:focus {
   color: var(--accent);
 }
 
-.marker-pill {
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
+.custom-marker {
+  background: transparent;
+  border: none;
+}
+
+.marker-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.marker-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6), 0 0 0 3px rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+}
+
+.marker-icon--complete {
+  opacity: 0.6;
+  border-color: rgba(74, 222, 128, 0.8);
+}
+
+.marker-icon--complete::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid #4ade80;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.marker-icon__symbol {
+  font-size: 18px;
+  line-height: 1;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.marker-icon__check {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  background: #4ade80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
   color: #05090f;
-  font-weight: 600;
+  font-weight: bold;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.map-legend {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  min-width: 180px;
+}
+
+.map-legend__title {
+  margin: 0 0 0.75rem;
   font-size: 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 600;
 }
 
-.marker-pill--quest {
-  background: var(--yellow);
+.map-legend__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.marker-pill--loot {
-  background: #fb7185;
+.map-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
-.marker-pill--boss {
-  background: #c084fc;
+.map-legend__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
 }
 
-.marker-pill--event {
-  background: #34d399;
-}
-
-.marker-pill--collectible {
-  background: #f472b6;
+.map-legend__label {
+  font-size: 0.85rem;
+  color: var(--text);
 }
 
 .hidden {
   display: none !important;
+}
+
+.map-legend {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  min-width: 180px;
+}
+
+.map-legend__title {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.map-legend__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.map-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.map-legend__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.map-legend__label {
+  font-size: 0.85rem;
+  color: var(--text);
 }
 
 @media (max-width: 720px) {
@@ -479,6 +616,20 @@ input[type="search"]:focus {
 
   .map-toolbar__actions {
     justify-content: space-between;
+  }
+
+  .map-legend {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.75rem;
+    min-width: 150px;
+    font-size: 0.8rem;
+  }
+
+  .map-legend__icon {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
   }
 }
 

@@ -1,20 +1,63 @@
 <svg width="1200" height="1600" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="spaceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="spaceBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#020617;stop-opacity:1" />
     </linearGradient>
+    <radialGradient id="launchPadGrad" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:0.6" />
+    </radialGradient>
   </defs>
-  <rect width="1200" height="1600" fill="url(#spaceGrad)"/>
-  <text x="600" y="800" font-family="Arial" font-size="48" fill="#60a5fa" text-anchor="middle" opacity="0.3">SPACEPORT</text>
-  <text x="600" y="850" font-family="Arial" font-size="24" fill="#94a3b8" text-anchor="middle" opacity="0.5">Launch Pad • Assembly Building</text>
-  <!-- Launch pad -->
-  <circle cx="680" cy="440" r="80" fill="#334155" opacity="0.5" stroke="#475569" stroke-width="3"/>
-  <!-- Launch towers -->
-  <line x1="700" y1="480" x2="700" y2="200" stroke="#64748b" stroke-width="6" opacity="0.6"/>
-  <line x1="740" y1="480" x2="740" y2="200" stroke="#64748b" stroke-width="6" opacity="0.6"/>
-  <!-- Buildings -->
-  <rect x="540" y="580" width="120" height="100" fill="#475569" opacity="0.4" stroke="#64748b" stroke-width="2"/>
-  <rect x="820" y="660" width="100" height="80" fill="#475569" opacity="0.4" stroke="#64748b" stroke-width="2"/>
+  
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="url(#spaceBg)"/>
+  
+  <!-- Launch Pad -->
+  <circle cx="680" cy="440" r="100" fill="url(#launchPadGrad)" stroke="#475569" stroke-width="4"/>
+  <circle cx="680" cy="440" r="70" fill="#1e293b" opacity="0.7" stroke="#334155" stroke-width="2"/>
+  <circle cx="680" cy="440" r="40" fill="#0f172a" opacity="0.8"/>
+  
+  <!-- Launch Towers -->
+  <line x1="700" y1="480" x2="700" y2="180" stroke="#64748b" stroke-width="8" opacity="0.7"/>
+  <line x1="740" y1="480" x2="740" y2="180" stroke="#64748b" stroke-width="8" opacity="0.7"/>
+  <line x1="660" y1="480" x2="660" y2="200" stroke="#64748b" stroke-width="6" opacity="0.6"/>
+  <!-- Tower platforms -->
+  <rect x="690" y="200" width="20" height="15" fill="#475569" opacity="0.8"/>
+  <rect x="730" y="200" width="20" height="15" fill="#475569" opacity="0.8"/>
+  <rect x="650" y="220" width="20" height="15" fill="#475569" opacity="0.7"/>
+  
+  <!-- Assembly Building -->
+  <rect x="540" y="580" width="140" height="120" fill="#334155" opacity="0.7" stroke="#475569" stroke-width="3" rx="4"/>
+  <rect x="550" y="590" width="30" height="100" fill="#1e293b" opacity="0.8"/>
+  <rect x="590" y="590" width="30" height="100" fill="#1e293b" opacity="0.8"/>
+  <rect x="630" y="590" width="30" height="100" fill="#1e293b" opacity="0.8"/>
+  <rect x="670" y="590" width="10" height="100" fill="#1e293b" opacity="0.8"/>
+  <!-- Roof details -->
+  <polygon points="540,580 620,560 680,580" fill="#475569" opacity="0.6"/>
+  
+  <!-- Fuel Depot -->
+  <rect x="820" y="660" width="120" height="100" fill="#334155" opacity="0.7" stroke="#475569" stroke-width="3" rx="4"/>
+  <circle cx="880" cy="710" r="35" fill="#1e293b" opacity="0.8" stroke="#334155" stroke-width="2"/>
+  <circle cx="880" cy="710" r="25" fill="#0f172a" opacity="0.9"/>
+  <!-- Warning stripes -->
+  <rect x="820" y="660" width="120" height="15" fill="#dc2626" opacity="0.6"/>
+  
+  <!-- Service roads -->
+  <path d="M 240 680 L 540 580 L 680 440 L 1080 520" stroke="#334155" stroke-width="12" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <path d="M 680 440 L 820 660" stroke="#334155" stroke-width="10" fill="none" opacity="0.4"/>
+  
+  <!-- Grid overlay -->
+  <g opacity="0.1">
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="0" y1="800" x2="1200" y2="800" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="0" y1="1200" x2="1200" y2="1200" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="1600" stroke="#60a5fa" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="1600" stroke="#60a5fa" stroke-width="1"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#60a5fa" text-anchor="middle" opacity="0.4">SPACEPORT</text>
+  <text x="600" y="140" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle" opacity="0.5">Launch Pad • Assembly Building</text>
 </svg>
-
