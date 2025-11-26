@@ -1,0 +1,21 @@
+<svg width="1200" height="1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="stellaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0e7ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c7d2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#stellaGrad)"/>
+  <text x="600" y="800" font-family="Arial" font-size="48" fill="#1e40af" text-anchor="middle" opacity="0.3">STELLA MONTIS</text>
+  <text x="600" y="850" font-family="Arial" font-size="24" fill="#64748b" text-anchor="middle" opacity="0.5">Isolated Mountain Facility</text>
+  <!-- Snow-covered mountains -->
+  <polygon points="500,400 600,500 700,450 800,500 900,400" fill="#ffffff" opacity="0.6" stroke="#cbd5e1" stroke-width="3"/>
+  <polygon points="400,600 480,680 600,640 720,700 800,620" fill="#ffffff" opacity="0.5" stroke="#cbd5e1" stroke-width="2"/>
+  <!-- Snowfield -->
+  <ellipse cx="480" cy="680" rx="200" ry="150" fill="#f1f5f9" opacity="0.4"/>
+  <!-- Facility -->
+  <rect x="580" y="480" width="80" height="60" fill="#475569" opacity="0.5" stroke="#64748b" stroke-width="2"/>
+  <!-- Ice caves -->
+  <ellipse cx="720" cy="840" rx="80" ry="60" fill="#e0e7ff" opacity="0.6" stroke="#c7d2fe" stroke-width="2"/>
+</svg>
+

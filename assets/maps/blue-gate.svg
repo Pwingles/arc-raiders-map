@@ -1,0 +1,22 @@
+<svg width="1200" height="1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f1f3a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#blueGrad)"/>
+  <text x="600" y="800" font-family="Arial" font-size="48" fill="#3b82f6" text-anchor="middle" opacity="0.3">THE BLUE GATE</text>
+  <text x="600" y="850" font-family="Arial" font-size="24" fill="#94a3b8" text-anchor="middle" opacity="0.5">Mountain Pass • Underground Complex</text>
+  <!-- Mountains -->
+  <polygon points="400,300 520,440 600,380 680,440 800,320" fill="#334155" opacity="0.5" stroke="#475569" stroke-width="2"/>
+  <polygon points="300,500 420,580 500,520 600,600 700,540" fill="#334155" opacity="0.4" stroke="#475569" stroke-width="2"/>
+  <!-- Roads -->
+  <path d="M 360 640 L 520 440 L 680 720" stroke="#64748b" stroke-width="12" fill="none" opacity="0.4"/>
+  <!-- Underground complex -->
+  <ellipse cx="680" cy="720" rx="100" ry="60" fill="#1e293b" opacity="0.6" stroke="#334155" stroke-width="2"/>
+  <!-- Town -->
+  <rect x="400" y="560" width="60" height="50" fill="#475569" opacity="0.4" stroke="#64748b" stroke-width="2"/>
+  <rect x="420" y="580" width="40" height="40" fill="#475569" opacity="0.4" stroke="#64748b" stroke-width="2"/>
+</svg>
+
