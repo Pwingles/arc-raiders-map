@@ -61,7 +61,8 @@ CATEGORY_MAP = {
     13928: "location",  # Medium Loot
 }
 
-# Map configurations with coordinate bounds
+# Map configurations with image bounds
+# Using 1000x1000 as a standard coordinate space
 MAP_CONFIGS = {
     "dam-battlegrounds": {
         "file": "mapgenie_dam-battlegrounds.json",
@@ -74,7 +75,7 @@ MAP_CONFIGS = {
         "recommendedPower": 18,
         "featuredLoot": ["Aphelion Blueprint", "Stormglass Core modules"],
         "image_url": "data/Dam_Battlegrounds_Map_(Server_Slam).jpg",
-        "image_bounds": [[0, 0], [1200, 1600]],
+        "image_bounds": [[0, 0], [1000, 1000]],
     },
     "buried-city": {
         "file": "mapgenie_buried-city.json",
@@ -87,7 +88,7 @@ MAP_CONFIGS = {
         "recommendedPower": 16,
         "featuredLoot": ["Espresso Machine Parts", "Urban alloy stockpiles"],
         "image_url": "data/Buried_City_Map.png",
-        "image_bounds": [[0, 0], [1200, 1600]],
+        "image_bounds": [[0, 0], [1000, 1000]],
     },
     "spaceport": {
         "file": "mapgenie_spaceport.json",
@@ -100,7 +101,7 @@ MAP_CONFIGS = {
         "recommendedPower": 22,
         "featuredLoot": ["Prototype Mods", "Fuel Depot Access Codes"],
         "image_url": "data/Spaceport_Map.png",
-        "image_bounds": [[0, 0], [1200, 1600]],
+        "image_bounds": [[0, 0], [1000, 1000]],
     },
     "the-blue-gate": {
         "file": "mapgenie_the-blue-gate.json",
@@ -113,7 +114,7 @@ MAP_CONFIGS = {
         "recommendedPower": 15,
         "featuredLoot": ["Rusted Gears", "Vehicle salvage"],
         "image_url": "data/The_Blue_Gate_Map.png",
-        "image_bounds": [[0, 0], [1200, 1600]],
+        "image_bounds": [[0, 0], [1000, 1000]],
     },
     "stella-montis": {
         "file": "mapgenie_stella-montis.json",
@@ -126,7 +127,7 @@ MAP_CONFIGS = {
         "recommendedPower": 24,
         "featuredLoot": ["North Line tech fragments", "Cryonic alloys"],
         "image_url": "data/Stella_Montis_map_lower_level.png",
-        "image_bounds": [[0, 0], [1200, 1600]],
+        "image_bounds": [[0, 0], [1000, 1000]],
     },
 }
 
@@ -145,33 +146,48 @@ def get_coordinate_bounds(locations):
 
 
 def convert_coords(lat, lng, bounds, image_bounds):
-    """Convert MapGenie lat/lng to pixel coordinates for Leaflet Simple projection."""
+    """
+    Convert MapGenie lat/lng to pixel coordinates for Leaflet Simple projection.
+    
+    MapGenie uses:
+    - Latitude: increases going up/north (maps to Y)
+    - Longitude: increases going right/east (maps to X, but values are negative)
+    
+    Leaflet Simple CRS uses [lat, lng] = [y, x]
+    """
     lat = float(lat)
     lng = float(lng)
     
-    # Image bounds: [[y_min, x_min], [y_max, x_max]] = [[0, 0], [1200, 1600]]
+    # Image bounds: [[y_min, x_min], [y_max, x_max]]
     y_min, x_min = image_bounds[0]
     y_max, x_max = image_bounds[1]
     
-    # Add padding to bounds (5% on each side)
-    lat_range = bounds["lat_max"] - bounds["lat_min"]
-    lng_range = bounds["lng_max"] - bounds["lng_min"]
+    # Data bounds
+    lat_min = bounds["lat_min"]
+    lat_max = bounds["lat_max"]
+    lng_min = bounds["lng_min"]
+    lng_max = bounds["lng_max"]
     
-    lat_min = bounds["lat_min"] - lat_range * 0.05
-    lat_max = bounds["lat_max"] + lat_range * 0.05
-    lng_min = bounds["lng_min"] - lng_range * 0.05
-    lng_max = bounds["lng_max"] + lng_range * 0.05
+    # Add 5% padding
+    lat_range = lat_max - lat_min
+    lng_range = lng_max - lng_min
+    lat_min -= lat_range * 0.05
+    lat_max += lat_range * 0.05
+    lng_min -= lng_range * 0.05
+    lng_max += lng_range * 0.05
     
-    # Normalize lat/lng to 0-1 range
-    lat_norm = (lat - lat_min) / (lat_max - lat_min)
-    lng_norm = (lng - lng_min) / (lng_max - lng_min)
+    # Normalize to 0-1 range
+    lat_norm = (lat - lat_min) / (lat_max - lat_min) if lat_max != lat_min else 0.5
+    lng_norm = (lng - lng_min) / (lng_max - lng_min) if lng_max != lng_min else 0.5
     
     # Convert to pixel coordinates
-    # X maps from longitude, Y maps from latitude
-    x = x_min + lng_norm * (x_max - x_min)
+    # Y (lat) maps from bottom to top
     y = y_min + lat_norm * (y_max - y_min)
+    # X (lng) maps from left to right
+    x = x_min + lng_norm * (x_max - x_min)
     
-    return [round(x, 1), round(y, 1)]
+    # Return as [y, x] for Leaflet (lat, lng format)
+    return [round(y, 1), round(x, 1)]
 
 
 def convert_location(loc, bounds, image_bounds, map_slug):
@@ -266,7 +282,7 @@ def generate_maps_js():
             "recommendedPower": config["recommendedPower"],
             "featuredLoot": config["featuredLoot"],
             "projection": "simple",
-            "zoom": {"min": -1, "max": 3, "initial": 0},
+            "zoom": {"min": -2, "max": 4, "initial": 0},
             "image": {
                 "url": config["image_url"],
                 "bounds": config["image_bounds"],
@@ -284,43 +300,43 @@ def generate_maps_js():
         "rarityOptions": ["common", "uncommon", "rare", "legendary", "exotic"],
         "difficultyOptions": ["low", "medium", "high", "elite"],
         "categories": {
-            "location": {"label": "Location", "color": "#60a5fa"},
+            "location": {"label": "Location", "color": "#3b82f6"},
             "cargoElevator": {"label": "Cargo Elevator", "color": "#a855f7"},
             "fieldDepot": {"label": "Field Depot", "color": "#8b5cf6"},
-            "lockedDoor": {"label": "Locked Door", "color": "#ef4444"},
-            "raiderCamp": {"label": "Raider Camp", "color": "#f87171"},
+            "lockedDoor": {"label": "Locked Door", "color": "#f97316"},
+            "raiderCamp": {"label": "Raider Camp", "color": "#78716c"},
             "raiderHatch": {"label": "Raider Hatch", "color": "#dc2626"},
-            "collectible": {"label": "Mission Objective", "color": "#38bdf8"},
-            "ammoBox": {"label": "Ammo Box", "color": "#fb923c"},
+            "collectible": {"label": "Mission Objective", "color": "#06b6d4"},
+            "ammoBox": {"label": "Ammo Box", "color": "#f59e0b"},
             "arcCourier": {"label": "ARC Courier", "color": "#fbbf24"},
-            "baronHusk": {"label": "Baron Husk", "color": "#f59e0b"},
-            "container": {"label": "Container", "color": "#d97706"},
-            "fieldCrate": {"label": "Field Crate", "color": "#f97316"},
-            "grenadeTube": {"label": "Grenade Tube", "color": "#ea580c"},
+            "baronHusk": {"label": "Baron Husk", "color": "#a855f7"},
+            "container": {"label": "Container", "color": "#a78bfa"},
+            "fieldCrate": {"label": "Field Crate", "color": "#c084fc"},
+            "grenadeTube": {"label": "Grenade Tube", "color": "#84cc16"},
             "item": {"label": "Item", "color": "#94a3b8"},
             "medicalBox": {"label": "Medical Box", "color": "#ef4444"},
-            "securityLocker": {"label": "Security Locker", "color": "#a855f7"},
-            "weaponCase": {"label": "Weapon Crate", "color": "#fb7185"},
-            "agave": {"label": "Agave", "color": "#84cc16"},
-            "apricot": {"label": "Apricot", "color": "#bef264"},
-            "fruitBasket": {"label": "Fruit Basket", "color": "#a3e635"},
-            "greatMullein": {"label": "Great Mullein", "color": "#65a30d"},
-            "mushroom": {"label": "Mushroom", "color": "#4d7c0f"},
-            "pricklyPear": {"label": "Prickly Pear", "color": "#3f6212"},
-            "quest": {"label": "Mission", "color": "#facc15"},
+            "securityLocker": {"label": "Security Locker", "color": "#ec4899"},
+            "weaponCase": {"label": "Weapon Crate", "color": "#f472b6"},
+            "agave": {"label": "Agave", "color": "#22c55e"},
+            "apricot": {"label": "Apricot", "color": "#f59e0b"},
+            "fruitBasket": {"label": "Fruit Basket", "color": "#84cc16"},
+            "greatMullein": {"label": "Great Mullein", "color": "#22c55e"},
+            "mushroom": {"label": "Mushroom", "color": "#a3a3a3"},
+            "pricklyPear": {"label": "Prickly Pear", "color": "#16a34a"},
+            "quest": {"label": "Mission", "color": "#fbbf24"},
             "arc": {"label": "ARC", "color": "#ef4444"},
-            "enemy": {"label": "Enemy", "color": "#b91c1c"},
-            "sentinel": {"label": "Sentinel", "color": "#991b1b"},
+            "enemy": {"label": "Enemy", "color": "#dc2626"},
+            "sentinel": {"label": "Sentinel", "color": "#b91c1c"},
             "surveyor": {"label": "Surveyor", "color": "#7f1d1d"},
-            "boss": {"label": "Boss", "color": "#c084fc"},
-            "miscellaneous": {"label": "Miscellaneous", "color": "#94a3b8"},
+            "miscellaneous": {"label": "Miscellaneous", "color": "#6b7280"},
             "playerSpawn": {"label": "Player Spawn", "color": "#22d3ee"},
             "supplyCall": {"label": "Supply Call Station", "color": "#0ea5e9"},
-            "zipline": {"label": "Zipline", "color": "#0284c7"},
-            "raiderCache": {"label": "Raider Cache", "color": "#ec4899"},
-            "event": {"label": "Event", "color": "#d946ef"},
+            "zipline": {"label": "Zipline", "color": "#06b6d4"},
+            "raiderCache": {"label": "Raider Cache", "color": "#f59e0b"},
+            "event": {"label": "Event", "color": "#a855f7"},
+            "boss": {"label": "Boss", "color": "#c084fc"},
             "vehicleTrunk": {"label": "Vehicle Trunk", "color": "#14b8a6"},
-            "extraction": {"label": "Extraction Point", "color": "#34d399"}
+            "extraction": {"label": "Extraction Point", "color": "#22c55e"}
         },
         "maps": maps
     }
@@ -340,4 +356,3 @@ def generate_maps_js():
 
 if __name__ == "__main__":
     generate_maps_js()
-

@@ -287,8 +287,8 @@
         iconAnchor: [14, 28],
       });
 
-      // Convert coords [x, y] to [y, x] for Leaflet
-      const latLng = [item.coords[1], item.coords[0]];
+      // coords are [y, x] = [lat, lng] format for Leaflet Simple CRS
+      const latLng = item.coords;
       
       const marker = L.marker(latLng, { icon });
       marker.itemData = item;
