@@ -67,7 +67,7 @@ window.arcMapsConfig = {
       description:
         "Overgrown ruins of the Alcantara Power Plant. Toxic, waterlogged terrain with frequent ARC skirmishes. Features the Control Tower, Research & Administration Building, and Pumping Station.",
       biome: "Flooded industrial exclusion zone",
-      thumbnail: "assets/maps/dam-battlegrounds.svg",
+      thumbnail: "data/Dam_Battlegrounds_Map_(Server_Slam).jpg",
       threatLevel: { label: "High Threat", color: "#f97316" },
       recommendedPower: 18,
       featuredLoot: ["Aphelion Blueprint", "Stormglass Core modules"],
@@ -78,7 +78,7 @@ window.arcMapsConfig = {
         initial: 0
       },
       image: {
-        url: "assets/maps/dam-battlegrounds.svg",
+        url: "data/Dam_Battlegrounds_Map_(Server_Slam).jpg",
         bounds: [
           [0, 0],
           [1200, 1600]
@@ -222,7 +222,7 @@ window.arcMapsConfig = {
       description:
         "A remnant of the old world amidst sand dunes. Underground city reclaimed by nature with narrow streets and empty plazas. Features Sunken Plaza, Subway Tunnels, and Central Hub.",
       biome: "Subterranean metro ruins",
-      thumbnail: "assets/maps/buried-city.svg",
+      thumbnail: "data/Buried_City_Map.png",
       threatLevel: { label: "Medium Threat", color: "#facc15" },
       recommendedPower: 16,
       featuredLoot: ["Espresso Machine Parts", "Urban alloy stockpiles"],
@@ -233,7 +233,7 @@ window.arcMapsConfig = {
         initial: 0
       },
       image: {
-        url: "assets/maps/buried-city.svg",
+        url: "data/Buried_City_Map.png",
         bounds: [
           [0, 0],
           [1200, 1600]
@@ -370,7 +370,7 @@ window.arcMapsConfig = {
       description:
         "A derelict rocket launch facility reflecting humanity's past ambitions. Multi-level buildings and tight corridors. Features Launch Pad, Assembly Building, and Fuel Depot.",
       biome: "Orbital launch complex",
-      thumbnail: "assets/maps/spaceport.svg",
+      thumbnail: "data/Spaceport_Map.png",
       threatLevel: { label: "Severe Threat", color: "#60a5fa" },
       recommendedPower: 22,
       featuredLoot: ["Prototype Mods", "Fuel Depot Access Codes"],
@@ -381,7 +381,7 @@ window.arcMapsConfig = {
         initial: 0
       },
       image: {
-        url: "assets/maps/spaceport.svg",
+        url: "data/Spaceport_Map.png",
         bounds: [
           [0, 0],
           [1200, 1600]
@@ -532,7 +532,7 @@ window.arcMapsConfig = {
       description:
         "A mountainous region with open hills, small towns, tunnels, and underground complexes. Excellent for farming Rusted Gears from vehicle trunks.",
       biome: "Foothills and subterranean caverns",
-      thumbnail: "assets/maps/blue-gate.svg",
+      thumbnail: "data/The_Blue_Gate_Map.png",
       threatLevel: { label: "Dynamic Threat", color: "#38bdf8" },
       recommendedPower: 15,
       featuredLoot: ["Rusted Gears", "Vehicle salvage"],
@@ -543,7 +543,7 @@ window.arcMapsConfig = {
         initial: 0
       },
       image: {
-        url: "assets/maps/blue-gate.svg",
+        url: "data/The_Blue_Gate_Map.png",
         bounds: [
           [0, 0],
           [1200, 1600]
@@ -676,7 +676,7 @@ window.arcMapsConfig = {
       description:
         "An isolated mountain facility shrouded in snow, containing long-kept secrets. Introduced in the North Line update. Harsh arctic environment with hidden facilities.",
       biome: "Polar research summit",
-      thumbnail: "assets/maps/stella-montis.svg",
+      thumbnail: "data/Stella_Montis_map_lower_level.png",
       threatLevel: { label: "Extreme Threat", color: "#a855f7" },
       recommendedPower: 24,
       featuredLoot: ["North Line tech fragments", "Cryonic alloys"],
@@ -687,7 +687,7 @@ window.arcMapsConfig = {
         initial: 0
       },
       image: {
-        url: "assets/maps/stella-montis.svg",
+        url: "data/Stella_Montis_map_lower_level.png",
         bounds: [
           [0, 0],
           [1200, 1600]
