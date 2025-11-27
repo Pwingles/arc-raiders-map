@@ -906,6 +906,107 @@ html, body {
 }
 
 /* ==========================================================================
+   Mapbox GL Markers
+   ========================================================================== */
+
+.marker {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.marker:hover {
+  transform: scale(1.2);
+  z-index: 100 !important;
+}
+
+.marker__icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.marker__icon::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid currentColor;
+}
+
+.marker__icon-inner {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.marker--found .marker__icon {
+  opacity: 0.4;
+  filter: grayscale(0.5);
+}
+
+/* Mapbox GL Popup Styles */
+.mapboxgl-popup--custom {
+  z-index: 1000;
+}
+
+.mapboxgl-popup--custom .mapboxgl-popup-content {
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0;
+  min-width: 250px;
+  max-width: 300px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.mapboxgl-popup--custom .mapboxgl-popup-tip {
+  border-top-color: var(--bg-sidebar);
+}
+
+.popup {
+  padding: 16px;
+}
+
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.popup__close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.popup__close:hover {
+  color: var(--text-primary);
+}
+
+.popup__btn:not(.popup__btn--found) {
+  background: var(--accent);
+  color: white;
+  border: none;
+}
+
+.popup__btn:not(.popup__btn--found):hover {
+  background: var(--accent-hover);
+}
+
+/* ==========================================================================
    Utility Classes
    ========================================================================== */
 
