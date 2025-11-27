@@ -69,7 +69,8 @@ body {
   gap: 1.5rem;
   backdrop-filter: blur(16px);
   box-shadow: var(--shadow-lg);
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 3rem);
 }
 
 .panel__header {
