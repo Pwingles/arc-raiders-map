@@ -77,11 +77,11 @@ MAP_CONFIGS = {
         "recommendedPower": 18,
         "featuredLoot": ["Aphelion Blueprint", "Stormglass Core modules"],
         "image_url": "data/Dam_Battlegrounds_Map_(Server_Slam).jpg",
-        # Calibration: Our image shows more area than the playable zone
-        # Need to scale down and offset to fit markers into the playable area
-        "padding": 0.35,  # Large padding to push markers toward center
-        "offset_x": 50,   # Shift right slightly
-        "offset_y": 80,   # Shift up
+        # Calibration: Map shows yellow outline of playable area
+        # Markers should fit within that outlined region
+        "padding": 0.40,  # Larger padding to compress markers
+        "offset_x": 65,   # Shift right to center in playable area
+        "offset_y": 50,   # Shift up slightly
     },
     "buried-city": {
         "file": "mapgenie_buried-city.json",
@@ -109,9 +109,10 @@ MAP_CONFIGS = {
         "recommendedPower": 22,
         "featuredLoot": ["Prototype Mods", "Fuel Depot Access Codes"],
         "image_url": "data/Spaceport_Map.png",
-        "padding": 0.30,
-        "offset_x": 30,
-        "offset_y": 60,
+        # Calibration: Spread markers more to cover the visible playable area
+        "padding": 0.25,
+        "offset_x": 45,
+        "offset_y": 40,
     },
     "the-blue-gate": {
         "file": "mapgenie_the-blue-gate.json",

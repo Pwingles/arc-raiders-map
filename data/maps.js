@@ -206,8 +206,8 @@ window.arcMapsConfig = {
           "title": "Central Swamp Lift",
           "type": "cargoElevator",
           "coords": [
-            695.6,
-            405.5
+            659.2,
+            428.5
           ]
         },
         {
@@ -215,8 +215,8 @@ window.arcMapsConfig = {
           "title": "Red Lakes Balcony Lift",
           "type": "cargoElevator",
           "coords": [
-            546.9,
-            710.5
+            518.8,
+            716.6
           ]
         },
         {
@@ -224,8 +224,8 @@ window.arcMapsConfig = {
           "title": "North Complex Elevator",
           "type": "cargoElevator",
           "coords": [
-            810.5,
-            673.7
+            767.7,
+            681.9
           ],
           "description": "Raider Extract"
         },
@@ -234,8 +234,8 @@ window.arcMapsConfig = {
           "title": "Water Treatment Elevator",
           "type": "cargoElevator",
           "coords": [
-            613.2,
-            467.7
+            581.4,
+            487.3
           ]
         },
         {
@@ -243,8 +243,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            536.9,
-            390.7
+            509.3,
+            414.5
           ],
           "description": "Field Crate Locations: - Field Crate   - Field Crate   - Field Crate   - Field Crate   - Field Crate - Field Crate"
         },
@@ -253,8 +253,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            608.9,
-            519.0
+            577.3,
+            535.7
           ]
         },
         {
@@ -262,8 +262,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            570.3,
-            660.9
+            540.9,
+            669.8
           ],
           "description": "Field Crate South East   Field Crate South West   Field Crate North West"
         },
@@ -272,8 +272,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            650.1,
-            350.7
+            616.2,
+            376.7
           ],
           "description": "Field Crate Locations: - Field Depot     - Field Depot     - Field Depot   - Field Depot"
         },
@@ -282,8 +282,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            765.5,
-            775.3
+            725.2,
+            777.8
           ],
           "description": "Field Crate Locations: - Field Crate - Field Crate   - Field Crate North"
         },
@@ -292,8 +292,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            749.4,
-            501.2
+            710.0,
+            518.9
           ],
           "description": "Field Crate South   Field Crate North   Field Crate North East   Field Crate East"
         },
@@ -302,8 +302,8 @@ window.arcMapsConfig = {
           "title": "Ruby Residence",
           "type": "location",
           "coords": [
-            830.6,
-            406.2
+            786.7,
+            429.2
           ]
         },
         {
@@ -311,8 +311,8 @@ window.arcMapsConfig = {
           "title": "Pale Apartments",
           "type": "location",
           "coords": [
-            788.0,
-            326.6
+            746.4,
+            354.0
           ]
         },
         {
@@ -320,8 +320,8 @@ window.arcMapsConfig = {
           "title": "Old Battleground",
           "type": "location",
           "coords": [
-            706.3,
-            314.6
+            669.3,
+            342.7
           ],
           "description": "Type: ARC"
         },
@@ -330,8 +330,8 @@ window.arcMapsConfig = {
           "title": "Water Treatment Control",
           "type": "location",
           "coords": [
-            630.4,
-            428.9
+            597.6,
+            450.6
           ],
           "description": "Loot Value: Medium Type:  - Industrial - Mechanical"
         },
@@ -340,8 +340,8 @@ window.arcMapsConfig = {
           "title": "South Swamp Outpost",
           "type": "location",
           "coords": [
-            618.4,
-            307.8
+            586.2,
+            336.3
           ]
         },
         {
@@ -349,8 +349,8 @@ window.arcMapsConfig = {
           "title": "Water Towers",
           "type": "location",
           "coords": [
-            522.8,
-            356.7
+            495.9,
+            382.4
           ]
         },
         {
@@ -358,8 +358,8 @@ window.arcMapsConfig = {
           "title": "Electrical Substation",
           "type": "location",
           "coords": [
-            549.9,
-            416.7
+            521.6,
+            439.1
           ],
           "description": "Type: Electrical"
         },
@@ -368,8 +368,8 @@ window.arcMapsConfig = {
           "title": "Hydroponic Dome Complex",
           "type": "location",
           "coords": [
-            753.7,
-            523.7
+            714.1,
+            540.2
           ],
           "description": "Loot Value: High Type:  - Nature - Industrial - Security"
         },
@@ -378,8 +378,8 @@ window.arcMapsConfig = {
           "title": "Formicai Outpost",
           "type": "location",
           "coords": [
-            428.1,
-            540.0
+            406.5,
+            555.5
           ]
         },
         {
@@ -387,8 +387,8 @@ window.arcMapsConfig = {
           "title": "Scrap Yard",
           "type": "location",
           "coords": [
-            492.4,
-            535.0
+            467.3,
+            550.8
           ],
           "description": "Type:  - Mechanical - Industrial"
         },
@@ -397,8 +397,8 @@ window.arcMapsConfig = {
           "title": "Wreckage",
           "type": "location",
           "coords": [
-            495.8,
-            598.6
+            470.5,
+            610.9
           ]
         },
         {
@@ -406,8 +406,8 @@ window.arcMapsConfig = {
           "title": "Small Creek",
           "type": "location",
           "coords": [
-            549.4,
-            556.7
+            521.1,
+            571.3
           ]
         },
         {
@@ -415,8 +415,8 @@ window.arcMapsConfig = {
           "title": "Testing Annex",
           "type": "location",
           "coords": [
-            523.7,
-            689.6
+            496.8,
+            696.9
           ],
           "description": "Loot Value: Medium Type:  - Medical - Commercial"
         },
@@ -425,8 +425,8 @@ window.arcMapsConfig = {
           "title": "Electrical Tower",
           "type": "location",
           "coords": [
-            528.0,
-            777.9
+            500.9,
+            780.3
           ]
         },
         {
@@ -434,8 +434,8 @@ window.arcMapsConfig = {
           "title": "Red Lakes Balcony",
           "type": "location",
           "coords": [
-            572.9,
-            653.8
+            543.3,
+            663.1
           ]
         },
         {
@@ -443,8 +443,8 @@ window.arcMapsConfig = {
           "title": "Research & Administration",
           "type": "location",
           "coords": [
-            593.1,
-            581.9
+            562.3,
+            595.1
           ],
           "description": "Loot Value: High Type:  - Commercial - Technological"
         },
@@ -453,8 +453,8 @@ window.arcMapsConfig = {
           "title": "Control Tower",
           "type": "location",
           "coords": [
-            613.4,
-            598.7
+            581.6,
+            611.0
           ],
           "description": "Loot Value: High Type:  - Technological - Security"
         },
@@ -463,8 +463,8 @@ window.arcMapsConfig = {
           "title": "Primary Facility",
           "type": "location",
           "coords": [
-            629.1,
-            547.2
+            596.4,
+            562.3
           ],
           "description": "Type:  - Mechanical - Industrial"
         },
@@ -473,8 +473,8 @@ window.arcMapsConfig = {
           "title": "Floodgates",
           "type": "location",
           "coords": [
-            662.2,
-            589.8
+            627.6,
+            602.6
           ]
         },
         {
@@ -482,8 +482,8 @@ window.arcMapsConfig = {
           "title": "The Breach",
           "type": "location",
           "coords": [
-            709.4,
-            623.1
+            672.2,
+            634.0
           ]
         },
         {
@@ -491,8 +491,8 @@ window.arcMapsConfig = {
           "title": "Pipeline Tower",
           "type": "location",
           "coords": [
-            737.9,
-            690.8
+            699.1,
+            697.9
           ]
         },
         {
@@ -500,8 +500,8 @@ window.arcMapsConfig = {
           "title": "East Broken Bridge",
           "type": "location",
           "coords": [
-            742.9,
-            844.1
+            703.9,
+            842.8
           ]
         },
         {
@@ -509,8 +509,8 @@ window.arcMapsConfig = {
           "title": "Raider Outpost East",
           "type": "location",
           "coords": [
-            789.3,
-            789.8
+            747.7,
+            791.5
           ]
         },
         {
@@ -518,8 +518,8 @@ window.arcMapsConfig = {
           "title": "Power Generation Complex",
           "type": "location",
           "coords": [
-            785.5,
-            716.3
+            744.1,
+            722.1
           ],
           "description": "Loot Value: Medium Type:  - Electrical - Industrial"
         },
@@ -528,8 +528,8 @@ window.arcMapsConfig = {
           "title": "Generator Hall",
           "type": "location",
           "coords": [
-            799.2,
-            654.8
+            757.1,
+            664.0
           ]
         },
         {
@@ -537,8 +537,8 @@ window.arcMapsConfig = {
           "title": "North Complex Elevator",
           "type": "location",
           "coords": [
-            807.0,
-            673.0
+            764.4,
+            681.1
           ]
         },
         {
@@ -546,8 +546,8 @@ window.arcMapsConfig = {
           "title": "Pattern House",
           "type": "location",
           "coords": [
-            852.6,
-            656.3
+            807.5,
+            665.4
           ]
         },
         {
@@ -555,8 +555,8 @@ window.arcMapsConfig = {
           "title": "West Broken Bridge",
           "type": "location",
           "coords": [
-            852.1,
-            584.4
+            807.0,
+            597.5
           ]
         },
         {
@@ -564,8 +564,8 @@ window.arcMapsConfig = {
           "title": "Ben Welder's Sunroof",
           "type": "location",
           "coords": [
-            772.1,
-            381.6
+            731.4,
+            406.0
           ]
         },
         {
@@ -573,8 +573,8 @@ window.arcMapsConfig = {
           "title": "Underpass",
           "type": "location",
           "coords": [
-            767.9,
-            678.7
+            727.5,
+            686.6
           ]
         },
         {
@@ -582,8 +582,8 @@ window.arcMapsConfig = {
           "title": "Dam Staff Room",
           "type": "lockedDoor",
           "coords": [
-            602.2,
-            584.6
+            570.9,
+            597.6
           ],
           "description": "Key Required: Dam Staff Room Key Behind the Door:  - Lockers - Security Breach",
           "mediaUrl": "https://media.mapgenie.io/storage/media/984316c2-03dc-4a83-9993-f86598682dbe.jpeg"
@@ -593,8 +593,8 @@ window.arcMapsConfig = {
           "title": "Dam Testing Annex Locked Door",
           "type": "lockedDoor",
           "coords": [
-            521.2,
-            700.7
+            494.5,
+            707.3
           ],
           "description": "Location: Lower level of the central courtyard Key Required: Dam Testing Annex Key",
           "mediaUrl": "https://media.mapgenie.io/storage/media/9cd78f35-5ffc-4b69-a090-1cae79ac7e91.jpeg"
@@ -604,8 +604,8 @@ window.arcMapsConfig = {
           "title": "Dam Control Center Tower",
           "type": "lockedDoor",
           "coords": [
-            614.0,
-            587.3
+            582.1,
+            600.2
           ],
           "description": "Key Required: Dam Control Center Tower Key"
         },
@@ -614,8 +614,8 @@ window.arcMapsConfig = {
           "title": "Dam Surveillance Room",
           "type": "lockedDoor",
           "coords": [
-            619.6,
-            427.8
+            587.4,
+            449.6
           ],
           "description": "Key Required: Dam Surveillance Key (common) Location: Middle floor (with the blue pipe) on the south side of the building. Behind the Door:  - Weapon Crate - Ammo Case - Lockers - Backpack - Loose Electronics"
         },
@@ -624,8 +624,8 @@ window.arcMapsConfig = {
           "title": "Security Brech",
           "type": "lockedDoor",
           "coords": [
-            651.1,
-            618.6
+            617.2,
+            629.7
           ]
         },
         {
@@ -633,8 +633,8 @@ window.arcMapsConfig = {
           "title": "Locked Door",
           "type": "lockedDoor",
           "coords": [
-            764.9,
-            714.0
+            724.6,
+            719.9
           ],
           "description": "Key Required: Power Rod Location: In the big room underground where turrets, fireballs, and pops spawn Behind the Door:  - Lockers - Grenade Spawns"
         },
@@ -643,8 +643,8 @@ window.arcMapsConfig = {
           "title": "Raider Camp",
           "type": "raiderCamp",
           "coords": [
-            475.7,
-            652.4
+            451.5,
+            661.8
           ]
         },
         {
@@ -652,8 +652,8 @@ window.arcMapsConfig = {
           "title": "Raider Camp",
           "type": "raiderCamp",
           "coords": [
-            839.5,
-            513.9
+            795.1,
+            530.9
           ]
         },
         {
@@ -661,8 +661,8 @@ window.arcMapsConfig = {
           "title": "Raider Camp",
           "type": "raiderCamp",
           "coords": [
-            545.8,
-            496.0
+            517.7,
+            514.0
           ]
         },
         {
@@ -670,8 +670,8 @@ window.arcMapsConfig = {
           "title": "Sunroof Hatch",
           "type": "raiderHatch",
           "coords": [
-            779.2,
-            377.0
+            738.2,
+            401.6
           ]
         },
         {
@@ -679,8 +679,8 @@ window.arcMapsConfig = {
           "title": "Good Old Baron's Hatch",
           "type": "raiderHatch",
           "coords": [
-            559.2,
-            330.9
+            530.3,
+            358.1
           ]
         },
         {
@@ -688,8 +688,8 @@ window.arcMapsConfig = {
           "title": "Red Lakes Hatch",
           "type": "raiderHatch",
           "coords": [
-            607.4,
-            724.2
+            575.9,
+            729.5
           ]
         },
         {
@@ -697,8 +697,8 @@ window.arcMapsConfig = {
           "title": "Pump House Hatch",
           "type": "raiderHatch",
           "coords": [
-            714.1,
-            817.2
+            676.6,
+            817.4
           ]
         },
         {
@@ -706,8 +706,8 @@ window.arcMapsConfig = {
           "title": "[Broken Monument] Compass Location",
           "type": "collectible",
           "coords": [
-            480.1,
-            517.2
+            455.7,
+            534.0
           ],
           "description": "Mission Giver: Tian wen   Location: Dam Battleground Scrap Yard  -  In the middle of the carts and cars Objectives: - Objective 2 of 7: Search for the compass near the broken vehicles"
         },
@@ -716,8 +716,8 @@ window.arcMapsConfig = {
           "title": "[Straight Record] EMP Device",
           "type": "collectible",
           "coords": [
-            819.1,
-            520.4
+            775.8,
+            537.1
           ],
           "description": "Mission: Straight Record   Location: ??"
         },
@@ -726,8 +726,8 @@ window.arcMapsConfig = {
           "title": "[Straight Record] Power Switch #1",
           "type": "collectible",
           "coords": [
-            837.6,
-            519.2
+            793.3,
+            535.9
           ],
           "description": "Mission: Straight Record   Location: ??"
         },
@@ -736,8 +736,8 @@ window.arcMapsConfig = {
           "title": "[Straight Record] Power Switch #2",
           "type": "collectible",
           "coords": [
-            815.7,
-            549.6
+            772.6,
+            564.6
           ],
           "description": "Mission: Straight Record   Location: 2nd floor of nearby broken building"
         },
@@ -746,8 +746,8 @@ window.arcMapsConfig = {
           "title": "[Straight Record] Power Switch #3",
           "type": "collectible",
           "coords": [
-            800.5,
-            520.7
+            758.2,
+            537.3
           ],
           "description": "Mission: Straight Record   Location: ??"
         },
@@ -756,8 +756,8 @@ window.arcMapsConfig = {
           "title": "[Keeping the Memory] Helmet",
           "type": "collectible",
           "coords": [
-            499.3,
-            600.9
+            473.8,
+            613.1
           ],
           "description": "Mission: Keeping the Memory   Location: In clearing, in front of wreckage in very small bush"
         },
@@ -766,8 +766,8 @@ window.arcMapsConfig = {
           "title": "[What We Left Behind]",
           "type": "collectible",
           "coords": [
-            621.5,
-            293.9
+            589.2,
+            323.2
           ],
           "description": "Mission: What We Left Behind Location: South Swamp Outpost. Goal: Search for anything significant in the South Swamp Outpost",
           "mediaUrl": "https://media.mapgenie.io/storage/media/db7da0e2-566a-4150-962c-c378a85d02fc.png"
@@ -777,8 +777,8 @@ window.arcMapsConfig = {
           "title": "EYES IN THE SKY",
           "type": "collectible",
           "coords": [
-            612.4,
-            618.8
+            580.6,
+            630.0
           ],
           "description": "Mission: Eyes In The Sky Location: At the top of the control tower on the eastern corner. Lidar scanner is installed on top of the tripod."
         },
@@ -787,8 +787,8 @@ window.arcMapsConfig = {
           "title": "[Source of the Contamination] Flood Spill Intake",
           "type": "collectible",
           "coords": [
-            663.3,
-            425.8
+            628.7,
+            447.7
           ],
           "description": "Mission: Source of the Contamination   Location: Look for the barrel inside the polluted water"
         },
@@ -797,8 +797,8 @@ window.arcMapsConfig = {
           "title": "[Echoes of Victory Ridge] Major Aiva's Patch",
           "type": "collectible",
           "coords": [
-            846.9,
-            578.8
+            802.1,
+            592.2
           ],
           "description": "Mission: Echoes of Victory Ridge   Location: Under some broken bridge - found in a container",
           "mediaUrl": "https://media.mapgenie.io/storage/media/bf6de693-2003-44b3-a6ba-c184e2074605.jpeg"
@@ -808,8 +808,8 @@ window.arcMapsConfig = {
           "title": "[Greasing Her Palms] Visit Locked Room",
           "type": "collectible",
           "coords": [
-            619.9,
-            431.7
+            587.6,
+            453.2
           ],
           "description": "Mission: On Dam Battlegrounds, visit the Locked Room in the Water Treatment Control Building   Location: Visit the Dam Surveillance Room room in Water Treatment Control building on the middle floor. Note: You will be given a Dam Surveillance Room Key - put it in your safe pocket to ensure you don't lose it if you die"
         },
@@ -818,8 +818,8 @@ window.arcMapsConfig = {
           "title": "[Celeste's Journals] Journal",
           "type": "collectible",
           "coords": [
-            622.8,
-            297.2
+            590.5,
+            326.2
           ],
           "description": "Mission: Celeste's Journals   Location: On the bed"
         },
@@ -828,8 +828,8 @@ window.arcMapsConfig = {
           "title": "[Celeste's Journals] Northern Outpost Journal",
           "type": "collectible",
           "coords": [
-            792.0,
-            795.1
+            750.2,
+            796.5
           ],
           "description": "Mission: Celeste's Journals Location: Raider Outpost East, on a mattress"
         },
@@ -838,8 +838,8 @@ window.arcMapsConfig = {
           "title": "[The Majors Footlocker] Major's Footlocker",
           "type": "collectible",
           "coords": [
-            818.0,
-            395.2
+            774.8,
+            418.8
           ],
           "description": "Mission: The Majors Footlocker Location: Top floor (not roof) of Southern Apartment of Ruby Residence"
         },
@@ -848,8 +848,8 @@ window.arcMapsConfig = {
           "title": "[Back On Top] ??",
           "type": "collectible",
           "coords": [
-            856.8,
-            665.2
+            811.5,
+            673.8
           ],
           "description": "Mission: Back on Top   Location: Outside north east side of the Pattern House building",
           "mediaUrl": "https://media.mapgenie.io/storage/media/f72edc41-1331-4c2a-8f38-33b5cae60e96.jpg"
@@ -859,8 +859,8 @@ window.arcMapsConfig = {
           "title": "[A Balanced Harvest] Collect Notes in Lab 1",
           "type": "collectible",
           "coords": [
-            596.9,
-            577.0
+            565.9,
+            590.5
           ],
           "description": "Mission: A Balanced Harvest Location: In the Research and Administration building, go to Lab 1, in the floor above reception.  Notes are sitting on a countertop in one of the rooms."
         },
@@ -869,8 +869,8 @@ window.arcMapsConfig = {
           "title": "[Broken Monument] Old Field Rations",
           "type": "collectible",
           "coords": [
-            492.5,
-            532.6
+            467.4,
+            548.6
           ],
           "description": "Mission: Broken Monument   Location: Search for the old field rations in the Raider camp"
         },
@@ -879,8 +879,8 @@ window.arcMapsConfig = {
           "title": "[A Symbol of Unification] Flag Location",
           "type": "collectible",
           "coords": [
-            426.0,
-            538.5
+            404.5,
+            554.2
           ],
           "description": "Mission: A Symbol of Unification Location: Formicai Outpost"
         },
@@ -889,8 +889,8 @@ window.arcMapsConfig = {
           "title": "[Broken Monument] Video Tape",
           "type": "collectible",
           "coords": [
-            475.7,
-            535.8
+            451.5,
+            551.6
           ],
           "description": "Mission: Broken Monument   Location: Search for the video tape near the cylindrical containers"
         },
@@ -899,8 +899,8 @@ window.arcMapsConfig = {
           "title": "[Flickering Threat] Repair The Generators",
           "type": "collectible",
           "coords": [
-            799.4,
-            652.6
+            757.2,
+            661.9
           ],
           "description": "Mission: Flickering Threat   Location: Repair the generators _Requires 4 wires_"
         },
@@ -909,8 +909,8 @@ window.arcMapsConfig = {
           "title": "[Flickering Threat] Repair the generators",
           "type": "collectible",
           "coords": [
-            799.4,
-            652.6
+            757.2,
+            661.9
           ],
           "description": "Quest Location: Repair the generators _Requires 4 wires_"
         },
@@ -919,8 +919,8 @@ window.arcMapsConfig = {
           "title": "[Our Presence Up There] - Power Switch",
           "type": "collectible",
           "coords": [
-            851.6,
-            650.7
+            806.5,
+            660.1
           ],
           "description": "Mission: Our Presence Up There Location: Pattern House - Power switch on first floor left of stairs",
           "mediaUrl": "https://media.mapgenie.io/storage/media/25c45514-5eb6-4fcc-9b24-7e09394697aa.jpeg"
@@ -930,8 +930,8 @@ window.arcMapsConfig = {
           "title": "[Untended Garden]",
           "type": "collectible",
           "coords": [
-            770.8,
-            542.8
+            730.2,
+            558.2
           ],
           "description": "Inside the dome there is an interactable computer"
         },
@@ -940,8 +940,8 @@ window.arcMapsConfig = {
           "title": "[A New Type of Plant] Possibly Toxic Plant",
           "type": "collectible",
           "coords": [
-            699.1,
-            321.1
+            662.5,
+            348.8
           ],
           "description": "Mission: A New Type of Plant   Location: Old Battlegrounds"
         },
@@ -950,8 +950,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            760.5,
-            735.9
+            720.4,
+            740.6
           ]
         },
         {
@@ -959,8 +959,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            480.8,
-            431.1
+            456.3,
+            452.7
           ]
         },
         {
@@ -968,8 +968,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            726.1,
-            721.9
+            688.0,
+            727.4
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/82dc22aa-af5a-4208-b3c6-99062408af2e.png"
         },
@@ -978,8 +978,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            766.0,
-            546.7
+            725.6,
+            561.9
           ]
         },
         {
@@ -987,8 +987,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            592.7,
-            599.8
+            562.0,
+            612.1
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/c44c8be0-dae9-43fc-9d19-c13a54b1b034.png"
         },
@@ -997,8 +997,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            528.1,
-            783.4
+            501.0,
+            785.4
           ],
           "description": "Location: Inside the Electrical Tower, near the breachables",
           "mediaUrl": "https://media.mapgenie.io/storage/media/c512f5a4-ec33-4056-8108-ca164f3cfddb.png"
@@ -1008,8 +1008,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            436.3,
-            583.3
+            414.3,
+            596.4
           ]
         },
         {
@@ -1017,8 +1017,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            488.3,
-            768.2
+            463.4,
+            771.0
           ],
           "description": "In water grate"
         },
@@ -1027,8 +1027,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box",
           "type": "ammoBox",
           "coords": [
-            528.9,
-            783.4
+            501.8,
+            785.4
           ]
         },
         {
@@ -1036,8 +1036,8 @@ window.arcMapsConfig = {
           "title": "Ammo Box in broken field station",
           "type": "ammoBox",
           "coords": [
-            481.9,
-            651.8
+            457.4,
+            661.1
           ]
         },
         {
@@ -1045,8 +1045,8 @@ window.arcMapsConfig = {
           "title": "ARC Courier",
           "type": "arcCourier",
           "coords": [
-            501.4,
-            651.6
+            475.8,
+            661.0
           ],
           "description": "Location: By the roadside"
         },
@@ -1055,8 +1055,8 @@ window.arcMapsConfig = {
           "title": "ARC Courier",
           "type": "arcCourier",
           "coords": [
-            838.7,
-            551.9
+            794.3,
+            566.8
           ]
         },
         {
@@ -1064,8 +1064,8 @@ window.arcMapsConfig = {
           "title": "ARC Courier",
           "type": "arcCourier",
           "coords": [
-            660.5,
-            741.9
+            626.0,
+            746.2
           ]
         },
         {
@@ -1073,8 +1073,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Rocketeer",
           "type": "arcCourier",
           "coords": [
-            703.8,
-            374.4
+            666.9,
+            399.2
           ]
         },
         {
@@ -1082,8 +1082,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Rocketeer",
           "type": "arcCourier",
           "coords": [
-            716.2,
-            315.5
+            678.6,
+            343.5
           ]
         },
         {
@@ -1091,8 +1091,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Rocketeer",
           "type": "arcCourier",
           "coords": [
-            699.4,
-            337.1
+            662.7,
+            363.9
           ]
         },
         {
@@ -1100,8 +1100,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Rocketeer",
           "type": "arcCourier",
           "coords": [
-            693.5,
-            348.7
+            657.2,
+            374.9
           ]
         },
         {
@@ -1109,8 +1109,8 @@ window.arcMapsConfig = {
           "title": "ARC COURIER",
           "type": "arcCourier",
           "coords": [
-            809.5,
-            504.5
+            766.8,
+            522.0
           ]
         },
         {
@@ -1118,8 +1118,8 @@ window.arcMapsConfig = {
           "title": "Baron Husk",
           "type": "baronHusk",
           "coords": [
-            700.5,
-            320.9
+            663.8,
+            348.6
           ]
         },
         {
@@ -1127,8 +1127,8 @@ window.arcMapsConfig = {
           "title": "Baron Husk",
           "type": "baronHusk",
           "coords": [
-            615.6,
-            377.1
+            583.7,
+            401.7
           ]
         },
         {
@@ -1136,8 +1136,8 @@ window.arcMapsConfig = {
           "title": "Baron Husk",
           "type": "baronHusk",
           "coords": [
-            708.3,
-            613.5
+            671.2,
+            625.0
           ]
         },
         {
@@ -1145,8 +1145,8 @@ window.arcMapsConfig = {
           "title": "Grenade Tube",
           "type": "container",
           "coords": [
-            848.0,
-            584.3
+            803.1,
+            597.4
           ]
         },
         {
@@ -1154,8 +1154,8 @@ window.arcMapsConfig = {
           "title": "Grenade Tube",
           "type": "container",
           "coords": [
-            483.4,
-            432.6
+            458.7,
+            454.1
           ]
         },
         {
@@ -1163,8 +1163,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            749.9,
-            777.7
+            710.5,
+            780.0
           ],
           "description": "Location: ??   Field Depot: Field Depot",
           "mediaUrl": "https://media.mapgenie.io/storage/media/78004d9f-dcc2-4121-9680-c3d2080e59b9.png"
@@ -1174,8 +1174,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            543.0,
-            642.7
+            515.1,
+            652.5
           ]
         },
         {
@@ -1183,8 +1183,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            556.4,
-            698.5
+            527.7,
+            705.2
           ]
         },
         {
@@ -1192,8 +1192,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            595.6,
-            629.1
+            564.7,
+            639.7
           ]
         },
         {
@@ -1201,8 +1201,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            767.2,
-            516.0
+            726.8,
+            532.9
           ],
           "description": "Location: ??   Field Depot"
         },
@@ -1211,8 +1211,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            623.6,
-            333.2
+            591.1,
+            360.3
           ],
           "description": "Location:  Inside hideout next to generator   Field Depot: - Field Depot",
           "mediaUrl": "https://media.mapgenie.io/storage/media/60abfd14-2c60-4965-9b93-e0540fe0300b.png"
@@ -1222,8 +1222,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            635.8,
-            294.8
+            602.7,
+            323.9
           ],
           "description": "Field Depot"
         },
@@ -1232,8 +1232,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            616.4,
-            325.2
+            584.3,
+            352.7
           ],
           "description": "Location: ??   Field Depot:"
         },
@@ -1242,8 +1242,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            571.9,
-            435.4
+            542.4,
+            456.8
           ],
           "description": "Location: ??   Field Depot: - ??"
         },
@@ -1252,8 +1252,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            661.5,
-            303.6
+            626.9,
+            332.3
           ],
           "description": "Field Bunker"
         },
@@ -1262,8 +1262,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            529.0,
-            346.8
+            501.9,
+            373.1
           ],
           "description": "Location: ??   Field Depot: - Field Depot"
         },
@@ -1272,8 +1272,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            530.1,
-            362.1
+            502.9,
+            387.6
           ],
           "description": "Location: ??   Field Depot: - Field Depot",
           "mediaUrl": "https://media.mapgenie.io/storage/media/532e5838-618c-4f82-abab-e1615fb1a5df.png"
@@ -1283,8 +1283,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            724.7,
-            494.7
+            686.6,
+            512.8
           ],
           "description": "Location: On top of the water crates Field Depot: Field Depot"
         },
@@ -1293,8 +1293,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            741.9,
-            553.8
+            702.9,
+            568.6
           ],
           "description": "Location: Inside dome on wooden pallet   Field Bunker",
           "mediaUrl": "https://media.mapgenie.io/storage/media/7925a837-3940-4201-b34a-848a35233d81.jpeg"
@@ -1304,8 +1304,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            514.4,
-            350.4
+            488.1,
+            376.5
           ],
           "description": "Field Depot"
         },
@@ -1314,8 +1314,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            768.1,
-            747.2
+            727.6,
+            751.2
           ],
           "description": "Location: Inside the tunnel   Field Depot:  Field Depot",
           "mediaUrl": "https://media.mapgenie.io/storage/media/11f9d6d3-21ff-49a0-bc02-2c4632873721.png"
@@ -1325,8 +1325,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            782.8,
-            765.2
+            741.5,
+            768.2
           ],
           "description": "Bus"
         },
@@ -1335,8 +1335,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            761.5,
-            730.4
+            721.4,
+            735.4
           ],
           "description": "Field Depot",
           "mediaUrl": "https://media.mapgenie.io/storage/media/40dfc439-486b-4a57-af4a-2a432ac015eb.jpeg"
@@ -1346,8 +1346,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            738.1,
-            540.0
+            699.3,
+            555.5
           ],
           "description": "Next to security locker",
           "mediaUrl": "https://media.mapgenie.io/storage/media/06232698-598e-4a8a-b56a-11e131b201b9.png"
@@ -1357,8 +1357,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            771.2,
-            540.6
+            730.6,
+            556.1
           ],
           "description": "Field Bunker"
         },
@@ -1367,8 +1367,8 @@ window.arcMapsConfig = {
           "title": "Field crate",
           "type": "fieldCrate",
           "coords": [
-            553.2,
-            414.4
+            524.7,
+            436.9
           ],
           "description": "Location: ??   Field Depot: - Field Depot"
         },
@@ -1377,8 +1377,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            681.0,
-            337.0
+            645.4,
+            363.8
           ],
           "description": "Location: Inside broken down tower   Field Depot"
         },
@@ -1387,8 +1387,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            536.6,
-            365.3
+            509.0,
+            390.6
           ],
           "description": "Location: Near the shipping container. Field Depot: - Field Depot",
           "mediaUrl": "https://media.mapgenie.io/storage/media/f26066d0-af68-4a38-be0c-aaf68c8eb5b9.png"
@@ -1398,8 +1398,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            622.9,
-            295.2
+            590.5,
+            324.3
           ],
           "description": "Location: ??   Field Depot: ??"
         },
@@ -1408,8 +1408,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            752.3,
-            770.9
+            712.7,
+            773.6
           ],
           "description": "Location: On the ground next to the cart and fence"
         },
@@ -1418,8 +1418,8 @@ window.arcMapsConfig = {
           "title": "Grenade Tube",
           "type": "grenadeTube",
           "coords": [
-            794.9,
-            739.9
+            753.0,
+            744.3
           ]
         },
         {
@@ -1427,8 +1427,8 @@ window.arcMapsConfig = {
           "title": "Grenade Tube",
           "type": "grenadeTube",
           "coords": [
-            767.9,
-            816.3
+            727.4,
+            816.5
           ]
         },
         {
@@ -1436,8 +1436,8 @@ window.arcMapsConfig = {
           "title": "Moss",
           "type": "item",
           "coords": [
-            728.6,
-            486.8
+            690.3,
+            505.3
           ]
         },
         {
@@ -1445,8 +1445,8 @@ window.arcMapsConfig = {
           "title": "Medical Box",
           "type": "medicalBox",
           "coords": [
-            628.0,
-            299.7
+            595.3,
+            328.6
           ]
         },
         {
@@ -1454,8 +1454,8 @@ window.arcMapsConfig = {
           "title": "Security Locker",
           "type": "securityLocker",
           "coords": [
-            536.7,
-            702.3
+            509.1,
+            708.9
           ]
         },
         {
@@ -1463,8 +1463,8 @@ window.arcMapsConfig = {
           "title": "Security Locker (2x)",
           "type": "securityLocker",
           "coords": [
-            634.4,
-            597.9
+            601.4,
+            610.2
           ],
           "description": "Requires Skill: Security Breach",
           "mediaUrl": "https://media.mapgenie.io/storage/media/25bf9768-ebce-43db-bd95-87c7993dbdbd.jpeg"
@@ -1474,8 +1474,8 @@ window.arcMapsConfig = {
           "title": "Security Locker",
           "type": "securityLocker",
           "coords": [
-            737.3,
-            539.8
+            698.6,
+            555.4
           ],
           "description": "Inside agridome"
         },
@@ -1484,8 +1484,8 @@ window.arcMapsConfig = {
           "title": "Security Locker (Power Generation Complex)",
           "type": "securityLocker",
           "coords": [
-            765.8,
-            710.0
+            725.5,
+            716.1
           ],
           "description": "Security Locker in Power Generation Complex (next to Power Rod room)"
         },
@@ -1494,8 +1494,8 @@ window.arcMapsConfig = {
           "title": "Security Locker (2x)",
           "type": "securityLocker",
           "coords": [
-            622.1,
-            594.4
+            589.8,
+            606.9
           ],
           "description": "Up the zipline to top floor, need keycard."
         },
@@ -1504,8 +1504,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            820.2,
-            423.5
+            776.9,
+            445.5
           ],
           "description": "Location:"
         },
@@ -1514,8 +1514,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            634.7,
-            600.6
+            601.7,
+            612.8
           ],
           "description": "Behind the breachable door on the bridge you can lower",
           "mediaUrl": "https://media.mapgenie.io/storage/media/e2e1af6b-f4e6-4a34-a0e7-0faa38ad27db.jpeg"
@@ -1525,8 +1525,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            762.4,
-            737.1
+            722.3,
+            741.7
           ],
           "description": "Found on the ground below electrical, inside a small, relatively destroyed scavenger hut.",
           "mediaUrl": "https://media.mapgenie.io/storage/media/e18741ec-105c-4ed4-b476-b175144ecd45.png"
@@ -1536,8 +1536,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            481.2,
-            433.9
+            456.6,
+            455.4
           ],
           "description": "On the north east corner of the shed building next to the radio tower"
         },
@@ -1546,8 +1546,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            429.6,
-            542.8
+            408.0,
+            558.2
           ],
           "description": "Location: Two possible weapon crate spawns, one requires you to parkour and jump up the big shelf onto the inside roof of the dome",
           "mediaUrl": "https://media.mapgenie.io/storage/media/423d9e40-65d5-4e6a-a5c1-b08050cece06.jpeg"
@@ -1557,8 +1557,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            486.4,
-            772.0
+            461.6,
+            774.6
           ],
           "description": "On the bed of the truck",
           "mediaUrl": "https://media.mapgenie.io/storage/media/dedac420-6088-4700-af0a-45f6005213bc.png"
@@ -1568,8 +1568,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            621.2,
-            427.7
+            588.9,
+            449.5
           ],
           "description": "Location: Inside the Dam Surveillance Room - on the control panels"
         },
@@ -1578,8 +1578,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            671.6,
-            711.3
+            636.5,
+            717.3
           ],
           "description": "Inside this broken section of the Dam."
         },
@@ -1588,8 +1588,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            542.8,
-            696.7
+            514.8,
+            703.6
           ],
           "description": "Will be on the top floor by an open window if it spawns."
         },
@@ -1598,8 +1598,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            741.0,
-            552.2
+            702.1,
+            567.1
           ],
           "description": "By the hole at the end of the shelves."
         },
@@ -1608,8 +1608,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            734.9,
-            485.9
+            696.3,
+            504.5
           ]
         },
         {
@@ -1617,8 +1617,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            724.1,
-            489.8
+            686.1,
+            508.1
           ]
         },
         {
@@ -1626,8 +1626,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            621.1,
-            293.1
+            588.8,
+            322.4
           ],
           "description": "On the couch."
         },
@@ -1636,8 +1636,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            775.9,
-            758.5
+            735.0,
+            761.9
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/68ebbe6e-5d01-400f-91b7-3ad566a338bd.png"
         },
@@ -1646,8 +1646,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            555.2,
-            630.1
+            526.5,
+            640.6
           ],
           "description": "It would be on the vent up the tower."
         },
@@ -1656,8 +1656,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            592.5,
-            601.6
+            561.8,
+            613.7
           ],
           "description": "Beside a couch."
         },
@@ -1666,8 +1666,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            683.9,
-            494.0
+            648.1,
+            512.1
           ],
           "description": "In a treehouse that you need to climb up into."
         },
@@ -1676,8 +1676,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            665.0,
-            500.8
+            630.3,
+            518.6
           ],
           "description": "By the fork in the river",
           "mediaUrl": "https://media.mapgenie.io/storage/media/a098011f-c133-49c7-a76c-3d86ce9e6a58.png"
@@ -1687,8 +1687,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            792.5,
-            343.8
+            750.7,
+            370.2
           ],
           "description": "Will be in the back room on the first floor (not ground floor) and tucked away."
         },
@@ -1697,8 +1697,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            766.6,
-            818.8
+            726.3,
+            818.9
           ],
           "description": "Drop in from the overpass above, or zipline up.",
           "mediaUrl": "https://media.mapgenie.io/storage/media/3ef15faf-32da-4782-8b71-283892f44119.png"
@@ -1708,8 +1708,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            734.5,
-            644.8
+            695.9,
+            654.5
           ]
         },
         {
@@ -1717,8 +1717,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            442.2,
-            474.2
+            419.9,
+            493.5
           ],
           "description": "Location: Behind the AC/Power Unit that is attached to the back of the green hut, in front of the cell tower"
         },
@@ -1727,8 +1727,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            684.7,
-            630.3
+            648.9,
+            640.9
           ],
           "description": "Location:  Under the destroyed road, in between the girders/beams of the broken bridge"
         },
@@ -1737,8 +1737,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            616.8,
-            601.8
+            584.8,
+            613.9
           ],
           "description": "Locations: Inside the dam control tower (requires Dam Control Tower Key), weapon crates can spawn under the two tables by red lockers, or beside the walls"
         },
@@ -1747,8 +1747,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            671.7,
-            603.8
+            636.6,
+            615.8
           ],
           "description": "Location: By the blue barrels (also broken down yellow generator) near the pile of rubble on the dam floor"
         },
@@ -1757,8 +1757,8 @@ window.arcMapsConfig = {
           "title": "Weapon crate",
           "type": "weaponCase",
           "coords": [
-            513.1,
-            351.6
+            486.8,
+            377.6
           ],
           "description": "Weapon crate can spawn here, or on the tower in the east direction on top of the towers.",
           "mediaUrl": "https://media.mapgenie.io/storage/media/bb199e34-9c4c-4c79-813c-ba7d53b93011.png"
@@ -1768,8 +1768,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            518.8,
-            378.7
+            492.2,
+            403.3
           ],
           "description": "The weapon crate spawns rarely, but it spawns on top of this tower, or the tower to the south east of it.",
           "mediaUrl": "https://media.mapgenie.io/storage/media/a89ac5bb-e33e-4e46-a052-23502929975a.png"
@@ -1779,8 +1779,8 @@ window.arcMapsConfig = {
           "title": "Weapon crate",
           "type": "weaponCase",
           "coords": [
-            527.6,
-            345.0
+            500.5,
+            371.4
           ],
           "description": "can spawn on top of one of the 3 towers",
           "mediaUrl": "https://media.mapgenie.io/storage/media/cd62f542-5110-482e-b5a0-ce05d6757af6.png"
@@ -1790,8 +1790,8 @@ window.arcMapsConfig = {
           "title": "Agave Plant",
           "type": "agave",
           "coords": [
-            834.5,
-            512.9
+            790.4,
+            530.0
           ]
         },
         {
@@ -1799,8 +1799,8 @@ window.arcMapsConfig = {
           "title": "Agave Plant",
           "type": "agave",
           "coords": [
-            781.3,
-            371.0
+            740.1,
+            396.0
           ]
         },
         {
@@ -1808,8 +1808,8 @@ window.arcMapsConfig = {
           "title": "Agave Plant",
           "type": "agave",
           "coords": [
-            789.8,
-            392.1
+            748.1,
+            415.9
           ]
         },
         {
@@ -1817,8 +1817,8 @@ window.arcMapsConfig = {
           "title": "Agave Plant",
           "type": "agave",
           "coords": [
-            789.8,
-            392.1
+            748.1,
+            415.9
           ]
         },
         {
@@ -1826,8 +1826,8 @@ window.arcMapsConfig = {
           "title": "3 Apricot Trees",
           "type": "apricot",
           "coords": [
-            643.1,
-            790.8
+            609.6,
+            792.5
           ]
         },
         {
@@ -1835,8 +1835,8 @@ window.arcMapsConfig = {
           "title": "Fruit Baskets",
           "type": "apricot",
           "coords": [
-            622.7,
-            308.2
+            590.4,
+            336.7
           ],
           "description": "Baskets of nature objects like lemons, apricots, mushrooms, olives"
         },
@@ -1845,8 +1845,8 @@ window.arcMapsConfig = {
           "title": "4 Apricot Trees",
           "type": "apricot",
           "coords": [
-            589.5,
-            755.2
+            559.0,
+            758.8
           ]
         },
         {
@@ -1854,8 +1854,8 @@ window.arcMapsConfig = {
           "title": "Fruit Baskets",
           "type": "fruitBasket",
           "coords": [
-            625.6,
-            298.2
+            593.1,
+            327.2
           ]
         },
         {
@@ -1863,8 +1863,8 @@ window.arcMapsConfig = {
           "title": "Basket",
           "type": "fruitBasket",
           "coords": [
-            477.4,
-            649.0
+            453.1,
+            658.5
           ]
         },
         {
@@ -1872,8 +1872,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            839.3,
-            614.9
+            794.9,
+            626.3
           ],
           "description": "3 possible Fruit Basket Locations in the Raider ruins"
         },
@@ -1882,8 +1882,8 @@ window.arcMapsConfig = {
           "title": "Fruit basket",
           "type": "fruitBasket",
           "coords": [
-            492.5,
-            702.4
+            467.4,
+            708.9
           ],
           "description": "On the flatbed of a scrapped truck"
         },
@@ -1892,8 +1892,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            474.5,
-            526.8
+            450.3,
+            543.0
           ]
         },
         {
@@ -1901,8 +1901,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            832.6,
-            545.1
+            788.6,
+            560.4
           ]
         },
         {
@@ -1910,8 +1910,8 @@ window.arcMapsConfig = {
           "title": "3x Great Mullein",
           "type": "greatMullein",
           "coords": [
-            645.9,
-            347.7
+            612.2,
+            373.9
           ],
           "description": "Location: Just in front of the Field Depot fence"
         },
@@ -1920,8 +1920,8 @@ window.arcMapsConfig = {
           "title": "4x Great Mullein",
           "type": "greatMullein",
           "coords": [
-            673.2,
-            352.8
+            638.0,
+            378.8
           ]
         },
         {
@@ -1929,8 +1929,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            842.9,
-            638.7
+            798.3,
+            648.7
           ],
           "description": "Usually in clumps of three on either side of the bridge"
         },
@@ -1939,8 +1939,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            763.7,
-            340.7
+            723.5,
+            367.4
           ]
         },
         {
@@ -1948,8 +1948,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            758.3,
-            340.9
+            718.4,
+            367.5
           ]
         },
         {
@@ -1957,8 +1957,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            745.5,
-            334.1
+            706.3,
+            361.1
           ]
         },
         {
@@ -1966,8 +1966,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            751.8,
-            339.4
+            712.2,
+            366.1
           ]
         },
         {
@@ -1975,8 +1975,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            738.0,
-            330.3
+            699.2,
+            357.5
           ]
         },
         {
@@ -1984,8 +1984,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            794.8,
-            442.3
+            752.9,
+            463.3
           ]
         },
         {
@@ -1993,8 +1993,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            730.0,
-            495.4
+            691.7,
+            513.5
           ]
         },
         {
@@ -2002,8 +2002,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            841.3,
-            637.1
+            796.7,
+            647.3
           ]
         },
         {
@@ -2011,8 +2011,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            834.2,
-            629.6
+            790.0,
+            640.2
           ]
         },
         {
@@ -2020,8 +2020,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            701.8,
-            304.7
+            665.0,
+            333.3
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/dd5e8045-59f3-407f-9de4-2b1760794982.jpeg"
         },
@@ -2030,8 +2030,8 @@ window.arcMapsConfig = {
           "title": "Mushrooms",
           "type": "mushroom",
           "coords": [
-            633.5,
-            438.4
+            600.5,
+            459.6
           ],
           "description": "Location: Inside the Water Treatment Plant, growing on the large blue pipe inside the building"
         },
@@ -2040,8 +2040,8 @@ window.arcMapsConfig = {
           "title": "Mushrooms",
           "type": "mushroom",
           "coords": [
-            509.9,
-            606.1
+            483.8,
+            618.0
           ],
           "description": "Trees all around the wreckage spawn mushrooms"
         },
@@ -2050,8 +2050,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            792.7,
-            449.4
+            750.9,
+            470.0
           ],
           "description": "Inside the fallen log"
         },
@@ -2060,8 +2060,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            692.5,
-            400.1
+            656.2,
+            423.4
           ]
         },
         {
@@ -2069,8 +2069,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            720.6,
-            401.1
+            682.8,
+            424.4
           ]
         },
         {
@@ -2078,8 +2078,8 @@ window.arcMapsConfig = {
           "title": "Mushrooms",
           "type": "mushroom",
           "coords": [
-            730.4,
-            492.5
+            692.1,
+            510.7
           ],
           "description": "in the water"
         },
@@ -2088,8 +2088,8 @@ window.arcMapsConfig = {
           "title": "Mushrooms",
           "type": "mushroom",
           "coords": [
-            671.7,
-            527.0
+            636.6,
+            543.3
           ]
         },
         {
@@ -2097,8 +2097,8 @@ window.arcMapsConfig = {
           "title": "Mushrooms",
           "type": "mushroom",
           "coords": [
-            678.6,
-            353.4
+            643.2,
+            379.3
           ]
         },
         {
@@ -2106,8 +2106,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            696.1,
-            484.6
+            659.6,
+            503.2
           ]
         },
         {
@@ -2115,8 +2115,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            712.5,
-            304.9
+            675.2,
+            333.5
           ],
           "description": "On a tree"
         },
@@ -2125,8 +2125,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            466.7,
-            492.6
+            443.0,
+            510.8
           ],
           "description": "A few fallen tree can spawn mushroom"
         },
@@ -2135,8 +2135,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            718.4,
-            334.5
+            680.7,
+            361.5
           ],
           "description": "On a tree"
         },
@@ -2145,8 +2145,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            702.7,
-            337.3
+            665.8,
+            364.1
           ]
         },
         {
@@ -2154,8 +2154,8 @@ window.arcMapsConfig = {
           "title": "On tree",
           "type": "mushroom",
           "coords": [
-            680.8,
-            310.5
+            645.2,
+            338.8
           ]
         },
         {
@@ -2163,8 +2163,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear Patch",
           "type": "pricklyPear",
           "coords": [
-            819.0,
-            661.8
+            775.7,
+            670.6
           ]
         },
         {
@@ -2172,8 +2172,8 @@ window.arcMapsConfig = {
           "title": "4x Prickley Pear Bush",
           "type": "pricklyPear",
           "coords": [
-            832.8,
-            505.0
+            788.8,
+            522.5
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/f469d756-fd0a-4c0e-8648-ed723009cbd7.jpeg"
         },
@@ -2182,8 +2182,8 @@ window.arcMapsConfig = {
           "title": "4x Prickley Pear Bush",
           "type": "pricklyPear",
           "coords": [
-            822.5,
-            520.5
+            779.1,
+            537.1
           ]
         },
         {
@@ -2191,8 +2191,8 @@ window.arcMapsConfig = {
           "title": "4x Prickley Pear Bush",
           "type": "pricklyPear",
           "coords": [
-            820.7,
-            522.6
+            777.3,
+            539.1
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/dab04e9a-07b8-40f7-855e-d882f90a32b7.png"
         },
@@ -2201,8 +2201,8 @@ window.arcMapsConfig = {
           "title": "2x Pricky Pear Bush",
           "type": "pricklyPear",
           "coords": [
-            822.7,
-            536.1
+            779.2,
+            551.9
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/5f81f645-8732-40b3-a05d-cdd14fb1187a.png"
         },
@@ -2211,8 +2211,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear Patch",
           "type": "pricklyPear",
           "coords": [
-            837.8,
-            649.2
+            793.4,
+            658.7
           ]
         },
         {
@@ -2220,8 +2220,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear Patch",
           "type": "pricklyPear",
           "coords": [
-            848.0,
-            621.0
+            803.1,
+            632.1
           ]
         },
         {
@@ -2229,8 +2229,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear Patch",
           "type": "pricklyPear",
           "coords": [
-            574.0,
-            540.4
+            544.4,
+            555.9
           ]
         },
         {
@@ -2238,8 +2238,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear Patch",
           "type": "pricklyPear",
           "coords": [
-            591.5,
-            509.7
+            560.9,
+            526.9
           ]
         },
         {
@@ -2247,8 +2247,8 @@ window.arcMapsConfig = {
           "title": "Prickly Pear",
           "type": "pricklyPear",
           "coords": [
-            614.9,
-            737.6
+            583.0,
+            742.2
           ]
         },
         {
@@ -2256,8 +2256,8 @@ window.arcMapsConfig = {
           "title": "Prickly Pear",
           "type": "pricklyPear",
           "coords": [
-            628.0,
-            469.1
+            595.4,
+            488.6
           ]
         },
         {
@@ -2265,8 +2265,8 @@ window.arcMapsConfig = {
           "title": "Prickly Pear",
           "type": "pricklyPear",
           "coords": [
-            812.5,
-            706.3
+            769.6,
+            712.6
           ]
         },
         {
@@ -2274,8 +2274,8 @@ window.arcMapsConfig = {
           "title": "Prickly Pear",
           "type": "pricklyPear",
           "coords": [
-            837.7,
-            666.4
+            793.3,
+            674.9
           ]
         },
         {
@@ -2283,8 +2283,8 @@ window.arcMapsConfig = {
           "title": "Picking Up The Pieces",
           "type": "quest",
           "coords": [
-            317.2,
-            496.2
+            301.8,
+            514.2
           ],
           "description": "Mission Giver: Shani   Location: Dam Battlegrounds, The Spaceport, Buried City Objectives: - Visit any area on your map with a loot category icon. - Loot 3 containers Granted Items: - Binoculars Rewards: - Kettle II Assault Rifle - Light Ammo x100"
         },
@@ -2293,8 +2293,8 @@ window.arcMapsConfig = {
           "title": "Trash Into Treasure",
           "type": "quest",
           "coords": [
-            312.8,
-            492.8
+            297.6,
+            511.0
           ],
           "description": "Requirements: Complete Picking Up The Pieces Mission Giver: Shani   Objectives: - Obtain 6 Wires - Obtain 1 Battery Rewards: - Tactical Mk. 1 Augment - Adrenaline Shots x3"
         },
@@ -2303,8 +2303,8 @@ window.arcMapsConfig = {
           "title": "Clearer Skies",
           "type": "quest",
           "coords": [
-            312.9,
-            499.5
+            297.7,
+            517.3
           ],
           "description": "Requirements: Complete Picking Up The Pieces Mission Giver: Shani   Objectives: - Destroy 3 ARC enemies - Get 3 ARC Alloy for Shani Rewards: - Sterilized Bandages x3 - Light Shield"
         },
@@ -2313,8 +2313,8 @@ window.arcMapsConfig = {
           "title": "Off the Radar",
           "type": "quest",
           "coords": [
-            308.3,
-            496.3
+            293.4,
+            514.3
           ],
           "description": "Requirements: Complete Trash Into Treasure and Clearer Skies Mission Giver: Shani   Location: Buried City, The Spaceport, Dam Battlegrounds Objectives: - In One Round:    - Visit a Field Depot    - Repair the antenna on the roof of the Field Depot Granted Items: - Remote Raider Flare x2 Rewards: - Black (Hiker Color) Backpack"
         },
@@ -2323,8 +2323,8 @@ window.arcMapsConfig = {
           "title": "A Bad Feeling",
           "type": "quest",
           "coords": [
-            303.2,
-            496.7
+            288.6,
+            514.7
           ],
           "description": "Requirements: Complete Off the Radar Mission Giver: Celeste   Objectives: - Find and search any ARC Probe or ARC Courier Rewards: - Metal Parts x10 - Steel Spring x5 - Duct Tape x5"
         },
@@ -2333,8 +2333,8 @@ window.arcMapsConfig = {
           "title": "Safe Passage",
           "type": "quest",
           "coords": [
-            298.3,
-            496.6
+            284.0,
+            514.6
           ],
           "description": "Requirements: Complete A Bad Feeling Mission Giver: Apollo   Objectives: - Destroy 2 ARC enemies using any explosive grenade Granted Items: - Light Impact Grenade x5 - Snap Blast Grenade x3 Rewards: - Cans Backpack Attachment - Junior Outfit - Shrapnel Grenade x3"
         },
@@ -2343,8 +2343,8 @@ window.arcMapsConfig = {
           "title": "Down to Earth",
           "type": "quest",
           "coords": [
-            294.2,
-            490.8
+            280.1,
+            509.1
           ],
           "description": "Requirements: Complete Hatch Repairs   Mission Giver: Shani   Objectives: - In One Round:    - Visit a Field Depot    - Deliver a Field Crate to a Supply Station    - Collect the reward Granted Items: - Binoculars Rewards: - Combat Mk. 1 Augment - Medium Shield"
         },
@@ -2353,8 +2353,8 @@ window.arcMapsConfig = {
           "title": "The Right Tool",
           "type": "quest",
           "coords": [
-            298.5,
-            502.3
+            284.2,
+            520.0
           ],
           "description": "Requirements: Complete A Bad Feeling Mission Giver: Tian Wen   Objectives: - Destroy a Fireball - Destroy a Hornet - Destroy a Turret Granted Items: - Ferro IV Battle Rifle - Heavy Ammo x20 Rewards: - Stitcher II SMG - Extended Light Mag I Modification"
         },
@@ -2363,8 +2363,8 @@ window.arcMapsConfig = {
           "title": "The Trifecta",
           "type": "quest",
           "coords": [
-            289.7,
-            490.6
+            275.9,
+            508.9
           ],
           "description": "Requirements: Complete Down to Earth Mission Giver: Shani   Objectives: - Destroy a Wasp x2 - Get a Wasp Driver x2 for Shani - Destroy a Hornet x2 - Get a Hornet Driver x2 for Shani - Destroy a Snitch x2 - Get a Snitch Scanner x2 for Shani Granted Items: - Remote Raider Flare x1 Rewards: - Burletta III Pistol - Light Ammo x60"
         },
@@ -2373,8 +2373,8 @@ window.arcMapsConfig = {
           "title": "What Goes Around",
           "type": "quest",
           "coords": [
-            294.0,
-            496.8
+            279.8,
+            514.8
           ],
           "description": "Requirements: Complete Safe Passage Mission Giver: Apollo   Objectives: - Destroy any ARC enemy using a Fireball Burner Rewards: - Cobalt (Junior Color) Outfit Color - Blaze Grenade x3 - Noisemaker x2 - Red Light Stick x5"
         },
@@ -2383,8 +2383,8 @@ window.arcMapsConfig = {
           "title": "Sparks Fly",
           "type": "quest",
           "coords": [
-            289.7,
-            496.8
+            275.9,
+            514.8
           ],
           "description": "Requirements: Complete What Goes Around Mission Giver: Apollo   Objectives: - Destroy a Hornet with a Trigger 'Nade or Snap Blast Granted Items: - Trigger 'Nade x3 - Snap Blast Grenade x3 Rewards: - Copper Blue (Junior Color) Outfit Color - Yellow Light Stick x5 - Noisemaker x1"
         },
@@ -2393,8 +2393,8 @@ window.arcMapsConfig = {
           "title": "A Better Use",
           "type": "quest",
           "coords": [
-            294.1,
-            502.2
+            280.0,
+            519.8
           ],
           "description": "Requirements: Complete The Right Tool Mission Giver: Tian Wen   Location: Buried City, The Spaceport, The Blug Gate, Dam Battleground Objectives: - Request in a Supply Drop from a Call Station - Loot a Supply Drop Rewards: - Extended Light Mag I Modification - Compensator I Modification - Stable Stock I Modification"
         },
@@ -2403,8 +2403,8 @@ window.arcMapsConfig = {
           "title": "Hatch Repairs",
           "type": "quest",
           "coords": [
-            298.8,
-            490.5
+            284.4,
+            508.8
           ],
           "description": "Requirements: Complete A Bad Feeling Mission Giver: Shani   Location: ?? Objectives: - Repair the leaking hydraulic pipes near any Raider Hatch Granted Items: - Raider Hatch Key (after repairing the leaky pipes, a Hatch Key will spawn behind you) Rewards: - Raider Hatch Key - Binoculars"
         },
@@ -2413,8 +2413,8 @@ window.arcMapsConfig = {
           "title": "A First Foothold",
           "type": "quest",
           "coords": [
-            298.6,
-            515.6
+            284.2,
+            532.5
           ],
           "description": "Requirements: Unlock The Blue Gate Map Mission Giver: Apollo   Location: The Blue Gate Objectives: - ?? Granted Items: - Noisemaker x2 Rewards: - ??"
         },
@@ -2423,8 +2423,8 @@ window.arcMapsConfig = {
           "title": "Greasing Her Palms",
           "type": "quest",
           "coords": [
-            290.3,
-            501.8
+            276.3,
+            519.5
           ],
           "description": "Requirements: Complete A Better Use Mission Giver: Celeste   Objectives: - On Dam Battlegrounds, visit the Locked Room in the Water Treatment Control Building - On Spaceport, scope out the rocket thrusters outside the Rocket Assembly - On Buried City, visit the barricaded area on floor 6 of the Space Travel Building Granted Items: - Dam Surveillance Key Rewards: - Lure Grenade Blueprint - Speaker Component - Electrical Components"
         },
@@ -2433,8 +2433,8 @@ window.arcMapsConfig = {
           "title": "Reduced to Rubble",
           "type": "quest",
           "coords": [
-            294.2,
-            515.3
+            280.1,
+            532.2
           ],
           "description": "Requirements: Complete A First Foothold Mission Giver: Shani   Location: The Blue Gate Objectives: - Take a photo of the Collapsed Highway Granted Items: - Binoculars Rewards: - Zipline - 3x Barricade Kit - 3x Door Blocker"
         },
@@ -2443,8 +2443,8 @@ window.arcMapsConfig = {
           "title": "With a Trace",
           "type": "quest",
           "coords": [
-            289.8,
-            514.8
+            276.0,
+            531.8
           ],
           "description": "Requirements: Complete Reduced to Rubble   Mission Giver: Shani   Location: The Blue Gate Objectives: - Reach the Barren Clearing - Find signs of who brought down the ARC Machines Rewards: - Looting Mk. 2 - Medium Shield"
         },
@@ -2453,8 +2453,8 @@ window.arcMapsConfig = {
           "title": "Celeste's Journals",
           "type": "quest",
           "coords": [
-            288.6,
-            535.0
+            274.8,
+            550.8
           ],
           "description": "Requirements: ?? Mission Giver: ??   Location: ?? Objectives: - ?? Granted Items: - ?? Rewards: - ??"
         },
@@ -2463,8 +2463,8 @@ window.arcMapsConfig = {
           "title": "Doctor's Orders",
           "type": "quest",
           "coords": [
-            286.0,
-            505.4
+            272.3,
+            522.9
           ],
           "description": "Requirements: Complete Greasing Her Palms Mission Giver: Lance   Location: Any Objectives: - Obtain 2x Antiseptic - Obtain 1 Syringe - Obtain 1 Durable Cloth - Obtain 1 Great Mullein  Rewards: - ??"
         },
@@ -2473,8 +2473,8 @@ window.arcMapsConfig = {
           "title": "Dormant Barons",
           "type": "quest",
           "coords": [
-            285.9,
-            499.7
+            272.2,
+            517.5
           ],
           "description": "Requirements: Complete Greasing Her Palms Mission Giver: Shani   Location: Spaceport, Dam Battlegrounds, Blue Gate Objectives: - Loot a Baron Husk Rewards: - 3x Door Blocker - 3x Li'l Smoke Grenade"
         },
@@ -2483,8 +2483,8 @@ window.arcMapsConfig = {
           "title": "Surveyor Spawn",
           "type": "arc",
           "coords": [
-            660.6,
-            307.5
+            626.1,
+            336.0
           ]
         },
         {
@@ -2492,8 +2492,8 @@ window.arcMapsConfig = {
           "title": "Bastion",
           "type": "arc",
           "coords": [
-            744.1,
-            513.8
+            705.0,
+            530.8
           ],
           "description": "Bastion wandering around in area"
         },
@@ -2502,8 +2502,8 @@ window.arcMapsConfig = {
           "title": "Leaper",
           "type": "arc",
           "coords": [
-            702.5,
-            313.0
+            665.7,
+            341.2
           ],
           "description": "Patrols around the Battlegrounds near the \"Decorated\" bastion"
         },
@@ -2512,8 +2512,8 @@ window.arcMapsConfig = {
           "title": "Leaper",
           "type": "enemy",
           "coords": [
-            612.2,
-            677.7
+            580.4,
+            685.6
           ]
         },
         {
@@ -2521,8 +2521,8 @@ window.arcMapsConfig = {
           "title": "Leaper",
           "type": "enemy",
           "coords": [
-            626.0,
-            454.7
+            593.4,
+            475.0
           ]
         },
         {
@@ -2530,8 +2530,8 @@ window.arcMapsConfig = {
           "title": "Sentinel Spawn",
           "type": "sentinel",
           "coords": [
-            732.2,
-            630.3
+            693.8,
+            640.8
           ],
           "description": "Location: It is positioned atop an elevated outcropping that overlooks The Breach on the northwest side of The Breach. Note: 100% spawn rate during night raids."
         },
@@ -2540,8 +2540,8 @@ window.arcMapsConfig = {
           "title": "Sentinel Spawn",
           "type": "sentinel",
           "coords": [
-            578.7,
-            589.0
+            548.8,
+            601.8
           ],
           "description": "Sentinels sometimes spawn on the ceiling above the blue staircase located here."
         },
@@ -2550,8 +2550,8 @@ window.arcMapsConfig = {
           "title": "Sentinel Spawn",
           "type": "sentinel",
           "coords": [
-            685.8,
-            605.0
+            649.9,
+            617.0
           ],
           "description": "Sentinels sometimes spawn on the broken end of the walkway above the husk."
         },
@@ -2560,8 +2560,8 @@ window.arcMapsConfig = {
           "title": "Surveyor",
           "type": "surveyor",
           "coords": [
-            592.1,
-            768.1
+            561.4,
+            771.0
           ]
         },
         {
@@ -2569,8 +2569,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Probe",
           "type": "miscellaneous",
           "coords": [
-            764.8,
-            783.7
+            724.5,
+            785.7
           ]
         },
         {
@@ -2578,8 +2578,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Probe",
           "type": "miscellaneous",
           "coords": [
-            757.5,
-            530.0
+            717.6,
+            546.1
           ]
         },
         {
@@ -2587,8 +2587,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Probe",
           "type": "miscellaneous",
           "coords": [
-            816.0,
-            627.4
+            772.9,
+            638.1
           ]
         },
         {
@@ -2596,8 +2596,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            814.0,
-            753.8
+            771.0,
+            757.5
           ],
           "description": "Location: Inside the Deployment Tunnels Dam"
         },
@@ -2606,8 +2606,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            738.4,
-            688.8
+            699.6,
+            696.1
           ],
           "description": "Location: Inside Pipeline Tower"
         },
@@ -2616,8 +2616,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            625.0,
-            589.8
+            592.5,
+            602.6
           ]
         },
         {
@@ -2625,8 +2625,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            463.6,
-            636.1
+            440.1,
+            646.3
           ]
         },
         {
@@ -2634,8 +2634,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            874.1,
-            588.4
+            827.8,
+            601.3
           ],
           "description": "Location: In the tunnels"
         },
@@ -2644,8 +2644,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            451.8,
-            746.6
+            428.9,
+            750.6
           ]
         },
         {
@@ -2653,8 +2653,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            498.1,
-            429.5
+            472.6,
+            451.2
           ]
         },
         {
@@ -2662,8 +2662,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            631.6,
-            255.9
+            598.7,
+            287.2
           ]
         },
         {
@@ -2671,8 +2671,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            700.1,
-            265.2
+            663.5,
+            296.0
           ]
         },
         {
@@ -2680,8 +2680,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            842.0,
-            400.4
+            797.4,
+            423.7
           ]
         },
         {
@@ -2689,8 +2689,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            808.7,
-            327.7
+            766.0,
+            355.1
           ]
         },
         {
@@ -2698,8 +2698,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            796.0,
-            805.5
+            754.0,
+            806.3
           ]
         },
         {
@@ -2707,8 +2707,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            860.6,
-            667.6
+            815.0,
+            676.1
           ]
         },
         {
@@ -2716,8 +2716,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            565.5,
-            317.5
+            536.3,
+            345.5
           ]
         },
         {
@@ -2725,8 +2725,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            516.8,
-            359.9
+            490.3,
+            385.5
           ]
         },
         {
@@ -2734,8 +2734,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            458.9,
-            499.8
+            435.6,
+            517.6
           ]
         },
         {
@@ -2743,8 +2743,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            529.4,
-            777.0
+            502.2,
+            779.4
           ]
         },
         {
@@ -2752,8 +2752,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            545.6,
-            490.8
+            517.6,
+            509.0
           ]
         },
         {
@@ -2761,8 +2761,8 @@ window.arcMapsConfig = {
           "title": "PLAYER SPAWN",
           "type": "playerSpawn",
           "coords": [
-            712.1,
-            823.4
+            674.8,
+            823.2
           ]
         },
         {
@@ -2770,8 +2770,8 @@ window.arcMapsConfig = {
           "title": "Victory Ridge Spawn",
           "type": "playerSpawn",
           "coords": [
-            840.5,
-            509.1
+            796.1,
+            526.4
           ]
         },
         {
@@ -2779,8 +2779,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            636.8,
-            547.3
+            603.6,
+            562.4
           ]
         },
         {
@@ -2788,8 +2788,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            599.2,
-            626.7
+            568.1,
+            637.4
           ]
         },
         {
@@ -2797,8 +2797,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            646.4,
-            603.6
+            612.7,
+            615.6
           ]
         },
         {
@@ -2806,8 +2806,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            763.8,
-            690.2
+            723.6,
+            697.4
           ]
         },
         {
@@ -2815,8 +2815,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            766.7,
-            732.1
+            726.3,
+            737.0
           ]
         },
         {
@@ -2824,8 +2824,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            747.5,
-            641.3
+            708.2,
+            651.2
           ]
         },
         {
@@ -2833,8 +2833,8 @@ window.arcMapsConfig = {
           "title": "Primary Facility Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            626.3,
-            545.0
+            593.7,
+            560.3
           ]
         },
         {
@@ -2842,8 +2842,8 @@ window.arcMapsConfig = {
           "title": "Hydroponic Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            761.7,
-            534.1
+            721.6,
+            549.9
           ]
         },
         {
@@ -2851,8 +2851,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            708.4,
-            404.1
+            671.3,
+            427.2
           ]
         },
         {
@@ -2860,8 +2860,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            753.6,
-            678.8
+            713.9,
+            686.6
           ],
           "description": "Available during Night Raid",
           "tags": [
@@ -2873,8 +2873,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            545.7,
-            627.0
+            517.6,
+            637.7
           ],
           "description": "On Hill westerly of Annex"
         },
@@ -2883,8 +2883,8 @@ window.arcMapsConfig = {
           "title": "Testing Annex Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            524.4,
-            664.7
+            497.5,
+            673.3
           ]
         },
         {
@@ -2892,8 +2892,8 @@ window.arcMapsConfig = {
           "title": "Supply Station Call",
           "type": "supplyCall",
           "coords": [
-            691.1,
-            696.2
+            654.9,
+            703.1
           ]
         },
         {
@@ -2901,8 +2901,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            629.7,
-            427.1
+            596.9,
+            449.0
           ],
           "description": "On top of Water Treatment Control"
         },
@@ -2911,8 +2911,8 @@ window.arcMapsConfig = {
           "title": "Zipline",
           "type": "zipline",
           "coords": [
-            530.6,
-            780.2
+            503.3,
+            782.4
           ]
         },
         {
@@ -2920,8 +2920,8 @@ window.arcMapsConfig = {
           "title": "Zipline",
           "type": "zipline",
           "coords": [
-            540.2,
-            743.8
+            512.4,
+            748.0
           ]
         },
         {
@@ -2929,8 +2929,8 @@ window.arcMapsConfig = {
           "title": "Zipline",
           "type": "zipline",
           "coords": [
-            632.6,
-            576.0
+            599.6,
+            589.6
           ],
           "description": "Zipline From the dam wall to the lower roof of the Control tower"
         },
@@ -2939,8 +2939,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            674.4,
-            542.9
+            639.1,
+            558.3
           ]
         },
         {
@@ -2948,8 +2948,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            785.7,
-            479.6
+            744.3,
+            498.5
           ]
         },
         {
@@ -2957,8 +2957,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            743.3,
-            829.9
+            704.2,
+            829.3
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/c5e487f2-6bf5-4bc5-bfd0-97e422507332.png"
         },
@@ -2967,8 +2967,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            767.6,
-            792.2
+            727.1,
+            793.7
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/1ee10154-c960-45bc-b93b-177a565968e4.png"
         },
@@ -2977,8 +2977,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            466.7,
-            489.4
+            443.0,
+            507.7
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/3ea1c64b-fcb6-401b-af2b-76301bc90a8c.png"
         },
@@ -2987,8 +2987,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            498.3,
-            393.4
+            472.8,
+            417.1
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/93b75080-4ab0-4b1b-a1bf-e48a4a158185.png"
         },
@@ -2997,8 +2997,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            515.7,
-            454.6
+            489.3,
+            474.9
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/e41db1e5-7225-4fd1-82e5-665d1324191a.png"
         },
@@ -3007,8 +3007,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            546.9,
-            452.2
+            518.7,
+            472.6
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/8820c72d-edd3-4c66-b05a-da21e4cb9451.png"
         },
@@ -3017,8 +3017,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            602.6,
-            484.6
+            571.4,
+            503.3
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/efe018fd-67f2-4ca1-87f7-efa5d6ddd9ca.png"
         },
@@ -3027,8 +3027,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            588.6,
-            472.5
+            558.2,
+            491.8
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/71701d06-7361-4f1f-aa6b-c8a370b3a9b2.png"
         },
@@ -3037,8 +3037,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            592.8,
-            352.7
+            562.1,
+            378.7
           ]
         },
         {
@@ -3046,8 +3046,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            505.1,
-            519.5
+            479.3,
+            536.2
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/7f3779ad-1b44-4759-90ef-65886e31ca3b.png"
         },
@@ -3056,8 +3056,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            500.8,
-            542.0
+            475.2,
+            557.5
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/489fa82e-3a93-40cd-a66c-5a51e4a5a764.png"
         },
@@ -3066,8 +3066,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            683.6,
-            711.8
+            647.9,
+            717.8
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/40f98190-aaf5-4211-b3da-aab37980c07c.png"
         },
@@ -3076,8 +3076,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            724.1,
-            328.0
+            686.1,
+            355.3
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/1723aac3-92ff-46f5-9341-2a90aa00b8d7.png"
         },
@@ -3086,8 +3086,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            697.2,
-            354.2
+            660.7,
+            380.0
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/00a67601-5879-4354-bd5b-1e2c427f06dd.png"
         },
@@ -3096,8 +3096,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            736.6,
-            408.5
+            697.9,
+            431.3
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/641e478c-df90-40e5-9765-e8844858d09a.png"
         },
@@ -3106,8 +3106,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            537.4,
-            752.3
+            509.8,
+            756.0
           ],
           "description": "On the coast of the red lakes just north-east of the electrical tower.",
           "mediaUrl": "https://media.mapgenie.io/storage/media/fb74c52b-3edf-4a74-8a43-07a0d0e19b1f.png"
@@ -3117,8 +3117,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            590.4,
-            512.3
+            559.8,
+            529.4
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/7aff1f17-d6e3-49d2-b6b7-b5444688c49f.png"
         },
@@ -3127,8 +3127,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            816.6,
-            370.5
+            773.4,
+            395.5
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/a86c9a8e-3df2-43c3-8e3d-f779430cf67e.png"
         },
@@ -3137,8 +3137,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            654.5,
-            451.0
+            620.4,
+            471.5
           ]
         },
         {
@@ -3146,8 +3146,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            577.3,
-            585.1
+            547.4,
+            598.1
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/41f9ba05-45b6-4852-9973-bb9f62aaffb6.png"
         },
@@ -3156,8 +3156,8 @@ window.arcMapsConfig = {
           "title": "RAIDER CACHE",
           "type": "raiderCache",
           "coords": [
-            543.2,
-            322.8
+            515.2,
+            350.4
           ]
         },
         {
@@ -3165,8 +3165,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            501.3,
-            781.2
+            475.7,
+            783.4
           ],
           "description": "Raider Cache southeast of the electrical tower, on the bank of the red lake. At the edge of the map."
         },
@@ -3175,8 +3175,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            456.4,
-            586.5
+            433.3,
+            599.5
           ]
         },
         {
@@ -3184,8 +3184,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            825.5,
-            540.4
+            781.9,
+            555.9
           ],
           "description": "Spawns around the ruins near the Prickly Pear location"
         },
@@ -3194,8 +3194,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            515.8,
-            789.9
+            489.3,
+            791.6
           ],
           "description": "Raider Cache at the bank of the red lake south-east of the electrical tower."
         },
@@ -3204,8 +3204,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            625.0,
-            353.1
+            592.5,
+            379.1
           ]
         },
         {
@@ -3213,8 +3213,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            732.2,
-            457.8
+            693.8,
+            477.9
           ]
         },
         {
@@ -3222,8 +3222,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            610.4,
-            725.9
+            578.7,
+            731.1
           ]
         },
         {
@@ -3231,8 +3231,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            597.4,
-            753.1
+            566.5,
+            756.8
           ]
         },
         {
@@ -3240,8 +3240,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            591.1,
-            736.3
+            560.5,
+            741.0
           ]
         },
         {
@@ -3249,8 +3249,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            579.0,
-            759.7
+            549.1,
+            763.1
           ]
         },
         {
@@ -3258,8 +3258,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            551.8,
-            728.9
+            523.4,
+            733.9
           ]
         },
         {
@@ -3267,8 +3267,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            756.5,
-            695.9
+            716.7,
+            702.8
           ]
         },
         {
@@ -3276,8 +3276,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            699.5,
-            645.7
+            662.9,
+            655.4
           ]
         },
         {
@@ -3285,8 +3285,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            504.1,
-            639.4
+            478.3,
+            649.4
           ]
         },
         {
@@ -3294,8 +3294,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            830.0,
-            603.8
+            786.1,
+            615.8
           ]
         },
         {
@@ -3303,8 +3303,8 @@ window.arcMapsConfig = {
           "title": "Research & Administration",
           "type": "location",
           "coords": [
-            604.9,
-            571.5
+            573.5,
+            585.3
           ]
         },
         {
@@ -3312,8 +3312,8 @@ window.arcMapsConfig = {
           "title": "Hydroponic Dome Complex",
           "type": "location",
           "coords": [
-            754.3,
-            523.8
+            714.6,
+            540.2
           ]
         },
         {
@@ -3321,8 +3321,8 @@ window.arcMapsConfig = {
           "title": "Power Generation Complex",
           "type": "location",
           "coords": [
-            789.7,
-            716.1
+            748.0,
+            721.9
           ]
         },
         {
@@ -3330,8 +3330,8 @@ window.arcMapsConfig = {
           "title": "Testing Annex",
           "type": "location",
           "coords": [
-            530.2,
-            697.0
+            503.0,
+            703.8
           ]
         },
         {
@@ -3339,8 +3339,8 @@ window.arcMapsConfig = {
           "title": "Water Treatment Control",
           "type": "location",
           "coords": [
-            632.6,
-            427.6
+            599.7,
+            449.4
           ]
         }
       ]
@@ -5540,8 +5540,8 @@ window.arcMapsConfig = {
           "title": "East Elevator",
           "type": "cargoElevator",
           "coords": [
-            510.8,
-            725.2
+            487.5,
+            753.2
           ]
         },
         {
@@ -5549,8 +5549,8 @@ window.arcMapsConfig = {
           "title": "South Elevator",
           "type": "cargoElevator",
           "coords": [
-            505.4,
-            504.1
+            481.7,
+            517.4
           ]
         },
         {
@@ -5558,8 +5558,8 @@ window.arcMapsConfig = {
           "title": "West Elevator",
           "type": "cargoElevator",
           "coords": [
-            613.7,
-            359.2
+            597.3,
+            362.8
           ]
         },
         {
@@ -5567,8 +5567,8 @@ window.arcMapsConfig = {
           "title": "Central Elevator",
           "type": "cargoElevator",
           "coords": [
-            699.0,
-            523.3
+            688.3,
+            537.9
           ]
         },
         {
@@ -5576,8 +5576,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            750.5,
-            362.2
+            743.2,
+            366.0
           ],
           "description": "Field Crate Locations: - Field Crate   - Field Crate"
         },
@@ -5586,8 +5586,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            324.7,
-            493.4
+            289.1,
+            506.0
           ]
         },
         {
@@ -5595,8 +5595,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            556.1,
-            750.2
+            535.8,
+            779.9
           ],
           "description": "Field Crate Locations: - Field Crate"
         },
@@ -5605,8 +5605,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            533.7,
-            385.0
+            511.9,
+            390.3
           ],
           "description": "Field Crate Locations: - Field Crate   - Field Crate   - Field Crate"
         },
@@ -5615,8 +5615,8 @@ window.arcMapsConfig = {
           "title": "Field Depot",
           "type": "fieldDepot",
           "coords": [
-            372.3,
-            729.9
+            339.7,
+            758.3
           ],
           "description": "Field Crate Locations: - Field Crate - Field Crate South - Field Crate West"
         },
@@ -5625,8 +5625,8 @@ window.arcMapsConfig = {
           "title": "Rocket Assembly",
           "type": "location",
           "coords": [
-            614.3,
-            685.4
+            598.0,
+            710.7
           ]
         },
         {
@@ -5634,8 +5634,8 @@ window.arcMapsConfig = {
           "title": "Fuel Control",
           "type": "location",
           "coords": [
-            660.6,
-            656.5
+            647.3,
+            680.0
           ]
         },
         {
@@ -5643,8 +5643,8 @@ window.arcMapsConfig = {
           "title": "Launch Towers",
           "type": "location",
           "coords": [
-            624.0,
-            534.9
+            608.3,
+            550.2
           ]
         },
         {
@@ -5652,8 +5652,8 @@ window.arcMapsConfig = {
           "title": "Departure Building",
           "type": "location",
           "coords": [
-            606.8,
-            438.9
+            589.9,
+            447.8
           ]
         },
         {
@@ -5661,8 +5661,8 @@ window.arcMapsConfig = {
           "title": "Arrival Building",
           "type": "location",
           "coords": [
-            715.1,
-            442.6
+            705.5,
+            451.7
           ]
         },
         {
@@ -5670,8 +5670,8 @@ window.arcMapsConfig = {
           "title": "Shipping Warehouse",
           "type": "location",
           "coords": [
-            776.8,
-            496.5
+            771.3,
+            509.3
           ]
         },
         {
@@ -5679,8 +5679,8 @@ window.arcMapsConfig = {
           "title": "Control Tower A6",
           "type": "location",
           "coords": [
-            511.1,
-            570.3
+            487.9,
+            587.9
           ]
         },
         {
@@ -5688,8 +5688,8 @@ window.arcMapsConfig = {
           "title": "Vehicle Maintenance",
           "type": "location",
           "coords": [
-            450.1,
-            574.3
+            422.8,
+            592.3
           ]
         },
         {
@@ -5697,8 +5697,8 @@ window.arcMapsConfig = {
           "title": "Container Storage",
           "type": "location",
           "coords": [
-            479.6,
-            654.2
+            454.2,
+            677.5
           ]
         },
         {
@@ -5706,8 +5706,8 @@ window.arcMapsConfig = {
           "title": "Fuel Lines",
           "type": "location",
           "coords": [
-            506.3,
-            425.0
+            482.7,
+            433.0
           ]
         },
         {
@@ -5715,8 +5715,8 @@ window.arcMapsConfig = {
           "title": "Fuel Processing",
           "type": "location",
           "coords": [
-            542.1,
-            302.3
+            520.9,
+            302.2
           ]
         },
         {
@@ -5724,8 +5724,8 @@ window.arcMapsConfig = {
           "title": "Water Towers",
           "type": "location",
           "coords": [
-            686.2,
-            217.5
+            674.6,
+            211.7
           ]
         },
         {
@@ -5733,8 +5733,8 @@ window.arcMapsConfig = {
           "title": "Jiangsu Warehouse",
           "type": "location",
           "coords": [
-            773.1,
-            300.0
+            767.3,
+            299.7
           ]
         },
         {
@@ -5742,8 +5742,8 @@ window.arcMapsConfig = {
           "title": "Fuel Depot",
           "type": "location",
           "coords": [
-            824.6,
-            346.0
+            822.2,
+            348.8
           ]
         },
         {
@@ -5751,8 +5751,8 @@ window.arcMapsConfig = {
           "title": "Car Park",
           "type": "location",
           "coords": [
-            734.9,
-            415.2
+            726.6,
+            422.6
           ]
         },
         {
@@ -5760,8 +5760,8 @@ window.arcMapsConfig = {
           "title": "West Hangar",
           "type": "location",
           "coords": [
-            830.1,
-            604.7
+            828.2,
+            624.6
           ]
         },
         {
@@ -5769,8 +5769,8 @@ window.arcMapsConfig = {
           "title": "East Hangar",
           "type": "location",
           "coords": [
-            775.8,
-            664.8
+            770.2,
+            688.8
           ]
         },
         {
@@ -5778,8 +5778,8 @@ window.arcMapsConfig = {
           "title": "Little Hangar",
           "type": "location",
           "coords": [
-            705.9,
-            736.5
+            695.6,
+            765.3
           ]
         },
         {
@@ -5787,8 +5787,8 @@ window.arcMapsConfig = {
           "title": "East Container Yard",
           "type": "location",
           "coords": [
-            647.9,
-            724.5
+            633.8,
+            752.4
           ]
         },
         {
@@ -5796,8 +5796,8 @@ window.arcMapsConfig = {
           "title": "East Plains Warehouse",
           "type": "location",
           "coords": [
-            596.9,
-            801.2
+            579.3,
+            834.2
           ]
         },
         {
@@ -5805,8 +5805,8 @@ window.arcMapsConfig = {
           "title": "Service Buildings",
           "type": "location",
           "coords": [
-            335.8,
-            800.3
+            300.9,
+            833.4
           ]
         },
         {
@@ -5814,8 +5814,8 @@ window.arcMapsConfig = {
           "title": "Communications Tower",
           "type": "location",
           "coords": [
-            448.0,
-            806.1
+            420.6,
+            839.5
           ]
         },
         {
@@ -5823,8 +5823,8 @@ window.arcMapsConfig = {
           "title": "Staff Parking",
           "type": "location",
           "coords": [
-            320.5,
-            615.8
+            284.6,
+            636.6
           ]
         },
         {
@@ -5832,8 +5832,8 @@ window.arcMapsConfig = {
           "title": "Security Checkpoint",
           "type": "location",
           "coords": [
-            281.5,
-            685.5
+            242.9,
+            710.9
           ]
         },
         {
@@ -5841,8 +5841,8 @@ window.arcMapsConfig = {
           "title": "Electrical Substation",
           "type": "location",
           "coords": [
-            248.5,
-            623.3
+            207.8,
+            644.5
           ]
         },
         {
@@ -5850,8 +5850,8 @@ window.arcMapsConfig = {
           "title": "Maintenance Hangar",
           "type": "location",
           "coords": [
-            358.3,
-            508.1
+            324.8,
+            521.6
           ]
         },
         {
@@ -5859,8 +5859,8 @@ window.arcMapsConfig = {
           "title": "Fuel Storage",
           "type": "location",
           "coords": [
-            351.5,
-            378.7
+            317.6,
+            383.6
           ]
         },
         {
@@ -5868,8 +5868,8 @@ window.arcMapsConfig = {
           "title": "West Container Yard",
           "type": "location",
           "coords": [
-            790.1,
-            531.0
+            785.4,
+            546.0
           ]
         },
         {
@@ -5877,8 +5877,8 @@ window.arcMapsConfig = {
           "title": "North Trench Tower",
           "type": "location",
           "coords": [
-            777.6,
-            612.2
+            772.1,
+            632.6
           ]
         },
         {
@@ -5886,8 +5886,8 @@ window.arcMapsConfig = {
           "title": "South Trench Tower",
           "type": "location",
           "coords": [
-            755.3,
-            592.2
+            748.3,
+            611.3
           ]
         },
         {
@@ -5895,8 +5895,8 @@ window.arcMapsConfig = {
           "title": "The Trench",
           "type": "location",
           "coords": [
-            719.5,
-            620.5
+            710.1,
+            641.5
           ]
         },
         {
@@ -5904,8 +5904,8 @@ window.arcMapsConfig = {
           "title": "Security Breach inside Red lockers Room",
           "type": "lockedDoor",
           "coords": [
-            728.1,
-            441.7
+            719.3,
+            450.9
           ]
         },
         {
@@ -5913,8 +5913,8 @@ window.arcMapsConfig = {
           "title": "Spaceport Shipping Warehouse Door",
           "type": "lockedDoor",
           "coords": [
-            775.4,
-            487.6
+            769.8,
+            499.8
           ],
           "description": "Key Required: Spaceport Warehouse Key Location: Northwest corner of the 2nd floor",
           "mediaUrl": "https://media.mapgenie.io/storage/media/8d6541e5-fa20-497a-ac15-8de0cf9864a5.jpeg"
@@ -5924,8 +5924,8 @@ window.arcMapsConfig = {
           "title": "Security Breach",
           "type": "lockedDoor",
           "coords": [
-            739.6,
-            475.5
+            731.6,
+            486.8
           ],
           "description": "Breach door to enter, no key required"
         },
@@ -5934,8 +5934,8 @@ window.arcMapsConfig = {
           "title": "Trench Tower Locked Door",
           "type": "lockedDoor",
           "coords": [
-            749.7,
-            600.7
+            742.3,
+            620.4
           ],
           "description": "Key Required: Spaceport Trench Tower Key Location: ??   Behind the Door:  - ??"
         },
@@ -5944,8 +5944,8 @@ window.arcMapsConfig = {
           "title": "Trench Tower Locked Door",
           "type": "lockedDoor",
           "coords": [
-            762.9,
-            585.6
+            756.4,
+            604.3
           ],
           "description": "Key Required: Spaceport Trench Tower Key Location: ??   Behind the Door:  - ??"
         },
@@ -5954,8 +5954,8 @@ window.arcMapsConfig = {
           "title": "Trench Tower Locked Door",
           "type": "lockedDoor",
           "coords": [
-            783.2,
-            604.2
+            778.1,
+            624.1
           ],
           "description": "Key Required: Spaceport Trench Tower Key Location: ??   Behind the Door:  - ??"
         },
@@ -5964,8 +5964,8 @@ window.arcMapsConfig = {
           "title": "Trench Tower Locked Door",
           "type": "lockedDoor",
           "coords": [
-            783.2,
-            604.2
+            778.1,
+            624.1
           ]
         },
         {
@@ -5973,8 +5973,8 @@ window.arcMapsConfig = {
           "title": "Trench Tower Locked Door",
           "type": "lockedDoor",
           "coords": [
-            771.9,
-            616.7
+            766.0,
+            637.5
           ],
           "description": "Key Required: Spaceport Trench Tower Key Location: ??   Behind the Door:  - ??"
         },
@@ -5983,8 +5983,8 @@ window.arcMapsConfig = {
           "title": "Spaceport Container Storage Room",
           "type": "lockedDoor",
           "coords": [
-            484.2,
-            662.8
+            459.1,
+            686.6
           ],
           "description": "Key Required: Spaceport Container Storage Room   Location: Top floor of the Container Storage Area   Behind the Door:  - ??"
         },
@@ -5993,8 +5993,8 @@ window.arcMapsConfig = {
           "title": "Spaceport Control Tower",
           "type": "lockedDoor",
           "coords": [
-            513.2,
-            553.9
+            490.1,
+            570.5
           ],
           "description": "Key Required: Spaceport Control Tower Key   Location: Control Tower A6   Behind the Door:  - Spaceport Control Tower"
         },
@@ -6003,8 +6003,8 @@ window.arcMapsConfig = {
           "title": "Raider Camp",
           "type": "raiderCamp",
           "coords": [
-            746.5,
-            225.7
+            738.9,
+            220.5
           ]
         },
         {
@@ -6012,8 +6012,8 @@ window.arcMapsConfig = {
           "title": "Raider Camp",
           "type": "raiderCamp",
           "coords": [
-            801.0,
-            479.1
+            797.1,
+            490.7
           ]
         },
         {
@@ -6021,8 +6021,8 @@ window.arcMapsConfig = {
           "title": "Trench Hatch West",
           "type": "raiderHatch",
           "coords": [
-            808.4,
-            565.1
+            805.0,
+            582.4
           ]
         },
         {
@@ -6030,8 +6030,8 @@ window.arcMapsConfig = {
           "title": "Raider Hatch",
           "type": "raiderHatch",
           "coords": [
-            672.3,
-            727.5
+            659.8,
+            755.6
           ]
         },
         {
@@ -6039,8 +6039,8 @@ window.arcMapsConfig = {
           "title": "Departures Hatch",
           "type": "raiderHatch",
           "coords": [
-            580.7,
-            591.8
+            562.0,
+            611.0
           ]
         },
         {
@@ -6048,8 +6048,8 @@ window.arcMapsConfig = {
           "title": "Control Hatch",
           "type": "raiderHatch",
           "coords": [
-            545.5,
-            565.6
+            524.5,
+            583.0
           ]
         },
         {
@@ -6057,8 +6057,8 @@ window.arcMapsConfig = {
           "title": "Security Breach",
           "type": "miscellaneous",
           "coords": [
-            597.3,
-            417.6
+            579.8,
+            425.1
           ],
           "description": "Security Breach inside of locker room"
         },
@@ -6067,8 +6067,8 @@ window.arcMapsConfig = {
           "title": "[What We Left Behind] Bilguun's Hideout",
           "type": "collectible",
           "coords": [
-            463.0,
-            691.3
+            436.5,
+            717.1
           ],
           "description": "Mission: What We Left Behind   Location: Shack at the wall where you need to take the ladder to climb up. Eastern side, outside the container storage."
         },
@@ -6077,8 +6077,8 @@ window.arcMapsConfig = {
           "title": "[Greasing Her Palms] Rocket Thruster",
           "type": "collectible",
           "coords": [
-            557.5,
-            628.4
+            537.3,
+            650.0
           ],
           "description": "Mission: Greasing Her Palms   Location: Large rocket thruster, south of the Rocket Assembly Goal: Scope out the rocket thrusters outside the Rocket Assembly",
           "mediaUrl": "https://media.mapgenie.io/storage/media/c90315ba-4969-4fa5-a521-312d5d1eb260.png"
@@ -6088,8 +6088,8 @@ window.arcMapsConfig = {
           "title": "[Lay of the Land] Locate the Scanners",
           "type": "collectible",
           "coords": [
-            512.2,
-            593.2
+            489.1,
+            612.5
           ],
           "description": "Mission: Lay of the Land   Location: On the upper floor of Control Tower A6. Hidden behind a desk in the corner."
         },
@@ -6098,8 +6098,8 @@ window.arcMapsConfig = {
           "title": "[Lay Of The Land] Shipping Notes",
           "type": "collectible",
           "coords": [
-            781.2,
-            284.3
+            776.0,
+            282.9
           ],
           "description": "Mission: Lay Of The Land Location: Jiangsu Warehouse The shipping notes are on a desk in the second floor of the main warehouse"
         },
@@ -6108,8 +6108,8 @@ window.arcMapsConfig = {
           "title": "[Medical Merchandise] Containers in Depature Building",
           "type": "collectible",
           "coords": [
-            610.4,
-            441.7
+            593.7,
+            450.9
           ],
           "description": "Mission:  Medical Merchandise Location: On Spaceport, search 2 containers in the Departure Building's exam room."
         },
@@ -6118,8 +6118,8 @@ window.arcMapsConfig = {
           "title": "[Power Out] Install Fuse",
           "type": "collectible",
           "coords": [
-            254.4,
-            618.9
+            214.1,
+            639.8
           ],
           "description": "Mission: Power Out  Location:  Electrical Substation Description Missing Engineer, Fuse, Restore Power"
         },
@@ -6128,8 +6128,8 @@ window.arcMapsConfig = {
           "title": "Eyes In the Sky",
           "type": "collectible",
           "coords": [
-            460.2,
-            801.6
+            433.6,
+            834.7
           ],
           "description": "Mission: Eyes in the Sky   Location: Install a LiDAR scanner at the Communications Tower   Objective: Climb the ladder of the tower and turn right. The mount is located in the corner"
         },
@@ -6138,8 +6138,8 @@ window.arcMapsConfig = {
           "title": "[Back on Top] South Trench Tower",
           "type": "collectible",
           "coords": [
-            750.5,
-            590.8
+            743.2,
+            609.9
           ],
           "description": "Mission:Back on Top Location: South Trench Tower"
         },
@@ -6148,8 +6148,8 @@ window.arcMapsConfig = {
           "title": "[Switching The Supply] Tunnel Under Spaceport",
           "type": "collectible",
           "coords": [
-            590.5,
-            497.8
+            572.5,
+            510.7
           ],
           "description": "Mission: Switching The Supply Location: Look for YELLOW valve in tunnel."
         },
@@ -6158,8 +6158,8 @@ window.arcMapsConfig = {
           "title": "[Lost in Transmission] Activate Comms",
           "type": "collectible",
           "coords": [
-            507.9,
-            552.6
+            484.4,
+            569.2
           ],
           "description": "Mission: Lost in Transmission   Location: Use zipline to go to top of Control Tower. Activate comms at main terminal"
         },
@@ -6168,8 +6168,8 @@ window.arcMapsConfig = {
           "title": "ARC Courier",
           "type": "arcCourier",
           "coords": [
-            366.1,
-            550.1
+            333.2,
+            566.4
           ]
         },
         {
@@ -6177,8 +6177,8 @@ window.arcMapsConfig = {
           "title": "ARC Courier",
           "type": "arcCourier",
           "coords": [
-            514.8,
-            709.5
+            491.8,
+            736.5
           ]
         },
         {
@@ -6186,8 +6186,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Probe",
           "type": "miscellaneous",
           "coords": [
-            552.0,
-            793.6
+            531.5,
+            826.2
           ],
           "description": "Location: On the road"
         },
@@ -6196,8 +6196,8 @@ window.arcMapsConfig = {
           "title": "Crashed ARC Probe",
           "type": "miscellaneous",
           "coords": [
-            519.5,
-            485.5
+            496.8,
+            497.5
           ]
         },
         {
@@ -6205,8 +6205,8 @@ window.arcMapsConfig = {
           "title": "ARC Probe",
           "type": "miscellaneous",
           "coords": [
-            383.8,
-            627.8
+            352.1,
+            649.3
           ]
         },
         {
@@ -6214,8 +6214,8 @@ window.arcMapsConfig = {
           "title": "Baron Husk",
           "type": "baronHusk",
           "coords": [
-            452.7,
-            517.6
+            425.6,
+            531.8
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/f08e1133-8406-4743-b0e3-c9e6f6b204fb.jpeg"
         },
@@ -6224,8 +6224,8 @@ window.arcMapsConfig = {
           "title": "Baron Husk",
           "type": "baronHusk",
           "coords": [
-            427.1,
-            364.3
+            398.2,
+            368.3
           ]
         },
         {
@@ -6233,8 +6233,8 @@ window.arcMapsConfig = {
           "title": "Baron Husk",
           "type": "baronHusk",
           "coords": [
-            824.6,
-            429.7
+            822.3,
+            438.0
           ]
         },
         {
@@ -6242,8 +6242,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            367.7,
-            765.6
+            334.9,
+            796.3
           ],
           "description": "Location: On the back of the small truck   Field Depot: - Field Depot"
         },
@@ -6252,8 +6252,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            728.6,
-            397.8
+            719.8,
+            404.0
           ]
         },
         {
@@ -6261,8 +6261,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            349.8,
-            513.1
+            315.8,
+            527.0
           ],
           "description": "Location: ??   Field Depot: - Field Depot"
         },
@@ -6271,8 +6271,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            772.0,
-            335.7
+            766.1,
+            337.8
           ]
         },
         {
@@ -6280,8 +6280,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            578.1,
-            804.2
+            559.3,
+            837.5
           ],
           "description": "Location: East plains warehouse  Field Depot: Field Depot",
           "mediaUrl": "https://media.mapgenie.io/storage/media/b673df14-aa34-47b3-82db-6de6f987ed0a.jpeg"
@@ -6291,8 +6291,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            327.7,
-            595.3
+            292.2,
+            614.6
           ],
           "description": "Location: Next to the bus   Field Depot: - ??"
         },
@@ -6301,8 +6301,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            522.0,
-            452.0
+            499.5,
+            461.8
           ],
           "description": "Location: ??   Field Depot: Field Depot"
         },
@@ -6311,8 +6311,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            387.9,
-            689.4
+            356.4,
+            715.0
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/5eb07efd-8051-45f0-a853-c764b05b058f.jpeg"
         },
@@ -6321,8 +6321,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            344.5,
-            736.7
+            310.1,
+            765.5
           ],
           "description": "Location: ??   Field Depot"
         },
@@ -6331,8 +6331,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            503.3,
-            399.6
+            479.6,
+            405.9
           ],
           "mediaUrl": "https://media.mapgenie.io/storage/media/22c80da9-dd92-4553-8f2e-f04bfb1ad3bd.png"
         },
@@ -6341,8 +6341,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            297.0,
-            478.5
+            259.5,
+            490.1
           ],
           "description": "Location: On truck   Field Depot: ??"
         },
@@ -6351,8 +6351,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            549.0,
-            349.4
+            528.3,
+            352.3
           ],
           "description": "On top of truck"
         },
@@ -6361,8 +6361,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            453.3,
-            815.7
+            426.2,
+            849.7
           ],
           "description": "Next to communications tower and lamp post",
           "mediaUrl": "https://media.mapgenie.io/storage/media/26e68988-2e69-4c50-a18b-1cdb3829ebce.jpeg"
@@ -6372,8 +6372,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            765.1,
-            390.9
+            758.8,
+            396.6
           ],
           "description": "Location: On top of a small truck Field Depot: ??"
         },
@@ -6382,8 +6382,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            381.9,
-            745.9
+            350.1,
+            775.3
           ],
           "description": "Outside Shack"
         },
@@ -6392,8 +6392,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            278.5,
-            696.8
+            239.7,
+            722.9
           ],
           "description": "Location: ??   Field Depot: ??"
         },
@@ -6402,8 +6402,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            367.8,
-            667.3
+            335.0,
+            691.4
           ],
           "description": "Inside Building"
         },
@@ -6412,8 +6412,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            724.2,
-            349.4
+            715.2,
+            352.3
           ]
         },
         {
@@ -6421,8 +6421,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            578.1,
-            382.0
+            559.4,
+            387.1
           ]
         },
         {
@@ -6430,8 +6430,8 @@ window.arcMapsConfig = {
           "title": "Field Crate",
           "type": "fieldCrate",
           "coords": [
-            585.7,
-            740.9
+            567.4,
+            770.0
           ]
         },
         {
@@ -6439,8 +6439,8 @@ window.arcMapsConfig = {
           "title": "3x Mushroom",
           "type": "item",
           "coords": [
-            674.2,
-            709.0
+            661.8,
+            736.0
           ],
           "description": "Guaranteed 3 mushroom-spawns. Location: On the rotten tree in the corner"
         },
@@ -6449,8 +6449,8 @@ window.arcMapsConfig = {
           "title": "Lush Basket",
           "type": "item",
           "coords": [
-            748.2,
-            646.6
+            740.8,
+            669.4
           ],
           "description": "Basket that only spawns during Lush map condition"
         },
@@ -6459,8 +6459,8 @@ window.arcMapsConfig = {
           "title": "Med Bag",
           "type": "medicalBox",
           "coords": [
-            504.8,
-            489.4
+            481.1,
+            501.7
           ],
           "description": "Location: Between the containers"
         },
@@ -6469,8 +6469,8 @@ window.arcMapsConfig = {
           "title": "Security Breach",
           "type": "securityLocker",
           "coords": [
-            509.1,
-            466.1
+            485.7,
+            476.9
           ]
         },
         {
@@ -6478,8 +6478,8 @@ window.arcMapsConfig = {
           "title": "2x Security Locker",
           "type": "securityLocker",
           "coords": [
-            665.1,
-            421.4
+            652.1,
+            429.2
           ],
           "description": "2 Security Lockers inside breachable bunker"
         },
@@ -6488,8 +6488,8 @@ window.arcMapsConfig = {
           "title": "Security Locker",
           "type": "securityLocker",
           "coords": [
-            679.2,
-            398.3
+            667.1,
+            404.6
           ],
           "description": "Location: Top floor"
         },
@@ -6498,8 +6498,8 @@ window.arcMapsConfig = {
           "title": "Security Locker",
           "type": "securityLocker",
           "coords": [
-            378.8,
-            609.7
+            346.7,
+            630.0
           ]
         },
         {
@@ -6507,8 +6507,8 @@ window.arcMapsConfig = {
           "title": "Security Locker",
           "type": "securityLocker",
           "coords": [
-            740.6,
-            478.7
+            732.6,
+            490.3
           ],
           "description": "1 Locker"
         },
@@ -6517,8 +6517,8 @@ window.arcMapsConfig = {
           "title": "Security Locker",
           "type": "securityLocker",
           "coords": [
-            745.7,
-            456.5
+            738.1,
+            466.7
           ]
         },
         {
@@ -6526,8 +6526,8 @@ window.arcMapsConfig = {
           "title": "Security Locker",
           "type": "securityLocker",
           "coords": [
-            591.6,
-            422.3
+            573.7,
+            430.1
           ],
           "description": "Inside the changing rooms in the corner"
         },
@@ -6536,8 +6536,8 @@ window.arcMapsConfig = {
           "title": "Security Locker",
           "type": "securityLocker",
           "coords": [
-            507.3,
-            554.5
+            483.8,
+            571.2
           ],
           "description": "Inside the tower A6 in the last floor"
         },
@@ -6546,8 +6546,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            632.8,
-            444.6
+            617.6,
+            454.0
           ],
           "description": "Location: In the tunnel in a side room under a table with computers on it."
         },
@@ -6556,8 +6556,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            781.6,
-            615.3
+            776.4,
+            636.0
           ],
           "description": "One can spawn on the TOP of the tower. Another can spawn in each of the towers rooms. You need a key for the rooms."
         },
@@ -6566,8 +6566,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            724.3,
-            439.6
+            715.2,
+            448.5
           ],
           "description": "Location: Rooftop"
         },
@@ -6576,8 +6576,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            628.4,
-            551.5
+            613.0,
+            567.9
           ],
           "description": "Very top of the launch tower"
         },
@@ -6586,8 +6586,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            708.0,
-            422.7
+            697.9,
+            430.6
           ],
           "description": "Server room"
         },
@@ -6596,8 +6596,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            367.3,
-            454.9
+            334.4,
+            464.9
           ]
         },
         {
@@ -6605,8 +6605,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            372.8,
-            650.2
+            340.3,
+            673.2
           ],
           "description": "Inside the leftmost little office."
         },
@@ -6615,8 +6615,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            378.1,
-            605.9
+            346.0,
+            626.0
           ],
           "description": "On the top of the tower"
         },
@@ -6625,8 +6625,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            596.7,
-            701.8
+            579.2,
+            728.3
           ],
           "description": "It can spawn on the top of the green pipes, in the area where 2 sets of double pipes cross each other. Begin from the south, climb up the pipes, up to the top."
         },
@@ -6635,8 +6635,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            793.0,
-            502.8
+            788.6,
+            516.0
           ],
           "description": "This crate spawns inside of the closed room."
         },
@@ -6645,8 +6645,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            700.4,
-            436.5
+            689.8,
+            445.3
           ],
           "description": "Top floor in the pinned angle facing the \"windows\""
         },
@@ -6655,8 +6655,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            605.6,
-            454.7
+            588.6,
+            464.6
           ],
           "description": "Location: 2nd Floor - there is an office enclosed in curtains. A weapon crate and/or a medical bag can spawn."
         },
@@ -6665,8 +6665,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            607.7,
-            408.7
+            590.9,
+            415.6
           ],
           "description": "Location: In the breachable Changing Room You can miss it easily because it can spawn vertically in the last shower to the left."
         },
@@ -6675,8 +6675,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            599.7,
-            419.4
+            582.4,
+            427.0
           ]
         },
         {
@@ -6684,8 +6684,8 @@ window.arcMapsConfig = {
           "title": "Bunker Crates",
           "type": "weaponCase",
           "coords": [
-            551.4,
-            371.0
+            530.8,
+            375.4
           ],
           "description": "If you open the bunker during the special mission you can find up to 3 weapon crates."
         },
@@ -6694,8 +6694,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            504.6,
-            424.6
+            481.0,
+            432.5
           ],
           "description": "Jump in the small tube."
         },
@@ -6704,8 +6704,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            504.0,
-            465.3
+            480.2,
+            476.0
           ],
           "description": "In the Tower"
         },
@@ -6714,8 +6714,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            512.4,
-            549.1
+            489.3,
+            565.4
           ],
           "description": "Location: In the tower behind the locked door"
         },
@@ -6724,8 +6724,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate",
           "type": "weaponCase",
           "coords": [
-            447.8,
-            568.8
+            420.3,
+            586.4
           ],
           "description": "Second Floor on the yellow couches"
         },
@@ -6734,8 +6734,8 @@ window.arcMapsConfig = {
           "title": "Weapon Crate Lower Corridor",
           "type": "weaponCase",
           "coords": [
-            488.5,
-            665.0
+            463.8,
+            689.0
           ],
           "description": "In this facility there are 2 ziplines on the left and 2 on the right side of the structure. In the middle of the right ones can spawn a weapon case."
         },
@@ -6744,8 +6744,8 @@ window.arcMapsConfig = {
           "title": "Weapons Crate",
           "type": "weaponCase",
           "coords": [
-            652.1,
-            724.5
+            638.2,
+            752.4
           ],
           "description": "Find the Valley and go to the right end of it near the ladder"
         },
@@ -6754,8 +6754,8 @@ window.arcMapsConfig = {
           "title": "Locked Room",
           "type": "weaponCase",
           "coords": [
-            758.2,
-            590.0
+            751.4,
+            609.0
           ],
           "description": "Inside the locked room"
         },
@@ -6764,8 +6764,8 @@ window.arcMapsConfig = {
           "title": "Weapons Crate",
           "type": "weaponCase",
           "coords": [
-            678.6,
-            398.1
+            666.5,
+            404.3
           ]
         },
         {
@@ -6773,8 +6773,8 @@ window.arcMapsConfig = {
           "title": "Agave",
           "type": "agave",
           "coords": [
-            276.2,
-            652.5
+            237.3,
+            675.7
           ]
         },
         {
@@ -6782,8 +6782,8 @@ window.arcMapsConfig = {
           "title": "Agave",
           "type": "agave",
           "coords": [
-            528.8,
-            687.3
+            506.8,
+            712.8
           ]
         },
         {
@@ -6791,8 +6791,8 @@ window.arcMapsConfig = {
           "title": "Apricot Tree",
           "type": "apricot",
           "coords": [
-            326.1,
-            606.0
+            290.6,
+            626.0
           ]
         },
         {
@@ -6800,8 +6800,8 @@ window.arcMapsConfig = {
           "title": "Apricot Tree",
           "type": "apricot",
           "coords": [
-            510.3,
-            759.4
+            486.9,
+            789.7
           ]
         },
         {
@@ -6809,8 +6809,8 @@ window.arcMapsConfig = {
           "title": "Apricot Tree",
           "type": "apricot",
           "coords": [
-            482.6,
-            746.7
+            457.4,
+            776.1
           ]
         },
         {
@@ -6818,8 +6818,8 @@ window.arcMapsConfig = {
           "title": "Apricot Tree",
           "type": "apricot",
           "coords": [
-            469.0,
-            760.7
+            443.0,
+            791.1
           ]
         },
         {
@@ -6827,8 +6827,8 @@ window.arcMapsConfig = {
           "title": "Apricot",
           "type": "apricot",
           "coords": [
-            715.2,
-            657.3
+            705.5,
+            680.8
           ]
         },
         {
@@ -6836,8 +6836,8 @@ window.arcMapsConfig = {
           "title": "Apricot Tree",
           "type": "apricot",
           "coords": [
-            747.6,
-            386.3
+            740.1,
+            391.7
           ]
         },
         {
@@ -6845,8 +6845,8 @@ window.arcMapsConfig = {
           "title": "Apricot trees",
           "type": "apricot",
           "coords": [
-            558.6,
-            779.0
+            538.5,
+            810.6
           ],
           "description": "Apricot trees"
         },
@@ -6855,8 +6855,8 @@ window.arcMapsConfig = {
           "title": "Apricot",
           "type": "apricot",
           "coords": [
-            793.8,
-            418.4
+            789.4,
+            426.0
           ]
         },
         {
@@ -6864,8 +6864,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            820.5,
-            486.2
+            817.8,
+            498.2
           ]
         },
         {
@@ -6873,8 +6873,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            380.3,
-            685.1
+            348.3,
+            710.5
           ]
         },
         {
@@ -6882,8 +6882,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            532.7,
-            806.0
+            510.9,
+            839.4
           ]
         },
         {
@@ -6891,8 +6891,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            792.4,
-            476.8
+            787.9,
+            488.2
           ]
         },
         {
@@ -6900,8 +6900,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            426.4,
-            725.2
+            397.5,
+            753.2
           ]
         },
         {
@@ -6909,8 +6909,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            465.9,
-            764.4
+            439.7,
+            795.0
           ]
         },
         {
@@ -6918,8 +6918,8 @@ window.arcMapsConfig = {
           "title": "Red ball Fruits",
           "type": "fruitBasket",
           "coords": [
-            364.2,
-            455.8
+            331.2,
+            465.8
           ],
           "description": "Up to 2 can spawn here. They can even spawn together with a weapon case."
         },
@@ -6928,8 +6928,8 @@ window.arcMapsConfig = {
           "title": "Fruit Basket",
           "type": "fruitBasket",
           "coords": [
-            821.9,
-            382.8
+            819.4,
+            388.0
           ]
         },
         {
@@ -6937,8 +6937,8 @@ window.arcMapsConfig = {
           "title": "4x Great Mullein",
           "type": "greatMullein",
           "coords": [
-            680.9,
-            705.4
+            668.9,
+            732.1
           ]
         },
         {
@@ -6946,8 +6946,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            637.0,
-            541.9
+            622.1,
+            557.6
           ]
         },
         {
@@ -6955,8 +6955,8 @@ window.arcMapsConfig = {
           "title": "Great Mullein",
           "type": "greatMullein",
           "coords": [
-            713.1,
-            675.8
+            703.3,
+            700.5
           ]
         },
         {
@@ -6964,8 +6964,8 @@ window.arcMapsConfig = {
           "title": "Lemon Tree",
           "type": "miscellaneous",
           "coords": [
-            321.2,
-            603.8
+            285.3,
+            623.7
           ]
         },
         {
@@ -6973,8 +6973,8 @@ window.arcMapsConfig = {
           "title": "Lemon Tree",
           "type": "miscellaneous",
           "coords": [
-            325.7,
-            608.8
+            290.0,
+            629.0
           ]
         },
         {
@@ -6982,8 +6982,8 @@ window.arcMapsConfig = {
           "title": "Lemon Tree",
           "type": "miscellaneous",
           "coords": [
-            326.9,
-            613.0
+            291.4,
+            633.6
           ]
         },
         {
@@ -6991,8 +6991,8 @@ window.arcMapsConfig = {
           "title": "Lemon Tree x3",
           "type": "miscellaneous",
           "coords": [
-            750.7,
-            390.8
+            743.4,
+            396.5
           ]
         },
         {
@@ -7000,8 +7000,8 @@ window.arcMapsConfig = {
           "title": "Mushrooms",
           "type": "mushroom",
           "coords": [
-            557.3,
-            502.1
+            537.1,
+            515.3
           ],
           "description": "Can spawn on waterline pipes along the floors of the underground passageway. Can be anywhere along the entire tunnel."
         },
@@ -7010,8 +7010,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            679.7,
-            709.4
+            667.7,
+            736.3
           ],
           "description": "2 mushrooms on a tree"
         },
@@ -7020,8 +7020,8 @@ window.arcMapsConfig = {
           "title": "Mushroom",
           "type": "mushroom",
           "coords": [
-            669.4,
-            710.8
+            656.7,
+            737.9
           ]
         },
         {
@@ -7029,8 +7029,8 @@ window.arcMapsConfig = {
           "title": "Prickly Pear Bush",
           "type": "pricklyPear",
           "coords": [
-            480.8,
-            723.8
+            455.6,
+            751.7
           ]
         },
         {
@@ -7038,8 +7038,8 @@ window.arcMapsConfig = {
           "title": "Prickly Pear Bush",
           "type": "pricklyPear",
           "coords": [
-            476.7,
-            715.1
+            451.1,
+            742.4
           ]
         },
         {
@@ -7047,8 +7047,8 @@ window.arcMapsConfig = {
           "title": "Prickly Pear",
           "type": "pricklyPear",
           "coords": [
-            823.0,
-            438.8
+            820.5,
+            447.8
           ],
           "description": "Found near the player spawn near the cactus"
         },
@@ -7057,8 +7057,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear Patch",
           "type": "pricklyPear",
           "coords": [
-            254.9,
-            660.3
+            214.5,
+            683.9
           ]
         },
         {
@@ -7066,8 +7066,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear Patch",
           "type": "pricklyPear",
           "coords": [
-            750.0,
-            229.6
+            742.6,
+            224.6
           ]
         },
         {
@@ -7075,8 +7075,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear",
           "type": "pricklyPear",
           "coords": [
-            740.6,
-            223.4
+            732.6,
+            218.0
           ]
         },
         {
@@ -7084,8 +7084,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear",
           "type": "pricklyPear",
           "coords": [
-            532.9,
-            681.7
+            511.1,
+            706.9
           ]
         },
         {
@@ -7093,8 +7093,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear",
           "type": "pricklyPear",
           "coords": [
-            529.2,
-            693.3
+            507.2,
+            719.2
           ]
         },
         {
@@ -7102,8 +7102,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear",
           "type": "pricklyPear",
           "coords": [
-            301.3,
-            582.3
+            264.0,
+            600.7
           ]
         },
         {
@@ -7111,8 +7111,8 @@ window.arcMapsConfig = {
           "title": "Prickley Pear",
           "type": "pricklyPear",
           "coords": [
-            784.7,
-            417.4
+            779.6,
+            424.9
           ]
         },
         {
@@ -7120,8 +7120,8 @@ window.arcMapsConfig = {
           "title": "Prickly Pears x1-2",
           "type": "pricklyPear",
           "coords": [
-            681.4,
-            234.0
+            669.5,
+            229.3
           ]
         },
         {
@@ -7129,8 +7129,8 @@ window.arcMapsConfig = {
           "title": "Surveyor Spawn",
           "type": "arc",
           "coords": [
-            415.4,
-            642.3
+            385.8,
+            664.8
           ]
         },
         {
@@ -7138,8 +7138,8 @@ window.arcMapsConfig = {
           "title": "Bastion",
           "type": "arc",
           "coords": [
-            583.8,
-            654.9
+            565.4,
+            678.2
           ],
           "description": "Roams near thrusters"
         },
@@ -7148,8 +7148,8 @@ window.arcMapsConfig = {
           "title": "Rocketeer",
           "type": "arc",
           "coords": [
-            627.8,
-            536.5
+            612.3,
+            551.9
           ]
         },
         {
@@ -7157,8 +7157,8 @@ window.arcMapsConfig = {
           "title": "Bastion",
           "type": "arc",
           "coords": [
-            540.9,
-            645.0
+            519.6,
+            667.6
           ]
         },
         {
@@ -7166,8 +7166,8 @@ window.arcMapsConfig = {
           "title": "Bastion",
           "type": "arc",
           "coords": [
-            571.6,
-            479.9
+            552.4,
+            491.6
           ]
         },
         {
@@ -7175,8 +7175,8 @@ window.arcMapsConfig = {
           "title": "Bastion",
           "type": "arc",
           "coords": [
-            486.1,
-            613.0
+            461.2,
+            633.6
           ],
           "description": "Bastion patrols this area with 2 Spotter drones hovering above."
         },
@@ -7185,8 +7185,8 @@ window.arcMapsConfig = {
           "title": "Leaper",
           "type": "arc",
           "coords": [
-            674.6,
-            488.9
+            662.2,
+            501.2
           ],
           "description": "Leaper patrols this area"
         },
@@ -7195,8 +7195,8 @@ window.arcMapsConfig = {
           "title": "Surveyor Spawn",
           "type": "arc",
           "coords": [
-            733.2,
-            626.8
+            724.8,
+            648.2
           ]
         },
         {
@@ -7204,8 +7204,8 @@ window.arcMapsConfig = {
           "title": "Bastion/Bombardier",
           "type": "arc",
           "coords": [
-            794.9,
-            570.0
+            790.6,
+            587.7
           ],
           "tags": [
             92
@@ -7216,8 +7216,8 @@ window.arcMapsConfig = {
           "title": "Sentinel Firing Core",
           "type": "arc",
           "coords": [
-            755.9,
-            580.9
+            748.9,
+            599.3
           ]
         },
         {
@@ -7225,8 +7225,8 @@ window.arcMapsConfig = {
           "title": "Sentinel Spawn",
           "type": "arc",
           "coords": [
-            500.6,
-            629.5
+            476.6,
+            651.2
           ],
           "description": "Located on the 3rd floor balcony"
         },
@@ -7235,8 +7235,8 @@ window.arcMapsConfig = {
           "title": "Sentinel",
           "type": "arc",
           "coords": [
-            506.2,
-            466.2
+            482.6,
+            476.9
           ]
         },
         {
@@ -7244,8 +7244,8 @@ window.arcMapsConfig = {
           "title": "Sentinel",
           "type": "arc",
           "coords": [
-            603.1,
-            673.6
+            586.0,
+            698.2
           ]
         },
         {
@@ -7253,8 +7253,8 @@ window.arcMapsConfig = {
           "title": "Sentinel",
           "type": "arc",
           "coords": [
-            512.5,
-            602.6
+            489.3,
+            622.4
           ]
         },
         {
@@ -7262,8 +7262,8 @@ window.arcMapsConfig = {
           "title": "Sentinel",
           "type": "arc",
           "coords": [
-            769.6,
-            615.6
+            763.6,
+            636.3
           ]
         },
         {
@@ -7271,8 +7271,8 @@ window.arcMapsConfig = {
           "title": "Sentinel",
           "type": "arc",
           "coords": [
-            555.9,
-            427.7
+            535.6,
+            435.9
           ]
         },
         {
@@ -7280,8 +7280,8 @@ window.arcMapsConfig = {
           "title": "Tick",
           "type": "arc",
           "coords": [
-            780.2,
-            493.5
+            774.9,
+            506.0
           ]
         },
         {
@@ -7289,8 +7289,8 @@ window.arcMapsConfig = {
           "title": "Snitch",
           "type": "miscellaneous",
           "coords": [
-            589.6,
-            567.3
+            571.5,
+            584.8
           ]
         },
         {
@@ -7298,8 +7298,8 @@ window.arcMapsConfig = {
           "title": "Snitch",
           "type": "miscellaneous",
           "coords": [
-            452.2,
-            738.4
+            425.0,
+            767.3
           ]
         },
         {
@@ -7307,8 +7307,8 @@ window.arcMapsConfig = {
           "title": "Hidden Bunker",
           "type": "miscellaneous",
           "coords": [
-            541.6,
-            371.9
+            520.3,
+            376.4
           ],
           "description": "Can only be opened during the \"Hidden Bunker\" Event"
         },
@@ -7317,8 +7317,8 @@ window.arcMapsConfig = {
           "title": "Hidden Bunker",
           "type": "miscellaneous",
           "coords": [
-            593.7,
-            682.9
+            576.0,
+            708.0
           ]
         },
         {
@@ -7326,8 +7326,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            284.2,
-            603.3
+            245.8,
+            623.2
           ]
         },
         {
@@ -7335,8 +7335,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            710.2,
-            721.7
+            700.2,
+            749.4
           ]
         },
         {
@@ -7344,8 +7344,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            247.5,
-            684.9
+            206.7,
+            710.2
           ]
         },
         {
@@ -7353,8 +7353,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            872.5,
-            349.1
+            873.3,
+            352.1
           ]
         },
         {
@@ -7362,8 +7362,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            293.6,
-            482.8
+            255.9,
+            494.6
           ]
         },
         {
@@ -7371,8 +7371,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            809.2,
-            261.1
+            805.8,
+            258.2
           ]
         },
         {
@@ -7380,8 +7380,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            515.6,
-            830.4
+            492.6,
+            865.5
           ]
         },
         {
@@ -7389,8 +7389,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            415.3,
-            437.0
+            385.7,
+            445.8
           ]
         },
         {
@@ -7398,8 +7398,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            595.2,
-            842.5
+            577.6,
+            878.3
           ]
         },
         {
@@ -7407,8 +7407,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            346.1,
-            353.7
+            311.8,
+            357.0
           ]
         },
         {
@@ -7416,8 +7416,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            331.5,
-            811.2
+            296.3,
+            845.0
           ]
         },
         {
@@ -7425,8 +7425,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            548.7,
-            284.9
+            527.9,
+            283.5
           ]
         },
         {
@@ -7434,8 +7434,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            836.5,
-            434.3
+            834.9,
+            442.9
           ]
         },
         {
@@ -7443,8 +7443,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            847.8,
-            559.8
+            847.0,
+            576.8
           ]
         },
         {
@@ -7452,8 +7452,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            438.9,
-            313.2
+            410.8,
+            313.7
           ]
         },
         {
@@ -7461,8 +7461,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            670.8,
-            254.3
+            658.2,
+            250.9
           ]
         },
         {
@@ -7470,8 +7470,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            710.2,
-            311.3
+            700.2,
+            311.8
           ]
         },
         {
@@ -7479,8 +7479,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            582.5,
-            598.6
+            564.0,
+            618.2
           ]
         },
         {
@@ -7488,8 +7488,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            667.4,
-            476.4
+            654.6,
+            487.8
           ]
         },
         {
@@ -7497,8 +7497,8 @@ window.arcMapsConfig = {
           "title": "Player Spawn",
           "type": "playerSpawn",
           "coords": [
-            659.5,
-            664.0
+            646.2,
+            687.9
           ]
         },
         {
@@ -7506,8 +7506,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            383.7,
-            510.5
+            351.9,
+            524.2
           ]
         },
         {
@@ -7515,8 +7515,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            795.7,
-            465.1
+            791.4,
+            475.7
           ]
         },
         {
@@ -7524,8 +7524,8 @@ window.arcMapsConfig = {
           "title": "Supply Call Station",
           "type": "supplyCall",
           "coords": [
-            789.5,
-            554.4
+            784.8,
+            571.0
           ]
         },
         {
@@ -7533,8 +7533,8 @@ window.arcMapsConfig = {
           "title": "Zipline",
           "type": "zipline",
           "coords": [
-            481.8,
-            635.0
+            456.6,
+            657.0
           ]
         },
         {
@@ -7542,8 +7542,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            438.7,
-            442.6
+            410.6,
+            451.7
           ],
           "description": "Raider cache in the grass"
         },
@@ -7552,8 +7552,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            520.6,
-            357.1
+            498.0,
+            360.5
           ]
         },
         {
@@ -7561,8 +7561,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            823.2,
-            408.3
+            820.8,
+            415.2
           ]
         },
         {
@@ -7570,8 +7570,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            258.6,
-            650.4
+            218.5,
+            673.4
           ]
         },
         {
@@ -7579,8 +7579,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            437.6,
-            739.2
+            409.4,
+            768.1
           ]
         },
         {
@@ -7588,8 +7588,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            561.4,
-            785.1
+            541.5,
+            817.2
           ],
           "description": "Raider Cache near Apricot tree at the fork of the path"
         },
@@ -7598,8 +7598,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            521.0,
-            306.1
+            498.4,
+            306.2
           ]
         },
         {
@@ -7607,8 +7607,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            474.9,
-            701.7
+            449.3,
+            728.2
           ],
           "description": "In front of the truck"
         },
@@ -7617,8 +7617,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            382.8,
-            800.6
+            350.9,
+            833.6
           ]
         },
         {
@@ -7626,8 +7626,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            683.2,
-            253.8
+            671.4,
+            250.4
           ]
         },
         {
@@ -7635,8 +7635,8 @@ window.arcMapsConfig = {
           "title": "Raider Cache",
           "type": "raiderCache",
           "coords": [
-            304.7,
-            538.8
+            267.7,
+            554.4
           ]
         },
         {
@@ -7644,8 +7644,8 @@ window.arcMapsConfig = {
           "title": "Raider chache spawn",
           "type": "raiderCache",
           "coords": [
-            297.0,
-            583.3
+            259.4,
+            601.8
           ]
         },
         {
@@ -7653,8 +7653,8 @@ window.arcMapsConfig = {
           "title": "Container Storage",
           "type": "location",
           "coords": [
-            496.0,
-            654.5
+            471.7,
+            677.8
           ],
           "description": "- Industrial   - Mechanical"
         },
@@ -7663,8 +7663,8 @@ window.arcMapsConfig = {
           "title": "Control Tower A6",
           "type": "location",
           "coords": [
-            519.5,
-            579.1
+            496.8,
+            597.3
           ],
           "description": "- Technological   - Commercial"
         },
@@ -7673,8 +7673,8 @@ window.arcMapsConfig = {
           "title": "Launch Towers",
           "type": "location",
           "coords": [
-            635.1,
-            537.5
+            620.1,
+            553.0
           ],
           "description": "- Technological   - Security"
         },
@@ -7683,8 +7683,8 @@ window.arcMapsConfig = {
           "title": "Departure Building",
           "type": "location",
           "coords": [
-            619.4,
-            444.4
+            603.4,
+            453.7
           ],
           "description": "- Commercial   - Technological"
         },
@@ -7693,8 +7693,8 @@ window.arcMapsConfig = {
           "title": "Arrival Building",
           "type": "location",
           "coords": [
-            728.8,
-            450.9
+            720.0,
+            460.7
           ],
           "description": "- Commercial   - Technological"
         },
@@ -7703,8 +7703,8 @@ window.arcMapsConfig = {
           "title": "Vehicle Maintenance",
           "type": "location",
           "coords": [
-            468.9,
-            576.1
+            442.8,
+            594.2
           ],
           "description": "- Mechanical   - Industrial"
         },
@@ -7713,8 +7713,8 @@ window.arcMapsConfig = {
           "title": "Rocket Assembly",
           "type": "location",
           "coords": [
-            619.4,
-            685.2
+            603.4,
+            710.5
           ],
           "description": "- Exodus   - Industrial"
         },
@@ -7723,8 +7723,8 @@ window.arcMapsConfig = {
           "title": "North Trench Tower",
           "type": "location",
           "coords": [
-            780.6,
-            609.5
+            775.3,
+            629.8
           ],
           "description": "- Technological"
         },
@@ -7733,8 +7733,8 @@ window.arcMapsConfig = {
           "title": "South Trench Tower",
           "type": "location",
           "coords": [
-            759.7,
-            593.4
+            753.0,
+            612.6
           ],
           "description": "- Technological"
         }
