@@ -1,6 +1,6 @@
 /**
- * ARC Raiders Interactive Map - Mapbox GL Version
- * Uses MapGenie's tile server for perfect alignment
+ * ARC Raiders Interactive Map - Mapbox GL JS Version
+ * Uses MapGenie's tile server with matching configuration
  */
 
 (function () {
@@ -77,15 +77,12 @@
       tab.classList.toggle("map-tab--active", tab.dataset.mapId === mapId);
     });
 
-    // Clear existing map
-    if (state.map) {
-      state.map.remove();
-      state.map = null;
-    }
+    // Clear existing markers
+    state.markers.forEach(({ marker }) => marker.remove());
     state.markers = [];
     state.markerElements.clear();
     
-    // Close any open popup
+    // Close any active popup
     if (state.activePopup) {
       state.activePopup.remove();
       state.activePopup = null;
@@ -97,7 +94,7 @@
       state.visibleCategories.add(cat.id);
     });
 
-    // Create Mapbox map with MapGenie's tile server
+    // Create Mapbox GL map
     initMapboxMap(mapConfig);
     
     // Render categories
@@ -108,7 +105,13 @@
   }
 
   function initMapboxMap(mapConfig) {
-    // Create Mapbox map using MapGenie's raster tiles
+    // Remove existing map if any
+    if (state.map) {
+      state.map.remove();
+    }
+
+    // Create Mapbox GL map using MapGenie's raster tiles
+    // MapGenie uses standard XYZ tiles with EPSG3857 projection
     state.map = new mapboxgl.Map({
       container: "map",
       style: {
@@ -129,21 +132,21 @@
             source: "mapgenie-tiles",
             paint: {
               "raster-opacity": 1,
+              "raster-fade-duration": 0, // Disable tile fade to prevent seam artifacts
             },
           },
         ],
       },
-      center: mapConfig.center,
+      center: mapConfig.center, // [lng, lat] format - same as MapGenie
       zoom: mapConfig.zoom.initial,
       minZoom: mapConfig.zoom.min,
       maxZoom: mapConfig.zoom.max,
       attributionControl: false,
+      fadeDuration: 0, // Disable symbol/label fade
+      preserveDrawingBuffer: true, // Better rendering quality
     });
 
-    // Add custom controls
-    state.map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), "bottom-right");
-
-    // Load markers when map is ready
+    // Add markers after map loads
     state.map.on("load", () => {
       addMarkers(mapConfig);
     });
@@ -152,7 +155,10 @@
     state.map.on("click", (e) => {
       // Only close if not clicking on a marker
       if (!e.originalEvent.target.closest(".marker")) {
-        closeActivePopup();
+        if (state.activePopup) {
+          state.activePopup.remove();
+          state.activePopup = null;
+        }
       }
     });
   }
@@ -169,21 +175,13 @@
       // Create marker element
       const el = document.createElement("div");
       el.className = `marker ${isFound ? "marker--found" : ""}`;
-      el.dataset.itemId = item.id;
-      el.dataset.categoryId = item.categoryId;
-      
       el.innerHTML = `
         <div class="marker__icon" style="background-color: ${category.color};">
           <span class="marker__icon-inner">${getIconForType(category.type)}</span>
         </div>
       `;
 
-      // Check visibility
-      if (!state.visibleCategories.has(item.categoryId)) {
-        el.style.display = "none";
-      }
-
-      // Create Mapbox marker
+      // Create Mapbox marker at [lng, lat] - same format as MapGenie
       const marker = new mapboxgl.Marker({
         element: el,
         anchor: "bottom",
@@ -191,21 +189,28 @@
         .setLngLat(item.coords)
         .addTo(state.map);
 
-      // Click handler for popup
+      // Store references
+      marker.itemId = item.id;
+      marker.categoryId = item.categoryId;
+      marker._element = el;
+
+      // Click handler
       el.addEventListener("click", (e) => {
         e.stopPropagation();
         showItemPopup(item, category, marker);
       });
 
       state.markers.push({ marker, item, element: el });
-      state.markerElements.set(item.id, el);
+      state.markerElements.set(item.id, marker);
     });
 
     updateMarkerVisibility();
   }
 
   function showItemPopup(item, category, marker) {
-    closeActivePopup();
+    if (state.activePopup) {
+      state.activePopup.remove();
+    }
 
     const isFound = state.foundItems.has(`${state.currentMapId}-${item.id}`);
     
@@ -215,7 +220,6 @@
           <span class="popup__category" style="background-color: ${category.color};">
             ${category.name}
           </span>
-          <button class="popup__close" onclick="window.closePopup()">×</button>
         </div>
         <h3 class="popup__title">${item.name}</h3>
         ${item.description ? `<div class="popup__description">${formatDescription(item.description)}</div>` : ""}
@@ -229,36 +233,32 @@
     `;
 
     state.activePopup = new mapboxgl.Popup({
-      closeButton: false,
+      closeButton: true,
       closeOnClick: false,
-      className: "mapboxgl-popup--custom",
+      className: "custom-popup",
       maxWidth: "300px",
+      offset: [0, -10],
     })
       .setLngLat(item.coords)
       .setHTML(popupContent)
       .addTo(state.map);
   }
 
-  function closeActivePopup() {
-    if (state.activePopup) {
-      state.activePopup.remove();
-      state.activePopup = null;
-    }
-  }
-
   // Global functions for popup buttons
-  window.closePopup = closeActivePopup;
-  
   window.toggleItemFound = function(itemId) {
     const key = `${state.currentMapId}-${itemId}`;
-    const el = state.markerElements.get(itemId);
+    const marker = state.markerElements.get(itemId);
     
     if (state.foundItems.has(key)) {
       state.foundItems.delete(key);
-      if (el) el.classList.remove("marker--found");
+      if (marker && marker._element) {
+        marker._element.classList.remove("marker--found");
+      }
     } else {
       state.foundItems.add(key);
-      if (el) el.classList.add("marker--found");
+      if (marker && marker._element) {
+        marker._element.classList.add("marker--found");
+      }
     }
     
     saveProgress();

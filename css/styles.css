@@ -695,20 +695,46 @@ html, body {
 }
 
 /* ==========================================================================
-   Leaflet Customization
+   Mapbox GL JS Customization
    ========================================================================== */
 
-.leaflet-container {
+.mapboxgl-map {
   background: #0f1419;
   font-family: inherit;
 }
 
-.leaflet-control-zoom {
+/* Mapbox GL canvas styling */
+.mapboxgl-canvas {
+  /* Use auto for best rendering */
+  image-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Force GPU acceleration for smoother rendering */
+.mapboxgl-canvas-container {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Hide default attribution */
+.mapboxgl-ctrl-attrib {
   display: none !important;
 }
 
-.leaflet-control-attribution {
-  display: none !important;
+.mapboxgl-ctrl-logo {
+  opacity: 0.3;
+}
+
+/* Ensure proper z-index layering */
+.mapboxgl-marker {
+  z-index: 1;
+}
+
+.mapboxgl-marker:hover {
+  z-index: 1000;
 }
 
 /* ==========================================================================
@@ -753,38 +779,35 @@ html, body {
 }
 
 /* ==========================================================================
-   Leaflet Popup
+   Mapbox GL Popup
    ========================================================================== */
 
-.leaflet-popup-content-wrapper {
+.mapboxgl-popup-content {
   background: var(--bg-sidebar);
   color: var(--text-primary);
   border-radius: 8px;
   border: 1px solid var(--border-color);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   padding: 0;
-}
-
-.leaflet-popup-content {
-  margin: 0;
   min-width: 280px;
   max-width: 320px;
 }
 
-.leaflet-popup-tip {
-  background: var(--bg-sidebar);
-  border: 1px solid var(--border-color);
-  box-shadow: none;
+.mapboxgl-popup-tip {
+  border-top-color: var(--bg-sidebar) !important;
 }
 
-.leaflet-popup-close-button {
-  color: var(--text-muted) !important;
-  font-size: 20px !important;
-  padding: 8px !important;
+.mapboxgl-popup-close-button {
+  color: var(--text-muted);
+  font-size: 20px;
+  padding: 8px;
+  right: 4px;
+  top: 4px;
 }
 
-.leaflet-popup-close-button:hover {
-  color: var(--text-primary) !important;
+.mapboxgl-popup-close-button:hover {
+  color: var(--text-primary);
+  background: transparent;
 }
 
 .popup {
