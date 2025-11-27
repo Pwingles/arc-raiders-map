@@ -1,14 +1,3 @@
-  function switchToMap(mapId, options = {}) {
-    if (!mapId || mapId === state.currentMapId) return;
-    state.currentMapId = mapId;
-    setActiveMapTab(mapId);
-    if (!options.preserveGuide) {
-      state.activeGuide = null;
-      state.activeGuideItems = null;
-      updateGuideUI();
-    }
-    renderMap();
-  }
 (() => {
   const config = window.arcMapsConfig;
   if (!config) {
@@ -207,6 +196,18 @@
     if (els.mapSelect && els.mapSelect.value !== mapId) {
       els.mapSelect.value = mapId;
     }
+  }
+
+  function switchToMap(mapId, options = {}) {
+    if (!mapId || mapId === state.currentMapId) return;
+    state.currentMapId = mapId;
+    setActiveMapTab(mapId);
+    if (!options.preserveGuide) {
+      state.activeGuide = null;
+      state.activeGuideItems = null;
+      updateGuideUI();
+    }
+    renderMap();
   }
 
   function hydrateCategoryGroups() {
