@@ -110,6 +110,13 @@
       state.map.remove();
     }
 
+    const mapBounds = mapConfig.bounds
+      ? [
+          [mapConfig.bounds.minLng, mapConfig.bounds.minLat],
+          [mapConfig.bounds.maxLng, mapConfig.bounds.maxLat],
+        ]
+      : null;
+
     // Create Mapbox GL map using MapGenie's raster tiles
     // MapGenie uses standard XYZ tiles with EPSG3857 projection
     state.map = new mapboxgl.Map({
@@ -141,9 +148,11 @@
       zoom: mapConfig.zoom.initial,
       minZoom: mapConfig.zoom.min,
       maxZoom: mapConfig.zoom.max,
+      maxBounds: mapBounds || undefined,
       attributionControl: false,
       fadeDuration: 0, // Disable symbol/label fade
       preserveDrawingBuffer: true, // Better rendering quality
+      renderWorldCopies: false,
     });
 
     // Add markers after map loads
