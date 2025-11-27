@@ -1,5 +1,6 @@
 """
-Sync MapGenie data to maps.js with proper coordinate conversion and category mapping.
+Sync MapGenie data to maps.js with proper coordinate conversion.
+Uses pixel-based coordinate system for Leaflet CRS.Simple.
 """
 import json
 import re
@@ -61,8 +62,9 @@ CATEGORY_MAP = {
     13928: "location",  # Medium Loot
 }
 
-# Map configurations with image bounds
-# Using 1000x1000 as a standard coordinate space
+# Map configurations with calibration settings
+# offset_x/y: Shift markers (positive = right/up, negative = left/down) in 0-1000 space
+# scale_x/y: Scale marker spread (>1 = wider spread, <1 = tighter cluster)
 MAP_CONFIGS = {
     "dam-battlegrounds": {
         "file": "mapgenie_dam-battlegrounds.json",
@@ -75,7 +77,11 @@ MAP_CONFIGS = {
         "recommendedPower": 18,
         "featuredLoot": ["Aphelion Blueprint", "Stormglass Core modules"],
         "image_url": "data/Dam_Battlegrounds_Map_(Server_Slam).jpg",
-        "image_bounds": [[0, 0], [1000, 1000]],
+        # Calibration: Our image shows more area than the playable zone
+        # Need to scale down and offset to fit markers into the playable area
+        "padding": 0.35,  # Large padding to push markers toward center
+        "offset_x": 50,   # Shift right slightly
+        "offset_y": 80,   # Shift up
     },
     "buried-city": {
         "file": "mapgenie_buried-city.json",
@@ -88,7 +94,9 @@ MAP_CONFIGS = {
         "recommendedPower": 16,
         "featuredLoot": ["Espresso Machine Parts", "Urban alloy stockpiles"],
         "image_url": "data/Buried_City_Map.png",
-        "image_bounds": [[0, 0], [1000, 1000]],
+        "padding": 0.25,
+        "offset_x": 0,
+        "offset_y": 0,
     },
     "spaceport": {
         "file": "mapgenie_spaceport.json",
@@ -101,7 +109,9 @@ MAP_CONFIGS = {
         "recommendedPower": 22,
         "featuredLoot": ["Prototype Mods", "Fuel Depot Access Codes"],
         "image_url": "data/Spaceport_Map.png",
-        "image_bounds": [[0, 0], [1000, 1000]],
+        "padding": 0.30,
+        "offset_x": 30,
+        "offset_y": 60,
     },
     "the-blue-gate": {
         "file": "mapgenie_the-blue-gate.json",
@@ -114,7 +124,9 @@ MAP_CONFIGS = {
         "recommendedPower": 15,
         "featuredLoot": ["Rusted Gears", "Vehicle salvage"],
         "image_url": "data/The_Blue_Gate_Map.png",
-        "image_bounds": [[0, 0], [1000, 1000]],
+        "padding": 0.20,
+        "offset_x": 0,
+        "offset_y": 0,
     },
     "stella-montis": {
         "file": "mapgenie_stella-montis.json",
@@ -127,7 +139,9 @@ MAP_CONFIGS = {
         "recommendedPower": 24,
         "featuredLoot": ["North Line tech fragments", "Cryonic alloys"],
         "image_url": "data/Stella_Montis_map_lower_level.png",
-        "image_bounds": [[0, 0], [1000, 1000]],
+        "padding": 0.15,
+        "offset_x": 0,
+        "offset_y": 0,
     },
 }
 
@@ -145,52 +159,48 @@ def get_coordinate_bounds(locations):
     }
 
 
-def convert_coords(lat, lng, bounds, image_bounds):
+def convert_coords(lat, lng, bounds, config, img_size=1000):
     """
-    Convert MapGenie lat/lng to pixel coordinates for Leaflet Simple projection.
-    
-    MapGenie uses:
-    - Latitude: increases going up/north (maps to Y)
-    - Longitude: increases going right/east (maps to X, but values are negative)
-    
-    Leaflet Simple CRS uses [lat, lng] = [y, x]
+    Convert MapGenie lat/lng to pixel coordinates with calibration.
     """
     lat = float(lat)
     lng = float(lng)
     
-    # Image bounds: [[y_min, x_min], [y_max, x_max]]
-    y_min, x_min = image_bounds[0]
-    y_max, x_max = image_bounds[1]
-    
-    # Data bounds
     lat_min = bounds["lat_min"]
     lat_max = bounds["lat_max"]
     lng_min = bounds["lng_min"]
     lng_max = bounds["lng_max"]
     
-    # Add 5% padding
+    # Add padding to bounds
     lat_range = lat_max - lat_min
     lng_range = lng_max - lng_min
-    lat_min -= lat_range * 0.05
-    lat_max += lat_range * 0.05
-    lng_min -= lng_range * 0.05
-    lng_max += lng_range * 0.05
+    padding = config.get("padding", 0.05)
+    
+    lat_min -= lat_range * padding
+    lat_max += lat_range * padding
+    lng_min -= lng_range * padding
+    lng_max += lng_range * padding
     
     # Normalize to 0-1 range
     lat_norm = (lat - lat_min) / (lat_max - lat_min) if lat_max != lat_min else 0.5
     lng_norm = (lng - lng_min) / (lng_max - lng_min) if lng_max != lng_min else 0.5
     
     # Convert to pixel coordinates
-    # Y (lat) maps from bottom to top
-    y = y_min + lat_norm * (y_max - y_min)
-    # X (lng) maps from left to right
-    x = x_min + lng_norm * (x_max - x_min)
+    y = lat_norm * img_size
+    x = lng_norm * img_size
     
-    # Return as [y, x] for Leaflet (lat, lng format)
+    # Apply offset calibration
+    x += config.get("offset_x", 0)
+    y += config.get("offset_y", 0)
+    
+    # Clamp to valid range
+    x = max(0, min(img_size, x))
+    y = max(0, min(img_size, y))
+    
     return [round(y, 1), round(x, 1)]
 
 
-def convert_location(loc, bounds, image_bounds, map_slug):
+def convert_location(loc, bounds, config, map_slug):
     """Convert a MapGenie location to our format."""
     category_id = loc.get("category_id")
     item_type = CATEGORY_MAP.get(category_id, "miscellaneous")
@@ -198,12 +208,7 @@ def convert_location(loc, bounds, image_bounds, map_slug):
     # Generate a clean ID
     item_id = f"mg-{map_slug}-{loc['id']}"
     
-    coords = convert_coords(
-        loc["latitude"],
-        loc["longitude"],
-        bounds,
-        image_bounds
-    )
+    coords = convert_coords(loc["latitude"], loc["longitude"], bounds, config)
     
     item = {
         "id": item_id,
@@ -252,11 +257,12 @@ def process_map(map_slug, config):
     bounds = get_coordinate_bounds(locations)
     print(f"  Found {len(locations)} locations")
     print(f"  Bounds: lat [{bounds['lat_min']:.4f}, {bounds['lat_max']:.4f}], lng [{bounds['lng_min']:.4f}, {bounds['lng_max']:.4f}]")
+    print(f"  Calibration: padding={config.get('padding', 0.05)}, offset_x={config.get('offset_x', 0)}, offset_y={config.get('offset_y', 0)}")
     
     items = []
     for loc in locations:
         try:
-            item = convert_location(loc, bounds, config["image_bounds"], map_slug)
+            item = convert_location(loc, bounds, config, map_slug)
             items.append(item)
         except Exception as e:
             print(f"  Error converting location {loc.get('id')}: {e}")
@@ -267,6 +273,9 @@ def process_map(map_slug, config):
 def generate_maps_js():
     """Generate the complete maps.js file."""
     maps = []
+    
+    # Standard image size for coordinate space
+    IMG_SIZE = 1000
     
     for map_slug, config in MAP_CONFIGS.items():
         print(f"\nProcessing {config['name']}...")
@@ -285,7 +294,7 @@ def generate_maps_js():
             "zoom": {"min": -2, "max": 4, "initial": 0},
             "image": {
                 "url": config["image_url"],
-                "bounds": config["image_bounds"],
+                "bounds": [[0, 0], [IMG_SIZE, IMG_SIZE]],
                 "attribution": f"ARC Raiders - {config['name']}"
             },
             "items": items
