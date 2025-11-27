@@ -173,36 +173,113 @@
 
   const guidePresets = [
     {
-      id: "rusted-gears",
-      title: "Rusted Gear Farm",
+      id: "rusted-gears-bluegate",
+      title: "Rusted Gear Farm (Blue Gate)",
       mapId: "blue-gate",
-      description: "Follow the ridge caravan route to loot 4 trunks per loop.",
-      itemIds: ["blue-vehicle-004", "blue-vehicle-005", "blue-vehicle-006", "blue-vehicle-013"],
+      description: "Follow the ridge caravan route to loot 4 trunks per loop. Best farming efficiency.",
+      itemIds: ["blue-vehicle-004", "blue-vehicle-005", "blue-vehicle-006", "blue-vehicle-013", "blue-spawn-020"],
       reference: {
-        label: "MetaForge Rusted Gear Guide",
-        url: "https://metaforge.app/arc-raiders/guides/page/1"
+        label: "PCGamer Rusted Gears Guide",
+        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-rusted-gears-locations"
       }
     },
     {
-      id: "hidden-bunker",
-      title: "Hidden Bunker Puzzle",
-      mapId: "dam-battlegrounds",
-      description: "Hit the Control Tower, Admin Wing, and Floodgate vault in order.",
-      itemIds: ["dam-location-003", "dam-location-004", "dam-locker-012"],
+      id: "rusted-gears-buried",
+      title: "Industrial Triangle (Buried City)",
+      mapId: "buried-city",
+      description: "Warehouse → Marano Station → Parking Garage loop for Rusted Gears.",
+      itemIds: ["city-location-017", "city-trunk-018", "city-location-019", "city-trunk-020", "city-location-021", "city-trunk-022"],
       reference: {
-        label: "MetaForge Hidden Bunker Guide",
-        url: "https://metaforge.app/arc-raiders/guides/page/1"
+        label: "PCGamer Rusted Gears Guide",
+        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-rusted-gears-locations"
+      }
+    },
+    {
+      id: "aphelion-hunt",
+      title: "Aphelion Blueprint Hunt",
+      mapId: "dam-battlegrounds",
+      description: "Defeat the Matriarch at The Breach to obtain the exotic Aphelion blueprint.",
+      itemIds: ["dam-boss-002", "dam-location-003", "dam-locker-012"],
+      reference: {
+        label: "PCGamer Aphelion Guide",
+        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-aphelion-blueprint-location"
+      }
+    },
+    {
+      id: "majors-footlocker",
+      title: "The Major's Footlocker Quest",
+      mapId: "dam-battlegrounds",
+      description: "Locate Major Aiva's Mementos in the Ruby Residence area.",
+      itemIds: ["dam-quest-001", "dam-location-004", "dam-cache-009"],
+      reference: {
+        label: "PCGamer Quest Guide",
+        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-the-majors-footlocker"
+      }
+    },
+    {
+      id: "celeste-journals",
+      title: "Celeste's Journals Quest",
+      mapId: "dam-battlegrounds",
+      description: "Recover journals from Raider outposts across Dam Battlegrounds.",
+      itemIds: ["dam-quest-019", "dam-location-003", "dam-location-004"],
+      reference: {
+        label: "PCGamer Journal Locations",
+        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-celestes-journals-location"
+      }
+    },
+    {
+      id: "espresso-quest",
+      title: "Espresso Quest",
+      mapId: "buried-city",
+      description: "Retrieve espresso machine parts from Caffe Da Rosa in Plaza Rosa.",
+      itemIds: ["city-quest-001", "city-location-005", "city-cache-009"],
+      reference: {
+        label: "ARC Raiders Hub",
+        url: "https://www.arc-raiders.org/en/maps"
       }
     },
     {
       id: "rocketeer-driver",
       title: "Rocketeer Driver Route",
       mapId: "spaceport",
-      description: "Clear Launch Towers and Fuel Depot for guaranteed Rocketeers.",
-      itemIds: ["space-boss-001", "space-location-004", "space-quest-013"],
+      description: "Clear Launch Towers and Fuel Depot for Rocketeer drops.",
+      itemIds: ["space-boss-001", "space-location-004", "space-quest-013", "space-weapon-023"],
       reference: {
-        label: "MetaForge Rocketeer Driver Tips",
-        url: "https://metaforge.app/arc-raiders/guides/page/1"
+        label: "TheGamer Map Guide",
+        url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide"
+      }
+    },
+    {
+      id: "high-tier-spaceport",
+      title: "High-Tier Loot Run (Spaceport)",
+      mapId: "spaceport",
+      description: "Hit Departure/Arrival Buildings and Launch Towers for best loot.",
+      itemIds: ["space-location-015", "space-location-016", "space-location-005", "space-weapon-022"],
+      reference: {
+        label: "TheGamer Spaceport Guide",
+        url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide"
+      }
+    },
+    {
+      id: "north-line-quest",
+      title: "North Line Uplink Quest",
+      mapId: "stella-montis",
+      description: "Synchronize uplink pylons to summon the Matriarch variant.",
+      itemIds: ["stella-quest-011", "stella-location-013", "stella-location-014", "stella-location-015", "stella-boss-016"],
+      reference: {
+        label: "TechRadar North Line Guide",
+        url: "https://www.techradar.com/gaming"
+      }
+    },
+    {
+      id: "pilgrims-peak",
+      title: "Pilgrim's Peak Challenge",
+      mapId: "blue-gate",
+      description: "High-risk, high-reward run to Pilgrim's Peak for legendary loot.",
+      itemIds: ["blue-location-014", "blue-weapon-017", "blue-location-015"],
+      reference: {
+        label: "TheGamer Blue Gate Guide",
+        url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide"
       }
     }
   ];

@@ -212,6 +212,113 @@ window.arcMapsConfig = {
           tags: ["fireteam", "public event"],
           rarity: "rare",
           difficulty: "high"
+        },
+        // Additional items from guide scraping
+        {
+          id: "dam-location-014",
+          title: "Hydroponic Dome Complex",
+          type: "location",
+          coords: [180, 280],
+          description: "High-tier loot zone in the top-left corner of the map. Known for industrial batteries and advanced components.",
+          tags: ["landmark", "high-tier loot", "TheGamer Guide"],
+          rarity: "rare",
+          difficulty: "high",
+          guideRef: { source: "TheGamer", url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide" }
+        },
+        {
+          id: "dam-weapon-015",
+          title: "Weapon Case - Hydroponic Dome",
+          type: "weaponCase",
+          coords: [200, 290],
+          description: "High-tier weapon container inside the Hydroponic Dome Complex.",
+          rewards: ["Random high-tier weapon", "Industrial Batteries"],
+          tags: ["elevated", "guide location"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "dam-crate-016",
+          title: "Field Crate - Industrial Catwalks",
+          type: "fieldCrate",
+          coords: [450, 380],
+          description: "Loot container on elevated industrial catwalks with good sightlines.",
+          rewards: ["Mixed materials", "ARC Parts"],
+          tags: ["elevated", "sniping position"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "dam-location-017",
+          title: "North Elevator Area",
+          type: "cargoElevator",
+          coords: [620, 200],
+          description: "Cargo elevator area mentioned in PCGamer's Rusted Gears guide. Vehicle trunks nearby may contain Rusted Gears.",
+          tags: ["farming", "rusted gears", "PCGamer Guide"],
+          rarity: "uncommon",
+          difficulty: "medium",
+          guideRef: { source: "PCGamer", url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-rusted-gears-locations" }
+        },
+        {
+          id: "dam-trunk-018",
+          title: "Vehicle Trunk - North Elevator",
+          type: "vehicleTrunk",
+          coords: [630, 210],
+          description: "Vehicle trunk near North Elevator. PCGamer notes mixed results for Rusted Gear drops here.",
+          rewards: ["Rusted Gears (variable)", "Scrap Metal"],
+          tags: ["farming", "variable drops"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "dam-quest-019",
+          title: "Celeste's Journals",
+          type: "quest",
+          coords: [350, 500],
+          description: "Recover journals from Raider outposts scattered across Dam Battlegrounds. Referenced in PCGamer quest guide.",
+          objectives: [
+            "Locate Raider outpost Alpha",
+            "Retrieve first journal",
+            "Find second outpost near Ruby Residence",
+            "Collect all journals and extract"
+          ],
+          rewards: ["Celeste's Journals", "Story progression", "Faction reputation"],
+          tags: ["story quest", "multi-part", "PCGamer Guide"],
+          rarity: "legendary",
+          difficulty: "high",
+          guideRef: { source: "PCGamer", url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-celestes-journals-location" }
+        },
+        {
+          id: "dam-locker-020",
+          title: "Security Locker - Hydroponic Wing",
+          type: "securityLocker",
+          coords: [190, 300],
+          description: "Locked container in the Hydroponic Dome requiring key access. Contains advanced electronics.",
+          rewards: ["Advanced Electrical Components", "Sensors"],
+          tags: ["requires key", "high-tier"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "dam-medbox-021",
+          title: "Medical Box - Research Building",
+          type: "medicalBox",
+          coords: [385, 630],
+          description: "Medical supplies in the Research & Administration Building ground floor.",
+          rewards: ["Medical Supplies", "Antiseptic"],
+          tags: ["healing", "indoor"],
+          rarity: "common",
+          difficulty: "low"
+        },
+        {
+          id: "dam-ammo-022",
+          title: "Ammo Box - Control Tower Base",
+          type: "ammoBox",
+          coords: [525, 450],
+          description: "Ammunition cache at the base of the Control Tower.",
+          rewards: ["Mixed Ammunition"],
+          tags: ["resupply"],
+          rarity: "common",
+          difficulty: "low"
         }
       ]
     },
@@ -360,6 +467,135 @@ window.arcMapsConfig = {
           tags: ["crowd control", "public event"],
           rarity: "rare",
           difficulty: "high"
+        },
+        // Additional items from guide scraping
+        {
+          id: "city-location-014",
+          title: "Space Travel Hub",
+          type: "location",
+          coords: [220, 340],
+          description: "Former space travel facility in the northwest. Rich in commercial and technological loot per TheGamer guide.",
+          tags: ["landmark", "high-tier loot", "TheGamer Guide"],
+          rarity: "rare",
+          difficulty: "medium",
+          guideRef: { source: "TheGamer", url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide" }
+        },
+        {
+          id: "city-location-015",
+          title: "Hospital",
+          type: "location",
+          coords: [840, 480],
+          description: "Medical facility in the east sector. Primary source of medical supplies and Antiseptic.",
+          tags: ["medical supplies", "TheGamer Guide"],
+          rarity: "uncommon",
+          difficulty: "medium"
+        },
+        {
+          id: "city-location-016",
+          title: "Town Hall",
+          type: "location",
+          coords: [600, 580],
+          description: "Central administrative building containing old world artifacts and valuable keys.",
+          tags: ["landmark", "high-tier loot"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "city-location-017",
+          title: "Warehouse",
+          type: "location",
+          coords: [400, 900],
+          description: "Industrial storage in the south. PCGamer identifies this as primary Rusted Gears farming location.",
+          tags: ["farming", "rusted gears", "PCGamer Guide"],
+          rarity: "uncommon",
+          difficulty: "low",
+          guideRef: { source: "PCGamer", url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-rusted-gears-locations" }
+        },
+        {
+          id: "city-trunk-018",
+          title: "Vehicle Trunk - Warehouse",
+          type: "vehicleTrunk",
+          coords: [410, 910],
+          description: "Vehicle trunk inside the Warehouse. Check generators nearby for additional Rusted Gears.",
+          rewards: ["Rusted Gears", "Industrial Materials"],
+          tags: ["farming", "rusted gears"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "city-location-019",
+          title: "Marano Station",
+          type: "location",
+          coords: [820, 640],
+          description: "Transit station in the east. Vehicles and generators here may contain Rusted Gears.",
+          tags: ["farming", "rusted gears", "PCGamer Guide"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "city-trunk-020",
+          title: "Vehicle Trunk - Marano Station",
+          type: "vehicleTrunk",
+          coords: [830, 650],
+          description: "Vehicle trunk at Marano Station. Part of the Industrial Triangle farming route.",
+          rewards: ["Rusted Gears", "Vehicle Parts"],
+          tags: ["farming route"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "city-location-021",
+          title: "Parking Garage",
+          type: "location",
+          coords: [760, 980],
+          description: "Multi-level parking structure in the southeast. Multiple vehicle trunks for Rusted Gears.",
+          tags: ["farming", "rusted gears", "PCGamer Guide"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "city-trunk-022",
+          title: "Vehicle Trunk - Parking Garage",
+          type: "vehicleTrunk",
+          coords: [770, 990],
+          description: "Vehicle trunk in the Parking Garage. Final stop on the Industrial Triangle route.",
+          rewards: ["Rusted Gears", "Scrap Metal"],
+          tags: ["farming route"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "city-medbox-023",
+          title: "Medical Box - Hospital Wing",
+          type: "medicalBox",
+          coords: [845, 490],
+          description: "Primary medical supplies cache in the Hospital. Best location for Antiseptic.",
+          rewards: ["Medical Supplies", "Antiseptic", "Chemicals"],
+          tags: ["healing", "indoor"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "city-weapon-024",
+          title: "Weapon Case - Space Travel Hub",
+          type: "weaponCase",
+          coords: [230, 350],
+          description: "Weapon container in the Space Travel Hub. Commercial area with high-tier items.",
+          rewards: ["Random weapon", "Tech Components"],
+          tags: ["commercial area"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "city-locker-025",
+          title: "Security Locker - Town Hall",
+          type: "securityLocker",
+          coords: [605, 590],
+          description: "Locked container in Town Hall basement. May contain keys for other areas.",
+          rewards: ["Old World Artifacts", "Keys"],
+          tags: ["requires key", "valuable"],
+          rarity: "rare",
+          difficulty: "medium"
         }
       ]
     },
@@ -522,6 +758,245 @@ window.arcMapsConfig = {
           tags: ["requires key", "hangar row"],
           rarity: "rare",
           difficulty: "medium"
+        },
+        // Additional items from guide scraping
+        {
+          id: "space-location-015",
+          title: "Departure Building",
+          type: "location",
+          coords: [240, 320],
+          description: "Former passenger departure terminal in the top-left. High-tier items per TheGamer guide.",
+          tags: ["landmark", "high-tier loot", "TheGamer Guide"],
+          rarity: "rare",
+          difficulty: "medium",
+          guideRef: { source: "TheGamer", url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide" }
+        },
+        {
+          id: "space-location-016",
+          title: "Arrival Building",
+          type: "location",
+          coords: [280, 380],
+          description: "Former passenger arrival terminal. Adjacent to Departure Building with similar loot quality.",
+          tags: ["landmark", "high-tier loot"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "space-location-017",
+          title: "Control Tower A6",
+          type: "location",
+          coords: [920, 880],
+          description: "Security control tower in the bottom-right. Requires key for upper levels.",
+          tags: ["landmark", "requires key", "TheGamer Guide"],
+          rarity: "rare",
+          difficulty: "high"
+        },
+        {
+          id: "space-location-018",
+          title: "Container Storage",
+          type: "location",
+          coords: [980, 920],
+          description: "Large container storage yard in the bottom-right. Rich in bulk materials.",
+          tags: ["farming", "industrial"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "space-location-019",
+          title: "Rocket Assembly",
+          type: "location",
+          coords: [540, 640],
+          description: "Main rocket assembly facility. Industrial batteries and ARC tech spawn here.",
+          tags: ["landmark", "ARC tech"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "space-location-020",
+          title: "Residential Quarter",
+          type: "location",
+          coords: [480, 880],
+          description: "Former worker housing area. ARC Raiders Cheatsheet notes Dog Collars spawn here.",
+          tags: ["dog collars", "residential", "ARC Raiders Cheatsheet"],
+          rarity: "uncommon",
+          difficulty: "low",
+          guideRef: { source: "ARC Raiders Cheatsheet", url: "https://arcraiderscheatsheet.org/map" }
+        },
+        {
+          id: "space-item-021",
+          title: "Dog Collar Spawn",
+          type: "item",
+          coords: [490, 890],
+          description: "Common spawn point for Dog Collars needed for specific quests.",
+          rewards: ["Dog Collar"],
+          tags: ["quest item", "residential"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "space-weapon-022",
+          title: "Weapon Case - Departure Terminal",
+          type: "weaponCase",
+          coords: [250, 330],
+          description: "High-tier weapon container in the Departure Building.",
+          rewards: ["Random high-tier weapon"],
+          tags: ["commercial area"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "space-weapon-023",
+          title: "Weapon Case - Rocket Assembly",
+          type: "weaponCase",
+          coords: [550, 650],
+          description: "Weapon container in the Rocket Assembly facility. May contain exotic blueprints.",
+          rewards: ["Random weapon", "Possible blueprint"],
+          tags: ["industrial"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "space-locker-024",
+          title: "Security Locker - Control Tower A6",
+          type: "securityLocker",
+          coords: [925, 890],
+          description: "Locked container in Control Tower A6 requiring Spaceport Control Tower Key.",
+          rewards: ["Security Equipment", "Keys"],
+          tags: ["requires key"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "space-crate-025",
+          title: "Field Crate - Container Storage",
+          type: "fieldCrate",
+          coords: [985, 930],
+          description: "Industrial crate in the container storage yard. Bulk materials available.",
+          rewards: ["Bulk Materials", "Industrial Components"],
+          tags: ["farming"],
+          rarity: "common",
+          difficulty: "low"
+        },
+        {
+          id: "space-enemy-026",
+          title: "Sentinel Patrol Route",
+          type: "sentinel",
+          coords: [700, 540],
+          description: "Regular Sentinel patrol between Launch Towers and Assembly. Drops ARC Alloy.",
+          tags: ["patrol", "ARC drops"],
+          rarity: "rare",
+          difficulty: "high"
+        },
+        // Locked Doors - Calibrated to match Spaceport_Map.png landmark positions
+        {
+          id: "space-door-027",
+          title: "North Trench Tower Locked Door",
+          type: "lockedDoor",
+          coords: [150, 800],
+          description: "Locked door at North Trench Tower requiring Spaceport Trench Tower Key.",
+          rewards: ["High-value loot", "ARC tech components"],
+          tags: ["requires key", "trench area"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "space-door-028",
+          title: "West Hangar Locked Door",
+          type: "lockedDoor",
+          coords: [80, 725],
+          description: "Locked door in the West Hangar area.",
+          rewards: ["Industrial components", "Rare materials"],
+          tags: ["requires key", "hangar"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "space-door-029",
+          title: "South Trench Tower Locked Door",
+          type: "lockedDoor",
+          coords: [185, 760],
+          description: "Secured room at South Trench Tower.",
+          rewards: ["Tech blueprints", "Crafting materials"],
+          tags: ["requires key", "trench area"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "space-door-030",
+          title: "The Trench Locked Door",
+          type: "lockedDoor",
+          coords: [265, 810],
+          description: "Locked door in The Trench sector between towers.",
+          rewards: ["Security keys", "Ammunition"],
+          tags: ["requires key", "trench"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "space-door-031",
+          title: "Fuel Control Locked Door",
+          type: "lockedDoor",
+          coords: [400, 805],
+          description: "Secured room in the Fuel Control area. Contains rare fuel components.",
+          rewards: ["Fuel components", "Industrial salvage"],
+          tags: ["requires key", "fuel depot"],
+          rarity: "rare",
+          difficulty: "high"
+        },
+        {
+          id: "space-door-032",
+          title: "East Container Yard Locked Door",
+          type: "lockedDoor",
+          coords: [375, 915],
+          description: "Locked storage container in the East Container Yard.",
+          rewards: ["Bulk materials", "Crates"],
+          tags: ["requires key", "container yard"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "space-door-033",
+          title: "Vehicle Maintenance Locked Door",
+          type: "lockedDoor",
+          coords: [735, 625],
+          description: "Locked maintenance bay with vehicle parts and tools.",
+          rewards: ["Vehicle parts", "Tools"],
+          tags: ["requires key", "maintenance"],
+          rarity: "uncommon",
+          difficulty: "medium"
+        },
+        {
+          id: "space-door-034",
+          title: "Control Tower A6 Locked Door",
+          type: "lockedDoor",
+          coords: [660, 720],
+          description: "High-security door in Control Tower A6 requiring special clearance.",
+          rewards: ["Top-tier equipment", "Security codes"],
+          tags: ["requires key", "high security"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "space-door-035",
+          title: "East Plains Warehouses Locked Door",
+          type: "lockedDoor",
+          coords: [430, 1010],
+          description: "Locked warehouse door in the East Plains industrial sector.",
+          rewards: ["Industrial equipment", "Raw materials"],
+          tags: ["requires key", "industrial"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "space-door-036",
+          title: "Communications Tower Locked Door",
+          type: "lockedDoor",
+          coords: [685, 1000],
+          description: "Secured communications equipment room.",
+          rewards: ["Comms equipment", "Data chips"],
+          tags: ["requires key", "communications"],
+          rarity: "rare",
+          difficulty: "medium"
         }
       ]
     },
@@ -666,6 +1141,121 @@ window.arcMapsConfig = {
           tags: ["farming route"],
           rarity: "uncommon",
           difficulty: "low"
+        },
+        // Additional items from guide scraping
+        {
+          id: "blue-location-014",
+          title: "Pilgrim's Peak",
+          type: "location",
+          coords: [920, 280],
+          description: "High-ground position in the top-right with top-tier loot. Heavy enemy presence per TheGamer guide.",
+          tags: ["landmark", "high-tier loot", "high threat", "TheGamer Guide"],
+          rarity: "legendary",
+          difficulty: "elite",
+          guideRef: { source: "TheGamer", url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide" }
+        },
+        {
+          id: "blue-location-015",
+          title: "Central Checkpoint",
+          type: "location",
+          coords: [600, 600],
+          description: "Heavily guarded central checkpoint. High rewards but significant enemy threat.",
+          tags: ["landmark", "high threat", "TheGamer Guide"],
+          rarity: "rare",
+          difficulty: "high"
+        },
+        {
+          id: "blue-location-016",
+          title: "Communication Tower",
+          type: "location",
+          coords: [780, 380],
+          description: "Radio communication tower. Requires Blue Gate Communication Tower Key for access.",
+          tags: ["requires key", "elevated"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "blue-weapon-017",
+          title: "Weapon Case - Pilgrim's Peak",
+          type: "weaponCase",
+          coords: [930, 290],
+          description: "High-tier weapon container at Pilgrim's Peak. Expect heavy resistance.",
+          rewards: ["Random high-tier weapon", "Rare materials"],
+          tags: ["high risk high reward"],
+          rarity: "legendary",
+          difficulty: "elite"
+        },
+        {
+          id: "blue-locker-018",
+          title: "Security Locker - Communication Tower",
+          type: "securityLocker",
+          coords: [785, 390],
+          description: "Locked container requiring Blue Gate Communication Tower Key.",
+          rewards: ["Communication Equipment", "Advanced Components"],
+          tags: ["requires key"],
+          rarity: "rare",
+          difficulty: "medium"
+        },
+        {
+          id: "blue-crate-019",
+          title: "Field Crate - Checkpoint",
+          type: "fieldCrate",
+          coords: [610, 610],
+          description: "Loot container at Central Checkpoint. Guard patrols nearby.",
+          rewards: ["Military Equipment", "Mixed materials"],
+          tags: ["guarded"],
+          rarity: "uncommon",
+          difficulty: "medium"
+        },
+        {
+          id: "blue-spawn-020",
+          title: "Player Spawn - Valley",
+          type: "playerSpawn",
+          coords: [260, 340],
+          description: "Valley spawn point. Start of recommended Rusted Gear farming route.",
+          tags: ["spawn", "farming start"],
+          rarity: "common",
+          difficulty: "low"
+        },
+        {
+          id: "blue-resource-021",
+          title: "Agave Patch",
+          type: "agave",
+          coords: [380, 520],
+          description: "Natural Agave spawn in the foothills. More abundant during 'Lush Blooms' condition.",
+          tags: ["natural resource", "crafting"],
+          rarity: "common",
+          difficulty: "low"
+        },
+        {
+          id: "blue-resource-022",
+          title: "Great Mullein Meadow",
+          type: "greatMullein",
+          coords: [540, 380],
+          description: "Medicinal herb spawn in the highland meadows.",
+          tags: ["natural resource", "medicine"],
+          rarity: "common",
+          difficulty: "low"
+        },
+        {
+          id: "blue-enemy-023",
+          title: "ARC Patrol Route",
+          type: "arc",
+          coords: [700, 500],
+          description: "Regular ARC patrol between Checkpoint and Underground Complex.",
+          tags: ["patrol", "medium threat"],
+          rarity: "uncommon",
+          difficulty: "medium"
+        },
+        {
+          id: "blue-zipline-024",
+          title: "Ridge Zipline",
+          type: "zipline",
+          coords: [480, 320],
+          description: "Zipline connecting mountain pass to lower areas. Quick escape route.",
+          tags: ["traversal", "escape"],
+          rarity: "common",
+          difficulty: "low"
         }
       ]
     },
@@ -806,6 +1396,142 @@ window.arcMapsConfig = {
           tags: ["ice caves", "scanner"],
           rarity: "uncommon",
           difficulty: "medium"
+        },
+        // Additional items from guide scraping
+        {
+          id: "stella-location-013",
+          title: "Uplink Pylon Alpha",
+          type: "location",
+          coords: [520, 440],
+          description: "First uplink pylon for North Line quest. Must synchronize without ARC drones resetting.",
+          tags: ["quest objective", "North Line"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "stella-location-014",
+          title: "Uplink Pylon Beta",
+          type: "location",
+          coords: [680, 480],
+          description: "Second uplink pylon. Part of the three-pylon synchronization for North Line quest.",
+          tags: ["quest objective", "North Line"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "stella-location-015",
+          title: "Uplink Pylon Gamma",
+          type: "location",
+          coords: [600, 560],
+          description: "Third uplink pylon. Completing all three summons the Matriarch variant.",
+          tags: ["quest objective", "North Line", "boss trigger"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "stella-boss-016",
+          title: "Matriarch Variant",
+          type: "boss",
+          coords: [600, 500],
+          description: "Special Matriarch variant summoned after completing North Line Uplink quest. Drops unique materials.",
+          rewards: ["North Line Tech Fragments", "Cryonic Alloys", "Exotic Materials"],
+          tags: ["elite", "fireteam recommended", "TechRadar Guide"],
+          rarity: "exotic",
+          difficulty: "elite",
+          guideRef: { source: "TechRadar", url: "https://www.techradar.com/gaming/arc-raiders-north-line-update" }
+        },
+        {
+          id: "stella-weapon-017",
+          title: "Weapon Case - Facility Armory",
+          type: "weaponCase",
+          coords: [620, 520],
+          description: "Secure armory in the Mountain Facility. High-tier weapons in arctic conditions.",
+          rewards: ["Random high-tier weapon", "Cold-resistant gear"],
+          tags: ["indoor", "high-tier"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "stella-locker-018",
+          title: "Research Vault",
+          type: "securityLocker",
+          coords: [580, 500],
+          description: "Secure research vault containing North Line secrets. Requires special access.",
+          rewards: ["North Line Tech Fragments", "Research Data"],
+          tags: ["requires key", "story relevant"],
+          rarity: "legendary",
+          difficulty: "high"
+        },
+        {
+          id: "stella-crate-019",
+          title: "Field Crate - Summit Approach",
+          type: "fieldCrate",
+          coords: [780, 320],
+          description: "Supply cache on the approach to the summit. Extreme weather conditions.",
+          rewards: ["Survival gear", "Cryonic Materials"],
+          tags: ["exposed", "arctic"],
+          rarity: "uncommon",
+          difficulty: "medium"
+        },
+        {
+          id: "stella-resource-020",
+          title: "Mushroom Cluster",
+          type: "mushroom",
+          coords: [740, 880],
+          description: "Rare mushroom spawn in the ice caves. Used in crafting recipes.",
+          tags: ["natural resource", "cave"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "stella-enemy-021",
+          title: "Arctic Sentinel",
+          type: "sentinel",
+          coords: [640, 400],
+          description: "Cold-adapted Sentinel guarding facility perimeter. Enhanced armor.",
+          tags: ["patrol", "enhanced", "arctic"],
+          rarity: "rare",
+          difficulty: "high"
+        },
+        {
+          id: "stella-spawn-022",
+          title: "Player Spawn - Base Camp",
+          type: "playerSpawn",
+          coords: [340, 300],
+          description: "Primary spawn at base camp. Shelter from extreme weather.",
+          tags: ["spawn", "safe zone"],
+          rarity: "common",
+          difficulty: "low"
+        },
+        {
+          id: "stella-spawn-023",
+          title: "Player Spawn - Summit Station",
+          type: "playerSpawn",
+          coords: [860, 260],
+          description: "Secondary spawn at summit station. Quick access to high-tier areas.",
+          tags: ["spawn", "advanced"],
+          rarity: "common",
+          difficulty: "low"
+        },
+        {
+          id: "stella-depot-024",
+          title: "Field Depot - Research Wing",
+          type: "fieldDepot",
+          coords: [560, 540],
+          description: "Supply depot in the research wing of the Mountain Facility.",
+          tags: ["resupply", "indoor"],
+          rarity: "uncommon",
+          difficulty: "low"
+        },
+        {
+          id: "stella-hatch-025",
+          title: "Emergency Hatch",
+          type: "raiderHatch",
+          coords: [680, 860],
+          description: "Hidden emergency exit from ice caves. Quick escape route to extraction.",
+          tags: ["escape", "underground"],
+          rarity: "uncommon",
+          difficulty: "low"
         }
       ]
     }

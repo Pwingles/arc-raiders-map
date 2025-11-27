@@ -1,0 +1,5927 @@
+{
+  "maps": [
+    {
+      "id": 828,
+      "title": "Dam Battlegrounds",
+      "slug": "dam-battlegrounds"
+    },
+    {
+      "id": 829,
+      "title": "Buried City",
+      "slug": "buried-city"
+    },
+    {
+      "id": 830,
+      "title": "Spaceport",
+      "slug": "spaceport"
+    },
+    {
+      "id": 831,
+      "title": "The Blue Gate",
+      "slug": "the-blue-gate"
+    },
+    {
+      "id": 832,
+      "title": "Stella Montis",
+      "slug": "stella-montis"
+    }
+  ],
+  "map": {
+    "id": 829,
+    "title": "Buried City",
+    "slug": "buried-city"
+  },
+  "groups": [
+    {
+      "id": 2420,
+      "game_id": 242,
+      "title": "Locations",
+      "order": 10,
+      "color": "223034",
+      "expandable": false,
+      "categories": [
+        {
+          "id": 13834,
+          "group_id": 2420,
+          "title": "Field Depot",
+          "icon": "field_depot",
+          "info": null,
+          "template": "**Field Crate Locations:**\n- ??",
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13840,
+          "group_id": 2420,
+          "title": "Location",
+          "icon": "location",
+          "info": null,
+          "template": "**Type:** ??",
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "text",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13842,
+          "group_id": 2420,
+          "title": "Locked Door",
+          "icon": "locked_door",
+          "info": null,
+          "template": "**Key Required:** ??  \n\n**Location:** ??  \n\n**Behind the Door:** \n- ??",
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13836,
+          "group_id": 2420,
+          "title": "Metro Station",
+          "icon": "metro_station",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13837,
+          "group_id": 2420,
+          "title": "Raider Camp",
+          "icon": "raider_camp",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13832,
+          "group_id": 2420,
+          "title": "Raider Hatch",
+          "icon": "raider_hatch",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        }
+      ]
+    },
+    {
+      "id": 2421,
+      "game_id": 242,
+      "title": "Services",
+      "order": 10,
+      "color": "199461",
+      "expandable": false,
+      "categories": []
+    },
+    {
+      "id": 2422,
+      "game_id": 242,
+      "title": "Collectibles",
+      "order": 10,
+      "color": "80518A",
+      "expandable": false,
+      "categories": [
+        {
+          "id": 13816,
+          "group_id": 2422,
+          "title": "Mission Objective",
+          "icon": "mission_objective",
+          "info": null,
+          "template": "**Mission:** ??  \n\n**Location:** ??",
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        }
+      ]
+    },
+    {
+      "id": 2423,
+      "game_id": 242,
+      "title": "Loot",
+      "order": 10,
+      "color": "5A8A95",
+      "expandable": false,
+      "categories": [
+        {
+          "id": 13823,
+          "group_id": 2423,
+          "title": "Ammo Box",
+          "icon": "ammo_box",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13940,
+          "group_id": 2423,
+          "title": "ARC Courier",
+          "icon": "arc_courier",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13944,
+          "group_id": 2423,
+          "title": "ARC Probe",
+          "icon": "arc_probe",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13945,
+          "group_id": 2423,
+          "title": "Field Crate",
+          "icon": "field_crate",
+          "info": null,
+          "template": "**Location:** ??  \n\n**Field Depot:** ??",
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13822,
+          "group_id": 2423,
+          "title": "Grenade Tube",
+          "icon": "grenade_tube",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13820,
+          "group_id": 2423,
+          "title": "Item",
+          "icon": "item",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13838,
+          "group_id": 2423,
+          "title": "Security Locker",
+          "icon": "security_locker",
+          "info": "Requires Skill: Security Breach",
+          "template": "**Location:**  ??",
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13821,
+          "group_id": 2423,
+          "title": "Weapon Crate",
+          "icon": "weapon_crate",
+          "info": "**Note:** Some Weapon Crates may only be a chance to spawn. Is this Crate 100% always there for you? Let us know by submitting suggestions.",
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        }
+      ]
+    },
+    {
+      "id": 2429,
+      "game_id": 242,
+      "title": "Natural Resources",
+      "order": 10,
+      "color": "745B49",
+      "expandable": false,
+      "categories": [
+        {
+          "id": 13932,
+          "group_id": 2429,
+          "title": "Agave",
+          "icon": "agave",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13934,
+          "group_id": 2429,
+          "title": "Apricot",
+          "icon": "apricot",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13839,
+          "group_id": 2429,
+          "title": "Fruit Basket",
+          "icon": "fruit_basket",
+          "info": "**Note:** Chance to Spawn here during Lush Blooms Event. Found one? Please suggest its location.",
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13933,
+          "group_id": 2429,
+          "title": "Great Mullein",
+          "icon": "great_mullein",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13812,
+          "group_id": 2429,
+          "title": "Lemons",
+          "icon": "lemons",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13931,
+          "group_id": 2429,
+          "title": "Prickly Pear",
+          "icon": "prickly_pear",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        }
+      ]
+    },
+    {
+      "id": 2424,
+      "game_id": 242,
+      "title": "Missions",
+      "order": 20,
+      "color": "C8A865",
+      "expandable": false,
+      "categories": []
+    },
+    {
+      "id": 2425,
+      "game_id": 242,
+      "title": "Enemies",
+      "order": 20,
+      "color": "A43D37",
+      "expandable": false,
+      "categories": [
+        {
+          "id": 13841,
+          "group_id": 2425,
+          "title": "ARC",
+          "icon": "arc",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13828,
+          "group_id": 2425,
+          "title": "Enemy",
+          "icon": "enemy",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 14031,
+          "group_id": 2425,
+          "title": "Sentinel",
+          "icon": "sentinel",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        }
+      ]
+    },
+    {
+      "id": 2426,
+      "game_id": 242,
+      "title": "Other",
+      "order": 20,
+      "color": "6B7178",
+      "expandable": false,
+      "categories": [
+        {
+          "id": 13942,
+          "group_id": 2426,
+          "title": "Entrance",
+          "icon": "metro_entrance",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13831,
+          "group_id": 2426,
+          "title": "Miscellaneous",
+          "icon": "miscellaneous",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13930,
+          "group_id": 2426,
+          "title": "Player Spawn",
+          "icon": "player_spawn",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13835,
+          "group_id": 2426,
+          "title": "Supply Call Station",
+          "icon": "supply_call_station",
+          "info": "This may be from a specific event mode. Let us know which event mode is running if you find a Supply Call Station.",
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13941,
+          "group_id": 2426,
+          "title": "Zipline",
+          "icon": "zipline",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": true,
+          "display_type": "features",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        }
+      ]
+    },
+    {
+      "id": 2428,
+      "game_id": 242,
+      "title": "Events",
+      "order": 20,
+      "color": "4899D8",
+      "expandable": false,
+      "categories": [
+        {
+          "id": 13937,
+          "group_id": 2428,
+          "title": "Raider Cache",
+          "icon": "raider_cache",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": false,
+          "display_type": "marker",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        }
+      ]
+    },
+    {
+      "id": 2427,
+      "game_id": 242,
+      "title": "Loot Zones",
+      "order": 30,
+      "color": "6B7178",
+      "expandable": false,
+      "categories": [
+        {
+          "id": 13927,
+          "group_id": 2427,
+          "title": "High Loot",
+          "icon": "high_loot",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": true,
+          "display_type": "features",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        },
+        {
+          "id": 13928,
+          "group_id": 2427,
+          "title": "Medium Loot",
+          "icon": "medium_loot",
+          "info": null,
+          "template": null,
+          "order": 1,
+          "has_heatmap": false,
+          "features_enabled": true,
+          "display_type": "features",
+          "ign_enabled": true,
+          "ign_visible": true,
+          "visible": true,
+          "description": null,
+          "premium": false
+        }
+      ]
+    }
+  ],
+  "categories": {
+    "13834": {
+      "id": 13834,
+      "group_id": 2420,
+      "title": "Field Depot",
+      "icon": "field_depot",
+      "info": null,
+      "template": "**Field Crate Locations:**\n- ??",
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13840": {
+      "id": 13840,
+      "group_id": 2420,
+      "title": "Location",
+      "icon": "location",
+      "info": null,
+      "template": "**Type:** ??",
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "text",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13842": {
+      "id": 13842,
+      "group_id": 2420,
+      "title": "Locked Door",
+      "icon": "locked_door",
+      "info": null,
+      "template": "**Key Required:** ??  \n\n**Location:** ??  \n\n**Behind the Door:** \n- ??",
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13836": {
+      "id": 13836,
+      "group_id": 2420,
+      "title": "Metro Station",
+      "icon": "metro_station",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13837": {
+      "id": 13837,
+      "group_id": 2420,
+      "title": "Raider Camp",
+      "icon": "raider_camp",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13832": {
+      "id": 13832,
+      "group_id": 2420,
+      "title": "Raider Hatch",
+      "icon": "raider_hatch",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13816": {
+      "id": 13816,
+      "group_id": 2422,
+      "title": "Mission Objective",
+      "icon": "mission_objective",
+      "info": null,
+      "template": "**Mission:** ??  \n\n**Location:** ??",
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13823": {
+      "id": 13823,
+      "group_id": 2423,
+      "title": "Ammo Box",
+      "icon": "ammo_box",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13940": {
+      "id": 13940,
+      "group_id": 2423,
+      "title": "ARC Courier",
+      "icon": "arc_courier",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13944": {
+      "id": 13944,
+      "group_id": 2423,
+      "title": "ARC Probe",
+      "icon": "arc_probe",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13945": {
+      "id": 13945,
+      "group_id": 2423,
+      "title": "Field Crate",
+      "icon": "field_crate",
+      "info": null,
+      "template": "**Location:** ??  \n\n**Field Depot:** ??",
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13822": {
+      "id": 13822,
+      "group_id": 2423,
+      "title": "Grenade Tube",
+      "icon": "grenade_tube",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13820": {
+      "id": 13820,
+      "group_id": 2423,
+      "title": "Item",
+      "icon": "item",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13838": {
+      "id": 13838,
+      "group_id": 2423,
+      "title": "Security Locker",
+      "icon": "security_locker",
+      "info": "Requires Skill: Security Breach",
+      "template": "**Location:**  ??",
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13821": {
+      "id": 13821,
+      "group_id": 2423,
+      "title": "Weapon Crate",
+      "icon": "weapon_crate",
+      "info": "**Note:** Some Weapon Crates may only be a chance to spawn. Is this Crate 100% always there for you? Let us know by submitting suggestions.",
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13932": {
+      "id": 13932,
+      "group_id": 2429,
+      "title": "Agave",
+      "icon": "agave",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13934": {
+      "id": 13934,
+      "group_id": 2429,
+      "title": "Apricot",
+      "icon": "apricot",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13839": {
+      "id": 13839,
+      "group_id": 2429,
+      "title": "Fruit Basket",
+      "icon": "fruit_basket",
+      "info": "**Note:** Chance to Spawn here during Lush Blooms Event. Found one? Please suggest its location.",
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13933": {
+      "id": 13933,
+      "group_id": 2429,
+      "title": "Great Mullein",
+      "icon": "great_mullein",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13812": {
+      "id": 13812,
+      "group_id": 2429,
+      "title": "Lemons",
+      "icon": "lemons",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13931": {
+      "id": 13931,
+      "group_id": 2429,
+      "title": "Prickly Pear",
+      "icon": "prickly_pear",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13841": {
+      "id": 13841,
+      "group_id": 2425,
+      "title": "ARC",
+      "icon": "arc",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13828": {
+      "id": 13828,
+      "group_id": 2425,
+      "title": "Enemy",
+      "icon": "enemy",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "14031": {
+      "id": 14031,
+      "group_id": 2425,
+      "title": "Sentinel",
+      "icon": "sentinel",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13942": {
+      "id": 13942,
+      "group_id": 2426,
+      "title": "Entrance",
+      "icon": "metro_entrance",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13831": {
+      "id": 13831,
+      "group_id": 2426,
+      "title": "Miscellaneous",
+      "icon": "miscellaneous",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13930": {
+      "id": 13930,
+      "group_id": 2426,
+      "title": "Player Spawn",
+      "icon": "player_spawn",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13835": {
+      "id": 13835,
+      "group_id": 2426,
+      "title": "Supply Call Station",
+      "icon": "supply_call_station",
+      "info": "This may be from a specific event mode. Let us know which event mode is running if you find a Supply Call Station.",
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13941": {
+      "id": 13941,
+      "group_id": 2426,
+      "title": "Zipline",
+      "icon": "zipline",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": true,
+      "display_type": "features",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13937": {
+      "id": 13937,
+      "group_id": 2428,
+      "title": "Raider Cache",
+      "icon": "raider_cache",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": false,
+      "display_type": "marker",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13927": {
+      "id": 13927,
+      "group_id": 2427,
+      "title": "High Loot",
+      "icon": "high_loot",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": true,
+      "display_type": "features",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    },
+    "13928": {
+      "id": 13928,
+      "group_id": 2427,
+      "title": "Medium Loot",
+      "icon": "medium_loot",
+      "info": null,
+      "template": null,
+      "order": 1,
+      "has_heatmap": false,
+      "features_enabled": true,
+      "display_type": "features",
+      "ign_enabled": true,
+      "ign_visible": true,
+      "visible": true,
+      "description": null,
+      "premium": false
+    }
+  },
+  "regions": [
+    {
+      "id": 3393,
+      "map_id": 829,
+      "parent_region_id": null,
+      "title": "New District",
+      "subtitle": null,
+      "features": [
+        {
+          "id": 3393,
+          "type": "Feature",
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.7213515941325284,
+                  0.6646407775769632
+                ],
+                [
+                  -0.6844606662811543,
+                  0.6729536597431149
+                ],
+                [
+                  -0.6558831869597839,
+                  0.6745123235768062
+                ],
+                [
+                  -0.6075612673808735,
+                  0.6724341050203293
+                ],
+                [
+                  -0.6153551253771354,
+                  0.6869816161833739
+                ],
+                [
+                  -0.48961421636292357,
+                  0.7581598540537442
+                ],
+                [
+                  -0.4994702982888555,
+                  0.839111276648751
+                ],
+                [
+                  -0.5057053846864221,
+                  0.888986294392339
+                ],
+                [
+                  -0.5322045018752704,
+                  0.9336654268405908
+                ],
+                [
+                  -0.5732521539916888,
+                  0.9617194773504565
+                ],
+                [
+                  -0.6402793327631571,
+                  0.993409886330241
+                ],
+                [
+                  -0.6891208428758375,
+                  0.9897732972763151
+                ],
+                [
+                  -0.7431582583197951,
+                  0.9669146467857104
+                ],
+                [
+                  -0.7166591411309753,
+                  0.8900253502296067
+                ],
+                [
+                  -0.8133029802900751,
+                  0.831318246724976
+                ],
+                [
+                  -0.7213515941325284,
+                  0.6646407775769632
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "properties": {
+            "id": 3393
+          }
+        }
+      ],
+      "center_x": "-0.67611119276512",
+      "center_y": "0.77649306107266",
+      "order": 50
+    },
+    {
+      "id": 3396,
+      "map_id": 829,
+      "parent_region_id": null,
+      "title": "Old Town",
+      "subtitle": null,
+      "features": [
+        {
+          "id": 3396,
+          "type": "Feature",
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.8604679529701116,
+                  0.4631759466568752
+                ],
+                [
+                  -0.7977187391214784,
+                  0.46216389556008153
+                ],
+                [
+                  -0.7081492967730298,
+                  0.46874222509701724
+                ],
+                [
+                  -0.6540027977258092,
+                  0.45457350775888017
+                ],
+                [
+                  -0.5932777520670243,
+                  0.4738024743871705
+                ],
+                [
+                  -0.5305285382183911,
+                  0.46671812435492654
+                ],
+                [
+                  -0.4601886936626727,
+                  0.5051759359698309
+                ],
+                [
+                  -0.4525980629544506,
+                  0.5669103608471886
+                ],
+                [
+                  -0.47587599712454676,
+                  0.6453424830339998
+                ],
+                [
+                  -0.48961421636292357,
+                  0.7581598540537442
+                ],
+                [
+                  -0.6153551253771354,
+                  0.6869816161833739
+                ],
+                [
+                  -0.6075612673808735,
+                  0.6724341050203293
+                ],
+                [
+                  -0.6558831869597839,
+                  0.6745123235768062
+                ],
+                [
+                  -0.6844606662811543,
+                  0.6729536597431149
+                ],
+                [
+                  -0.7213515941325284,
+                  0.6646407775769632
+                ],
+                [
+                  -0.7219914058902077,
+                  0.649590867166026
+                ],
+                [
+                  -0.7415609911648176,
+                  0.6438093125429702
+                ],
+                [
+                  -0.7691363158688773,
+                  0.6300225020977024
+                ],
+                [
+                  -0.7913744809536638,
+                  0.609564587349368
+                ],
+                [
+                  -0.8087202497192436,
+                  0.5908855537689277
+                ],
+                [
+                  -0.8465251303628634,
+                  0.5348480841480239
+                ],
+                [
+                  -0.8834404844020014,
+                  0.47436262374115756
+                ],
+                [
+                  -0.8604679529701116,
+                  0.4631759466568752
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "properties": {
+            "id": 3396
+          }
+        }
+      ],
+      "center_x": "-0.69704230812215",
+      "center_y": "0.58858605385232",
+      "order": 50
+    },
+    {
+      "id": 3394,
+      "map_id": 829,
+      "parent_region_id": null,
+      "title": "Outskirts",
+      "subtitle": null,
+      "features": [
+        {
+          "id": 3394,
+          "type": "Feature",
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.8423106218641863,
+                  0.7209982406767494
+                ],
+                [
+                  -0.7989279256616157,
+                  0.7480213059143068
+                ],
+                [
+                  -0.8074622265534117,
+                  0.767932932052517
+                ],
+                [
+                  -0.7869347886818336,
+                  0.7835214311800606
+                ],
+                [
+                  -0.8133029802900751,
+                  0.831318246724976
+                ],
+                [
+                  -0.7166591411309753,
+                  0.8900253502296067
+                ],
+                [
+                  -0.7431582583197951,
+                  0.9669146467857104
+                ],
+                [
+                  -0.7870490283126799,
+                  0.9684539531556169
+                ],
+                [
+                  -0.8835023040518024,
+                  0.9582861953941801
+                ],
+                [
+                  -0.9315748632056113,
+                  0.928090859322154
+                ],
+                [
+                  -0.9648558656977002,
+                  0.8572232565612552
+                ],
+                [
+                  -0.9719434865963592,
+                  0.7644771684702931
+                ],
+                [
+                  -0.9694782271505176,
+                  0.660328022510086
+                ],
+                [
+                  -0.9553029853490216,
+                  0.5170424180103481
+                ],
+                [
+                  -0.9321911780625101,
+                  0.49393151032784033
+                ],
+                [
+                  -0.9096956856376437,
+                  0.49701296941158546
+                ],
+                [
+                  -0.8640883859277722,
+                  0.6846707824489613
+                ],
+                [
+                  -0.8423106218641863,
+                  0.7209982406767494
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "properties": {
+            "id": 3394
+          }
+        }
+      ],
+      "center_x": "-0.83762986432981",
+      "center_y": "0.85816668440511",
+      "order": 50
+    },
+    {
+      "id": 3395,
+      "map_id": 829,
+      "parent_region_id": null,
+      "title": "West Village",
+      "subtitle": null,
+      "features": [
+        {
+          "id": 3395,
+          "type": "Feature",
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.8834404844020014,
+                  0.47436262374115756
+                ],
+                [
+                  -0.8465251303628634,
+                  0.5348480841480239
+                ],
+                [
+                  -0.8087202497192436,
+                  0.5908855537689277
+                ],
+                [
+                  -0.7913744809536638,
+                  0.609564587349368
+                ],
+                [
+                  -0.7691363158688773,
+                  0.6300225020977024
+                ],
+                [
+                  -0.7415609911648176,
+                  0.6438093125429702
+                ],
+                [
+                  -0.7219914058902077,
+                  0.649590867166026
+                ],
+                [
+                  -0.7213515941325284,
+                  0.6646407775769632
+                ],
+                [
+                  -0.7869347886818336,
+                  0.7835214311800606
+                ],
+                [
+                  -0.8074622265534117,
+                  0.767932932052517
+                ],
+                [
+                  -0.7989279256616157,
+                  0.7480213059143068
+                ],
+                [
+                  -0.8423106218641863,
+                  0.7209982406767494
+                ],
+                [
+                  -0.8640883859277722,
+                  0.6846707824489613
+                ],
+                [
+                  -0.9096956856376437,
+                  0.49701296941158546
+                ],
+                [
+                  -0.8834404844020014,
+                  0.47436262374115756
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          },
+          "properties": {
+            "id": 3395
+          }
+        }
+      ],
+      "center_x": "-0.81001813061746",
+      "center_y": "0.66617656624155",
+      "order": 50
+    }
+  ],
+  "locations": [
+    {
+      "id": 491546,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13834,
+      "title": "Field Depot",
+      "description": "**Field Crate Locations:**\n- [Field Crate](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=496191#L)\n- [Field Crate](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=491867#L)\n- [Field Crate](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=496190#L)",
+      "latitude": "0.69745655165829",
+      "longitude": "-0.54689647347470",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491551,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13834,
+      "title": "Field Depot",
+      "description": null,
+      "latitude": "0.57194404255253",
+      "longitude": "-0.74527680828118",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491869,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13834,
+      "title": "Field Depot",
+      "description": "**Field Crate Locations:**\n- [Field Crate](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=496208#L)",
+      "latitude": "0.84167128471255",
+      "longitude": "-0.72466096491769",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491330,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13840,
+      "title": "Merano Station",
+      "description": null,
+      "latitude": "0.79888856870257",
+      "longitude": "-0.83127239327689",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491331,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13840,
+      "title": "Warehouse",
+      "description": null,
+      "latitude": "0.75570753607691",
+      "longitude": "-0.90071855421098",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491332,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13840,
+      "title": "SuDurante Warehouse",
+      "description": null,
+      "latitude": "0.90246016488305",
+      "longitude": "-0.79829742285341",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491333,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13840,
+      "title": "Gas Station",
+      "description": null,
+      "latitude": "0.92200765662952",
+      "longitude": "-0.72847157117727",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491335,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Market Ruins",
+      "description": null,
+      "latitude": "0.85782147266069",
+      "longitude": "-0.68120149524364",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491337,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Dune's End",
+      "description": null,
+      "latitude": "0.84498410409095",
+      "longitude": "-0.62780381687423",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491338,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Galleria",
+      "description": "**Type:** Commercial",
+      "latitude": "0.79946945992425",
+      "longitude": "-0.64356050885254",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491347,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13840,
+      "title": "Piazza Arbusto",
+      "description": null,
+      "latitude": "0.66661050803529",
+      "longitude": "-0.61471307516373",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491348,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13840,
+      "title": "Santa Maria Houses",
+      "description": null,
+      "latitude": "0.62477431720794",
+      "longitude": "-0.72322250038627",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491349,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Town Hall",
+      "description": "**Type:** Old World",
+      "latitude": "0.68801506128425",
+      "longitude": "-0.68979305453868",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491351,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13840,
+      "title": "Piazza Roma",
+      "description": null,
+      "latitude": "0.72120618587557",
+      "longitude": "-0.78760670728832",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491352,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13840,
+      "title": "Grandioso Apartments",
+      "description": null,
+      "latitude": "0.62303073011934",
+      "longitude": "-0.84234519687084",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491354,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13840,
+      "title": "Abandoned Highway Camp",
+      "description": null,
+      "latitude": "0.57575022868396",
+      "longitude": "-0.83421371004329",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491355,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13840,
+      "title": "Main Street",
+      "description": null,
+      "latitude": "0.59080775730264",
+      "longitude": "-0.73211837542544",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491356,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13840,
+      "title": "Red Tower",
+      "description": "",
+      "latitude": "0.58569841730105",
+      "longitude": "-0.65894365310652",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491357,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13840,
+      "title": "Piazza Rosa",
+      "description": null,
+      "latitude": "0.57063065985160",
+      "longitude": "-0.71194024144711",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491359,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13840,
+      "title": "Church Ruins",
+      "description": null,
+      "latitude": "0.53961199974397",
+      "longitude": "-0.57471360319511",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491361,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Buried Properties",
+      "description": null,
+      "latitude": "0.71113869964798",
+      "longitude": "-0.60329896114368",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491362,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Space Travel",
+      "description": null,
+      "latitude": "0.76553024384025",
+      "longitude": "-0.66496689309662",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491363,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Research",
+      "description": null,
+      "latitude": "0.75438807542456",
+      "longitude": "-0.68454269472008",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491364,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Marano Park",
+      "description": null,
+      "latitude": "0.73993332799847",
+      "longitude": "-0.72248963325015",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491365,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Library",
+      "description": null,
+      "latitude": "0.80257021488579",
+      "longitude": "-0.75893074088702",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491367,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Hospital",
+      "description": null,
+      "latitude": "0.84210627282432",
+      "longitude": "-0.70904764996271",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491368,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13840,
+      "title": "Maintenance Depot",
+      "description": null,
+      "latitude": "0.61571914400488",
+      "longitude": "-0.93086360514235",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491554,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13840,
+      "title": "Parking Garage",
+      "description": null,
+      "latitude": "0.78695678849925",
+      "longitude": "-0.69449861422760",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496307,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13840,
+      "title": "Pharmacy",
+      "description": "**Type:** ??",
+      "latitude": "0.64803566002395",
+      "longitude": "-0.59464178510910",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496308,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13840,
+      "title": "Pharmacy",
+      "description": "**Type:** ??",
+      "latitude": "0.56963506576238",
+      "longitude": "-0.69268097360538",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491643,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13842,
+      "title": "Breachable Room",
+      "description": "High value loot",
+      "latitude": "0.82207888165564",
+      "longitude": "-0.83132501157741",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491753,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13842,
+      "title": "JKV Employee Access Door",
+      "description": "**Key Required:** Buried City JKV Employee Access Card",
+      "latitude": "0.76316750444300",
+      "longitude": "-0.66344567123917",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 106382,
+          "title": "",
+          "file_name": "4c3d018c-1443-4d5c-92f4-99c4ca1419b8.jpeg",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/4c3d018c-1443-4d5c-92f4-99c4ca1419b8.jpeg",
+          "type": "image",
+          "mime_type": "image/jpeg",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 492089,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13842,
+      "title": "Buried City Hospital Room",
+      "description": "**Key Required:** Buried City Hospital Key",
+      "latitude": "0.85797287502531",
+      "longitude": "-0.72232140155785",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492421,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13842,
+      "title": "Buried City Town Hall Room",
+      "description": "**Key Required:** Buried City Town Hall Key",
+      "latitude": "0.69272856877024",
+      "longitude": "-0.69460073648958",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494615,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13842,
+      "title": "Locker Room",
+      "description": "**Key Required:** Burried City Residential Master Key",
+      "latitude": "0.61864048634476",
+      "longitude": "-0.62906886182802",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494617,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13842,
+      "title": "Breach Door Room",
+      "description": "",
+      "latitude": "0.61308763668468",
+      "longitude": "-0.77620983123700",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494927,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13842,
+      "title": "Grandioso Apartments Locked Door",
+      "description": "**Key Required:** Buried City Residential Master Key\n\n**Location:** Southeast corner of the north building on the ground floor.",
+      "latitude": "0.62664134018036",
+      "longitude": "-0.83389761114918",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 105120,
+          "title": "",
+          "file_name": "3c76f841-ff34-4bf3-81a9-c0a64d224049.jpeg",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/3c76f841-ff34-4bf3-81a9-c0a64d224049.jpeg",
+          "type": "image",
+          "mime_type": "image/jpeg",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 491327,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13836,
+      "title": "Western Station",
+      "description": null,
+      "latitude": "0.70902485646033",
+      "longitude": "-0.78925454799909",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491358,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13836,
+      "title": "Southern Station",
+      "description": "",
+      "latitude": "0.55587373340256",
+      "longitude": "-0.71043670177261",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491360,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13836,
+      "title": "Eastern Station",
+      "description": null,
+      "latitude": "0.62873008712224",
+      "longitude": "-0.65584416495352",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491366,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13836,
+      "title": "Northern Station",
+      "description": null,
+      "latitude": "0.80437703428778",
+      "longitude": "-0.72489896268101",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494661,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13837,
+      "title": "Raider Camp",
+      "description": null,
+      "latitude": "0.48001135261097",
+      "longitude": "-0.66364063937658",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491328,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13832,
+      "title": "Train Station Hatch",
+      "description": null,
+      "latitude": "0.78575924755440",
+      "longitude": "-0.83039702150054",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491334,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13832,
+      "title": "Collapsed Supermarket Hatch",
+      "description": null,
+      "latitude": "0.87678568814708",
+      "longitude": "-0.69316490952266",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491350,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13832,
+      "title": "Highway Overpass Hatch",
+      "description": null,
+      "latitude": "0.68349789216435",
+      "longitude": "-0.67112075145147",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491353,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13832,
+      "title": "Old Town Hatch",
+      "description": null,
+      "latitude": "0.59984225495404",
+      "longitude": "-0.79235161118905",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492088,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13816,
+      "title": "[Market Correction] Cache Location",
+      "description": "**Mission:** Market Correction  \n\n**Location:** The cache is actually a waste bin found at the side of a building",
+      "latitude": "0.81706746851459",
+      "longitude": "-0.81923591514874",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492422,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "[Life of a Pharmacist] Pharmacy",
+      "description": "**Mission:** Life of a Pharmacist  \n\n**Location:** The pharmacy is located in the Piazza Arbusto neighborhood with a metro entrance right in front of it.\n\n**Note:** Break open the front door, and head upstairs.  On the second and third floor are the objects you need to take pictures of.  (piano, painting, etc.)",
+      "latitude": "0.66137749062213",
+      "longitude": "-0.60021951788650",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493192,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13816,
+      "title": "[Marked for Death] Tian Wen's Cache",
+      "description": "**Mission:** Marked for Death\n\n**Location:** SuDurante Warehouse\n\nFollow trail through the fence line after interacting.",
+      "latitude": "0.90276815877262",
+      "longitude": "-0.80910215190622",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493193,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13816,
+      "title": "[Eyes in the Sky] LiDAR Scanner Drop Point",
+      "description": "**Mission:** Eyes in the Sky  \n\n**Location:** On top of the sign - need a zipline or snap hook to get up.",
+      "latitude": "0.81468766612851",
+      "longitude": "-0.65432426158407",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493196,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13816,
+      "title": "[After Rain Comes] Flooded Solar Panels",
+      "description": "**Mission:**  After Rain Comes  \n\n**Location:** Access panel underneath the northeastern-most solar panel.\n\n**Note:** Need 5 wires and 2 batteries to repair",
+      "latitude": "0.63613371050953",
+      "longitude": "-0.80970399017895",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493368,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13816,
+      "title": "[Industrial Espionage] Rival Weapon Cache",
+      "description": "**Mission:** Industrial Espionage\n\n**Location:** Gas Station\n\nNote : Bring a Burletta pistol for the quest",
+      "latitude": "0.90988373694415",
+      "longitude": "-0.74288883989760",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 104550,
+          "title": "",
+          "file_name": "91120996-60c0-4249-a26d-22f0d210961e.jpeg",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/91120996-60c0-4249-a26d-22f0d210961e.jpeg",
+          "type": "image",
+          "mime_type": "image/jpeg",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 493370,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13816,
+      "title": "[What We Left Behind] Raider Camp beneath the Parking Garage",
+      "description": "**Mission:** What We Left Behind\n\n**Location:** Entrance to the Raider Camp beneath the Parking Garage through Elevator",
+      "latitude": "0.77225225814182",
+      "longitude": "-0.69939348707493",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 104614,
+          "title": "",
+          "file_name": "94a42ea2-bdde-4709-958e-64ac0679d2c7.png",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/94a42ea2-bdde-4709-958e-64ac0679d2c7.png",
+          "type": "image",
+          "mime_type": "image/png",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 493759,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "[A Reveal In Ruins] Barricaded Door",
+      "description": "**Mission:** A Reveal In Ruins\n\n**Location:** There is a barricaded door inside the plaza that leads to one of the pharmacies for the quest to find Lance's ESR analyzer.",
+      "latitude": "0.57045351726164",
+      "longitude": "-0.69465994834957",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494796,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "[Eyes on the Prize] Repair the Solar Panels",
+      "description": "**Mission:** Eyes on the Prize\n\n**Location:** On the roof of this location.  This area is partially shaded by a tarp.\n\n**NOTE:** You must have 3 Wires in your backpack to repair the solar panels.",
+      "latitude": "0.55063697048236",
+      "longitude": "-0.75675836910062",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494960,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13816,
+      "title": "[Greasing Her Palms] Floor 6 Barricaded Area",
+      "description": "**Mission:** Greasing Her Palms  \n\n**Location:** Go to floor 6 and visit the \"barricaded area\"",
+      "latitude": "0.76422689793209",
+      "longitude": "-0.66532142129194",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 495601,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13816,
+      "title": "[Back on Top] Mark Building with Paint",
+      "description": "**Mission:** Back on Top\r\n\r\n**Location:** Due east of the \"Space Travel\" building is a 1-story building covered in eyeball graffiti.\r\n\r\n**Note:** There is a doorway facing the parking lot, and just to the right of that doorway you will see a prompt to \"Spray Wall\", which will complete the objective.",
+      "latitude": "0.76170882869111",
+      "longitude": "-0.58500587940190",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 106381,
+          "title": "",
+          "file_name": "fe23c169-a50d-40f5-9106-a7534687e08a.jpeg",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/fe23c169-a50d-40f5-9106-a7534687e08a.jpeg",
+          "type": "image",
+          "mime_type": "image/jpeg",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 496186,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13816,
+      "title": "[Building A Library]",
+      "description": "**Mission:** Building a Library  \n\n**Location:** ??",
+      "latitude": "0.80563625946800",
+      "longitude": "-0.76640811358308",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496187,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "[Digging Up Dirt]",
+      "description": "**Mission:** Digging Up Dirt  \n\n**Location:** ??",
+      "latitude": "0.62298854879774",
+      "longitude": "-0.71477885425048",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496188,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13816,
+      "title": "[A Warm Place To Rest] Part 1 - Look for signs of survivors",
+      "description": "**Mission:** A Warm Place To Rest\n\n**Location:** Abandoned highway camp",
+      "latitude": "0.55513893635106",
+      "longitude": "-0.84445677706051",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496210,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13816,
+      "title": "[Root of the Matter] Research Building",
+      "description": "**Mission:**  Root of the Matter\n\n**Location:** Research building\n\n**Objective:** Search for the seed wault in the \"room with a great view\"",
+      "latitude": "0.74344448620539",
+      "longitude": "-0.68427331457457",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496636,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13816,
+      "title": "[Unexpected Initiative] Fertilizer",
+      "description": "**Mission:** Unexpected Initiative\n\n**Location:** On the roof of the southern building of the Grandioso Apartments",
+      "latitude": "0.60514658987009",
+      "longitude": "-0.84351294717035",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496637,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13816,
+      "title": "[Unexpected Initiative] Water Pump",
+      "description": "**Mission:** Unexpected Initiative\n\n**Location:** Broken rooftop gardens",
+      "latitude": "0.69338166198669",
+      "longitude": "-0.81911948997140",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 106379,
+          "title": "",
+          "file_name": "8c9fcd2d-e4a1-4ef0-b4e7-5f43b2e6ac87.jpeg",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/8c9fcd2d-e4a1-4ef0-b4e7-5f43b2e6ac87.jpeg",
+          "type": "image",
+          "mime_type": "image/jpeg",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 496713,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "Communication Hideout",
+      "description": "**Mission:** Communication Hideout\n\n**Location:** The battery for Communication Hideout can be found next to the small shack in the courtyard.",
+      "latitude": "0.59799718242830",
+      "longitude": "-0.63886652084457",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497837,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "[A Warm Place to Rest] Part 2 - Grave Site",
+      "description": "**Mission:** A Warm Place to Rest\n\n**Location:** At the \"Buried Properties\", just west of the field depot, there is a grave site in the corner of a ruined building with no roof.",
+      "latitude": "0.69948542841526",
+      "longitude": "-0.56985052865281",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 498770,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "[Espresso] Espresso Machine Parts",
+      "description": "**Mission:** Espresso\n\n**Location:** Between Plaza Rosa and Grandioso. Entering cafeteria, on the counter to the right, activate the Espresso Machine",
+      "latitude": "0.59482063422470",
+      "longitude": "-0.79204202549644",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 500153,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "Quest item - Espresso",
+      "description": "**Mission:** ??  Espresso\n\n**Location:** ?? ? Entering cafeteria, on the right is counter, then on there is espresso machine that you need to activate to get quest item drop.",
+      "latitude": "0.57657068206017",
+      "longitude": "-0.71316699042927",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 500383,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13816,
+      "title": "[A REVEAL IN RUINS] ESR Analyzer",
+      "description": "**Mission:** A REVEAL IN RUINS - search for an ESR Analyzer inside pharmacy in Buried City\n\n**Location:** Inside the Pharmacy, behind the counter",
+      "latitude": "0.65149449619074",
+      "longitude": "-0.58944927745432",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494618,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13823,
+      "title": "Ammo Box",
+      "description": null,
+      "latitude": "0.59662958512925",
+      "longitude": "-0.79111482991090",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494977,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13823,
+      "title": "Ammo Box",
+      "description": null,
+      "latitude": "0.69056353739832",
+      "longitude": "-0.80166192716675",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496311,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13823,
+      "title": "Ammo Box",
+      "description": null,
+      "latitude": "0.61373113922903",
+      "longitude": "-0.77723203478837",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491550,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13940,
+      "title": "ARC Courier",
+      "description": null,
+      "latitude": "0.51942124973549",
+      "longitude": "-0.60058941831292",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491553,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13940,
+      "title": "ARC Courier",
+      "description": null,
+      "latitude": "0.66409701243505",
+      "longitude": "-0.62335518341783",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491552,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13944,
+      "title": "Crashed ARC Probe",
+      "description": null,
+      "latitude": "0.62630289865245",
+      "longitude": "-0.62707091627277",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 499872,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13944,
+      "title": "Crashed ARC Probe",
+      "description": null,
+      "latitude": "0.75754908902348",
+      "longitude": "-0.80739734447957",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491867,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13945,
+      "title": "Field Cache",
+      "description": "**Location:** ??  \n\n**Field Depot:**\n- [Field Depot](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=491546)",
+      "latitude": "0.65882028399682",
+      "longitude": "-0.53981749985894",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496189,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13945,
+      "title": "Field Cache",
+      "description": "**Location:** On top of the pharmacy roof next to the tower  \n\n**Field Depot:**\n- ??",
+      "latitude": "0.65259555250621",
+      "longitude": "-0.59267116771690",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496190,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13945,
+      "title": "Field Cache",
+      "description": "**Location:** On the ground next to the two vehicles  \n\n**Field Depot:**\n- [Field Depot](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=491546)",
+      "latitude": "0.65458037197452",
+      "longitude": "-0.48887417271027",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496191,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13945,
+      "title": "Field Crate",
+      "description": "**Location:** On the ground along the wall of the graveyard  \n\n**Field Depot:**\n- [Field Depot](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=491546#L)",
+      "latitude": "0.70031843806511",
+      "longitude": "-0.57771799063565",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496192,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13945,
+      "title": "Field Cache",
+      "description": "**Location:** On the ground next to one of the beams propping up the corrugated metal  \n\n**Field Depot:**\n- ??",
+      "latitude": "0.75691181413384",
+      "longitude": "-0.61043028426943",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496193,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13945,
+      "title": "Field Crate",
+      "description": "**Location:** Inside the building connecting to red tower  \n\n**Field Depot:**\n- ??",
+      "latitude": "0.57659448497353",
+      "longitude": "-0.64245688602497",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 105740,
+          "title": "",
+          "file_name": "183adb93-7616-439c-8c75-642240328b6f.png",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/183adb93-7616-439c-8c75-642240328b6f.png",
+          "type": "image",
+          "mime_type": "image/png",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 496194,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13945,
+      "title": "Field Cache",
+      "description": "**Location:** In the corner buried buildings roof, below the trees  \n\n**Field Depot:**\n- ??",
+      "latitude": "0.55798070658444",
+      "longitude": "-0.66483633088379",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496208,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13945,
+      "title": "Field Crate",
+      "description": "**Location:** Inside the library  \n\n**Field Depot:**\n- [Field Depot](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=491869)",
+      "latitude": "0.80046765044705",
+      "longitude": "-0.75018311003083",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496218,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13945,
+      "title": "Field Crate",
+      "description": "**Location:** On the ground below the trees and next to the ducting on the roof of the buried building  \n\n**Field Depot:**\n- [Field Depot](https://mapgenie.io/arc-raiders/maps/buried-city?locationIds=491546)",
+      "latitude": "0.74037823455095",
+      "longitude": "-0.57665362683341",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497836,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13945,
+      "title": "Field Crate",
+      "description": "Second Floor interior",
+      "latitude": "0.64073710017897",
+      "longitude": "-0.58749082856102",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501360,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13822,
+      "title": "Grenade Tube",
+      "description": "Grenade Container on roof of building across from **Hospital**.",
+      "latitude": "0.84796303540227",
+      "longitude": "-0.64201259353993",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 108145,
+          "title": "",
+          "file_name": "aab16168-87b3-4321-b49b-391d346e57a4.png",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/aab16168-87b3-4321-b49b-391d346e57a4.png",
+          "type": "image",
+          "mime_type": "image/png",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 491752,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13820,
+      "title": "Lemon Tree",
+      "description": null,
+      "latitude": "0.62991889001006",
+      "longitude": "-0.80932405467848",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494063,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13820,
+      "title": "Pharmacy",
+      "description": "ESR  for Lance's A Reveal In Ruins quest",
+      "latitude": "0.79444874233631",
+      "longitude": "-0.63935534003346",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494924,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13820,
+      "title": "Dog Collar",
+      "description": "Collect a Dog Collar for Scrappy the chicken here.",
+      "latitude": "0.59897323108221",
+      "longitude": "-0.66091493279234",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494066,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": "**Location:** Attic of the house",
+      "latitude": "0.61864187879077",
+      "longitude": "-0.71663701823110",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494649,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": null,
+      "latitude": "0.58831967518546",
+      "longitude": "-0.66105018484427",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494650,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": "In the attic",
+      "latitude": "0.63966277424940",
+      "longitude": "-0.58544426887440",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494651,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": "Requires Buried City Residential Master Key",
+      "latitude": "0.62981473490181",
+      "longitude": "-0.84036039676519",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494667,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": "Requires Skill: Security Breach",
+      "latitude": "0.58831967518546",
+      "longitude": "-0.66105018484427",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494668,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": "Requires Skill: Security Breach",
+      "latitude": "0.63966277424940",
+      "longitude": "-0.58544426887440",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494669,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": "Requires Skill: Security Breach",
+      "latitude": "0.62981473490181",
+      "longitude": "-0.84036039676519",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 495598,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13838,
+      "title": "2x Security Locker",
+      "description": "**Location:** Attic of the house",
+      "latitude": "0.61758740069840",
+      "longitude": "-0.72045072470178",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 495600,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13838,
+      "title": "Security Locker - Rooftop",
+      "description": "Requires a player zipline to get to it.",
+      "latitude": "0.84889947620157",
+      "longitude": "-0.71404903070763",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497318,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": "Attic",
+      "latitude": "0.60946607315785",
+      "longitude": "-0.72365613901763",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 498769,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13838,
+      "title": "Security Locker",
+      "description": "Top floor to the left of the top flight of stairs",
+      "latitude": "0.68121695202638",
+      "longitude": "-0.70580552559338",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491865,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapon Cache",
+      "description": "**Location:** At the Red Tower, mid-level, by the control panel",
+      "latitude": "0.59840701282680",
+      "longitude": "-0.65860171759229",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492497,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapon Cache",
+      "description": null,
+      "latitude": "0.60337930290937",
+      "longitude": "-0.69725259675076",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492498,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13821,
+      "title": "Weapons Crate",
+      "description": "**Location:**  Possible weapons crate spawn in the back of the Raider Camp in the bottom level of Parking Garage.",
+      "latitude": "0.79438347116275",
+      "longitude": "-0.67770436680163",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494616,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapons Crate",
+      "description": "On the banister, top of stairs.",
+      "latitude": "0.62965734945941",
+      "longitude": "-0.61662375926983",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494619,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapons Crate",
+      "description": "Location: Jump from south rooftop into the window, then 180 and jump to the next window to access the \"secret room\" with 2 potential weapon case spawns",
+      "latitude": "0.58384149115018",
+      "longitude": "-0.79025652302550",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494663,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13821,
+      "title": "Weapon Cache",
+      "description": "**Location:** On top of the sign - use zipline to access",
+      "latitude": "0.81509146168105",
+      "longitude": "-0.65568890532242",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494925,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13821,
+      "title": "Weapon Crate Spawn",
+      "description": null,
+      "latitude": "0.70028605725024",
+      "longitude": "-0.80831803195619",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494926,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": null,
+      "latitude": "0.62313901804988",
+      "longitude": "-0.74886909705106",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 495592,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": null,
+      "latitude": "0.75748277324021",
+      "longitude": "-0.78552101527001",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496216,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "Open the locked door.",
+      "latitude": "0.82379443569970",
+      "longitude": "-0.82926412041792",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496641,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13821,
+      "title": "Weapon Cache",
+      "description": "**Location:** In the top floor kitchen on the table",
+      "latitude": "0.67022255028982",
+      "longitude": "-0.75589671080729",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496642,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13821,
+      "title": "Weapon Cache",
+      "description": "**Location:** In the attic",
+      "latitude": "0.69912808297545",
+      "longitude": "-0.75049342165670",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497842,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": null,
+      "latitude": "0.58366433640823",
+      "longitude": "-0.66109897418485",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 498000,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "**Location:** East side of roof has a hole in the wall and allows you to access the weapon crate spawn by the railing of the stairs inside",
+      "latitude": "0.62392603272693",
+      "longitude": "-0.60641419938275",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 498767,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "Inside the bus, near the back.",
+      "latitude": "0.84612167820057",
+      "longitude": "-0.78819124198355",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 500379,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "**Location:** On the top of the Stairs roof on the rooftop",
+      "latitude": "0.60971787734415",
+      "longitude": "-0.85252394010416",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 500380,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "**Location:** Beside the AC unit on the roof by the stairs",
+      "latitude": "0.63439553731077",
+      "longitude": "-0.84522216491689",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 500381,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "**Location:** Behind breach-able door",
+      "latitude": "0.61737224439869",
+      "longitude": "-0.77531079011624",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501352,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "Inside the Santa Maria House. Usually on the bottom floor.",
+      "latitude": "0.62022989211238",
+      "longitude": "-0.71593367778104",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501354,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "On the roof behind sign",
+      "latitude": "0.79577569244299",
+      "longitude": "-0.82977296963548",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 108144,
+          "title": "",
+          "file_name": "11aff4cf-8424-4701-98a3-295a553d303a.png",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/11aff4cf-8424-4701-98a3-295a553d303a.png",
+          "type": "image",
+          "mime_type": "image/png",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 501371,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13821,
+      "title": "Weapon Crate",
+      "description": "Location: Window/Door Shutters open to enter a small room with a weapon crate spawn possible",
+      "latitude": "0.69167659146197",
+      "longitude": "-0.76336457582190",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501357,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13932,
+      "title": "Agave",
+      "description": "There is an Agave plant here as well as another north east of it on the corner of the building",
+      "latitude": "0.64456107535500",
+      "longitude": "-0.86185564015057",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501358,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13932,
+      "title": "Agave",
+      "description": null,
+      "latitude": "0.53161640000899",
+      "longitude": "-0.64506259250078",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501361,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13932,
+      "title": "Agave x3",
+      "description": null,
+      "latitude": "0.61743682791800",
+      "longitude": "-0.54250732966642",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501362,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13932,
+      "title": "Agave",
+      "description": null,
+      "latitude": "0.54393134302894",
+      "longitude": "-0.58364092627156",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501363,
+      "map_id": 829,
+      "region_id": null,
+      "category_id": 13932,
+      "title": "Agave x5",
+      "description": null,
+      "latitude": "0.67981594561282",
+      "longitude": "-0.47851933451062",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501365,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13932,
+      "title": "Agave",
+      "description": null,
+      "latitude": "0.52286398926879",
+      "longitude": "-0.59602595457000",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501366,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13932,
+      "title": "Agave",
+      "description": null,
+      "latitude": "0.55269116673271",
+      "longitude": "-0.65334087292152",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501368,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13932,
+      "title": "Agave x2",
+      "description": null,
+      "latitude": "0.53762368102704",
+      "longitude": "-0.66324671603334",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501369,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13932,
+      "title": "Agave",
+      "description": null,
+      "latitude": "0.56790833686497",
+      "longitude": "-0.78850454378701",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491866,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13934,
+      "title": "Apricot Tree",
+      "description": null,
+      "latitude": "0.76889207153705",
+      "longitude": "-0.72492901961778",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492499,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13934,
+      "title": "Apricot Tree",
+      "description": null,
+      "latitude": "0.75216359189037",
+      "longitude": "-0.72976436122488",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494064,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13934,
+      "title": "Apricot/Lemon",
+      "description": null,
+      "latitude": "0.73853465444651",
+      "longitude": "-0.72547879887145",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494065,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13934,
+      "title": "Apricot",
+      "description": null,
+      "latitude": "0.56038930154003",
+      "longitude": "-0.70052351422055",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494959,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13839,
+      "title": "Fruit Basket",
+      "description": null,
+      "latitude": "0.59884836675778",
+      "longitude": "-0.89412577634761",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 495594,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13839,
+      "title": "Fruit Basket",
+      "description": null,
+      "latitude": "0.86445411630335",
+      "longitude": "-0.87747618271709",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 105524,
+          "title": "",
+          "file_name": "f3afd534-b9f6-4e53-a4ac-9b02844e6111.jpeg",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/f3afd534-b9f6-4e53-a4ac-9b02844e6111.jpeg",
+          "type": "image",
+          "mime_type": "image/jpeg",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 497839,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13839,
+      "title": "Fruit Basket",
+      "description": null,
+      "latitude": "0.65829735951772",
+      "longitude": "-0.51381977771007",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 498768,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13839,
+      "title": "Fruit Basket",
+      "description": null,
+      "latitude": "0.53314397810682",
+      "longitude": "-0.64525909491775",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 499996,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13839,
+      "title": "Fruit Basket",
+      "description": null,
+      "latitude": "0.75524275376992",
+      "longitude": "-0.61824887192736",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501353,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13839,
+      "title": "Red Tower",
+      "description": "Inside from the roof by the top of the stairs near the railing (during Lush Blooms event)",
+      "latitude": "0.59214593745637",
+      "longitude": "-0.65945750131624",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501355,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13839,
+      "title": "Fruit Basket",
+      "description": "In the back corner of the shop",
+      "latitude": "0.74216256787460",
+      "longitude": "-0.71387372111840",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501356,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13839,
+      "title": "Fruit Basket",
+      "description": null,
+      "latitude": "0.65430270005160",
+      "longitude": "-0.53452601226064",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494906,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13933,
+      "title": "Great Mullein",
+      "description": "In the planters on ground level.",
+      "latitude": "0.79575180129689",
+      "longitude": "-0.63499773005870",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501364,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13933,
+      "title": "Great Mullein 1-3x",
+      "description": null,
+      "latitude": "0.73355115189928",
+      "longitude": "-0.72845062595249",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491889,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13812,
+      "title": "Lemon Tree",
+      "description": null,
+      "latitude": "0.77034854944331",
+      "longitude": "-0.75474876629670",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496310,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13812,
+      "title": "Lemon Tree",
+      "description": null,
+      "latitude": "0.62831454003486",
+      "longitude": "-0.80868250654387",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491751,
+      "map_id": 829,
+      "region_id": null,
+      "category_id": 13931,
+      "title": "Prickly Pear",
+      "description": "Lots of cacti grow here. Average 3 pears per run if you get here first.",
+      "latitude": "0.46617931943969",
+      "longitude": "-0.70731119372229",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492496,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13931,
+      "title": "Prickly Pear",
+      "description": null,
+      "latitude": "0.50490073622184",
+      "longitude": "-0.57640829497052",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494622,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13931,
+      "title": "Prickly Pear",
+      "description": null,
+      "latitude": "0.53376339625842",
+      "longitude": "-0.64585665265469",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494654,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13931,
+      "title": "Prickly Pear",
+      "description": null,
+      "latitude": "0.84066465571375",
+      "longitude": "-0.59189363440152",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501367,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13931,
+      "title": "Prickly Pear",
+      "description": null,
+      "latitude": "0.53615888078996",
+      "longitude": "-0.65845631680557",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494656,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13841,
+      "title": "Pop",
+      "description": "**Location:** Inside the supermarket",
+      "latitude": "0.87153666660626",
+      "longitude": "-0.69037570549193",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494658,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13841,
+      "title": "Wasp",
+      "description": null,
+      "latitude": "0.90661649618220",
+      "longitude": "-0.69283014549097",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493194,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13828,
+      "title": "Bastion / Bombardier spawn",
+      "description": "Random spawn of a bastion or bombardier",
+      "latitude": "0.59570705789908",
+      "longitude": "-0.70755602171258",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493195,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13828,
+      "title": "Bastion / Bombardier / Leaper spawn",
+      "description": "Randomized spawn between the large ground based arc enemies and it will be patrolling the park",
+      "latitude": "0.71553147877832",
+      "longitude": "-0.71260117617328",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493369,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13828,
+      "title": "Bombardier",
+      "description": "On top of the parking garage.",
+      "latitude": "0.79033081374028",
+      "longitude": "-0.69128820284791",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494648,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13828,
+      "title": "Sentinel",
+      "description": "In Tower. Sometimes South on the underside of the overpass.",
+      "latitude": "0.69226636503029",
+      "longitude": "-0.69278418143884",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497841,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 14031,
+      "title": "Sentinel Spawn",
+      "description": "Sentinels sometimes spawn on the underside of the freeway here.",
+      "latitude": "0.66762760757157",
+      "longitude": "-0.65764987270671",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491542,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13942,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.64329328419564",
+      "longitude": "-0.60240327234217",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491543,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13942,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.66240288612551",
+      "longitude": "-0.66871559364600",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491544,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13942,
+      "title": "Church Metro Entrance",
+      "description": null,
+      "latitude": "0.60254124615105",
+      "longitude": "-0.67539287601184",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491545,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13942,
+      "title": "Courtyard Metro Entrance",
+      "description": "",
+      "latitude": "0.58635820620530",
+      "longitude": "-0.64454019069638",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491547,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13942,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.71909000579987",
+      "longitude": "-0.73820922015767",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491548,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13942,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.73003804535631",
+      "longitude": "-0.78412402519612",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491555,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13942,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.79232597960443",
+      "longitude": "-0.73980409024227",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491556,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13942,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.84382224109430",
+      "longitude": "-0.76517671234978",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491557,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13942,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.86190068171634",
+      "longitude": "-0.72013997075575",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491558,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13831,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.78005399181882",
+      "longitude": "-0.68397908334387",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491559,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13831,
+      "title": "Metro Entrance",
+      "description": null,
+      "latitude": "0.67519588908139",
+      "longitude": "-0.78029853798859",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493757,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13831,
+      "title": "Hidden Room",
+      "description": "Jump from the opposite second story window",
+      "latitude": "0.58150272857853",
+      "longitude": "-0.79676836692028",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491541,
+      "map_id": 829,
+      "region_id": null,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.65072026448564",
+      "longitude": "-0.47204738190212",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491549,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.52538545449966",
+      "longitude": "-0.53838869747031",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491834,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.62445998364475",
+      "longitude": "-0.93865039337584",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491864,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.60431727746499",
+      "longitude": "-0.62466936994880",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493758,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.74722333782923",
+      "longitude": "-0.91906689686022",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494067,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13930,
+      "title": "Gas Station Player Spawn",
+      "description": null,
+      "latitude": "0.93240973493769",
+      "longitude": "-0.71930601692313",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494621,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.55333375760188",
+      "longitude": "-0.61358062355339",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494623,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.53261432035013",
+      "longitude": "-0.76560581171969",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494645,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.84715054591376",
+      "longitude": "-0.56052746036670",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 495591,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.73353803841931",
+      "longitude": "-0.79144333277492",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496154,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.48023756930672",
+      "longitude": "-0.65991844358112",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496640,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.57396921584913",
+      "longitude": "-0.87116624338711",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497852,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13930,
+      "title": "Player Spawn",
+      "description": null,
+      "latitude": "0.77110585654309",
+      "longitude": "-0.58607966459948",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491868,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13835,
+      "title": "Supply Call Station",
+      "description": null,
+      "latitude": "0.80430309646449",
+      "longitude": "-0.68461496529770",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492081,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13835,
+      "title": "Supply Call Station",
+      "description": null,
+      "latitude": "0.57165644781172",
+      "longitude": "-0.68420748871219",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 492333,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13835,
+      "title": "Supply Call Station",
+      "description": null,
+      "latitude": "0.65994562178342",
+      "longitude": "-0.59216257238759",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493752,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13835,
+      "title": "Piazza Roma Supply Call Station",
+      "description": null,
+      "latitude": "0.73546413086683",
+      "longitude": "-0.78656464012630",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493753,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13835,
+      "title": "Grandioso Apartments Supply Call Station",
+      "description": null,
+      "latitude": "0.64290418927180",
+      "longitude": "-0.82876213559135",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493754,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13835,
+      "title": "Library Supply Call Station",
+      "description": null,
+      "latitude": "0.79193994562117",
+      "longitude": "-0.76406250146073",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493755,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13835,
+      "title": "Supply Call Station",
+      "description": null,
+      "latitude": "0.92534545330375",
+      "longitude": "-0.71858292047483",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 493756,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13835,
+      "title": "Supply Call Station",
+      "description": "On top of the gas station",
+      "latitude": "0.89468119512546",
+      "longitude": "-0.74012694049605",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494646,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13835,
+      "title": "Supply Call Station",
+      "description": null,
+      "latitude": "0.64368900832073",
+      "longitude": "-0.74646264360777",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494879,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13835,
+      "title": "Supply Call Station",
+      "description": "**Location:** On the roof",
+      "latitude": "0.73495272387700",
+      "longitude": "-0.67941633693945",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494662,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13941,
+      "title": "Zipline",
+      "description": "To Galleria",
+      "latitude": "0.82209611747865",
+      "longitude": "-0.68974125933133",
+      "features": [
+        {
+          "id": "cb7d930546392c7b1b46d0d7f1db4c98",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                -0.6889722061094972,
+                0.8213983339223887
+              ],
+              [
+                -0.6648537826476115,
+                0.8192527866340384
+              ]
+            ],
+            "type": "LineString"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 495595,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13941,
+      "title": "Zipline",
+      "description": "Deployable zipline floor below the top floor",
+      "latitude": "0.64591644559995",
+      "longitude": "-0.84078946914184",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 495596,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13941,
+      "title": "Zipline",
+      "description": null,
+      "latitude": "0.69712197744718",
+      "longitude": "-0.77790850605359",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496209,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13941,
+      "title": "Zipline",
+      "description": "Goes to second floor of building to SW",
+      "latitude": "0.72792537021611",
+      "longitude": "-0.79320732997925",
+      "features": [
+        {
+          "id": "f26678d2f88789eaaea21b0dbf0d39a8",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                -0.7942603671921802,
+                0.7270409278335705
+              ],
+              [
+                -0.7791541660202483,
+                0.7152830549581637
+              ]
+            ],
+            "type": "LineString"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501370,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13941,
+      "title": "Zipline to Space Travel",
+      "description": null,
+      "latitude": "0.78093931628722",
+      "longitude": "-0.64079733547575",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 494620,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": "",
+      "latitude": "0.54407792162378",
+      "longitude": "-0.73311746120467",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496155,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.52391623230687",
+      "longitude": "-0.61858931085382",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": [
+        {
+          "id": 105706,
+          "title": "",
+          "file_name": "4cf06413-eed0-415f-83a4-6f7111f7f602.png",
+          "attribution": "",
+          "url": "https://media.mapgenie.io/storage/media/4cf06413-eed0-415f-83a4-6f7111f7f602.png",
+          "type": "image",
+          "mime_type": "image/png",
+          "meta": null,
+          "order": 10
+        }
+      ]
+    },
+    {
+      "id": 496185,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.73680570071122",
+      "longitude": "-0.56390122348242",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496309,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.64367077714047",
+      "longitude": "-0.86283417528153",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496638,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.62762417409279",
+      "longitude": "-0.87152994625995",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 496639,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.49666545587276",
+      "longitude": "-0.72429028938188",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497317,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": "Next to a building with just the roof sticking out.",
+      "latitude": "0.62229892954576",
+      "longitude": "-0.53134469558663",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497840,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.49695724060471",
+      "longitude": "-0.84809236493365",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497997,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13937,
+      "title": "Raider cache",
+      "description": null,
+      "latitude": "0.74792294684194",
+      "longitude": "-0.81748123778260",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497998,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.73921549394917",
+      "longitude": "-0.79987450211789",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 497999,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.50399216795424",
+      "longitude": "-0.66826502036656",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 499873,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.65307079921551",
+      "longitude": "-0.53377788415776",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 499874,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.86972117298045",
+      "longitude": "-0.82107708292531",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 499875,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.62687102780068",
+      "longitude": "-0.55366041182762",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 500377,
+      "map_id": 829,
+      "region_id": 3394,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.90295288829456",
+      "longitude": "-0.82509828933817",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 500382,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.68516979994507",
+      "longitude": "-0.84250821781950",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 500384,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.79578342637399",
+      "longitude": "-0.77557757114621",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 501359,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13937,
+      "title": "Raider Cache",
+      "description": null,
+      "latitude": "0.70492240963490",
+      "longitude": "-0.83569094225663",
+      "features": null,
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491563,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13927,
+      "title": "Space Travel",
+      "description": "- Commercial  \n- Technological",
+      "latitude": "0.75304906864902",
+      "longitude": "-0.65838942160417",
+      "features": [
+        {
+          "id": "ddb065a2b2f1ae6e14bc751e8a1feb4a",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.681666047202782,
+                  0.7762162068487299
+                ],
+                [
+                  -0.6620108195422176,
+                  0.7426593560981587
+                ],
+                [
+                  -0.6463038035505235,
+                  0.7520141053019245
+                ],
+                [
+                  -0.6655298777692735,
+                  0.7854850603585106
+                ],
+                [
+                  -0.681666047202782,
+                  0.7762162068487299
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491564,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13927,
+      "title": "Hospital",
+      "description": "- Medical",
+      "latitude": "0.84394879193734",
+      "longitude": "-0.70764341414983",
+      "features": [
+        {
+          "id": "c62b88940f5524771421b765d35b7755",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.7338518778956029,
+                  0.8657896305731327
+                ],
+                [
+                  -0.7020620748810984,
+                  0.811752758281159
+                ],
+                [
+                  -0.6847221823276755,
+                  0.8215776992700512
+                ],
+                [
+                  -0.7162229871327384,
+                  0.8746030593563745
+                ],
+                [
+                  -0.7338518778956029,
+                  0.8657896305731327
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491565,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13927,
+      "title": "Town Hall",
+      "description": "- Old World",
+      "latitude": "0.69020641848628",
+      "longitude": "-0.68593845916561",
+      "features": [
+        {
+          "id": "dcc1cc4c71d71acd62d95b0055ece87f",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.7242891026652671,
+                  0.6784065326217785
+                ],
+                [
+                  -0.7162721638651419,
+                  0.665004134160128
+                ],
+                [
+                  -0.6725547944685957,
+                  0.6894290381500099
+                ],
+                [
+                  -0.6679200017243829,
+                  0.6811621613740186
+                ],
+                [
+                  -0.6548924761736146,
+                  0.677780253141762
+                ],
+                [
+                  -0.6515103301165084,
+                  0.6915583828806859
+                ],
+                [
+                  -0.6642873263308218,
+                  0.713352797033906
+                ],
+                [
+                  -0.7242891026652671,
+                  0.6784065326217785
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491540,
+      "map_id": 829,
+      "region_id": 3395,
+      "category_id": 13928,
+      "title": "Medium Loot",
+      "description": "- Residential",
+      "latitude": "0.62529241158001",
+      "longitude": "-0.84240040336005",
+      "features": [
+        {
+          "id": "8e265becd0ff26f11f5719aaac194a53",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.845123548372186,
+                  0.6508838073891923
+                ],
+                [
+                  -0.8591227362641689,
+                  0.5990565659069063
+                ],
+                [
+                  -0.837790640428608,
+                  0.5928905905379906
+                ],
+                [
+                  -0.8234581385389959,
+                  0.64555112473154
+                ],
+                [
+                  -0.845123548372186,
+                  0.6508838073891923
+                ],
+                [
+                  -0.845123548372186,
+                  0.6508838073891923
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491561,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13928,
+      "title": "Library",
+      "description": "- Commercial  \n- Old World",
+      "latitude": "0.80595309295211",
+      "longitude": "-0.75795962641919",
+      "features": [
+        {
+          "id": "2c4b5400a9d40700c59f2e6788f4bc88",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.7875590765779918,
+                  0.8102994716729484
+                ],
+                [
+                  -0.7687273426025172,
+                  0.7785792649340095
+                ],
+                [
+                  -0.7289152875525815,
+                  0.8018323487529386
+                ],
+                [
+                  -0.7362457611811806,
+                  0.8145962138601135
+                ],
+                [
+                  -0.7506539334843865,
+                  0.815228087325707
+                ],
+                [
+                  -0.7581107945894416,
+                  0.8279919099863378
+                ],
+                [
+                  -0.7875590765779918,
+                  0.8102994716729484
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491562,
+      "map_id": 829,
+      "region_id": 3393,
+      "category_id": 13928,
+      "title": "Research",
+      "description": "- Medical  \n- Technological",
+      "latitude": "0.75726997173086",
+      "longitude": "-0.68379674965320",
+      "features": [
+        {
+          "id": "13cf7924fcd883cbc3076126681bc77c",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.6842409678528156,
+                  0.7749233930333475
+                ],
+                [
+                  -0.7001196452207239,
+                  0.7661694545135163
+                ],
+                [
+                  -0.6802069254987089,
+                  0.7319314083432715
+                ],
+                [
+                  -0.6644999095078106,
+                  0.7413720037350799
+                ],
+                [
+                  -0.6842409678528156,
+                  0.7749233930333475
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    },
+    {
+      "id": 491566,
+      "map_id": 829,
+      "region_id": 3396,
+      "category_id": 13928,
+      "title": "Piazza Rosa",
+      "description": "- Medical\n- Commercial",
+      "latitude": "0.57085111401808",
+      "longitude": "-0.70487164152019",
+      "features": [
+        {
+          "id": "b8fdc23d85a407b0627f453eb6de0cbf",
+          "type": "Feature",
+          "properties": {},
+          "geometry": {
+            "coordinates": [
+              [
+                [
+                  -0.7130784383805349,
+                  0.5544560929538704
+                ],
+                [
+                  -0.7035771015538614,
+                  0.5389419581149326
+                ],
+                [
+                  -0.684694697985833,
+                  0.5495252482499069
+                ],
+                [
+                  -0.6783203834054632,
+                  0.574179430342312
+                ],
+                [
+                  -0.7334040829852881,
+                  0.5871679325853876
+                ],
+                [
+                  -0.7402594779115361,
+                  0.5611908985914908
+                ],
+                [
+                  -0.7130784383805349,
+                  0.5544560929538704
+                ]
+              ]
+            ],
+            "type": "Polygon"
+          }
+        }
+      ],
+      "ign_page_id": null,
+      "tags": [],
+      "media": []
+    }
+  ],
+  "heatmapGroups": [],
+  "heatmapCategories": [],
+  "routes": [],
+  "notes": [],
+  "sharedNotes": {},
+  "maxMarkedLocations": 50,
+  "tags": [
+    {
+      "id": 92,
+      "game_id": 242,
+      "title": "Night Raid",
+      "color": null
+    }
+  ],
+  "tagsById": {
+    "92": {
+      "id": 92,
+      "game_id": 242,
+      "title": "Night Raid",
+      "color": null
+    }
+  },
+  "distanceToolConfig": null,
+  "mapConfig": {
+    "tile_sets": [
+      {
+        "id": 908,
+        "map_id": 829,
+        "name": "V2",
+        "path": "arc-raiders/buried-city/default-v2",
+        "extension": "jpg",
+        "pattern": "arc-raiders/buried-city/default-v2/{z}/{y}/{x}.jpg",
+        "min_zoom": 8,
+        "max_zoom": 14,
+        "order": 1,
+        "bounds": null
+      }
+    ],
+    "initial_zoom": 11,
+    "start_lat": 0.71582777841564,
+    "start_lng": -0.82733091998838,
+    "overlay": null,
+    "overzoom": false
+  },
+  "proCategoryLocationCounts": [],
+  "searchQuery": null,
+  "presets": [],
+  "styles": {
+    "textStyles": {},
+    "lineStyles": {},
+    "regionStyles": {
+      "126": {
+        "text-color": "#c29cd8",
+        "text-halo-color": "#253139",
+        "line-color": "#533f5d",
+        "line-width": 2,
+        "fill-color": "#533f5d",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "127": {
+        "text-color": "#c29cd8",
+        "text-halo-color": "#253139",
+        "line-color": "#533f5d",
+        "line-width": 2,
+        "fill-color": "#533f5d",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "128": {
+        "text-color": "#c29cd8",
+        "text-halo-color": "#253139",
+        "line-color": "#533f5d",
+        "line-width": 2,
+        "fill-color": "#533f5d",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "129": {
+        "text-color": "#769CB3",
+        "text-halo-color": "#253139",
+        "line-color": "#445A67",
+        "line-width": 2,
+        "fill-color": "#445A67",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "130": {
+        "text-color": "#769CB3",
+        "text-halo-color": "#253139",
+        "line-color": "#445A67",
+        "line-width": 2,
+        "fill-color": "#445A67",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "131": {
+        "text-color": "#769CB3",
+        "text-halo-color": "#253139",
+        "line-color": "#445A67",
+        "line-width": 2,
+        "fill-color": "#445A67",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "132": {
+        "text-color": "#efefef",
+        "text-halo-color": "#aaaaaa",
+        "line-color": "#b1b1b1",
+        "line-width": 2,
+        "fill-color": "#b1b1b1",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "133": {
+        "text-color": "#efefef",
+        "text-halo-color": "#aaaaaa",
+        "line-color": "#b1b1b1",
+        "line-width": 2,
+        "fill-color": "#b1b1b1",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "134": {
+        "text-color": "#61BA76",
+        "text-halo-color": "#23462B",
+        "line-color": "#3C7449",
+        "line-width": 2,
+        "fill-color": "#3C7449",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "135": {
+        "text-color": "#61BA76",
+        "text-halo-color": "#23462B",
+        "line-color": "#3C7449",
+        "line-width": 2,
+        "fill-color": "#3C7449",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "136": {
+        "text-color": "#61BA76",
+        "text-halo-color": "#23462B",
+        "line-color": "#3C7449",
+        "line-width": 2,
+        "fill-color": "#3C7449",
+        "fill-opacity": [
+          "case",
+          [
+            "boolean",
+            [
+              "feature-state",
+              "hover"
+            ],
+            false
+          ],
+          0.25,
+          0
+        ]
+      },
+      "354": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "355": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "356": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "357": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "358": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "3202": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "3203": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "474": {
+        "text-color": "#B07CEE",
+        "line-color": "#ff6a13"
+      },
+      "475": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "476": {
+        "text-color": "#B07CEE",
+        "line-color": "#ff6a13"
+      },
+      "477": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "478": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "479": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "480": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "481": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "482": {
+        "text-color": "#B07CEE",
+        "line-color": "#ff6a13"
+      },
+      "483": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "484": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "485": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "486": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "487": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "488": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "489": {
+        "text-color": "#FFFFFF",
+        "line-color": "#FFFFFF"
+      },
+      "2886": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2887": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#31efd5"
+      },
+      "2888": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#eabea5"
+      },
+      "2889": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#0f7cf5"
+      },
+      "2890": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2891": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#0f7cf5"
+      },
+      "2892": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2893": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#701f25"
+      },
+      "2894": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#b7c7e8"
+      },
+      "2895": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#c48748"
+      },
+      "2896": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#10916b"
+      },
+      "2897": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#9446fc"
+      },
+      "2898": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#f8448b"
+      },
+      "2899": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#5bffff"
+      },
+      "2900": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#4530a7"
+      },
+      "2901": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2902": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#4530a7"
+      },
+      "2903": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#37e5fd"
+      },
+      "2904": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#1d8804"
+      },
+      "2905": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2906": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#134402"
+      },
+      "2907": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2908": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#7198fd"
+      },
+      "2909": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#d75c8a"
+      },
+      "2910": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#cebec1"
+      },
+      "2911": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#998169"
+      },
+      "2912": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2913": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#fbd4e7"
+      },
+      "2914": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#e6a1d8"
+      },
+      "2915": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#016f66"
+      },
+      "2916": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#e8e3a9"
+      },
+      "2917": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2918": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#4abbf7"
+      },
+      "2919": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#5a5d26"
+      },
+      "2920": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2921": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#cfdf4b"
+      },
+      "2922": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#cfd4d8"
+      },
+      "2923": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#"
+      },
+      "2924": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#4379a6"
+      },
+      "2925": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#b240c0"
+      },
+      "2926": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#c7b6e9"
+      },
+      "2927": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#8503b7"
+      },
+      "2928": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#609d6d"
+      },
+      "2929": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#28be33"
+      },
+      "2930": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#7e9b28"
+      },
+      "2931": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#27a1ea"
+      },
+      "3061": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#0b59a5"
+      },
+      "3065": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#ffb300"
+      },
+      "3066": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#ffb300"
+      },
+      "3067": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#ffb300"
+      },
+      "3063": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#ffb300"
+      },
+      "3199": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#ffb300"
+      },
+      "3050": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#eabea5"
+      },
+      "3054": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#31efd5"
+      },
+      "3042": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#0f7cf5"
+      },
+      "3057": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#f8448b"
+      },
+      "3046": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#4530a7"
+      },
+      "3055": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#701f25"
+      },
+      "3047": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#c48748"
+      },
+      "3056": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#b7c7e8"
+      },
+      "3043": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#cebec1"
+      },
+      "3051": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#998169"
+      },
+      "3053": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#4abbf7"
+      },
+      "3044": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#134402"
+      },
+      "3052": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#37e5fd"
+      },
+      "3049": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#1d8804"
+      },
+      "3045": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#fbd4e7"
+      },
+      "3048": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#016f66"
+      },
+      "3060": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#eabea5"
+      },
+      "3058": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#ffb300"
+      },
+      "3059": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#A4CFEC"
+      },
+      "3167": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#ffb300"
+      },
+      "3262": {
+        "text-color": "#E6E6E6",
+        "text-halo-color": "#253139",
+        "fill-color": "#ffb300"
+      }
+    },
+    "shapeStyles": {},
+    "polygonStyles": {
+      "13927": {
+        "line-color": "#C8675F",
+        "line-width": 3,
+        "fill-color": "#C8675F",
+        "fill-opacity": 0.3
+      },
+      "13928": {
+        "line-color": "#F2BE4D",
+        "line-width": 3,
+        "fill-color": "#F2BE4D",
+        "fill-opacity": 0.2
+      },
+      "13929": {
+        "line-color": "#F7F8FA",
+        "line-width": 3,
+        "fill-color": "#F7F8FA",
+        "fill-opacity": 0.15
+      }
+    },
+    "polygonStylesByTag": {}
+  }
+}
