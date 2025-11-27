@@ -1,1249 +1,566 @@
+/**
+ * ARC Raiders Interactive Map - MapGenie Clone
+ */
 (() => {
   const config = window.arcMapsConfig;
   if (!config) {
-    console.error("Missing arcMapsConfig in data/maps.js");
+    console.error("Missing arcMapsConfig");
     return;
   }
 
-  const els = {
-    mapTabs: document.getElementById("mapTabs"),
-    mapSelect: document.getElementById("mapSelect"),
-    mapDescription: document.getElementById("mapDescription"),
-    searchInput: document.getElementById("searchInput"),
-    showComplete: document.getElementById("showComplete"),
-    showIncomplete: document.getElementById("showIncomplete"),
-    categoryGroups: document.getElementById("categoryGroups"),
-    itemList: document.getElementById("itemList"),
-    collapseList: document.getElementById("collapseList"),
-    progressHeadline: document.getElementById("completionHeadline"),
-    progressSubtext: document.getElementById("completionSubtext"),
-    progressBar: document.getElementById("progressBarValue"),
-    activeFilters: document.getElementById("activeFilters"),
-    resetProgress: document.getElementById("resetProgress"),
-    fitBoundsBtn: document.getElementById("fitBoundsBtn"),
-    exportProgressBtn: document.getElementById("exportProgressBtn"),
-    importProgressInput: document.getElementById("importProgressInput"),
-    mapPreview: document.getElementById("mapPreview"),
-    mapThreatBadge: document.getElementById("mapThreatBadge"),
-    mapBiome: document.getElementById("mapBiome"),
-    mapRecommendedPower: document.getElementById("mapRecommendedPower"),
-    mapFeaturedLoot: document.getElementById("mapFeaturedLoot"),
-    rarityFilter: document.getElementById("rarityFilter"),
-    difficultyFilter: document.getElementById("difficultyFilter"),
-    legendItems: document.getElementById("legendItems"),
-    mapLegend: document.getElementById("mapLegend"),
-    showAllBtn: document.getElementById("showAllBtn"),
-    hideAllBtn: document.getElementById("hideAllBtn"),
-    expandGroupsBtn: document.getElementById("expandGroupsBtn"),
-    collapseGroupsBtn: document.getElementById("collapseGroupsBtn"),
-    guideList: document.getElementById("guideList"),
-    clearGuideBtn: document.getElementById("clearGuideBtn"),
-    poiSectionLabel: document.getElementById("poiSectionLabel"),
-    toggleLegendBtn: document.getElementById("toggleLegendBtn"),
-    measureToolBtn: document.getElementById("measureToolBtn"),
-    radiusToolBtn: document.getElementById("radiusToolBtn")
-  };
+  // ==========================================================================
+  // State
+  // ==========================================================================
 
   const state = {
-    mapInstance: null,
+    map: null,
     markerLayer: null,
-    baseLayer: null,
-    imageLayer: null,
+    markers: new Map(),
     currentMapId: config.defaultMapId,
-    bounds: null,
-    filters: {
-      search: "",
-      types: new Set(Object.keys(config.categories)),
-      showComplete: true,
-      showIncomplete: true,
-      rarity: "all",
-      difficulty: "all"
-    },
-    progress: loadProgress(),
-    listCollapsed: false,
-    groupCollapse: new Set(),
-    activeGuide: null,
-    activeGuideItems: null,
-    toolLayer: null,
-    activeTool: null,
-    measureStart: null
+    visibleCategories: new Set(Object.keys(config.categories)),
+    foundLocations: loadFoundLocations(),
+    searchQuery: "",
+    selectedLocation: null,
   };
 
-  const template = document.getElementById("poiTemplate");
+  // ==========================================================================
+  // DOM Elements
+  // ==========================================================================
 
-  const defaultMetaByType = {
-    // Locations
-    location: { rarity: "common", difficulty: "low" },
-    cargoElevator: { rarity: "uncommon", difficulty: "medium" },
-    fieldDepot: { rarity: "rare", difficulty: "medium" },
-    lockedDoor: { rarity: "rare", difficulty: "medium" },
-    raiderCamp: { rarity: "uncommon", difficulty: "medium" },
-    raiderHatch: { rarity: "rare", difficulty: "high" },
-    
-    // Collectibles
-    collectible: { rarity: "uncommon", difficulty: "low" },
-    
-    // Loot
-    ammoBox: { rarity: "common", difficulty: "low" },
-    arcCourier: { rarity: "rare", difficulty: "high" },
-    baronHusk: { rarity: "legendary", difficulty: "elite" },
-    container: { rarity: "common", difficulty: "low" },
-    fieldCrate: { rarity: "common", difficulty: "low" },
-    grenadeTube: { rarity: "uncommon", difficulty: "low" },
-    item: { rarity: "common", difficulty: "low" },
-    medicalBox: { rarity: "common", difficulty: "low" },
-    securityLocker: { rarity: "rare", difficulty: "medium" },
-    weaponCase: { rarity: "rare", difficulty: "medium" },
-    
-    // Resources
-    agave: { rarity: "common", difficulty: "low" },
-    apricot: { rarity: "common", difficulty: "low" },
-    fruitBasket: { rarity: "common", difficulty: "low" },
-    greatMullein: { rarity: "common", difficulty: "low" },
-    mushroom: { rarity: "common", difficulty: "low" },
-    pricklyPear: { rarity: "common", difficulty: "low" },
-    
-    // Missions
-    quest: { rarity: "legendary", difficulty: "high" },
-    
-    // Enemies
-    arc: { rarity: "uncommon", difficulty: "medium" },
-    enemy: { rarity: "common", difficulty: "medium" },
-    sentinel: { rarity: "rare", difficulty: "high" },
-    surveyor: { rarity: "rare", difficulty: "medium" },
-    boss: { rarity: "exotic", difficulty: "elite" },
-    
-    // Other
-    miscellaneous: { rarity: "common", difficulty: "low" },
-    playerSpawn: { rarity: "common", difficulty: "low" },
-    supplyCall: { rarity: "uncommon", difficulty: "medium" },
-    zipline: { rarity: "common", difficulty: "low" },
-    
-    // Events
-    raiderCache: { rarity: "legendary", difficulty: "medium" },
-    event: { rarity: "rare", difficulty: "high" },
-    
-    // Legacy
-    vehicleTrunk: { rarity: "uncommon", difficulty: "low" },
-    extraction: { rarity: "common", difficulty: "low" }
+  const els = {
+    mapTabs: document.getElementById("mapTabs"),
+    categoryList: document.getElementById("categoryList"),
+    searchInput: document.getElementById("searchInput"),
+    searchBtn: document.getElementById("searchBtn"),
+    showAllBtn: document.getElementById("showAllBtn"),
+    hideAllBtn: document.getElementById("hideAllBtn"),
+    progressValue: document.getElementById("progressValue"),
+    progressFill: document.getElementById("progressFill"),
+    foundCount: document.getElementById("foundCount"),
+    totalCount: document.getElementById("totalCount"),
+    locationPanel: document.getElementById("locationPanel"),
+    exportBtn: document.getElementById("exportBtn"),
+    importInput: document.getElementById("importInput"),
+    resetBtn: document.getElementById("resetBtn"),
+    zoomInBtn: document.getElementById("zoomInBtn"),
+    zoomOutBtn: document.getElementById("zoomOutBtn"),
+    leftSidebar: document.getElementById("leftSidebar"),
+    rightSidebar: document.getElementById("rightSidebar"),
+    toggleLeftSidebar: document.getElementById("toggleLeftSidebar"),
+    toggleRightSidebar: document.getElementById("toggleRightSidebar"),
   };
 
-  const categoryGroupConfig = [
+  // ==========================================================================
+  // Category Icons (SVG paths)
+  // ==========================================================================
+
+  const categoryIcons = {
+    location: '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>',
+    cargoElevator: '<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/>',
+    fieldDepot: '<path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>',
+    lockedDoor: '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/>',
+    raiderCamp: '<path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>',
+    raiderHatch: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>',
+    collectible: '<path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>',
+    ammoBox: '<path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/>',
+    arcCourier: '<path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>',
+    baronHusk: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>',
+    container: '<path d="M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4h16v3z"/>',
+    fieldCrate: '<path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM9 7h6v2H9z"/>',
+    grenadeTube: '<path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z"/>',
+    item: '<path d="M12 2l-5.5 9h11z"/><path d="M17.5 17.5L12 22l-5.5-4.5h11z"/>',
+    medicalBox: '<path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>',
+    securityLocker: '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>',
+    weaponCase: '<path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>',
+    agave: '<path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.38 1.12 2.5 2.5 2.5.53 0 1.01-.16 1.42-.44l-.02.19c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5l-.02-.19c.4.28.89.44 1.42.44 1.38 0 2.5-1.12 2.5-2.5 0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.25 1.43-2.25 0-1.38-1.12-2.5-2.5-2.5-.53 0-1.01.16-1.42.44l.02-.19C14.5 2.12 13.38 1 12 1S9.5 2.12 9.5 3.5l.02.19c-.4-.28-.89-.44-1.42-.44-1.38 0-2.5 1.12-2.5 2.5 0 1 .59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25zM12 5.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5S9.5 9.38 9.5 8s1.12-2.5 2.5-2.5zM3 13c0 4.97 4.03 9 9 9 0-4.97-4.03-9-9-9z"/>',
+    apricot: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>',
+    fruitBasket: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>',
+    greatMullein: '<path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM3 13c0 4.97 4.03 9 9 9 0-4.97-4.03-9-9-9zm9-11C6.48 2 2 6.48 2 12c0 .34.02.68.05 1.01C5.55 8.86 10.46 6 16 6c1.82 0 3.56.32 5.17.9C20.49 3.83 16.66 2 12 2z"/>',
+    mushroom: '<path d="M12 2C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm1 14h-2v-1h2v1zm-3.57-4.38l.56.34V14h4.02v-2.04l.56-.34C15.45 10.98 16 9.84 16 8.5c0-2.49-2.01-4.5-4.5-4.5S7 6.01 7 8.5c0 1.34.55 2.48 1.43 3.12zM9 20h6c0 1.1-.9 2-2 2h-2c-1.1 0-2-.9-2-2z"/>',
+    pricklyPear: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/>',
+    quest: '<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z"/>',
+    arc: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>',
+    enemy: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm1.61-9.96c-2.06-.3-3.88.97-4.43 2.79-.18.58.26 1.17.87 1.17h.2c.41 0 .74-.29.88-.67.32-.89 1.27-1.5 2.3-1.28.95.2 1.65 1.13 1.57 2.1-.1 1.34-1.62 1.63-2.45 2.88 0 .01-.01.01-.01.02-.01.02-.02.03-.03.05-.09.15-.18.32-.25.5-.01.03-.03.05-.04.08-.01.02-.01.04-.02.07-.12.34-.2.75-.2 1.25h2c0-.42.11-.77.28-1.07.02-.03.03-.06.05-.09.08-.14.18-.27.28-.39.01-.01.02-.03.03-.04.1-.12.21-.23.33-.34.96-.91 2.26-1.65 1.99-3.56-.24-1.74-1.61-3.21-3.35-3.47z"/>',
+    sentinel: '<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>',
+    surveyor: '<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>',
+    miscellaneous: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>',
+    playerSpawn: '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>',
+    supplyCall: '<path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>',
+    zipline: '<path d="M17.66 7.93L12 2.27 6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.7 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/>',
+    raiderCache: '<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm7 10c0 4.52-2.98 8.69-7 9.93-4.02-1.24-7-5.41-7-9.93V6.3l7-3.11 7 3.11V11zm-11.59.59L6 13l4 4 8-8-1.41-1.42L10 14.17z"/>',
+    boss: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>',
+    vehicleTrunk: '<path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>',
+    extraction: '<path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>',
+    event: '<path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>',
+  };
+
+  // ==========================================================================
+  // Category Groups
+  // ==========================================================================
+
+  const categoryGroups = [
     {
       id: "locations",
-      label: "Locations",
-      categories: ["location", "cargoElevator", "fieldDepot", "lockedDoor", "raiderCamp", "raiderHatch"]
+      title: "Locations",
+      categories: ["cargoElevator", "fieldDepot", "location", "lockedDoor", "raiderCamp", "raiderHatch"],
     },
     {
       id: "collectibles",
-      label: "Collectibles",
-      categories: ["collectible"]
+      title: "Collectibles",
+      categories: ["collectible"],
     },
     {
       id: "loot",
-      label: "Loot",
-      categories: ["ammoBox", "arcCourier", "fieldCrate", "grenadeTube", "medicalBox", "securityLocker", "weaponCase", "baronHusk", "container", "item"]
+      title: "Loot",
+      categories: ["ammoBox", "arcCourier", "baronHusk", "container", "fieldCrate", "grenadeTube", "item", "medicalBox", "securityLocker", "weaponCase"],
     },
     {
       id: "resources",
-      label: "Natural Resources",
-      categories: ["agave", "apricot", "fruitBasket", "greatMullein", "mushroom", "pricklyPear"]
+      title: "Natural Resources",
+      categories: ["agave", "apricot", "fruitBasket", "greatMullein", "mushroom", "pricklyPear"],
     },
     {
       id: "missions",
-      label: "Missions",
-      categories: ["quest"]
+      title: "Missions",
+      categories: ["quest"],
     },
     {
       id: "enemies",
-      label: "Enemies",
-      categories: ["arc", "enemy", "sentinel", "surveyor", "boss"]
+      title: "Enemies",
+      categories: ["arc", "enemy", "sentinel", "surveyor"],
     },
     {
       id: "other",
-      label: "Other",
-      categories: ["miscellaneous", "playerSpawn", "supplyCall", "zipline"]
+      title: "Other",
+      categories: ["miscellaneous", "playerSpawn", "supplyCall", "zipline"],
     },
     {
       id: "events",
-      label: "Events",
-      categories: ["raiderCache", "event"]
-    }
+      title: "Events",
+      categories: ["raiderCache", "event"],
+    },
   ];
 
-  const guidePresets = [
-    {
-      id: "rusted-gears-bluegate",
-      title: "Rusted Gear Farm (Blue Gate)",
-      mapId: "blue-gate",
-      description: "Follow the ridge caravan route to loot 4 trunks per loop. Best farming efficiency.",
-      itemIds: ["blue-vehicle-004", "blue-vehicle-005", "blue-vehicle-006", "blue-vehicle-013", "blue-spawn-020"],
-      reference: {
-        label: "PCGamer Rusted Gears Guide",
-        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-rusted-gears-locations"
-      }
-    },
-    {
-      id: "rusted-gears-buried",
-      title: "Industrial Triangle (Buried City)",
-      mapId: "buried-city",
-      description: "Warehouse → Marano Station → Parking Garage loop for Rusted Gears.",
-      itemIds: ["city-location-017", "city-trunk-018", "city-location-019", "city-trunk-020", "city-location-021", "city-trunk-022"],
-      reference: {
-        label: "PCGamer Rusted Gears Guide",
-        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-rusted-gears-locations"
-      }
-    },
-    {
-      id: "aphelion-hunt",
-      title: "Aphelion Blueprint Hunt",
-      mapId: "dam-battlegrounds",
-      description: "Defeat the Matriarch at The Breach to obtain the exotic Aphelion blueprint.",
-      itemIds: ["dam-boss-002", "dam-location-003", "dam-locker-012"],
-      reference: {
-        label: "PCGamer Aphelion Guide",
-        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-aphelion-blueprint-location"
-      }
-    },
-    {
-      id: "majors-footlocker",
-      title: "The Major's Footlocker Quest",
-      mapId: "dam-battlegrounds",
-      description: "Locate Major Aiva's Mementos in the Ruby Residence area.",
-      itemIds: ["dam-quest-001", "dam-location-004", "dam-cache-009"],
-      reference: {
-        label: "PCGamer Quest Guide",
-        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-the-majors-footlocker"
-      }
-    },
-    {
-      id: "celeste-journals",
-      title: "Celeste's Journals Quest",
-      mapId: "dam-battlegrounds",
-      description: "Recover journals from Raider outposts across Dam Battlegrounds.",
-      itemIds: ["dam-quest-019", "dam-location-003", "dam-location-004"],
-      reference: {
-        label: "PCGamer Journal Locations",
-        url: "https://www.pcgamer.com/games/third-person-shooter/arc-raiders-celestes-journals-location"
-      }
-    },
-    {
-      id: "espresso-quest",
-      title: "Espresso Quest",
-      mapId: "buried-city",
-      description: "Retrieve espresso machine parts from Caffe Da Rosa in Plaza Rosa.",
-      itemIds: ["city-quest-001", "city-location-005", "city-cache-009"],
-      reference: {
-        label: "ARC Raiders Hub",
-        url: "https://www.arc-raiders.org/en/maps"
-      }
-    },
-    {
-      id: "rocketeer-driver",
-      title: "Rocketeer Driver Route",
-      mapId: "spaceport",
-      description: "Clear Launch Towers and Fuel Depot for Rocketeer drops.",
-      itemIds: ["space-boss-001", "space-location-004", "space-quest-013", "space-weapon-023"],
-      reference: {
-        label: "TheGamer Map Guide",
-        url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide"
-      }
-    },
-    {
-      id: "high-tier-spaceport",
-      title: "High-Tier Loot Run (Spaceport)",
-      mapId: "spaceport",
-      description: "Hit Departure/Arrival Buildings and Launch Towers for best loot.",
-      itemIds: ["space-location-015", "space-location-016", "space-location-005", "space-weapon-022"],
-      reference: {
-        label: "TheGamer Spaceport Guide",
-        url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide"
-      }
-    },
-    {
-      id: "north-line-quest",
-      title: "North Line Uplink Quest",
-      mapId: "stella-montis",
-      description: "Synchronize uplink pylons to summon the Matriarch variant.",
-      itemIds: ["stella-quest-011", "stella-location-013", "stella-location-014", "stella-location-015", "stella-boss-016"],
-      reference: {
-        label: "TechRadar North Line Guide",
-        url: "https://www.techradar.com/gaming"
-      }
-    },
-    {
-      id: "pilgrims-peak",
-      title: "Pilgrim's Peak Challenge",
-      mapId: "blue-gate",
-      description: "High-risk, high-reward run to Pilgrim's Peak for legendary loot.",
-      itemIds: ["blue-location-014", "blue-weapon-017", "blue-location-015"],
-      reference: {
-        label: "TheGamer Blue Gate Guide",
-        url: "https://www.thegamer.com/arc-raiders-complete-map-unlock-guide"
-      }
-    }
-  ];
+  // ==========================================================================
+  // Storage
+  // ==========================================================================
 
-  const categoryCheckboxes = new Map();
-
-  function loadProgress() {
+  function loadFoundLocations() {
     try {
-      const raw = window.localStorage.getItem(config.storageKey);
-      return raw ? JSON.parse(raw) : {};
-    } catch (err) {
-      console.warn("Unable to parse saved progress", err);
+      const data = localStorage.getItem("arc-raiders-found");
+      return data ? JSON.parse(data) : {};
+    } catch (e) {
       return {};
     }
   }
 
-  function persistProgress() {
+  function saveFoundLocations() {
     try {
-      window.localStorage.setItem(config.storageKey, JSON.stringify(state.progress));
-    } catch (err) {
-      console.warn("Unable to persist progress", err);
+      localStorage.setItem("arc-raiders-found", JSON.stringify(state.foundLocations));
+    } catch (e) {
+      console.error("Failed to save progress", e);
     }
   }
 
-  function hydrateMapSelect() {
-    if (!els.mapSelect) return;
-    els.mapSelect.innerHTML = "";
-    config.maps.forEach((map) => {
-      const option = document.createElement("option");
-      option.value = map.id;
-      option.textContent = map.name;
-      if (map.id === state.currentMapId) {
-        option.selected = true;
-      }
-      els.mapSelect.append(option);
-    });
-  }
-
-  function hydrateMapTabs() {
-    if (!els.mapTabs) return;
-    els.mapTabs.innerHTML = "";
-    config.maps.forEach((map) => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = `map-tab${map.id === state.currentMapId ? " map-tab--active" : ""}`;
-      button.textContent = map.name;
-      button.addEventListener("click", () => switchToMap(map.id));
-      button.dataset.mapId = map.id;
-      els.mapTabs.append(button);
-    });
-  }
-
-  function setActiveMapTab(mapId) {
-    if (els.mapTabs) {
-      [...els.mapTabs.children].forEach((child) => {
-        child.classList.toggle("map-tab--active", child.dataset.mapId === mapId);
-      });
-    }
-    if (els.mapSelect && els.mapSelect.value !== mapId) {
-      els.mapSelect.value = mapId;
-    }
-  }
-
-  function switchToMap(mapId, options = {}) {
-    if (!mapId || mapId === state.currentMapId) return;
-    state.currentMapId = mapId;
-    setActiveMapTab(mapId);
-    if (!options.preserveGuide) {
-      state.activeGuide = null;
-      state.activeGuideItems = null;
-      updateGuideUI();
-    }
-    renderMap();
-  }
-
-  function hydrateCategoryGroups() {
-    if (!els.categoryGroups) return;
-    els.categoryGroups.innerHTML = "";
-    categoryCheckboxes.clear();
-
-    categoryGroupConfig.forEach((group) => {
-      const wrapper = document.createElement("div");
-      wrapper.className = "category-group";
-      wrapper.dataset.group = group.id;
-
-      const header = document.createElement("button");
-      header.type = "button";
-      header.className = "category-group__header";
-      header.innerHTML = `
-        <span>${group.label}</span>
-        <span class="category-group__count" data-group-count="${group.id}">0</span>
-      `;
-
-      const body = document.createElement("div");
-      body.className = "category-group__body";
-
-      header.addEventListener("click", () => toggleGroupCollapse(group.id, body));
-
-      group.categories.forEach((type) => {
-        const meta = config.categories[type];
-        if (!meta) return;
-        const row = document.createElement("label");
-        row.className = "category-filter";
-
-        const left = document.createElement("span");
-        left.className = "category-filter__label";
-
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.checked = state.filters.types.has(type);
-        checkbox.addEventListener("change", (event) => {
-          event.stopPropagation();
-          handleCategoryToggle(type, event.target.checked);
-        });
-
-        const swatch = document.createElement("span");
-        swatch.className = "category-filter__swatch";
-        swatch.style.background = meta.color;
-
-        const label = document.createElement("span");
-        label.textContent = meta.label;
-
-        left.append(checkbox, swatch, label);
-
-        const count = document.createElement("span");
-        count.className = "category-filter__count";
-        count.dataset.countFor = type;
-        count.textContent = "0";
-
-        row.append(left, count);
-        body.append(row);
-
-        categoryCheckboxes.set(type, { checkbox, countEl: count });
-      });
-
-      wrapper.append(header, body);
-      els.categoryGroups.append(wrapper);
-    });
-  }
-
-  function handleCategoryToggle(type, isChecked) {
-    if (isChecked) {
-      state.filters.types.add(type);
-    } else {
-      state.filters.types.delete(type);
-    }
-    render();
-  }
-
-  function syncCategoryCheckboxes() {
-    categoryCheckboxes.forEach(({ checkbox }, type) => {
-      checkbox.checked = state.filters.types.has(type);
-    });
-  }
-
-  function toggleGroupCollapse(groupId, bodyEl) {
-    const isCollapsed = state.groupCollapse.has(groupId);
-    if (isCollapsed) {
-      state.groupCollapse.delete(groupId);
-      bodyEl.classList.remove("is-collapsed");
-    } else {
-      state.groupCollapse.add(groupId);
-      bodyEl.classList.add("is-collapsed");
-    }
-  }
-
-  function setAllGroupCollapse(collapsed) {
-    state.groupCollapse = new Set();
-    els.categoryGroups?.querySelectorAll(".category-group__body")?.forEach((body) => {
-      const groupId = body.parentElement?.dataset.group;
-      if (!groupId) return;
-      if (collapsed) {
-        body.classList.add("is-collapsed");
-        state.groupCollapse.add(groupId);
-      } else {
-        body.classList.remove("is-collapsed");
-      }
-    });
-  }
-
-  function updateCategoryCounts(items) {
-    const counts = {};
-    items.forEach((item) => {
-      counts[item.type] = (counts[item.type] || 0) + 1;
-    });
-    categoryCheckboxes.forEach(({ countEl }, type) => {
-      countEl.textContent = counts[type] ?? 0;
-    });
-    categoryGroupConfig.forEach((group) => {
-      const total = group.categories.reduce((sum, type) => sum + (counts[type] ?? 0), 0);
-      const countLabel = els.categoryGroups?.querySelector(`[data-group-count="${group.id}"]`);
-      if (countLabel) countLabel.textContent = total;
-    });
-  }
-
-  function hydrateGuideList() {
-    if (!els.guideList) return;
-    els.guideList.innerHTML = "";
-    guidePresets.forEach((guide) => {
-      const card = document.createElement("article");
-      card.className = "guide-card";
-      card.dataset.guideId = guide.id;
-
-      const title = document.createElement("p");
-      title.className = "guide-card__title";
-      title.textContent = guide.title;
-
-      const meta = document.createElement("p");
-      meta.className = "guide-card__meta";
-      meta.textContent = formatLabel(guide.mapId);
-
-      const desc = document.createElement("p");
-      desc.className = "guide-card__description";
-      desc.textContent = guide.description;
-
-      const actions = document.createElement("div");
-      actions.className = "guide-card__actions";
-      const button = document.createElement("button");
-      button.className = "primary-button primary-button--small";
-      button.type = "button";
-      button.textContent = "Load Guide";
-      button.addEventListener("click", () => applyGuidePreset(guide));
-      actions.append(button);
-
-      if (guide.reference?.label && guide.reference?.url) {
-        const source = document.createElement("a");
-        source.href = guide.reference.url;
-        source.target = "_blank";
-        source.rel = "noopener noreferrer";
-        source.className = "text-button text-button--muted";
-        source.textContent = guide.reference.label;
-        actions.append(source);
-      }
-
-      card.append(title, meta, desc, actions);
-      els.guideList.append(card);
-    });
-    updateGuideUI();
-  }
-
-  function applyGuidePreset(guide) {
-    if (!guide) return;
-    state.activeGuide = guide;
-    state.activeGuideItems = new Set(guide.itemIds);
-    if (state.currentMapId !== guide.mapId) {
-      switchToMap(guide.mapId, { preserveGuide: true });
-    } else {
-      render();
-    }
-    updateGuideUI();
-  }
-
-  function clearActiveGuide() {
-    state.activeGuide = null;
-    state.activeGuideItems = null;
-    updateGuideUI();
-    render();
-  }
-
-  function updateGuideUI() {
-    if (els.clearGuideBtn) {
-      els.clearGuideBtn.disabled = !state.activeGuide;
-    }
-    if (els.poiSectionLabel) {
-      els.poiSectionLabel.textContent = state.activeGuide
-        ? `Points of Interest · ${state.activeGuide.title}`
-        : "Points of Interest";
-    }
-    if (els.guideList) {
-      els.guideList.querySelectorAll(".guide-card").forEach((card) => {
-        card.classList.toggle("guide-card--active", card.dataset.guideId === state.activeGuide?.id);
-      });
-    }
-  }
-
-  function initEvents() {
-    els.mapSelect?.addEventListener("change", (event) => {
-      switchToMap(event.target.value);
-    });
-
-    els.searchInput.addEventListener("input", (event) => {
-      state.filters.search = event.target.value.trim().toLowerCase();
-      render();
-    });
-
-    els.showComplete.addEventListener("change", (event) => {
-      state.filters.showComplete = event.target.checked;
-      render();
-    });
-
-    els.showIncomplete.addEventListener("change", (event) => {
-      state.filters.showIncomplete = event.target.checked;
-      render();
-    });
-
-    els.collapseList.addEventListener("click", () => {
-      state.listCollapsed = !state.listCollapsed;
-      els.itemList.classList.toggle("hidden", state.listCollapsed);
-      els.collapseList.textContent = state.listCollapsed ? "Expand" : "Collapse";
-    });
-
-    els.resetProgress?.addEventListener("click", () => {
-      if (confirm("Clear all saved progress on this device?")) {
-        state.progress = {};
-        persistProgress();
-        render();
-      }
-    });
-
-    els.fitBoundsBtn?.addEventListener("click", fitCurrentBounds);
-
-    els.exportProgressBtn?.addEventListener("click", exportProgress);
-    els.importProgressInput?.addEventListener("change", importProgress);
-
-    els.rarityFilter?.addEventListener("change", (event) => {
-      state.filters.rarity = event.target.value;
-      render();
-    });
-
-    els.difficultyFilter?.addEventListener("change", (event) => {
-      state.filters.difficulty = event.target.value;
-      render();
-    });
-
-    els.showAllBtn?.addEventListener("click", () => {
-      state.filters.types = new Set(Object.keys(config.categories));
-      syncCategoryCheckboxes();
-      render();
-    });
-
-    els.hideAllBtn?.addEventListener("click", () => {
-      state.filters.types.clear();
-      syncCategoryCheckboxes();
-      render();
-    });
-
-    els.expandGroupsBtn?.addEventListener("click", () => setAllGroupCollapse(false));
-    els.collapseGroupsBtn?.addEventListener("click", () => setAllGroupCollapse(true));
-
-    els.clearGuideBtn?.addEventListener("click", clearActiveGuide);
-
-    els.toggleLegendBtn?.addEventListener("click", () => {
-      els.mapLegend?.classList.toggle("hidden");
-    });
-
-    els.measureToolBtn?.addEventListener("click", () => toggleTool("measure"));
-    els.radiusToolBtn?.addEventListener("click", () => toggleTool("radius"));
-  }
-
-  function exportProgress() {
-    const payload = JSON.stringify(
-      { exportedAt: new Date().toISOString(), progress: state.progress },
-      null,
-      2
-    );
-    const blob = new Blob([payload], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = "arc-raiders-progress.json";
-    anchor.click();
-    URL.revokeObjectURL(url);
-  }
-
-  function importProgress(event) {
-    const file = event.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const parsed = JSON.parse(e.target.result);
-        if (parsed.progress && typeof parsed.progress === "object") {
-          state.progress = parsed.progress;
-          persistProgress();
-          render();
-        } else {
-          alert("Import file is missing a valid progress object.");
-        }
-      } catch (err) {
-        alert("Unable to parse the import file.");
-        console.warn(err);
-      }
-    };
-    reader.readAsText(file);
-    event.target.value = "";
-  }
+  // ==========================================================================
+  // Helpers
+  // ==========================================================================
 
   function getCurrentMap() {
-    return config.maps.find((map) => map.id === state.currentMapId) ?? config.maps[0];
+    return config.maps.find(m => m.id === state.currentMapId) || config.maps[0];
   }
 
-  function renderMap() {
-    const currentMap = getCurrentMap();
-    if (!currentMap) return;
-    setActiveMapTab(state.currentMapId);
-    els.mapDescription.textContent = currentMap.description || "";
-
-    const mapContainer = document.getElementById("map");
-    if (state.mapInstance) {
-      state.mapInstance.remove();
-    }
-    mapContainer.innerHTML = "";
-
-    const mapOptions =
-      currentMap.projection === "simple"
-        ? {
-            crs: L.CRS.Simple,
-            minZoom: currentMap.zoom?.min ?? -2,
-            maxZoom: currentMap.zoom?.max ?? 4,
-            zoomControl: false,
-            attributionControl: false,
-            zoomSnap: 0.5,
-            zoomDelta: 0.5,
-            wheelPxPerZoomLevel: 120
-          }
-        : {
-            minZoom: currentMap.zoom?.min ?? 2,
-            maxZoom: currentMap.zoom?.max ?? 7,
-            zoomControl: false,
-            attributionControl: false,
-            zoomSnap: 0.5,
-            zoomDelta: 0.5
-          };
-
-    state.mapInstance = L.map(mapContainer, mapOptions);
-    L.control.zoom({ position: "bottomright" }).addTo(state.mapInstance);
-    L.control.attribution({ position: "bottomleft", prefix: false }).addTo(state.mapInstance);
-
-    if (currentMap.projection === "simple" && currentMap.image?.bounds) {
-      state.imageLayer = L.imageOverlay(currentMap.image.url, currentMap.image.bounds, {
-        attribution: currentMap.image.attribution
-      });
-      state.imageLayer.addTo(state.mapInstance);
-      state.mapInstance.fitBounds(currentMap.image.bounds);
-      state.bounds = currentMap.image.bounds;
-    } else if (currentMap.tileLayer?.url) {
-      state.baseLayer = L.tileLayer(currentMap.tileLayer.url, {
-        attribution: currentMap.tileLayer.attribution,
-        maxZoom: mapOptions.maxZoom
-      });
-      state.baseLayer.addTo(state.mapInstance);
-      const view = currentMap.view ?? { center: [0, 0], zoom: 3 };
-      state.mapInstance.setView(view.center, view.zoom);
-      state.bounds = null;
-    }
-
-    state.markerLayer = L.layerGroup().addTo(state.mapInstance);
-    state.toolLayer = L.layerGroup().addTo(state.mapInstance);
-    state.measureStart = null;
-    syncToolButtons();
-    state.mapInstance.on("click", handleMapToolClick);
-
-    updateMapContext();
-    render();
-  }
-
-  function fitCurrentBounds() {
-    if (!state.mapInstance) return;
-    if (state.bounds) {
-      state.mapInstance.fitBounds(state.bounds, { maxZoom: state.mapInstance.getZoom() });
-    } else if (state.markerLayer && state.markerLayer.getLayers().length > 0) {
-      state.mapInstance.fitBounds(state.markerLayer.getBounds(), { maxZoom: state.mapInstance.getZoom() });
-    }
-  }
-
-  function toggleTool(tool) {
-    if (state.activeTool === tool) {
-      state.activeTool = null;
-    } else {
-      state.activeTool = tool;
-    }
-    state.measureStart = null;
-    state.toolLayer?.clearLayers();
-    syncToolButtons();
-  }
-
-  function syncToolButtons() {
-    if (els.measureToolBtn) {
-      els.measureToolBtn.classList.toggle("is-active", state.activeTool === "measure");
-    }
-    if (els.radiusToolBtn) {
-      els.radiusToolBtn.classList.toggle("is-active", state.activeTool === "radius");
-    }
-  }
-
-  function handleMapToolClick(event) {
-    if (!state.activeTool) return;
-    if (state.activeTool === "measure") {
-      handleMeasureClick(event.latlng);
-    } else if (state.activeTool === "radius") {
-      handleRadiusClick(event.latlng);
-    }
-  }
-
-  function handleMeasureClick(latlng) {
-    if (!state.toolLayer) return;
-    if (!state.measureStart) {
-      state.toolLayer.clearLayers();
-      state.measureStart = latlng;
-      return;
-    }
-    const start = state.measureStart;
-    const distance = start.distanceTo(latlng);
-    state.toolLayer.clearLayers();
-    L.polyline([start, latlng], { color: "#22d3ee", dashArray: "6 4" }).addTo(state.toolLayer);
-    const midpoint = L.latLng((start.lat + latlng.lat) / 2, (start.lng + latlng.lng) / 2);
-    L.marker(midpoint, {
-      interactive: false,
-      icon: L.divIcon({
-        className: "measure-label",
-        html: `<span>${formatDistance(distance)}</span>`
-      })
-    }).addTo(state.toolLayer);
-    state.measureStart = null;
-  }
-
-  function handleRadiusClick(latlng) {
-    if (!state.toolLayer) return;
-    state.measureStart = null;
-    state.toolLayer.clearLayers();
-    const rings = [50, 100, 150, 200, 250, 300];
-    rings.forEach((radius) => {
-      L.circle(latlng, {
-        radius,
-        color: "#facc15",
-        weight: radius % 100 === 0 ? 2 : 1,
-        dashArray: radius % 100 === 0 ? "4 4" : "2 6",
-        fillOpacity: 0
-      }).addTo(state.toolLayer);
-    });
-    L.marker(latlng, {
-      interactive: false,
-      icon: L.divIcon({
-        className: "measure-label",
-        html: `<span>${formatDistance(rings[rings.length - 1])} radius</span>`
-      })
-    }).addTo(state.toolLayer);
-  }
-
-  function formatDistance(meters) {
-    if (meters >= 1000) {
-      return `${(meters / 1000).toFixed(2)} km`;
-    }
-    return `${Math.round(meters)} m`;
-  }
-
-  function filteredItems(items) {
-    return items.filter((item) => {
-      const matchesType = state.filters.types.has(item.type);
-      if (!matchesType) return false;
-
-      const completed = Boolean(state.progress[item.id]);
-
-      if (!completed && !state.filters.showIncomplete) return false;
-      if (completed && !state.filters.showComplete) return false;
-
-      const rarityValue = getRarityValue(item);
-      if (state.filters.rarity !== "all" && rarityValue !== state.filters.rarity) return false;
-
-      const difficultyValue = getDifficultyValue(item);
-      if (state.filters.difficulty !== "all" && difficultyValue !== state.filters.difficulty) return false;
-
-      const search = state.filters.search;
-      if (search) {
-        const haystack = [
-          item.title,
-          item.description,
-          ...(item.tags ?? []),
-          ...(Array.isArray(item.rewards) ? item.rewards : [item.rewards])
-        ]
-          .filter(Boolean)
-          .join(" ")
-          .toLowerCase();
-
-        if (!haystack.includes(search)) return false;
-      }
-
-      if (state.activeGuideItems) {
-        return state.activeGuideItems.has(item.id);
-      }
-
-      return true;
-    });
-  }
-
-  function renderMarkers(items) {
-    if (!state.mapInstance || !state.markerLayer) return;
-    state.markerLayer.clearLayers();
-    const mapConfig = getCurrentMap();
-
-    items.forEach((item) => {
-      const latLng = toLatLng(item.coords, mapConfig);
-      const icon = createMarkerIcon(item);
-      const marker = L.marker(latLng, { icon });
-      marker.itemId = item.id;
-      marker.bindPopup(renderPopupContent(item), { minWidth: 260 });
-      marker.on("popupopen", (event) => bindPopupActions(event.popup, item.id));
-      marker.addTo(state.markerLayer);
-    });
-  }
-
-  function toLatLng(coords, mapConfig) {
-    if (mapConfig.projection === "simple") {
-      const [x, y] = coords;
-      return L.latLng(y, x);
-    }
-    return coords;
-  }
-
-  function getMarkerIconSVG(item) {
-    const iconMap = {
-      quest: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>',
-      weaponCase: '<path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2H8c0-1.1.9-2 2-2zm6 14H6V8h12v10z"/>',
-      fieldCrate: '<path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/>',
-      securityLocker: '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>',
-      raiderCache: '<path d="M12 2L2 22h20L12 2zm0 3.45l6.27 12.55H5.73L12 5.45zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/>',
-      event: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>',
-      vehicleTrunk: '<path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>',
-      extraction: '<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L11 13.17V7h2v6.17l2.59-2.59L17 12l-5 5z"/>',
-      boss: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"/>',
-      collectible: '<path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>',
-      location: '<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>',
-      
-      // New Icons
-      cargoElevator: '<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 9h-2V7h-2v5h-2l3 3 3-3z"/>',
-      fieldDepot: '<path d="M4 15h16v3H4zm0-4h16v3H4zm0-4h16v3H4z"/>',
-      lockedDoor: '<path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>',
-      raiderCamp: '<path d="M2 21h20l-2.5-4h-15L2 21zm9.5-19L6 15h12L11.5 2z"/>',
-      raiderHatch: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>',
-      ammoBox: '<path d="M4 6h16v12H4zm2 2v8h12V8zm2 2h8v2H8z"/>',
-      grenadeTube: '<path d="M7 2v11h3v9l7-5.5V2H7zm3 18v-7h4v3.8l-4 3.2zM14 4v9h-4V4h4z"/>',
-      medicalBox: '<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>',
-      agave: '<path d="M12 2L8 10l-6 4 6 4 4 8 4-8 6-4-6-4z"/>',
-      mushroom: '<path d="M12 2C8 2 5 5 5 7c0 1.5 1 2.8 2.5 3.5L6 22h12l-1.5-11.5C18 9.8 19 8.5 19 7c0-2-3-5-7-5z"/>',
-      enemy: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v2h-2zm0-6h2v4h-2zm1-8C9.32 4 7.5 5.32 7.5 7.5h2c0-1.1.9-2 2-2s2 .9 2 2c0 1.1-.9 2-2 2h-2v2h2c2.21 0 4-1.79 4-4S13.79 2 12 2z"/>',
-      sentinel: '<path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>',
-      zipline: '<path d="M5 15h14v2H5zm0-4h14v2H5zm0-4h14v2H5z"/>'
+  function getCategoryColor(type) {
+    const colors = {
+      location: "#3b82f6",
+      cargoElevator: "#a855f7",
+      fieldDepot: "#8b5cf6",
+      lockedDoor: "#f97316",
+      raiderCamp: "#78716c",
+      raiderHatch: "#dc2626",
+      collectible: "#06b6d4",
+      ammoBox: "#f59e0b",
+      arcCourier: "#fbbf24",
+      baronHusk: "#a855f7",
+      container: "#a78bfa",
+      fieldCrate: "#c084fc",
+      grenadeTube: "#84cc16",
+      item: "#94a3b8",
+      medicalBox: "#ef4444",
+      securityLocker: "#ec4899",
+      weaponCase: "#f472b6",
+      agave: "#22c55e",
+      apricot: "#f59e0b",
+      fruitBasket: "#84cc16",
+      greatMullein: "#22c55e",
+      mushroom: "#a3a3a3",
+      pricklyPear: "#16a34a",
+      quest: "#fbbf24",
+      arc: "#ef4444",
+      enemy: "#dc2626",
+      sentinel: "#b91c1c",
+      surveyor: "#991b1b",
+      miscellaneous: "#6b7280",
+      playerSpawn: "#22d3ee",
+      supplyCall: "#0ea5e9",
+      zipline: "#06b6d4",
+      raiderCache: "#f59e0b",
+      event: "#a855f7",
+      boss: "#c084fc",
+      vehicleTrunk: "#14b8a6",
+      extraction: "#22c55e",
     };
-    return iconMap[item.type] || iconMap.location;
+    return colors[type] || "#6b7280";
   }
 
-  function createMarkerIcon(item) {
-    const category = config.categories[item.type];
-    const color = category?.color || "#94a3b8";
-    const completed = Boolean(state.progress[item.id]);
-    const inGuide = state.activeGuideItems?.has(item.id);
-    const iconSVG = getMarkerIconSVG(item);
-
-    return L.divIcon({
-      className: "custom-marker",
-      html: `
-        <div class="marker-icon ${completed ? "marker-icon--complete" : ""} ${
-        inGuide ? "marker-icon--featured" : ""
-      }" style="--marker-color: ${color};">
-          <svg class="marker-icon__svg" viewBox="0 0 24 24" fill="currentColor">
-            ${iconSVG}
-          </svg>
-          ${completed ? '<span class="marker-icon__check">✓</span>' : ""}
-        </div>
-      `,
-      iconSize: [32, 32],
-      iconAnchor: [16, 16]
+  function countByCategory(items) {
+    const counts = {};
+    items.forEach(item => {
+      counts[item.type] = (counts[item.type] || 0) + 1;
     });
+    return counts;
   }
 
-  function getRarityValue(item) {
-    return item.rarity ?? defaultMetaByType[item.type]?.rarity ?? "common";
-  }
+  // ==========================================================================
+  // Map Setup
+  // ==========================================================================
 
-  function getDifficultyValue(item) {
-    return item.difficulty ?? defaultMetaByType[item.type]?.difficulty ?? "medium";
-  }
-
-  function renderPopupContent(item) {
-    const completed = Boolean(state.progress[item.id]);
-    const objectiveList = (item.objectives ?? [])
-      .map((step) => `<li>${step}</li>`)
-      .join("");
+  function initMap() {
+    const mapConfig = getCurrentMap();
     
-    const rarity = getRarityValue(item);
-    const difficulty = getDifficultyValue(item);
-    const typeLabel = config.categories[item.type]?.label ?? item.type;
+    if (state.map) {
+      state.map.remove();
+    }
 
-    return `
+    const bounds = mapConfig.image?.bounds || [[0, 0], [1200, 1600]];
+    
+    state.map = L.map("map", {
+      crs: L.CRS.Simple,
+      minZoom: -2,
+      maxZoom: 4,
+      zoomControl: false,
+      attributionControl: false,
+    });
+
+    // Add image overlay
+    L.imageOverlay(mapConfig.image.url, bounds).addTo(state.map);
+    state.map.fitBounds(bounds);
+
+    // Create marker layer
+    state.markerLayer = L.layerGroup().addTo(state.map);
+
+    // Render markers
+    renderMarkers();
+  }
+
+  function renderMarkers() {
+    if (!state.markerLayer) return;
+    
+    state.markerLayer.clearLayers();
+    state.markers.clear();
+
+    const mapConfig = getCurrentMap();
+    const items = mapConfig.items || [];
+    const query = state.searchQuery.toLowerCase();
+
+    items.forEach(item => {
+      // Check if category is visible
+      if (!state.visibleCategories.has(item.type)) return;
+
+      // Check search query
+      if (query && !item.title.toLowerCase().includes(query)) {
+        if (!item.description?.toLowerCase().includes(query)) return;
+      }
+
+      const isFound = state.foundLocations[item.id];
+      const color = getCategoryColor(item.type);
+      const iconSvg = categoryIcons[item.type] || categoryIcons.location;
+
+      const icon = L.divIcon({
+        className: "marker",
+        html: `
+          <div class="marker__icon ${isFound ? "marker--found" : ""}" style="background-color: ${color};">
+            <svg viewBox="0 0 24 24">${iconSvg}</svg>
+          </div>
+        `,
+        iconSize: [28, 28],
+        iconAnchor: [14, 28],
+      });
+
+      // Convert coords [x, y] to [y, x] for Leaflet
+      const latLng = [item.coords[1], item.coords[0]];
+      
+      const marker = L.marker(latLng, { icon });
+      marker.itemData = item;
+      
+      marker.on("click", () => showLocationPopup(item, marker));
+      
+      marker.addTo(state.markerLayer);
+      state.markers.set(item.id, marker);
+    });
+
+    updateProgress();
+  }
+
+  function showLocationPopup(item, marker) {
+    const isFound = state.foundLocations[item.id];
+    const color = getCategoryColor(item.type);
+    const categoryLabel = config.categories[item.type]?.label || item.type;
+
+    const popupContent = `
       <div class="popup">
-        <p class="eyebrow">${typeLabel}</p>
-        <h3>${item.title}</h3>
-        <div class="popup-meta">
-          <span style="color: ${rarity === 'legendary' ? '#fbbf24' : rarity === 'rare' ? '#60a5fa' : '#fff'}">${formatLabel(rarity)}</span>
-          <span style="color: ${difficulty === 'elite' ? '#fb7185' : '#94a3b8'}">${formatLabel(difficulty)}</span>
+        <div class="popup__header">
+          <span class="popup__category" style="background-color: ${color};">
+            ${categoryLabel}
+          </span>
+          <h3 class="popup__title">${item.title}</h3>
         </div>
-        <p>${item.description ?? ""}</p>
-        ${
-          objectiveList
-            ? `<ul style="padding-left: 1rem; margin: 0 0 0.5rem; color: var(--text-muted);">${objectiveList}</ul>`
-            : ""
-        }
-        ${
-          item.rewards
-            ? `<p><strong>Reward:</strong> ${
-                Array.isArray(item.rewards) ? item.rewards.join(", ") : item.rewards
-              }</p>`
-            : ""
-        }
+        ${item.description ? `<p class="popup__description">${item.description}</p>` : ""}
+        ${item.mediaUrl ? `<img src="${item.mediaUrl}" alt="${item.title}" class="popup__image" />` : ""}
         <div class="popup__actions">
-          <button class="primary-button popup-toggle" data-item="${item.id}">
-            ${completed ? "Mark as in-progress" : "Mark as complete"}
+          <button class="popup__btn popup__btn--found ${isFound ? "is-found" : ""}" data-item-id="${item.id}">
+            ${isFound ? "✓ Found" : "Mark as Found"}
           </button>
         </div>
       </div>
     `;
-  }
 
-  function bindPopupActions(popup, itemId) {
-    const button = popup.getElement().querySelector(".popup-toggle");
-    if (!button) return;
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      toggleItemCompletion(itemId);
-    });
-  }
+    marker.bindPopup(popupContent, {
+      maxWidth: 320,
+      minWidth: 280,
+    }).openPopup();
 
-  function renderList(items) {
-    els.itemList.innerHTML = "";
-    if (!items.length) {
-      const emptyState = document.createElement("p");
-      emptyState.className = "panel__hint";
-      emptyState.textContent = "No points match the current filters.";
-      els.itemList.append(emptyState);
-      return;
-    }
-
-    const sorted = [...items].sort((a, b) => {
-      const aComplete = state.progress[a.id] ? 1 : 0;
-      const bComplete = state.progress[b.id] ? 1 : 0;
-      if (aComplete !== bComplete) return aComplete - bComplete;
-      return a.title.localeCompare(b.title);
-    });
-
-    sorted.forEach((item) => els.itemList.append(renderListItem(item)));
-  }
-
-  function renderListItem(item) {
-    const clone = template.content.cloneNode(true);
-    const card = clone.querySelector(".poi-card");
-    const typeEl = clone.querySelector(".poi-card__type");
-    const titleEl = clone.querySelector(".poi-card__title");
-    const descriptionEl = clone.querySelector(".poi-card__description");
-    const metaEl = clone.querySelector(".poi-card__meta");
-    const jumpBtn = clone.querySelector(".poi-card__jump");
-    const toggleBtn = clone.querySelector(".poi-card__toggle");
-
-    const category = config.categories[item.type];
-    typeEl.textContent = category?.label ?? item.type;
-    typeEl.style.color = category?.color ?? "var(--text-muted)";
-    titleEl.textContent = item.title;
-    descriptionEl.textContent = item.description ?? "";
-
-    const metaTags = [];
-    if (item.rewards) {
-      const rewardText = Array.isArray(item.rewards) ? item.rewards.join(", ") : item.rewards;
-      metaTags.push(`Reward: ${rewardText}`);
-    }
-    if (item.cooldownHours) metaTags.push(`Cooldown: ${item.cooldownHours}h`);
-    if (item.schedule) metaTags.push(item.schedule);
-    if (item.tags) metaTags.push(...item.tags);
-    const rarityLabel = formatLabel(getRarityValue(item));
-    const difficultyLabel = formatLabel(getDifficultyValue(item));
-    metaTags.unshift(`Difficulty: ${difficultyLabel}`);
-    metaTags.unshift(`Rarity: ${rarityLabel}`);
-
-    metaTags.forEach((tag) => {
-      const li = document.createElement("li");
-      li.textContent = tag;
-      metaEl.append(li);
-    });
-
-    const completed = Boolean(state.progress[item.id]);
-    if (completed) {
-      card.classList.add("poi-card--complete");
-    }
-    if (state.activeGuideItems?.has(item.id)) {
-      card.classList.add("poi-card--guide");
-    }
-    toggleBtn.textContent = completed ? "Mark as in-progress" : "Mark as complete";
-    if (completed) {
-      toggleBtn.classList.add("poi-card__toggle--complete");
-    }
-    toggleBtn.addEventListener("click", () => toggleItemCompletion(item.id));
-    jumpBtn.addEventListener("click", () => focusOnItem(item));
-
-    return clone;
-  }
-
-  function focusOnItem(item) {
-    const mapConfig = getCurrentMap();
-    const latLng = toLatLng(item.coords, mapConfig);
-    if (!state.mapInstance) return;
-    state.mapInstance.setView(latLng, Math.max(state.mapInstance.getZoom(), 2));
-    const targetMarker = state.markerLayer?.getLayers().find((layer) => layer.itemId === item.id);
-    if (targetMarker) {
-      targetMarker.openPopup();
-    }
-  }
-
-  function toggleItemCompletion(itemId) {
-    if (state.progress[itemId]) {
-      delete state.progress[itemId];
-    } else {
-      state.progress[itemId] = { completedAt: Date.now() };
-    }
-    persistProgress();
-    render();
-  }
-
-  function renderProgressSummary(totalItems) {
-    const mapItems = getCurrentMap().items ?? [];
-    const total = totalItems;
-    const totalCompleted = mapItems.filter((item) => Boolean(state.progress[item.id])).length;
-
-    els.progressHeadline.textContent = `${totalCompleted} of ${total} complete`;
-    const remaining = Math.max(total - totalCompleted, 0);
-    els.progressSubtext.textContent = remaining
-      ? `${remaining} remaining on this map`
-      : "All objectives cleared for this map!";
-
-    const percent = total === 0 ? 0 : Math.round((totalCompleted / total) * 100);
-    els.progressBar.style.width = `${percent}%`;
-  }
-
-  function updateToolbarStats(visibleItems) {
-    const typeCount = state.filters.types.size;
-    const searchActive = state.filters.search ? `Search: "${state.filters.search}"` : null;
-    const pieces = [`${visibleItems.length} visible`];
-    pieces.push(`${typeCount}/${Object.keys(config.categories).length} types`);
-    if (!state.filters.showComplete) pieces.push("Hiding completed");
-    if (!state.filters.showIncomplete) pieces.push("Hiding in-progress");
-    if (state.filters.rarity !== "all") {
-      pieces.push(`Rarity: ${formatLabel(state.filters.rarity)}`);
-    }
-    if (state.filters.difficulty !== "all") {
-      pieces.push(`Difficulty: ${formatLabel(state.filters.difficulty)}`);
-    }
-    if (state.activeGuide) {
-      pieces.push(`Guide: ${state.activeGuide.title}`);
-    }
-    if (searchActive) pieces.push(searchActive);
-    els.activeFilters.textContent = pieces.join(" • ");
-  }
-
-  function render() {
-    const currentMap = getCurrentMap();
-    const items = currentMap.items ?? [];
-    const visible = filteredItems(items);
-    renderMarkers(visible);
-    renderList(visible);
-    renderProgressSummary(items.length);
-    updateToolbarStats(visible);
-    updateCategoryCounts(items);
-    updateGuideUI();
-  }
-
-  function updateMapContext() {
-    const currentMap = getCurrentMap();
-    if (!currentMap) return;
-    if (els.mapPreview) {
-      const previewSrc = currentMap.thumbnail ?? currentMap.image?.url ?? "";
-      if (previewSrc) {
-        els.mapPreview.src = previewSrc;
-      } else {
-        els.mapPreview.removeAttribute("src");
+    // Bind event after popup opens
+    setTimeout(() => {
+      const btn = document.querySelector(`.popup__btn--found[data-item-id="${item.id}"]`);
+      if (btn) {
+        btn.addEventListener("click", () => toggleFound(item.id));
       }
-    }
-    if (els.mapThreatBadge) {
-      const threat = currentMap.threatLevel;
-      els.mapThreatBadge.textContent = threat?.label ?? "Threat Unknown";
-      els.mapThreatBadge.style.setProperty(
-        "--threat-color",
-        threat?.color ?? "#94a3b8"
-      );
-    }
-    if (els.mapBiome) {
-      els.mapBiome.textContent = currentMap.biome ?? "Unknown biome";
-    }
-    if (els.mapRecommendedPower) {
-      els.mapRecommendedPower.textContent = currentMap.recommendedPower
-        ? `Power ${currentMap.recommendedPower}+`
-        : "--";
-    }
-    if (els.mapFeaturedLoot) {
-      const loot = Array.isArray(currentMap.featuredLoot)
-        ? currentMap.featuredLoot.join(", ")
-        : currentMap.featuredLoot;
-      els.mapFeaturedLoot.textContent = loot || "--";
-    }
+    }, 100);
   }
 
-  function formatLabel(value) {
-    if (!value || typeof value !== "string") return "";
-    return value.charAt(0).toUpperCase() + value.slice(1);
+  function toggleFound(itemId) {
+    if (state.foundLocations[itemId]) {
+      delete state.foundLocations[itemId];
+    } else {
+      state.foundLocations[itemId] = true;
+    }
+    saveFoundLocations();
+    renderMarkers();
   }
 
-  function hydrateLegend() {
-    els.legendItems.innerHTML = "";
-    Object.entries(config.categories).forEach(([key, meta]) => {
-      const item = document.createElement("div");
-      item.className = "map-legend__item";
-      
-      const icon = document.createElement("span");
-      icon.className = "map-legend__icon";
-      icon.style.setProperty("--marker-color", meta.color);
-      
-      const iconSVG = getMarkerIconSVG({ type: key });
-      icon.innerHTML = `<svg class="map-legend__svg" viewBox="0 0 24 24" fill="currentColor">${iconSVG}</svg>`;
-      
-      const label = document.createElement("span");
-      label.className = "map-legend__label";
-      label.textContent = meta.label;
-      
-      item.append(icon, label);
-      els.legendItems.append(item);
+  // ==========================================================================
+  // UI Rendering
+  // ==========================================================================
+
+  function renderMapTabs() {
+    els.mapTabs.innerHTML = "";
+    
+    config.maps.forEach(map => {
+      const btn = document.createElement("button");
+      btn.className = `map-tab ${map.id === state.currentMapId ? "map-tab--active" : ""}`;
+      btn.textContent = map.name;
+      btn.addEventListener("click", () => switchMap(map.id));
+      els.mapTabs.appendChild(btn);
     });
   }
 
-  function hydrateFilterOptions() {
-    buildFilterSelect(
-      els.rarityFilter,
-      config.rarityOptions ?? [],
-      "All rarities",
-      state.filters.rarity
-    );
-    buildFilterSelect(
-      els.difficultyFilter,
-      config.difficultyOptions ?? [],
-      "All difficulties",
-      state.filters.difficulty
-    );
+  function renderCategories() {
+    const mapConfig = getCurrentMap();
+    const items = mapConfig.items || [];
+    const counts = countByCategory(items);
+
+    els.categoryList.innerHTML = "";
+
+    categoryGroups.forEach(group => {
+      // Check if any categories in this group exist in the current map
+      const hasItems = group.categories.some(cat => counts[cat] > 0);
+      if (!hasItems) return;
+
+      const groupEl = document.createElement("div");
+      groupEl.className = "category-group";
+      groupEl.innerHTML = `
+        <div class="category-group__header">
+          <span class="category-group__title">${group.title}</span>
+          <svg class="category-group__toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="category-group__body"></div>
+      `;
+
+      const header = groupEl.querySelector(".category-group__header");
+      const body = groupEl.querySelector(".category-group__body");
+
+      header.addEventListener("click", () => {
+        groupEl.classList.toggle("category-group--collapsed");
+      });
+
+      group.categories.forEach(catId => {
+        const count = counts[catId] || 0;
+        if (count === 0) return;
+
+        const catConfig = config.categories[catId];
+        if (!catConfig) return;
+
+        const color = getCategoryColor(catId);
+        const iconSvg = categoryIcons[catId] || categoryIcons.location;
+        const isVisible = state.visibleCategories.has(catId);
+
+        const itemEl = document.createElement("div");
+        itemEl.className = `category-item ${!isVisible ? "category-item--hidden" : ""}`;
+        itemEl.innerHTML = `
+          <span class="category-item__icon" style="background-color: ${color}; color: white;">
+            <svg viewBox="0 0 24 24">${iconSvg}</svg>
+          </span>
+          <span class="category-item__name">${catConfig.label}</span>
+          <span class="category-item__count">${count}</span>
+        `;
+
+        itemEl.addEventListener("click", () => {
+          toggleCategory(catId);
+          itemEl.classList.toggle("category-item--hidden");
+        });
+
+        body.appendChild(itemEl);
+      });
+
+      els.categoryList.appendChild(groupEl);
+    });
   }
 
-  function buildFilterSelect(selectEl, options, defaultLabel, currentValue) {
-    if (!selectEl) return;
-    selectEl.innerHTML = "";
-    const defaultOption = document.createElement("option");
-    defaultOption.value = "all";
-    defaultOption.textContent = defaultLabel;
-    selectEl.append(defaultOption);
+  function updateProgress() {
+    const mapConfig = getCurrentMap();
+    const items = mapConfig.items || [];
+    const total = items.length;
+    const found = items.filter(item => state.foundLocations[item.id]).length;
+    const percent = total > 0 ? (found / total) * 100 : 0;
 
-    options.forEach((value) => {
-      const option = document.createElement("option");
-      option.value = value;
-      option.textContent = formatLabel(value);
-      selectEl.append(option);
+    els.progressValue.textContent = `${found}/${total}`;
+    els.progressFill.style.width = `${percent}%`;
+    els.foundCount.textContent = found;
+    els.totalCount.textContent = total;
+  }
+
+  // ==========================================================================
+  // Actions
+  // ==========================================================================
+
+  function switchMap(mapId) {
+    state.currentMapId = mapId;
+    renderMapTabs();
+    renderCategories();
+    initMap();
+  }
+
+  function toggleCategory(catId) {
+    if (state.visibleCategories.has(catId)) {
+      state.visibleCategories.delete(catId);
+    } else {
+      state.visibleCategories.add(catId);
+    }
+    renderMarkers();
+  }
+
+  function showAllCategories() {
+    state.visibleCategories = new Set(Object.keys(config.categories));
+    renderCategories();
+    renderMarkers();
+  }
+
+  function hideAllCategories() {
+    state.visibleCategories.clear();
+    renderCategories();
+    renderMarkers();
+  }
+
+  function handleSearch() {
+    state.searchQuery = els.searchInput.value.trim();
+    renderMarkers();
+  }
+
+  function exportProgress() {
+    const data = JSON.stringify(state.foundLocations, null, 2);
+    const blob = new Blob([data], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "arc-raiders-progress.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function importProgress(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const data = JSON.parse(event.target.result);
+        state.foundLocations = data;
+        saveFoundLocations();
+        renderMarkers();
+      } catch (err) {
+        alert("Invalid file format");
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function resetProgress() {
+    if (confirm("Reset all progress? This cannot be undone.")) {
+      state.foundLocations = {};
+      saveFoundLocations();
+      renderMarkers();
+    }
+  }
+
+  function toggleSidebar(sidebar, toggle) {
+    sidebar.classList.toggle("sidebar--collapsed");
+    const isCollapsed = sidebar.classList.contains("sidebar--collapsed");
+    toggle.querySelector("svg").style.transform = isCollapsed ? "rotate(180deg)" : "";
+  }
+
+  // ==========================================================================
+  // Event Listeners
+  // ==========================================================================
+
+  function initEvents() {
+    els.showAllBtn.addEventListener("click", showAllCategories);
+    els.hideAllBtn.addEventListener("click", hideAllCategories);
+    
+    els.searchBtn.addEventListener("click", handleSearch);
+    els.searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") handleSearch();
     });
 
-    selectEl.value = currentValue ?? "all";
+    els.exportBtn.addEventListener("click", exportProgress);
+    els.importInput.addEventListener("change", importProgress);
+    els.resetBtn.addEventListener("click", resetProgress);
+
+    els.zoomInBtn.addEventListener("click", () => state.map?.zoomIn());
+    els.zoomOutBtn.addEventListener("click", () => state.map?.zoomOut());
+
+    els.toggleLeftSidebar.addEventListener("click", () => {
+      toggleSidebar(els.leftSidebar, els.toggleLeftSidebar);
+    });
+
+    els.toggleRightSidebar.addEventListener("click", () => {
+      toggleSidebar(els.rightSidebar, els.toggleRightSidebar);
+    });
   }
 
-  hydrateMapSelect();
-  hydrateMapTabs();
-  hydrateCategoryGroups();
-  hydrateGuideList();
-  hydrateLegend();
-  hydrateFilterOptions();
+  // ==========================================================================
+  // Initialize
+  // ==========================================================================
+
+  function init() {
+    renderMapTabs();
+    renderCategories();
+    initMap();
   initEvents();
-  renderMap();
-})();
+  }
 
+  init();
+})();
