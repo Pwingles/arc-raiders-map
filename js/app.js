@@ -20,24 +20,6 @@
     activePopup: null,
   };
 
-  const customImageMaps = {
-    "dam-battlegrounds": {
-      url: "data/Dam_Battlegrounds_Map_(Server_Slam).jpg",
-    },
-    "buried-city": {
-      url: "data/Buried_City_Map.png",
-    },
-    "spaceport": {
-      url: "data/Spaceport_Map.png",
-    },
-    "the-blue-gate": {
-      url: "data/The_Blue_Gate_Map.png",
-    },
-    "stella-montis": {
-      url: "data/Stella_Montis_map_upper_level.png",
-    },
-  };
-
   // DOM element cache
   const els = {};
 
@@ -134,44 +116,6 @@
           [mapConfig.bounds.maxLng, mapConfig.bounds.maxLat],
         ]
       : null;
-    const imageLayer = getImageLayerConfig(state.currentMapId, mapConfig);
-    const hasImageBase = Boolean(imageLayer);
-    const sources = {};
-    const layers = [];
-
-    if (hasImageBase) {
-      sources["custom-map-image"] = {
-        type: "image",
-        url: imageLayer.url,
-        coordinates: imageLayer.coordinates,
-      };
-      layers.push({
-        id: "custom-map-image-layer",
-        type: "raster",
-        source: "custom-map-image",
-        paint: {
-          "raster-opacity": 1,
-          "raster-fade-duration": 0,
-        },
-      });
-    } else {
-      sources["mapgenie-tiles"] = {
-        type: "raster",
-        tiles: [mapConfig.tileUrl],
-        tileSize: mapConfig.tileSize || 512,
-        minzoom: mapConfig.zoom.min,
-        maxzoom: mapConfig.zoom.max,
-      };
-      layers.push({
-        id: "mapgenie-layer",
-        type: "raster",
-        source: "mapgenie-tiles",
-        paint: {
-          "raster-opacity": 1,
-          "raster-fade-duration": 0, // Disable tile fade to prevent seam artifacts
-        },
-      });
-    }
 
     // Create Mapbox GL map using MapGenie's raster tiles
     // MapGenie uses standard XYZ tiles with EPSG3857 projection
@@ -179,13 +123,31 @@
       container: "map",
       style: {
         version: 8,
-        sources,
-        layers,
+        sources: {
+          "mapgenie-tiles": {
+            type: "raster",
+            tiles: [mapConfig.tileUrl],
+            tileSize: mapConfig.tileSize || 512,
+            minzoom: mapConfig.zoom.min,
+            maxzoom: mapConfig.zoom.max,
+          },
+        },
+        layers: [
+          {
+            id: "mapgenie-layer",
+            type: "raster",
+            source: "mapgenie-tiles",
+            paint: {
+              "raster-opacity": 1,
+              "raster-fade-duration": 0, // Disable tile fade to prevent seam artifacts
+            },
+          },
+        ],
       },
       center: mapConfig.center, // [lng, lat] format - same as MapGenie
       zoom: mapConfig.zoom.initial,
-      minZoom: hasImageBase ? imageLayer.minZoom : mapConfig.zoom.min,
-      maxZoom: hasImageBase ? imageLayer.maxZoom : mapConfig.zoom.max,
+      minZoom: mapConfig.zoom.min,
+      maxZoom: mapConfig.zoom.max,
       maxBounds: mapBounds || undefined,
       attributionControl: false,
       fadeDuration: 0, // Disable symbol/label fade
@@ -623,27 +585,6 @@
       .replace(/\n/g, "<br>")
       .replace(/- (.+)/g, "<li>$1</li>")
       .replace(/(<li>.*<\/li>)/gs, "<ul>$1</ul>");
-  }
-
-  function getImageLayerConfig(mapId, mapConfig) {
-    const override = customImageMaps[mapId];
-    if (!override || !mapConfig?.bounds) {
-      return null;
-    }
-
-    const coordinates = override.coordinates || [
-      [mapConfig.bounds.minLng, mapConfig.bounds.maxLat],
-      [mapConfig.bounds.maxLng, mapConfig.bounds.maxLat],
-      [mapConfig.bounds.maxLng, mapConfig.bounds.minLat],
-      [mapConfig.bounds.minLng, mapConfig.bounds.minLat],
-    ];
-
-    return {
-      url: override.url,
-      coordinates,
-      minZoom: override.minZoom ?? mapConfig.zoom?.min ?? 8,
-      maxZoom: override.maxZoom ?? mapConfig.zoom?.max ?? 14,
-    };
   }
 
   // Initialize when DOM is ready
