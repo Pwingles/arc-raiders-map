@@ -127,7 +127,7 @@
           "mapgenie-tiles": {
             type: "raster",
             tiles: [mapConfig.tileUrl],
-            tileSize: 256,
+            tileSize: mapConfig.tileSize || 512,
             minzoom: mapConfig.zoom.min,
             maxzoom: mapConfig.zoom.max,
           },
