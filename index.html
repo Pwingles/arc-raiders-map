@@ -24,21 +24,33 @@
   <body>
     <div class="app-shell">
       <aside class="panel">
-        <header class="panel__header">
-          <div>
-            <p class="eyebrow">ARC RAIDERS FIELD GUIDE</p>
-            <h1>Interactive Intel Map</h1>
+        <header class="panel__header panel__header--stacked">
+          <div class="panel__brand">
+            <p class="eyebrow">ARC RAIDERS INTERACTIVE MAP</p>
+            <h1>Community Intel Overlay</h1>
           </div>
-          <button id="resetProgress" class="ghost-button" title="Clear saved progress">
-            Reset Progress
-          </button>
+          <div class="panel__header-actions">
+            <button id="resetProgress" class="ghost-button" title="Clear saved progress">
+              Reset Progress
+            </button>
+          </div>
+          <nav class="map-tabs" id="mapTabs"></nav>
+          <select id="mapSelect" class="sr-only" aria-hidden="true"></select>
+          <div class="panel__search-row">
+            <div class="search-field search-field--header">
+              <input
+                type="search"
+                id="searchInput"
+                placeholder="Search POIs, loot, objectives"
+              />
+              <span class="material-icon">search</span>
+            </div>
+            <div class="panel__control-buttons">
+              <button class="text-button" id="showAllBtn">Show All</button>
+              <button class="text-button" id="hideAllBtn">Hide All</button>
+            </div>
+          </div>
         </header>
-
-        <section class="panel__section">
-          <label for="mapSelect" class="section-label">Region / Map</label>
-          <select id="mapSelect" class="select"></select>
-          <p class="panel__hint" id="mapDescription"></p>
-        </section>
 
         <section class="panel__section map-meta">
           <div class="map-meta__visual">
@@ -46,6 +58,7 @@
             <span class="map-meta__badge" id="mapThreatBadge">Threat</span>
           </div>
           <div class="map-meta__details">
+            <p class="panel__hint map-description" id="mapDescription"></p>
             <p class="map-meta__biome" id="mapBiome"></p>
             <p class="map-meta__stat">
               <span>Recommended Power</span>
@@ -69,21 +82,15 @@
           </div>
         </section>
 
-        <section class="panel__section">
-          <label for="searchInput" class="section-label">Search</label>
-          <div class="search-field">
-            <input
-              type="search"
-              id="searchInput"
-              placeholder="Search by name, tags, or rewards"
-            />
-            <span class="material-icon">search</span>
+        <section class="panel__section category-groups-section">
+          <div class="category-groups__header">
+            <p class="section-label">Filters</p>
+            <div class="category-groups__actions">
+              <button class="text-button text-button--muted" id="expandGroupsBtn">Expand All</button>
+              <button class="text-button text-button--muted" id="collapseGroupsBtn">Collapse All</button>
+            </div>
           </div>
-        </section>
-
-        <section class="panel__section">
-          <p class="section-label">Categories</p>
-          <div id="categoryFilters" class="chip-group"></div>
+          <div id="categoryGroups" class="category-groups"></div>
         </section>
 
         <section class="panel__section filter-row">
@@ -101,7 +108,7 @@
           </div>
         </section>
 
-        <section class="panel__section toggle-group">
+        <section class="panel__section toggle-group toggle-group--divider">
           <label class="toggle">
             <input type="checkbox" id="showIncomplete" checked />
             <span>Show in-progress</span>
@@ -110,11 +117,33 @@
             <input type="checkbox" id="showComplete" checked />
             <span>Show completed</span>
           </label>
+          <div class="filter-row">
+            <div class="filter-field">
+              <label for="rarityFilter" class="section-label">Rarity</label>
+              <select id="rarityFilter" class="select select--condensed">
+                <option value="all">All rarities</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label for="difficultyFilter" class="section-label">Difficulty</label>
+              <select id="difficultyFilter" class="select select--condensed">
+                <option value="all">All difficulties</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel__section guides-section">
+          <div class="guides__header">
+            <p class="section-label">Guide Presets</p>
+            <button class="text-button" id="clearGuideBtn">Clear Guide</button>
+          </div>
+          <div id="guideList" class="guides-grid"></div>
         </section>
 
         <section class="panel__section list-section">
           <div class="list-section__header">
-            <p class="section-label">Points of Interest</p>
+            <p class="section-label" id="poiSectionLabel">Points of Interest</p>
             <button id="collapseList" class="ghost-button ghost-button--small">
               Collapse
             </button>
@@ -132,12 +161,18 @@
         
         <!-- Floating Map Controls -->
         <div class="map-controls-dock">
-           <button class="ghost-button icon-only" id="fitBoundsBtn" title="Fit to Map">
+          <button class="ghost-button icon-only" id="measureToolBtn" title="Distance Measure">
+            <span class="material-icon">straighten</span>
+          </button>
+          <button class="ghost-button icon-only" id="radiusToolBtn" title="Sniping Radius Tool">
+            <span class="material-icon">donut_large</span>
+          </button>
+          <button class="ghost-button icon-only" id="fitBoundsBtn" title="Fit to Map">
             <span class="material-icon">crop_free</span>
-           </button>
-           <button class="ghost-button icon-only" id="toggleLegendBtn" title="Toggle Legend">
+          </button>
+          <button class="ghost-button icon-only" id="toggleLegendBtn" title="Toggle Legend">
             <span class="material-icon">map</span>
-           </button>
+          </button>
         </div>
 
         <div class="map-toolbar">

@@ -1,3 +1,14 @@
+  function switchToMap(mapId, options = {}) {
+    if (!mapId || mapId === state.currentMapId) return;
+    state.currentMapId = mapId;
+    setActiveMapTab(mapId);
+    if (!options.preserveGuide) {
+      state.activeGuide = null;
+      state.activeGuideItems = null;
+      updateGuideUI();
+    }
+    renderMap();
+  }
 (() => {
   const config = window.arcMapsConfig;
   if (!config) {
@@ -6,12 +17,13 @@
   }
 
   const els = {
+    mapTabs: document.getElementById("mapTabs"),
     mapSelect: document.getElementById("mapSelect"),
     mapDescription: document.getElementById("mapDescription"),
     searchInput: document.getElementById("searchInput"),
     showComplete: document.getElementById("showComplete"),
     showIncomplete: document.getElementById("showIncomplete"),
-    categoryFilters: document.getElementById("categoryFilters"),
+    categoryGroups: document.getElementById("categoryGroups"),
     itemList: document.getElementById("itemList"),
     collapseList: document.getElementById("collapseList"),
     progressHeadline: document.getElementById("completionHeadline"),
@@ -29,7 +41,18 @@
     mapFeaturedLoot: document.getElementById("mapFeaturedLoot"),
     rarityFilter: document.getElementById("rarityFilter"),
     difficultyFilter: document.getElementById("difficultyFilter"),
-    legendItems: document.getElementById("legendItems")
+    legendItems: document.getElementById("legendItems"),
+    mapLegend: document.getElementById("mapLegend"),
+    showAllBtn: document.getElementById("showAllBtn"),
+    hideAllBtn: document.getElementById("hideAllBtn"),
+    expandGroupsBtn: document.getElementById("expandGroupsBtn"),
+    collapseGroupsBtn: document.getElementById("collapseGroupsBtn"),
+    guideList: document.getElementById("guideList"),
+    clearGuideBtn: document.getElementById("clearGuideBtn"),
+    poiSectionLabel: document.getElementById("poiSectionLabel"),
+    toggleLegendBtn: document.getElementById("toggleLegendBtn"),
+    measureToolBtn: document.getElementById("measureToolBtn"),
+    radiusToolBtn: document.getElementById("radiusToolBtn")
   };
 
   const state = {
@@ -48,7 +71,13 @@
       difficulty: "all"
     },
     progress: loadProgress(),
-    listCollapsed: false
+    listCollapsed: false,
+    groupCollapse: new Set(),
+    activeGuide: null,
+    activeGuideItems: null,
+    toolLayer: null,
+    activeTool: null,
+    measureStart: null
   };
 
   const template = document.getElementById("poiTemplate");
@@ -66,6 +95,62 @@
     event: { rarity: "rare", difficulty: "high" },
     location: { rarity: "common", difficulty: "low" }
   };
+
+  const categoryGroupConfig = [
+    {
+      id: "locations",
+      label: "Key Locations",
+      categories: ["location", "collectible", "extraction"]
+    },
+    {
+      id: "loot",
+      label: "Loot Containers",
+      categories: ["weaponCase", "fieldCrate", "securityLocker", "raiderCache", "vehicleTrunk"]
+    },
+    {
+      id: "missions",
+      label: "Missions & Events",
+      categories: ["quest", "event", "boss"]
+    }
+  ];
+
+  const guidePresets = [
+    {
+      id: "rusted-gears",
+      title: "Rusted Gear Farm",
+      mapId: "blue-gate",
+      description: "Follow the ridge caravan route to loot 4 trunks per loop.",
+      itemIds: ["blue-vehicle-004", "blue-vehicle-005", "blue-vehicle-006", "blue-vehicle-013"],
+      reference: {
+        label: "MetaForge Rusted Gear Guide",
+        url: "https://metaforge.app/arc-raiders/guides/page/1"
+      }
+    },
+    {
+      id: "hidden-bunker",
+      title: "Hidden Bunker Puzzle",
+      mapId: "dam-battlegrounds",
+      description: "Hit the Control Tower, Admin Wing, and Floodgate vault in order.",
+      itemIds: ["dam-location-003", "dam-location-004", "dam-locker-012"],
+      reference: {
+        label: "MetaForge Hidden Bunker Guide",
+        url: "https://metaforge.app/arc-raiders/guides/page/1"
+      }
+    },
+    {
+      id: "rocketeer-driver",
+      title: "Rocketeer Driver Route",
+      mapId: "spaceport",
+      description: "Clear Launch Towers and Fuel Depot for guaranteed Rocketeers.",
+      itemIds: ["space-boss-001", "space-location-004", "space-quest-013"],
+      reference: {
+        label: "MetaForge Rocketeer Driver Tips",
+        url: "https://metaforge.app/arc-raiders/guides/page/1"
+      }
+    }
+  ];
+
+  const categoryCheckboxes = new Map();
 
   function loadProgress() {
     try {
@@ -86,6 +171,8 @@
   }
 
   function hydrateMapSelect() {
+    if (!els.mapSelect) return;
+    els.mapSelect.innerHTML = "";
     config.maps.forEach((map) => {
       const option = document.createElement("option");
       option.value = map.id;
@@ -97,50 +184,234 @@
     });
   }
 
-  function hydrateCategoryFilters() {
-    Object.entries(config.categories).forEach(([key, meta]) => {
-      const chip = document.createElement("label");
-      chip.className = "chip active";
-      chip.dataset.type = key;
-
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.checked = true;
-      checkbox.setAttribute("aria-label", `Toggle ${meta.label}`);
-
-      const swatch = document.createElement("span");
-      swatch.style.width = "10px";
-      swatch.style.height = "10px";
-      swatch.style.borderRadius = "999px";
-      swatch.style.background = meta.color;
-
-      const text = document.createElement("span");
-      text.textContent = meta.label;
-
-      chip.append(checkbox, swatch, text);
-      chip.addEventListener("click", (event) => {
-        event.preventDefault();
-        toggleCategoryFilter(key, chip);
-      });
-      els.categoryFilters.append(chip);
+  function hydrateMapTabs() {
+    if (!els.mapTabs) return;
+    els.mapTabs.innerHTML = "";
+    config.maps.forEach((map) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `map-tab${map.id === state.currentMapId ? " map-tab--active" : ""}`;
+      button.textContent = map.name;
+      button.addEventListener("click", () => switchToMap(map.id));
+      button.dataset.mapId = map.id;
+      els.mapTabs.append(button);
     });
   }
 
-  function toggleCategoryFilter(type, chip) {
-    if (state.filters.types.has(type)) {
-      state.filters.types.delete(type);
-      chip.classList.remove("active");
-    } else {
+  function setActiveMapTab(mapId) {
+    if (els.mapTabs) {
+      [...els.mapTabs.children].forEach((child) => {
+        child.classList.toggle("map-tab--active", child.dataset.mapId === mapId);
+      });
+    }
+    if (els.mapSelect && els.mapSelect.value !== mapId) {
+      els.mapSelect.value = mapId;
+    }
+  }
+
+  function hydrateCategoryGroups() {
+    if (!els.categoryGroups) return;
+    els.categoryGroups.innerHTML = "";
+    categoryCheckboxes.clear();
+
+    categoryGroupConfig.forEach((group) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "category-group";
+      wrapper.dataset.group = group.id;
+
+      const header = document.createElement("button");
+      header.type = "button";
+      header.className = "category-group__header";
+      header.innerHTML = `
+        <span>${group.label}</span>
+        <span class="category-group__count" data-group-count="${group.id}">0</span>
+      `;
+
+      const body = document.createElement("div");
+      body.className = "category-group__body";
+
+      header.addEventListener("click", () => toggleGroupCollapse(group.id, body));
+
+      group.categories.forEach((type) => {
+        const meta = config.categories[type];
+        if (!meta) return;
+        const row = document.createElement("label");
+        row.className = "category-filter";
+
+        const left = document.createElement("span");
+        left.className = "category-filter__label";
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = state.filters.types.has(type);
+        checkbox.addEventListener("change", (event) => {
+          event.stopPropagation();
+          handleCategoryToggle(type, event.target.checked);
+        });
+
+        const swatch = document.createElement("span");
+        swatch.className = "category-filter__swatch";
+        swatch.style.background = meta.color;
+
+        const label = document.createElement("span");
+        label.textContent = meta.label;
+
+        left.append(checkbox, swatch, label);
+
+        const count = document.createElement("span");
+        count.className = "category-filter__count";
+        count.dataset.countFor = type;
+        count.textContent = "0";
+
+        row.append(left, count);
+        body.append(row);
+
+        categoryCheckboxes.set(type, { checkbox, countEl: count });
+      });
+
+      wrapper.append(header, body);
+      els.categoryGroups.append(wrapper);
+    });
+  }
+
+  function handleCategoryToggle(type, isChecked) {
+    if (isChecked) {
       state.filters.types.add(type);
-      chip.classList.add("active");
+    } else {
+      state.filters.types.delete(type);
     }
     render();
   }
 
+  function syncCategoryCheckboxes() {
+    categoryCheckboxes.forEach(({ checkbox }, type) => {
+      checkbox.checked = state.filters.types.has(type);
+    });
+  }
+
+  function toggleGroupCollapse(groupId, bodyEl) {
+    const isCollapsed = state.groupCollapse.has(groupId);
+    if (isCollapsed) {
+      state.groupCollapse.delete(groupId);
+      bodyEl.classList.remove("is-collapsed");
+    } else {
+      state.groupCollapse.add(groupId);
+      bodyEl.classList.add("is-collapsed");
+    }
+  }
+
+  function setAllGroupCollapse(collapsed) {
+    state.groupCollapse = new Set();
+    els.categoryGroups?.querySelectorAll(".category-group__body")?.forEach((body) => {
+      const groupId = body.parentElement?.dataset.group;
+      if (!groupId) return;
+      if (collapsed) {
+        body.classList.add("is-collapsed");
+        state.groupCollapse.add(groupId);
+      } else {
+        body.classList.remove("is-collapsed");
+      }
+    });
+  }
+
+  function updateCategoryCounts(items) {
+    const counts = {};
+    items.forEach((item) => {
+      counts[item.type] = (counts[item.type] || 0) + 1;
+    });
+    categoryCheckboxes.forEach(({ countEl }, type) => {
+      countEl.textContent = counts[type] ?? 0;
+    });
+    categoryGroupConfig.forEach((group) => {
+      const total = group.categories.reduce((sum, type) => sum + (counts[type] ?? 0), 0);
+      const countLabel = els.categoryGroups?.querySelector(`[data-group-count="${group.id}"]`);
+      if (countLabel) countLabel.textContent = total;
+    });
+  }
+
+  function hydrateGuideList() {
+    if (!els.guideList) return;
+    els.guideList.innerHTML = "";
+    guidePresets.forEach((guide) => {
+      const card = document.createElement("article");
+      card.className = "guide-card";
+      card.dataset.guideId = guide.id;
+
+      const title = document.createElement("p");
+      title.className = "guide-card__title";
+      title.textContent = guide.title;
+
+      const meta = document.createElement("p");
+      meta.className = "guide-card__meta";
+      meta.textContent = formatLabel(guide.mapId);
+
+      const desc = document.createElement("p");
+      desc.className = "guide-card__description";
+      desc.textContent = guide.description;
+
+      const actions = document.createElement("div");
+      actions.className = "guide-card__actions";
+      const button = document.createElement("button");
+      button.className = "primary-button primary-button--small";
+      button.type = "button";
+      button.textContent = "Load Guide";
+      button.addEventListener("click", () => applyGuidePreset(guide));
+      actions.append(button);
+
+      if (guide.reference?.label && guide.reference?.url) {
+        const source = document.createElement("a");
+        source.href = guide.reference.url;
+        source.target = "_blank";
+        source.rel = "noopener noreferrer";
+        source.className = "text-button text-button--muted";
+        source.textContent = guide.reference.label;
+        actions.append(source);
+      }
+
+      card.append(title, meta, desc, actions);
+      els.guideList.append(card);
+    });
+    updateGuideUI();
+  }
+
+  function applyGuidePreset(guide) {
+    if (!guide) return;
+    state.activeGuide = guide;
+    state.activeGuideItems = new Set(guide.itemIds);
+    if (state.currentMapId !== guide.mapId) {
+      switchToMap(guide.mapId, { preserveGuide: true });
+    } else {
+      render();
+    }
+    updateGuideUI();
+  }
+
+  function clearActiveGuide() {
+    state.activeGuide = null;
+    state.activeGuideItems = null;
+    updateGuideUI();
+    render();
+  }
+
+  function updateGuideUI() {
+    if (els.clearGuideBtn) {
+      els.clearGuideBtn.disabled = !state.activeGuide;
+    }
+    if (els.poiSectionLabel) {
+      els.poiSectionLabel.textContent = state.activeGuide
+        ? `Points of Interest · ${state.activeGuide.title}`
+        : "Points of Interest";
+    }
+    if (els.guideList) {
+      els.guideList.querySelectorAll(".guide-card").forEach((card) => {
+        card.classList.toggle("guide-card--active", card.dataset.guideId === state.activeGuide?.id);
+      });
+    }
+  }
+
   function initEvents() {
-    els.mapSelect.addEventListener("change", (event) => {
-      state.currentMapId = event.target.value;
-      renderMap();
+    els.mapSelect?.addEventListener("change", (event) => {
+      switchToMap(event.target.value);
     });
 
     els.searchInput.addEventListener("input", (event) => {
@@ -164,7 +435,7 @@
       els.collapseList.textContent = state.listCollapsed ? "Expand" : "Collapse";
     });
 
-    els.resetProgress.addEventListener("click", () => {
+    els.resetProgress?.addEventListener("click", () => {
       if (confirm("Clear all saved progress on this device?")) {
         state.progress = {};
         persistProgress();
@@ -172,10 +443,10 @@
       }
     });
 
-    els.fitBoundsBtn.addEventListener("click", fitCurrentBounds);
+    els.fitBoundsBtn?.addEventListener("click", fitCurrentBounds);
 
-    els.exportProgressBtn.addEventListener("click", exportProgress);
-    els.importProgressInput.addEventListener("change", importProgress);
+    els.exportProgressBtn?.addEventListener("click", exportProgress);
+    els.importProgressInput?.addEventListener("change", importProgress);
 
     els.rarityFilter?.addEventListener("change", (event) => {
       state.filters.rarity = event.target.value;
@@ -186,6 +457,30 @@
       state.filters.difficulty = event.target.value;
       render();
     });
+
+    els.showAllBtn?.addEventListener("click", () => {
+      state.filters.types = new Set(Object.keys(config.categories));
+      syncCategoryCheckboxes();
+      render();
+    });
+
+    els.hideAllBtn?.addEventListener("click", () => {
+      state.filters.types.clear();
+      syncCategoryCheckboxes();
+      render();
+    });
+
+    els.expandGroupsBtn?.addEventListener("click", () => setAllGroupCollapse(false));
+    els.collapseGroupsBtn?.addEventListener("click", () => setAllGroupCollapse(true));
+
+    els.clearGuideBtn?.addEventListener("click", clearActiveGuide);
+
+    els.toggleLegendBtn?.addEventListener("click", () => {
+      els.mapLegend?.classList.toggle("hidden");
+    });
+
+    els.measureToolBtn?.addEventListener("click", () => toggleTool("measure"));
+    els.radiusToolBtn?.addEventListener("click", () => toggleTool("radius"));
   }
 
   function exportProgress() {
@@ -233,6 +528,7 @@
   function renderMap() {
     const currentMap = getCurrentMap();
     if (!currentMap) return;
+    setActiveMapTab(state.currentMapId);
     els.mapDescription.textContent = currentMap.description || "";
 
     const mapContainer = document.getElementById("map");
@@ -285,6 +581,10 @@
     }
 
     state.markerLayer = L.layerGroup().addTo(state.mapInstance);
+    state.toolLayer = L.layerGroup().addTo(state.mapInstance);
+    state.measureStart = null;
+    syncToolButtons();
+    state.mapInstance.on("click", handleMapToolClick);
 
     updateMapContext();
     render();
@@ -297,6 +597,87 @@
     } else if (state.markerLayer && state.markerLayer.getLayers().length > 0) {
       state.mapInstance.fitBounds(state.markerLayer.getBounds(), { maxZoom: state.mapInstance.getZoom() });
     }
+  }
+
+  function toggleTool(tool) {
+    if (state.activeTool === tool) {
+      state.activeTool = null;
+    } else {
+      state.activeTool = tool;
+    }
+    state.measureStart = null;
+    state.toolLayer?.clearLayers();
+    syncToolButtons();
+  }
+
+  function syncToolButtons() {
+    if (els.measureToolBtn) {
+      els.measureToolBtn.classList.toggle("is-active", state.activeTool === "measure");
+    }
+    if (els.radiusToolBtn) {
+      els.radiusToolBtn.classList.toggle("is-active", state.activeTool === "radius");
+    }
+  }
+
+  function handleMapToolClick(event) {
+    if (!state.activeTool) return;
+    if (state.activeTool === "measure") {
+      handleMeasureClick(event.latlng);
+    } else if (state.activeTool === "radius") {
+      handleRadiusClick(event.latlng);
+    }
+  }
+
+  function handleMeasureClick(latlng) {
+    if (!state.toolLayer) return;
+    if (!state.measureStart) {
+      state.toolLayer.clearLayers();
+      state.measureStart = latlng;
+      return;
+    }
+    const start = state.measureStart;
+    const distance = start.distanceTo(latlng);
+    state.toolLayer.clearLayers();
+    L.polyline([start, latlng], { color: "#22d3ee", dashArray: "6 4" }).addTo(state.toolLayer);
+    const midpoint = L.latLng((start.lat + latlng.lat) / 2, (start.lng + latlng.lng) / 2);
+    L.marker(midpoint, {
+      interactive: false,
+      icon: L.divIcon({
+        className: "measure-label",
+        html: `<span>${formatDistance(distance)}</span>`
+      })
+    }).addTo(state.toolLayer);
+    state.measureStart = null;
+  }
+
+  function handleRadiusClick(latlng) {
+    if (!state.toolLayer) return;
+    state.measureStart = null;
+    state.toolLayer.clearLayers();
+    const rings = [50, 100, 150, 200, 250, 300];
+    rings.forEach((radius) => {
+      L.circle(latlng, {
+        radius,
+        color: "#facc15",
+        weight: radius % 100 === 0 ? 2 : 1,
+        dashArray: radius % 100 === 0 ? "4 4" : "2 6",
+        fillOpacity: 0
+      }).addTo(state.toolLayer);
+    });
+    L.marker(latlng, {
+      interactive: false,
+      icon: L.divIcon({
+        className: "measure-label",
+        html: `<span>${formatDistance(rings[rings.length - 1])} radius</span>`
+      })
+    }).addTo(state.toolLayer);
+  }
+
+  function formatDistance(meters) {
+    if (meters >= 1000) {
+      return `${(meters / 1000).toFixed(2)} km`;
+    }
+    return `${Math.round(meters)} m`;
   }
 
   function filteredItems(items) {
@@ -316,18 +697,25 @@
       if (state.filters.difficulty !== "all" && difficultyValue !== state.filters.difficulty) return false;
 
       const search = state.filters.search;
-      if (!search) return true;
-      const haystack = [
-        item.title,
-        item.description,
-        ...(item.tags ?? []),
-        ...(Array.isArray(item.rewards) ? item.rewards : [item.rewards])
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
+      if (search) {
+        const haystack = [
+          item.title,
+          item.description,
+          ...(item.tags ?? []),
+          ...(Array.isArray(item.rewards) ? item.rewards : [item.rewards])
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
 
-      return haystack.includes(search);
+        if (!haystack.includes(search)) return false;
+      }
+
+      if (state.activeGuideItems) {
+        return state.activeGuideItems.has(item.id);
+      }
+
+      return true;
     });
   }
 
@@ -397,6 +785,7 @@
     const category = config.categories[item.type];
     const color = category?.color || "#94a3b8";
     const completed = Boolean(state.progress[item.id]);
+    const inGuide = state.activeGuideItems?.has(item.id);
     
     const iconImage = getMarkerIconImage(item);
     const iconSVG = getMarkerIconSVG(item);
@@ -408,7 +797,9 @@
     return L.divIcon({
       className: "custom-marker",
       html: `
-        <div class="marker-icon ${completed ? "marker-icon--complete" : ""}" style="--marker-color: ${color};">
+        <div class="marker-icon ${completed ? "marker-icon--complete" : ""} ${
+        inGuide ? "marker-icon--featured" : ""
+      }" style="--marker-color: ${color};">
           ${content}
           ${completed ? '<span class="marker-icon__check">✓</span>' : ""}
         </div>
@@ -534,6 +925,9 @@
     if (completed) {
       card.classList.add("poi-card--complete");
     }
+    if (state.activeGuideItems?.has(item.id)) {
+      card.classList.add("poi-card--guide");
+    }
     toggleBtn.textContent = completed ? "Mark as in-progress" : "Mark as complete";
     if (completed) {
       toggleBtn.classList.add("poi-card__toggle--complete");
@@ -593,6 +987,9 @@
     if (state.filters.difficulty !== "all") {
       pieces.push(`Difficulty: ${formatLabel(state.filters.difficulty)}`);
     }
+    if (state.activeGuide) {
+      pieces.push(`Guide: ${state.activeGuide.title}`);
+    }
     if (searchActive) pieces.push(searchActive);
     els.activeFilters.textContent = pieces.join(" • ");
   }
@@ -605,6 +1002,8 @@
     renderList(visible);
     renderProgressSummary(items.length);
     updateToolbarStats(visible);
+    updateCategoryCounts(items);
+    updateGuideUI();
   }
 
   function updateMapContext() {
@@ -713,17 +1112,12 @@
   }
 
   hydrateMapSelect();
-  hydrateCategoryFilters();
+  hydrateMapTabs();
+  hydrateCategoryGroups();
+  hydrateGuideList();
   hydrateLegend();
   hydrateFilterOptions();
   initEvents();
-    const toggleLegendBtn = document.getElementById("toggleLegendBtn");
-    if (toggleLegendBtn) {
-      toggleLegendBtn.addEventListener("click", () => {
-        els.mapLegend.classList.toggle("hidden");
-      });
-    }
-
-    renderMap();
-  })();
+  renderMap();
+})();
 
