@@ -4,61 +4,60 @@ window.arcMapsConfig = {
   rarityOptions: ["common", "uncommon", "rare", "legendary", "exotic"],
   difficultyOptions: ["low", "medium", "high", "elite"],
   categories: {
-    quest: {
-      label: "Quest",
-      color: "#facc15",
-      description: "Story missions, faction contracts, and multi-step objectives."
-    },
-    weaponCase: {
-      label: "Weapon Case",
-      color: "#fb7185",
-      description: "High-tier weapons and ammunition containers."
-    },
-    fieldCrate: {
-      label: "Field Crate",
-      color: "#f97316",
-      description: "General loot containers with mixed items."
-    },
-    securityLocker: {
-      label: "Security Locker",
-      color: "#a855f7",
-      description: "Locked containers requiring keys or lockpicks."
-    },
-    raiderCache: {
-      label: "Raider Cache",
-      color: "#ec4899",
-      description: "Premium loot stashes left by other raiders."
-    },
-    event: {
-      label: "World Event",
-      color: "#34d399",
-      description: "Timed public events and roaming convoy activities."
-    },
-    vehicleTrunk: {
-      label: "Vehicle Trunk",
-      color: "#14b8a6",
-      description: "Searchable vehicles, excellent for farming Rusted Gears."
-    },
-    extraction: {
-      label: "Extraction Point",
-      color: "#34d399",
-      description: "Evacuation zones for completing missions."
-    },
-    boss: {
-      label: "Boss",
-      color: "#c084fc",
-      description: "Elite enemies and high value targets."
-    },
-    collectible: {
-      label: "Collectible",
-      color: "#38bdf8",
-      description: "Lore fragments, intel logs, and one-time pickups."
-    },
-    location: {
-      label: "Key Location",
-      color: "#60a5fa",
-      description: "Important landmarks and points of interest."
-    }
+    // Locations
+    location: { label: "Location", color: "#60a5fa" },
+    cargoElevator: { label: "Cargo Elevator", color: "#a855f7" },
+    fieldDepot: { label: "Field Depot", color: "#8b5cf6" },
+    lockedDoor: { label: "Locked Door", color: "#ef4444" },
+    raiderCamp: { label: "Raider Camp", color: "#f87171" },
+    raiderHatch: { label: "Raider Hatch", color: "#dc2626" },
+    
+    // Collectibles
+    collectible: { label: "Mission Objective", color: "#38bdf8" },
+    
+    // Loot
+    ammoBox: { label: "Ammo Box", color: "#fb923c" },
+    arcCourier: { label: "ARC Courier", color: "#fbbf24" },
+    baronHusk: { label: "Baron Husk", color: "#f59e0b" },
+    container: { label: "Container", color: "#d97706" },
+    fieldCrate: { label: "Field Crate", color: "#f97316" },
+    grenadeTube: { label: "Grenade Tube", color: "#ea580c" },
+    item: { label: "Item", color: "#94a3b8" },
+    medicalBox: { label: "Medical Box", color: "#ef4444" },
+    securityLocker: { label: "Security Locker", color: "#a855f7" },
+    weaponCase: { label: "Weapon Crate", color: "#fb7185" },
+    
+    // Natural Resources
+    agave: { label: "Agave", color: "#84cc16" },
+    apricot: { label: "Apricot", color: "#bef264" },
+    fruitBasket: { label: "Fruit Basket", color: "#a3e635" },
+    greatMullein: { label: "Great Mullein", color: "#65a30d" },
+    mushroom: { label: "Mushroom", color: "#4d7c0f" },
+    pricklyPear: { label: "Prickly Pear", color: "#3f6212" },
+    
+    // Missions
+    quest: { label: "Mission", color: "#facc15" },
+    
+    // Enemies
+    arc: { label: "ARC", color: "#ef4444" },
+    enemy: { label: "Enemy", color: "#b91c1c" },
+    sentinel: { label: "Sentinel", color: "#991b1b" },
+    surveyor: { label: "Surveyor", color: "#7f1d1d" },
+    boss: { label: "Boss", color: "#c084fc" },
+    
+    // Other
+    miscellaneous: { label: "Miscellaneous", color: "#94a3b8" },
+    playerSpawn: { label: "Player Spawn", color: "#22d3ee" },
+    supplyCall: { label: "Supply Call Station", color: "#0ea5e9" },
+    zipline: { label: "Zipline", color: "#0284c7" },
+    
+    // Events
+    raiderCache: { label: "Raider Cache", color: "#ec4899" },
+    event: { label: "Event", color: "#d946ef" },
+    
+    // Legacy mappings (kept for compatibility, remapped in UI)
+    vehicleTrunk: { label: "Vehicle Trunk", color: "#14b8a6" },
+    extraction: { label: "Extraction Point", color: "#34d399" }
   },
   maps: [
     {
