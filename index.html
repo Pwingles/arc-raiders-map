@@ -129,15 +129,25 @@
           <p class="map-legend__title">Legend</p>
           <div class="map-legend__items" id="legendItems"></div>
         </div>
+        
+        <!-- Floating Map Controls -->
+        <div class="map-controls-dock">
+           <button class="ghost-button icon-only" id="fitBoundsBtn" title="Fit to Map">
+            <span class="material-icon">crop_free</span>
+           </button>
+           <button class="ghost-button icon-only" id="toggleLegendBtn" title="Toggle Legend">
+            <span class="material-icon">map</span>
+           </button>
+        </div>
+
         <div class="map-toolbar">
           <p class="map-toolbar__status" id="activeFilters"></p>
           <div class="map-toolbar__actions">
-            <button class="ghost-button" id="fitBoundsBtn">Fit to Map</button>
             <button class="ghost-button" id="exportProgressBtn" title="Download your checklist state">
-              Export Progress
+              Export
             </button>
             <label class="ghost-button ghost-button--file">
-              Import Progress
+              Import
               <input type="file" id="importProgressInput" accept="application/json" />
             </label>
           </div>

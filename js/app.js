@@ -431,11 +431,19 @@
     const objectiveList = (item.objectives ?? [])
       .map((step) => `<li>${step}</li>`)
       .join("");
+    
+    const rarity = getRarityValue(item);
+    const difficulty = getDifficultyValue(item);
+    const typeLabel = config.categories[item.type]?.label ?? item.type;
 
     return `
       <div class="popup">
-        <p class="eyebrow">${config.categories[item.type]?.label ?? item.type}</p>
+        <p class="eyebrow">${typeLabel}</p>
         <h3>${item.title}</h3>
+        <div class="popup-meta">
+          <span style="color: ${rarity === 'legendary' ? '#fbbf24' : rarity === 'rare' ? '#60a5fa' : '#fff'}">${formatLabel(rarity)}</span>
+          <span style="color: ${difficulty === 'elite' ? '#fb7185' : '#94a3b8'}">${formatLabel(difficulty)}</span>
+        </div>
         <p>${item.description ?? ""}</p>
         ${
           objectiveList
@@ -449,9 +457,11 @@
               }</p>`
             : ""
         }
-        <button class="primary-button popup-toggle" data-item="${item.id}">
-          ${completed ? "Mark as in-progress" : "Mark as complete"}
-        </button>
+        <div class="popup__actions">
+          <button class="primary-button popup-toggle" data-item="${item.id}">
+            ${completed ? "Mark as in-progress" : "Mark as complete"}
+          </button>
+        </div>
       </div>
     `;
   }
@@ -707,6 +717,13 @@
   hydrateLegend();
   hydrateFilterOptions();
   initEvents();
-  renderMap();
-})();
+    const toggleLegendBtn = document.getElementById("toggleLegendBtn");
+    if (toggleLegendBtn) {
+      toggleLegendBtn.addEventListener("click", () => {
+        els.mapLegend.classList.toggle("hidden");
+      });
+    }
+
+    renderMap();
+  })();
 
